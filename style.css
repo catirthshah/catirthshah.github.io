@@ -1,137 +1,165 @@
 :root {
-    --dark: #0b1220;
-    --light: #f8fafc;
-    --primary: #2563eb;
-    --text: #334155;
+  --dark: #0b1220;
+  --primary: #1e3a8a;
+  --accent: #2563eb;
+  --text: #334155;
+  --light: #f8fafc;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
-    margin: 0;
-    font-family: "Segoe UI", system-ui, sans-serif;
-    background: var(--light);
-    color: var(--text);
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--light);
+  color: var(--text);
 }
 
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 .header {
-    background: white;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-.nav {
-    text-align: center;
-    padding: 16px 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 20px;
+  text-align: center;
+  padding: 16px;
+  font-weight: 700;
 }
 
 .hero {
-    background: radial-gradient(circle at top, #162033, #0b1220);
-    color: white;
-    padding: 110px 0;
-    text-align: center;
+  background: linear-gradient(135deg, #0b1220, #162033);
+  color: white;
+  text-align: center;
+  padding: 110px 20px;
 }
 
-.hero h1 {
-    font-size: 42px;
-}
-
-.whatsapp-hero-btn {
-    margin-top: 35px;
-    display: inline-block;
-    padding: 16px 38px;
-    background: var(--primary);
-    color: white;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 700;
+.cta {
+  margin-top: 35px;
+  display: inline-block;
+  padding: 16px 38px;
+  background: var(--accent);
+  color: white;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .about {
-    padding: 90px 0;
-    background: white;
+  background: white;
+  padding: 90px 0;
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: center;
 }
 
 .about-image img {
-    width: 100%;
-    border-radius: 18px;
-    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.15);
 }
 
-.about h2 {
-    font-size: 32px;
+.practice {
+  padding: 90px 0;
+  text-align: center;
 }
 
-.qualification {
-    font-weight: 600;
-    margin-top: 15px;
-    color: #0f172a;
-}
-
-.services {
-    padding: 90px 0;
-    text-align: center;
-}
-
-.slider {
-    display: flex;
-    transition: transform 0.7s ease-in-out;
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .slider-container {
-    overflow: hidden;
+  overflow: hidden;
+  flex: 1;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease;
 }
 
 .card {
-    min-width: 100%;
-    padding: 50px 35px;
-    border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  min-width: 100%;
+  padding: 50px 35px;
+  border-radius: 18px;
 }
 
-/* Soothing practice colors */
-.tax-litigation { background: #eef2ff; }
-.direct-tax { background: #f0fdf4; }
-.international-tax { background: #ecfeff; }
+.litigation { background: #eef2ff; }
+.direct { background: #f0fdf4; }
+.international { background: #ecfeff; }
 .gst { background: #fff7ed; }
 
+.arrow {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.dots {
+  margin-top: 20px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #cbd5f5;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.dots .active {
+  background: var(--accent);
+}
+
+.process {
+  background: white;
+  padding: 90px 0;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.step span {
+  font-size: 28px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .contact {
-    background: var(--dark);
-    color: white;
-    padding: 80px 0;
-    text-align: center;
+  background: var(--dark);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
 }
 
 footer {
-    background: #020617;
-    color: #94a3b8;
-    text-align: center;
-    padding: 15px;
+  background: #020617;
+  color: #94a3b8;
+  text-align: center;
+  padding: 15px;
 }
 
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
 }
