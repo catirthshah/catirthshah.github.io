@@ -5,7 +5,6 @@ body {
     color: #1f2a36;
 }
 
-/* Header */
 header {
     background: white;
     padding: 15px 0;
@@ -42,7 +41,6 @@ header {
     color: white;
 }
 
-/* Slider Section */
 .slider-section {
     padding: 80px 20px;
     text-align: center;
@@ -56,14 +54,10 @@ header {
 
 .slider {
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
     scroll-behavior: smooth;
     gap: 20px;
     padding: 20px;
-}
-
-.slider::-webkit-scrollbar {
-    display: none;
 }
 
 .slide-card {
@@ -80,7 +74,6 @@ header {
     transform: translateY(-8px);
 }
 
-/* Arrows */
 .arrow {
     position: absolute;
     top: 50%;
@@ -89,20 +82,15 @@ header {
     color: white;
     border: none;
     font-size: 20px;
-    padding: 10px 14px;
+    padding: 12px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
 }
 
-.left {
-    left: -20px;
-}
+.left { left: -15px; }
+.right { right: -15px; }
 
-.right {
-    right: -20px;
-}
-
-/* Contact */
 .contact {
     text-align: center;
     padding: 80px 20px;
@@ -115,18 +103,10 @@ header {
     text-decoration: none;
 }
 
-/* WhatsApp Button */
+/* Strong WhatsApp Button */
 .whatsapp-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 14px 28px;
+    margin-top: 25px;
+    padding: 16px 32px;
     border-radius: 50px;
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-    transform:
+    background: linear-gradient(135deg, #25D366, #
