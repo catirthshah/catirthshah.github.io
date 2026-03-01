@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CA Tirth Shah | International Taxation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>CA Tirth Shah | International Taxation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,130 +12,82 @@
     <div class="container nav">
         <div class="logo">CA Tirth Shah</div>
         <ul>
-            <li><a href="#about">Profile</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </header>
 
 <section class="hero">
-    <div class="container">
-        <h1>CA Tirth Shah</h1>
-        <p class="designation">
-            Chartered Accountant | International Taxation
-        </p>
-        <p class="sub">
-            Pursuing ADIT (Advanced Diploma in International Taxation)
-        </p>
-    </div>
+    <h1>CA Tirth Shah</h1>
+    <p>Chartered Accountant | International Taxation</p>
 </section>
 
-<section id="about" class="section light">
-    <div class="container">
-        <h2>Professional Profile</h2>
-        <p>
-            Chartered Accountant with experience in International Taxation,
-            Direct Tax Compliance, Litigation Support and GST advisory.
-            Focused on cross-border taxation, transfer pricing, and regulatory
-            compliance with a structured and analytical approach.
-        </p>
-    </div>
-</section>
+<!-- SLIDER SECTION -->
+<section id="services" class="slider-section">
+    <h2>Professional Services</h2>
 
-<section id="services" class="section">
-    <div class="container">
-        <h2>Core Services</h2>
+    <div class="slider-wrapper">
+        <button class="arrow left" onclick="scrollLeft()">&#10094;</button>
 
-        <div class="grid">
-            <div class="card">
+        <div class="slider" id="slider">
+
+            <div class="slide-card">
                 <h3>International Taxation</h3>
-                <ul>
-                    <li>Cross-Border Transactions</li>
-                    <li>DTAA & Transfer Pricing</li>
-                    <li>Form 15CA / 15CB Compliance</li>
-                    <li>Permanent Establishment Analysis</li>
-                </ul>
+                <p>Cross-border taxation, DTAA advisory, transfer pricing documentation and Form 15CA/15CB compliance.</p>
             </div>
 
-            <div class="card">
-                <h3>Direct Tax & Litigation</h3>
-                <ul>
-                    <li>Income Tax Compliance</li>
-                    <li>Assessments & Appeals</li>
-                    <li>Notice Handling</li>
-                    <li>Corporate Tax Advisory</li>
-                </ul>
+            <div class="slide-card">
+                <h3>Direct Tax Advisory</h3>
+                <p>Income tax planning, return filing, assessments, appeals and corporate tax compliance.</p>
             </div>
 
-            <div class="card">
+            <div class="slide-card">
                 <h3>GST & Indirect Tax</h3>
-                <ul>
-                    <li>GST Return Filing</li>
-                    <li>ITC Reconciliation</li>
-                    <li>Refund Advisory</li>
-                    <li>GST Litigation Support</li>
-                </ul>
+                <p>GST return filing, ITC reconciliation, refund advisory and litigation support.</p>
             </div>
+
+            <div class="slide-card">
+                <h3>Litigation Support</h3>
+                <p>Representation support, drafting submissions and handling tax notices.</p>
+            </div>
+
+            <div class="slide-card">
+                <h3>Compliance & Reporting</h3>
+                <p>Corporate tax computation, advance tax review and regulatory reporting advisory.</p>
+            </div>
+
         </div>
+
+        <button class="arrow right" onclick="scrollRight()">&#10095;</button>
     </div>
 </section>
 
-<section id="experience" class="section light">
-    <div class="container">
-        <h2>Professional Experience</h2>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
 
-        <div class="timeline-item">
-            <h3>Kantilal Patel & Co. (KPC)</h3>
-            <span>International Taxation | Oct 2024 – Present</span>
-            <p>
-                Handling international tax compliance, cross-border transactions,
-                and corporate tax advisory matters.
-            </p>
-        </div>
+    <p>
+        Phone:
+        <a href="tel:+918128335264">+91 81283 35264</a>
+    </p>
 
-        <div class="timeline-item">
-            <h3>Shah Sanghvi & Associates</h3>
-            <span>Article Assistant | Mar 2021 – Mar 2024</span>
-            <p>
-                Experience in income tax litigation, GST compliance,
-                corporate taxation, and statutory audit assignments.
-            </p>
-        </div>
-    </div>
-</section>
+    <p>
+        Email:
+        <a href="mailto:catirths@gmail.com">catirths@gmail.com</a>
+    </p>
 
-<section id="contact" class="section dark">
-    <div class="container">
-        <h2>Contact</h2>
-
-        <p class="contact-info">
-            Phone:
-            <a href="tel:+918128335264">
-                +91 81283 35264
-            </a>
-        </p>
-
-        <p class="contact-info">
-            Email:
-            <a href="mailto:catirths@gmail.com">
-                catirths@gmail.com
-            </a>
-        </p>
-
-        <p class="contact-info">
-            <a class="whatsapp-btn" href="https://wa.me/918128335264" target="_blank">
-                Chat on WhatsApp
-            </a>
-        </p>
-
-    </div>
+    <a class="whatsapp-btn"
+       href="https://wa.me/918128335264?text=Hello%20CA%20Tirth%20Shah,%0A%0AI%20would%20like%20to%20inquire%20about%20your%20professional%20services.%0A%0ARegards,"
+       target="_blank">
+       Send Professional Inquiry on WhatsApp
+    </a>
 </section>
 
 <footer>
     © 2026 CA Tirth Shah. All Rights Reserved.
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
