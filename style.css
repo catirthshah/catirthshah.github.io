@@ -1,18 +1,22 @@
 :root {
   --dark: #0b1220;
   --primary: #1e3a8a;
+  --accent: #2563eb;
   --text: #334155;
   --muted: #64748b;
   --bg: #f8fafc;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: "Segoe UI", system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.7;
 }
 
 .container {
@@ -22,7 +26,7 @@ body {
 }
 
 .header {
-  background: #fff;
+  background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -30,30 +34,37 @@ body {
   text-align: center;
   padding: 18px 0;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .hero {
-  background: #0b1220;
-  color: white;
+  background: var(--dark);
+  color: #ffffff;
   text-align: center;
   padding: 100px 20px;
 }
 
-.hero h1 { margin-bottom: 10px; }
+.hero h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #cbd5f5;
+}
 
 .cta {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 32px;
   padding: 14px 34px;
-  background: #2563eb;
-  color: #fff;
+  background: var(--accent);
+  color: #ffffff;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
 }
 
 .about {
-  background: #fff;
+  background: #ffffff;
   padding: 90px 0;
 }
 
@@ -69,14 +80,19 @@ body {
   border-radius: 16px;
 }
 
-.qualification {
+.highlight {
   font-weight: 600;
-  margin-top: 15px;
+  color: var(--primary);
 }
 
 .practice {
-  padding: 90px 0;
   background: #f1f5f9;
+  padding: 90px 0;
+}
+
+.practice h2 {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .practice-grid {
@@ -86,39 +102,15 @@ body {
 }
 
 .practice-card {
-  background: #fff;
+  background: #ffffff;
   padding: 35px;
   border-radius: 16px;
   border: 1px solid #e5e7eb;
 }
 
-.process {
-  background: #fff;
-  padding: 90px 0;
-}
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.process-card {
-  background: #f8fafc;
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
-}
-
-.process-card span {
-  font-size: 24px;
-  font-weight: 700;
-  color: #2563eb;
-}
-
 .contact {
   background: var(--dark);
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 80px 20px;
 }
@@ -133,12 +125,12 @@ footer {
   color: #94a3b8;
   text-align: center;
   padding: 14px;
+  font-size: 14px;
 }
 
 @media (max-width: 900px) {
   .about-grid,
-  .practice-grid,
-  .process-grid {
+  .practice-grid {
     grid-template-columns: 1fr;
   }
 }
