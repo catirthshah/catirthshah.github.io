@@ -7,9 +7,9 @@ function moveSlide() {
     slider.style.transform = `translateX(-${index * 100}%)`;
 }
 
-setInterval(moveSlide, 3500);
+setInterval(moveSlide, 4000);
 
-/* touch support */
+/* Touch support */
 let startX = 0;
 
 slider.addEventListener("touchstart", e => {
