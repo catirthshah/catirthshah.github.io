@@ -1,112 +1,79 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f9;
-    color: #1f2a36;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CA Tirth Shah | International Taxation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-header {
-    background: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+<header>
+    <div class="container nav">
+        <div class="logo">CA Tirth Shah</div>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
+<section class="hero">
+    <h1>CA Tirth Shah</h1>
+    <p>Chartered Accountant | International Taxation</p>
+</section>
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+<section id="services" class="slider-section">
+    <h2>Professional Services</h2>
 
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+    <div class="slider-wrapper">
+        <button class="arrow left" onclick="manualScroll(-320)">&#10094;</button>
 
-.nav a {
-    text-decoration: none;
-    color: #1f2a36;
-}
+        <div class="slider" id="slider">
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to right, #1f2a36, #2e4057);
-    color: white;
-}
+            <div class="slide-card">
+                <h3>International Taxation</h3>
+                <p>Cross-border taxation, DTAA advisory, transfer pricing documentation and Form 15CA/15CB compliance.</p>
+            </div>
 
-.slider-section {
-    padding: 80px 20px;
-    text-align: center;
-}
+            <div class="slide-card">
+                <h3>Direct Tax Advisory</h3>
+                <p>Income tax planning, return filing, assessments, appeals and corporate tax compliance.</p>
+            </div>
 
-.slider-wrapper {
-    position: relative;
-    max-width: 1100px;
-    margin: auto;
-}
+            <div class="slide-card">
+                <h3>GST & Indirect Tax</h3>
+                <p>GST return filing, ITC reconciliation, refund advisory and litigation support.</p>
+            </div>
 
-.slider {
-    display: flex;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 20px;
-}
+            <div class="slide-card">
+                <h3>Litigation Support</h3>
+                <p>Drafting submissions and handling tax notices professionally.</p>
+            </div>
 
-.slide-card {
-    min-width: 300px;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    text-align: left;
-    transition: 0.3s ease;
-}
+            <div class="slide-card">
+                <h3>Compliance & Reporting</h3>
+                <p>Corporate tax computation, advance tax review and regulatory reporting advisory.</p>
+            </div>
 
-.slide-card:hover {
-    transform: translateY(-8px);
-}
+        </div>
 
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #1f2a36;
-    color: white;
-    border: none;
-    font-size: 20px;
-    padding: 12px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-}
+        <button class="arrow right" onclick="manualScroll(320)">&#10095;</button>
+    </div>
+</section>
 
-.left { left: -15px; }
-.right { right: -15px; }
+<section id="contact" class="contact">
+    <h2>Contact</h2>
 
-.contact {
-    text-align: center;
-    padding: 80px 20px;
-    background: #1f2a36;
-    color: white;
-}
+    <p>
+        Phone:
+        <a href="tel:+918128335264">+91 81283 35264</a>
+    </p>
 
-.contact a {
-    color: #25D366;
-    text-decoration: none;
-}
+    <p>
+        Email:
+        <a href="mailto:catirths@gmail.com">catirths@gmail.com</a>
+    </p>
 
-/* Strong WhatsApp Button */
-.whatsapp-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 16px 32px;
-    border-radius: 50px;
-    background: linear-gradient(135deg, #25D366, #
+    <a class="whatsapp-btn"
+       href="https://wa.me/918128335264?text=Hello%20CA%20Tirth%20Shah,%0A%0AI%20would%20like%20to%20inquire%20about%20your%20professional%20services.%0A%0ARegards,"
