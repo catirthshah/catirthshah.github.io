@@ -3,7 +3,6 @@
   --primary: #1e3a8a;
   --accent: #2563eb;
   --text: #334155;
-  --muted: #64748b;
   --bg: #f8fafc;
 }
 
@@ -42,10 +41,6 @@ body {
   color: #ffffff;
   text-align: center;
   padding: 100px 20px;
-}
-
-.hero h1 {
-  margin-bottom: 10px;
 }
 
 .subtitle {
