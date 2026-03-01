@@ -1,27 +1,10 @@
+let index = 0;
 const slider = document.getElementById("slider");
+const slides = slider.children.length;
 
-let scrollAmount = 0;
-const slideWidth = 320;
-
-function manualScroll(amount) {
-    scrollAmount += amount;
-
-    if (scrollAmount < 0) {
-        scrollAmount = slider.scrollWidth - slider.clientWidth;
-    }
-
-    if (scrollAmount > slider.scrollWidth - slider.clientWidth) {
-        scrollAmount = 0;
-    }
-
-    slider.scrollTo({
-        left: scrollAmount,
-        behavior: "smooth"
-    });
+function moveSlide() {
+    index = (index + 1) % slides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
 }
 
-function autoSlide() {
-    manualScroll(slideWidth);
-}
-
-setInterval(autoSlide, 3000); // auto move every 3 seconds
+setInterval(moveSlide, 3500);
