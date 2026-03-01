@@ -1,12 +1,15 @@
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
-    font-family: 'Georgia', serif;
-    background: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
     color: #1f2a36;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .container {
@@ -15,147 +18,115 @@ body {
     margin: auto;
 }
 
-/* Header */
-header {
-    position: sticky;
-    top: 0;
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    z-index: 1000;
-}
-
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 18px;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 .nav a {
     text-decoration: none;
     color: #1f2a36;
-    font-weight: 500;
 }
 
-.nav a:hover {
-    color: #b08d57;
-}
-
-/* Hero */
 .hero {
-    padding: 120px 20px;
     text-align: center;
-    background: linear-gradient(to right, #ffffff, #eaeaea);
+    padding: 100px 20px;
+    background: linear-gradient(to right, #1f2a36, #2e4057);
+    color: white;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.designation {
-    font-size: 18px;
-    color: #444;
-}
-
-.sub {
-    font-size: 15px;
-    margin-top: 8px;
-    color: #777;
-}
-
-/* Sections */
-.section {
+/* Slider Section */
+.slider-section {
     padding: 80px 20px;
     text-align: center;
 }
 
-.section h2::after {
-    content: "";
-    width: 80px;
-    height: 3px;
-    background: #b08d57;
-    display: block;
-    margin: 10px auto;
+.slider-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.light {
-    background: #ffffff;
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
 }
 
-.dark {
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slide-card {
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.slide-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1f2a36;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.left {
+    left: -20px;
+}
+
+.right {
+    right: -20px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    padding: 80px 20px;
     background: #1f2a36;
     color: white;
 }
 
-/* Grid */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card h3 {
-    color: #b08d57;
-}
-
-.card ul {
-    list-style: none;
-    padding: 0;
-    line-height: 1.8;
-}
-
-/* Contact */
-.contact-info {
-    font-size: 18px;
-    margin: 15px 0;
-}
-
-.contact-info a {
-    color: #b08d57;
+.contact a {
+    color: #25D366;
     text-decoration: none;
 }
 
+/* WhatsApp Button */
 .whatsapp-btn {
     display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #b08d57;
-    border-radius: 4px;
+    margin-top: 20px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
 .whatsapp-btn:hover {
-    background: #b08d57;
-    color: white;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    color: #aaa;
-    font-size: 14px;
-}
+    transform:
