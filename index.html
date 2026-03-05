@@ -187,6 +187,27 @@
     .scroll-cue i{font-size:14px;color:var(--gold-muted);}
     @keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
 
+    /* Wonder location label — bottom right badge */
+    .wonder-label{
+        position:absolute;
+        bottom:52px;left:60px;
+        z-index:10;
+        font-family:'Cormorant Garamond',serif;
+        font-size:11px;
+        letter-spacing:3px;
+        text-transform:uppercase;
+        color:rgba(201,168,76,0.55);
+        display:flex;align-items:center;gap:10px;
+        opacity:0;
+        transition:opacity 1s ease 1.2s;
+    }
+    .wonder-label::before{
+        content:'';display:block;
+        width:24px;height:1px;
+        background:rgba(201,168,76,0.35);
+    }
+    .slide.is-active .wonder-label{opacity:1;}
+
     /* MARQUEE */
     .marquee-strip{background:var(--gold);padding:14px 0;overflow:hidden;}
     .marquee-track{display:flex;gap:60px;white-space:nowrap;animation:marqueeRun 22s linear infinite;}
@@ -216,7 +237,23 @@
     .svc-item-tile:hover{background:#141414;}
     .svc-tile-icon{width:38px;height:38px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;color:var(--gold-muted);margin-top:2px;}
     .svc-tile-text h4{font-size:14px;color:var(--text);font-weight:500;margin-bottom:4px;line-height:1.3;}
-    .svc-tile-text p{font-size:12px;color:var(--text-dim);line-height:1.6;}
+    .svc-tile-text p{font-size:12px;color:var(--text-dim);line-height:1.6;margin-bottom:10px;}
+
+    /* Sub-services tag list */
+    .sub-services{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+    .sub-tag{
+        font-size:10px;letter-spacing:0.5px;
+        color:var(--text-dim);
+        background:#0a0a0a;
+        border:1px solid #1a1a1a;
+        padding:4px 10px;
+        display:flex;align-items:center;gap:5px;
+        transition:all var(--t) var(--ease);
+        white-space:nowrap;
+    }
+    .sub-tag i{font-size:7px;color:var(--gold-muted);}
+    .svc-item-tile:hover .sub-tag{border-color:var(--border-gold);color:var(--text-mid);}
+    .svc-item-tile:hover .sub-tag i{color:var(--gold);}
 
     /* ABOUT */
     #about{display:grid;grid-template-columns:1fr 1fr;min-height:680px;}
@@ -490,49 +527,131 @@
 
 <!-- HERO -->
 <section id="hero">
+    <!-- ═══════════════════════════════════════════════
+         7 WONDERS OF THE WORLD — International Tax Focus
+    ═══════════════════════════════════════════════ -->
+
+    <!-- Slide 1: Taj Mahal, India — home ground, global symbol -->
     <div class="slide is-active" data-idx="0">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1920&q=80');background-position:center 40%;"></div>
-        <div class="slide-overlay"></div>
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80');background-position:center 55%;"></div>
+        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(7,5,2,0.62) 52%,rgba(20,12,0,0.25) 100%);"></div>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow">Chartered Accountant · Ahmedabad</p>
+            <p class="slide-eyebrow"><i class="fa fa-location-dot" style="font-size:10px;"></i> &nbsp;Ahmedabad, India · International Tax Consultants</p>
             <h1 class="slide-title">Beyond<br><em>Compliance.</em></h1>
-            <p class="slide-desc">Specialized advisory in International Taxation, GST Strategy, and Complex Tax Litigation for discerning businesses and NRI clients.</p>
+            <p class="slide-desc">Specialized advisory in International Taxation, GST Strategy, and Complex Tax Litigation — rooted in India, serving clients across the globe.</p>
             <div class="slide-actions">
                 <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Consult Now</a>
                 <a href="#about" class="btn-ghost">About the Practice</a>
             </div>
         </div></div>
+        <div class="wonder-label">Taj Mahal · Agra, India</div>
     </div>
+
+    <!-- Slide 2: Great Wall of China — DTAA with China/Asia -->
     <div class="slide" data-idx="1">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1920&q=80');background-position:center 60%;"></div>
-        <div class="slide-overlay"></div>
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
+        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92) 0%,rgba(5,5,5,0.60) 52%,rgba(0,5,10,0.25) 100%);"></div>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow">International Taxation</p>
+            <p class="slide-eyebrow"><i class="fa fa-globe" style="font-size:10px;"></i> &nbsp;International Taxation · DTAA · Cross-Border Advisory</p>
             <h1 class="slide-title">Global Tax.<br><em>Local Insight.</em></h1>
-            <p class="slide-desc">NRI taxation, DTAA benefits, Form 15CA/15CB, and cross-border remittance strategy — navigated with precision.</p>
+            <p class="slide-desc">Leveraging India's network of 90+ Double Taxation Avoidance Agreements — we navigate cross-border transactions with precision and treaty expertise.</p>
             <div class="slide-actions">
                 <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> Our Services</a>
                 <a href="#insights" class="btn-ghost">Read Insights</a>
             </div>
         </div></div>
+        <div class="wonder-label">Great Wall · China</div>
     </div>
+
+    <!-- Slide 3: Machu Picchu, Peru — FEMA/Outbound investment -->
     <div class="slide" data-idx="2">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
-        <div class="slide-overlay"></div>
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80');background-position:center 40%;"></div>
+        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92) 0%,rgba(4,6,4,0.60) 52%,rgba(0,8,4,0.25) 100%);"></div>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow">Tax Litigation &amp; Advisory</p>
+            <p class="slide-eyebrow"><i class="fa fa-arrows-left-right" style="font-size:10px;"></i> &nbsp;NRI Taxation · FEMA · Outbound Investment</p>
+            <h1 class="slide-title">Cross-Border.<br><em>Without Borders.</em></h1>
+            <p class="slide-desc">Form 15CA/15CB, NRI compliance, repatriation planning and outbound investment structuring — for the global Indian and multinational enterprise.</p>
+            <div class="slide-actions">
+                <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> International Tax</a>
+                <a href="#contact" class="btn-ghost">Get in Touch</a>
+            </div>
+        </div></div>
+        <div class="wonder-label">Machu Picchu · Peru</div>
+    </div>
+
+    <!-- Slide 4: Chichen Itza, Mexico — GST & Indirect Tax -->
+    <div class="slide" data-idx="3">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1920&q=80');background-position:center 45%;"></div>
+        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(6,5,2,0.62) 52%,rgba(15,10,0,0.25) 100%);"></div>
+        <div class="container"><div class="slide-content">
+            <p class="slide-eyebrow"><i class="fa fa-receipt" style="font-size:10px;"></i> &nbsp;GST Advisory · Refunds · ITC · Litigation</p>
+            <h1 class="slide-title">Structured.<br><em>Compliant.</em></h1>
+            <p class="slide-desc">GST refund recovery, ITC optimization, departmental audit representation and GST litigation — end-to-end indirect tax management for your business.</p>
+            <div class="slide-actions">
+                <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> GST Services</a>
+                <a href="#contact" class="btn-ghost">Consult Now</a>
+            </div>
+        </div></div>
+        <div class="wonder-label">Chichen Itza · Mexico</div>
+    </div>
+
+    <!-- Slide 5: Colosseum, Rome — Tax Litigation / Fighting in forums -->
+    <div class="slide" data-idx="4">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
+        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(5,4,3,0.60) 52%,rgba(10,6,0,0.25) 100%);"></div>
+        <div class="container"><div class="slide-content">
+            <p class="slide-eyebrow"><i class="fa fa-gavel" style="font-size:10px;"></i> &nbsp;Tax Litigation · Scrutiny · ITAT · Appeals</p>
             <h1 class="slide-title">Your Advocate.<br><em>In Every Forum.</em></h1>
-            <p class="slide-desc">Scrutiny assessments, GST refund recovery, search &amp; seizure — represented with rigour and depth.</p>
+            <p class="slide-desc">Scrutiny assessments, CIT(A) and ITAT appeals, search &amp; seizure matters — represented with legal rigour and forensic preparation at every tier.</p>
             <div class="slide-actions">
                 <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Get in Touch</a>
                 <a href="#resources" class="btn-ghost">Download Resources</a>
             </div>
         </div></div>
+        <div class="wonder-label">Colosseum · Rome, Italy</div>
     </div>
+
+    <!-- Slide 6: Christ the Redeemer, Brazil — Transfer Pricing / OECD -->
+    <div class="slide" data-idx="5">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1920&q=80');background-position:center 35%;"></div>
+        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(4,5,6,0.60) 52%,rgba(0,5,12,0.25) 100%);"></div>
+        <div class="container"><div class="slide-content">
+            <p class="slide-eyebrow"><i class="fa fa-scale-balanced" style="font-size:10px;"></i> &nbsp;Transfer Pricing · OECD · Berry Ratio · BEPS</p>
+            <h1 class="slide-title">Arm's Length.<br><em>Every Transaction.</em></h1>
+            <p class="slide-desc">Transfer pricing documentation, Berry Ratio benchmarking, APA advisory, and TP audit representation — aligned with OECD guidelines and Indian TP jurisprudence.</p>
+            <div class="slide-actions">
+                <a href="#insights" class="btn-gold"><i class="fa fa-arrow-right"></i> Read Research</a>
+                <a href="#contact" class="btn-ghost">Advisory Enquiry</a>
+            </div>
+        </div></div>
+        <div class="wonder-label">Christ the Redeemer · Brazil</div>
+    </div>
+
+    <!-- Slide 7: Petra, Jordan — DTAA Middle East / NRI Gulf -->
+    <div class="slide" data-idx="6">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
+        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(6,4,2,0.60) 52%,rgba(15,8,0,0.25) 100%);"></div>
+        <div class="container"><div class="slide-content">
+            <p class="slide-eyebrow"><i class="fa fa-user-tie" style="font-size:10px;"></i> &nbsp;NRI Advisory · UAE · Gulf · Middle East DTAA</p>
+            <h1 class="slide-title">Wherever You Are.<br><em>We've Got India.</em></h1>
+            <p class="slide-desc">Specialized NRI tax advisory for Gulf-based Indians — UAE DTAA benefits, repatriation planning, Form 15CA/15CB, and Indian income compliance made seamless.</p>
+            <div class="slide-actions">
+                <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> NRI Services</a>
+                <a href="#contact" class="btn-ghost">Consult Now</a>
+            </div>
+        </div></div>
+        <div class="wonder-label">Petra · Jordan</div>
+    </div>
+
+    <!-- Dot controls — 7 dots -->
     <div class="hero-controls" id="hero-dots">
         <div class="hero-dot is-active" data-to="0"></div>
         <div class="hero-dot" data-to="1"></div>
         <div class="hero-dot" data-to="2"></div>
+        <div class="hero-dot" data-to="3"></div>
+        <div class="hero-dot" data-to="4"></div>
+        <div class="hero-dot" data-to="5"></div>
+        <div class="hero-dot" data-to="6"></div>
     </div>
     <div class="scroll-cue"><span>Scroll</span><i class="fa fa-chevron-down"></i></div>
 </section>
@@ -555,15 +674,24 @@
 <section id="services-grid">
     <div class="container">
         <div class="services-section-header reveal">
-            <div><span class="section-eyebrow">Practice Areas</span><h2 class="section-title">Our <em>Services</em></h2></div>
+            <div><span class="section-eyebrow">Three Pillars of Practice</span><h2 class="section-title">Our <em>Services</em></h2></div>
             <span class="section-count">02</span>
         </div>
     </div>
     <div class="services-layout">
         <div class="services-categories" id="svc-cats">
-            <div class="svc-cat is-active" data-svc="s-it"><i class="fa fa-calculator"></i> Income Tax</div>
-            <div class="svc-cat" data-svc="s-gst"><i class="fa fa-receipt"></i> GST Advisory</div>
-            <div class="svc-cat" data-svc="s-intl"><i class="fa fa-globe"></i> International Tax</div>
+            <div class="svc-cat is-active" data-svc="s-it">
+                <i class="fa fa-calculator"></i>
+                <div><span style="display:block;font-weight:500;">Income Tax</span><span style="display:block;font-size:10px;color:#444;margin-top:3px;text-transform:none;letter-spacing:0;font-weight:300;">Advisory &amp; Litigation</span></div>
+            </div>
+            <div class="svc-cat" data-svc="s-gst">
+                <i class="fa fa-receipt"></i>
+                <div><span style="display:block;font-weight:500;">GST Advisory</span><span style="display:block;font-size:10px;color:#444;margin-top:3px;text-transform:none;letter-spacing:0;font-weight:300;">Refunds, ITC &amp; Strategy</span></div>
+            </div>
+            <div class="svc-cat" data-svc="s-intl">
+                <i class="fa fa-globe"></i>
+                <div><span style="display:block;font-weight:500;">International Tax</span><span style="display:block;font-size:10px;color:#444;margin-top:3px;text-transform:none;letter-spacing:0;font-weight:300;">DTAA · 15CA/CB · NRI · TP</span></div>
+            </div>
         </div>
         <div class="services-detail">
             <!-- Income Tax -->
@@ -584,15 +712,88 @@
                 <h2 class="svc-panel-title">GST Advisory</h2>
                 <p class="svc-panel-desc">Complete GST lifecycle management — from registration and ITC optimization to complex refund recovery, departmental proceedings, and appellate representation.</p>
                 <div class="svc-items-grid">
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div><div class="svc-tile-text"><h4>GST Refund Recovery</h4><p>End-to-end refund filing and recovery for exporters, inverted duty structure applicants, and SEZ suppliers.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-coins"></i></div><div class="svc-tile-text"><h4>ITC Optimization</h4><p>Strategic input tax credit planning to maximize legitimate credits and improve business cash flow.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-stethoscope"></i></div><div class="svc-tile-text"><h4>GST Health Check</h4><p>Periodic review of returns, GSTR-2B reconciliations, and identification of compliance gaps before they escalate.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>GST Litigation &amp; Appeals</h4><p>Representation before adjudicating authorities, First Appellate Authority, and GST Appellate Tribunal.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-clipboard-check"></i></div><div class="svc-tile-text"><h4>Departmental Audit</h4><p>Full support and representation during GST departmental audit and special audit proceedings.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-file-code"></i></div><div class="svc-tile-text"><h4>E-Invoice &amp; E-Way Bill</h4><p>Implementation, exception handling, and reconciliation under the e-invoicing and e-way bill frameworks.</p></div></div>
+                    <!-- Core services -->
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div>
+                        <div class="svc-tile-text">
+                            <h4>GST Refund Recovery</h4>
+                            <p>End-to-end refund filing and recovery for exporters, inverted duty structure applicants, and SEZ suppliers.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Export Refunds (IGST &amp; ITC)</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Inverted Duty Structure</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> SEZ Supplier Refunds</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Excess Cash Ledger</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-coins"></i></div>
+                        <div class="svc-tile-text">
+                            <h4>ITC Optimization</h4>
+                            <p>Strategic input tax credit planning to maximize legitimate credits and improve business cash flow.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GSTR-2B Reconciliation</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Blocked Credit (Sec. 17(5))</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> ITC Reversal Advisory</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Credit Chain Structuring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-stethoscope"></i></div>
+                        <div class="svc-tile-text">
+                            <h4>GST Registration &amp; Compliance</h4>
+                            <p>Periodic health checks, registration, amendment, and cancellation across all GST return types.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GST Registration &amp; Amendment</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GSTR-1 / 3B / 9 / 9C Filing</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Annual Return (GSTR-9/9C)</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Compliance Health Check</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-gavel"></i></div>
+                        <div class="svc-tile-text">
+                            <h4>GST Litigation &amp; Notices</h4>
+                            <p>SCN replies, adjudication hearings, appeals and representation across all tiers of GST dispute resolution.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> SCN Reply &amp; Show Cause</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> First Appellate Authority</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GST Appellate Tribunal</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> High Court Writ Matters</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-clipboard-check"></i></div>
+                        <div class="svc-tile-text">
+                            <h4>GST on Specific Sectors</h4>
+                            <p>Sector-specific GST advisory for real estate, imports/exports, e-commerce and works contracts.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GST on Real Estate</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GST on Import &amp; Export</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> E-Commerce Operators</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Works Contract GST</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-file-code"></i></div>
+                        <div class="svc-tile-text">
+                            <h4>E-Invoice &amp; Departmental Audit</h4>
+                            <p>Implementation of e-invoicing, e-way bill compliance and full support during departmental audits.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> E-Invoice Implementation</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> E-Way Bill Compliance</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Departmental Audit Support</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Special Audit (Sec. 66)</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- International Tax — 3 pillar, with DTAA and 15CA/CB as hero services -->
+            <!-- International Tax — DTAA and 15CA/CB as hero services -->
             <div class="svc-panel" id="s-intl">
                 <h2 class="svc-panel-title">International Taxation</h2>
                 <p class="svc-panel-desc">High-value cross-border advisory for NRIs, multinationals, and global professionals — built on India's network of 90+ DTAAs, FEMA, and robust transfer pricing frameworks.</p>
@@ -601,31 +802,83 @@
                         <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-handshake"></i></div>
                         <div class="svc-tile-text">
                             <h4 style="color:var(--gold);">DTAA Benefits &amp; Treaty Analysis</h4>
-                            <p>Structured application of Double Taxation Avoidance Agreements to legally minimise withholding tax, claim treaty relief, and prevent double taxation on cross-border income.</p>
+                            <p>Structured application of Double Taxation Avoidance Agreements to minimise withholding tax, claim treaty relief, and prevent double taxation on cross-border income.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Treaty Eligibility Assessment</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Withholding Tax Minimisation</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Tie-Breaker Rule Advisory</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Tax Residency Certificate</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Principal Purpose Test (PPT)</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Treaty Shopping Defence</span>
+                            </div>
                         </div>
                     </div>
                     <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);">
                         <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-file-signature"></i></div>
                         <div class="svc-tile-text">
                             <h4 style="color:var(--gold);">Form 15CA &amp; 15CB Certification</h4>
-                            <p>Expert CA certification under Section 195 for all categories of foreign remittances — including royalties, professional fees, dividends, and loan repayments — with full treaty analysis.</p>
+                            <p>Expert CA certification under Section 195 for all categories of foreign remittances — royalties, professional fees, dividends, loan repayments — with full treaty analysis.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> All Parts — 15CA (I/II/III/IV)</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> 15CB Chartered Accountant Cert.</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Royalty &amp; FTS Remittances</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Dividend &amp; Loan Repayments</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Software &amp; Technical Fees</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Lower TDS Certificate (Sec. 197)</span>
+                            </div>
                         </div>
                     </div>
                     <div class="svc-item-tile">
                         <div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div>
-                        <div class="svc-tile-text"><h4>NRI Taxation &amp; Compliance</h4><p>Residency determination, ITR filing, TDS on property and rent, DTAA claims, and repatriation planning for Non-Resident Indians.</p></div>
+                        <div class="svc-tile-text">
+                            <h4>NRI Taxation &amp; Compliance</h4>
+                            <p>Residency determination, ITR filing, TDS on property and rent, DTAA claims, and repatriation planning for Non-Resident Indians.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Residency (NR/RNOR/R) Determination</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> NRI ITR Filing &amp; TDS Refund</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> TDS on Property Sale by NRI</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Repatriation of Funds from India</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="svc-item-tile">
                         <div class="svc-tile-icon"><i class="fa fa-arrows-left-right"></i></div>
-                        <div class="svc-tile-text"><h4>Cross-Border Remittance Strategy</h4><p>Tax-efficient structuring of outbound and inbound remittances, repatriation of profits, and dividend distributions under FEMA and the IT Act.</p></div>
+                        <div class="svc-tile-text">
+                            <h4>Cross-Border Remittance &amp; FEMA</h4>
+                            <p>Tax-efficient structuring of outbound/inbound remittances, outbound investments, and FEMA compliance management.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Outbound Investment (ODI)</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> FDI &amp; FPI Advisory</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> FEMA Compounding</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> ECB &amp; Overseas Borrowing</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-shield-halved"></i></div>
-                        <div class="svc-tile-text"><h4>FEMA &amp; RBI Compliance</h4><p>Compliance management under the Foreign Exchange Management Act for investments, overseas borrowings, and compounding of FEMA contraventions.</p></div>
+                        <div class="svc-tile-icon"><i class="fa fa-building-columns"></i></div>
+                        <div class="svc-tile-text">
+                            <h4>Foreign Company Taxation in India</h4>
+                            <p>PE exposure analysis, branch profit tax, effective management (POEM), and compliance for foreign entities operating in India.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Permanent Establishment Advisory</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> POEM — Place of Effective Mgmt.</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Branch / Liaison Office Tax</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> India Entry Tax Structuring</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="svc-item-tile">
                         <div class="svc-tile-icon"><i class="fa fa-scale-balanced"></i></div>
-                        <div class="svc-tile-text"><h4>Transfer Pricing Advisory</h4><p>Arm's length documentation, Berry Ratio benchmarking, and representation before the Transfer Pricing Officer under OECD guidelines.</p></div>
+                        <div class="svc-tile-text">
+                            <h4>Transfer Pricing &amp; BEPS</h4>
+                            <p>Arm's length documentation, Berry Ratio benchmarking, APA advisory, and BEPS / Pillar Two compliance for multinationals.</p>
+                            <div class="sub-services">
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> TP Documentation (Sec. 92D)</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Berry Ratio Benchmarking</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> APA — Advance Pricing Agreement</span>
+                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> BEPS &amp; Pillar Two Compliance</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -861,9 +1114,10 @@
                 <ul>
                     <li><a href="#services-grid">Income Tax Advisory</a></li>
                     <li><a href="#services-grid">GST Advisory</a></li>
-                    <li><a href="#services-grid">International Tax</a></li>
-                    <li><a href="#services-grid">DTAA &amp; 15CA/15CB</a></li>
-                    <li><a href="#services-grid">Transfer Pricing</a></li>
+                    <li><a href="#services-grid">International Taxation</a></li>
+                    <li><a href="#services-grid">DTAA &amp; Treaty Benefits</a></li>
+                    <li><a href="#services-grid">Form 15CA / 15CB</a></li>
+                    <li><a href="#services-grid">NRI Tax Compliance</a></li>
                 </ul>
             </div>
             <div class="footer-col">
