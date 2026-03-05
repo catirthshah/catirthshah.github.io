@@ -4,88 +4,942 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CA Tirth Shah | International Tax Advisory</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Chartered Accountant specializing in International Taxation, GST Advisory, and Complex Tax Litigation. Based in Ahmedabad, India.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        :root { --black: #0a0a0a; --gold: #D4AF37; --gold-muted: #8E6D21; --text: #ffffff; --card: #121212; }
-        
-        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--black); color: var(--text); overflow-x: hidden; scroll-behavior: smooth; }
-        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        /* ===========================
+           CSS VARIABLES & RESET
+        =========================== */
+        :root {
+            --black: #080808;
+            --black-2: #0f0f0f;
+            --card: #111111;
+            --gold: #C9A84C;
+            --gold-light: #E8C97A;
+            --gold-muted: #7A5C20;
+            --gold-dim: rgba(201, 168, 76, 0.12);
+            --text: #f0ede6;
+            --text-muted: #999890;
+            --border: #1e1e1e;
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-        /* HEADER & NAVIGATION */
-        header { position: sticky; top: 0; background: rgba(0, 0, 0, 0.95); border-bottom: 1px solid var(--gold-muted); z-index: 9999; backdrop-filter: blur(10px); }
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        .logo { font-family: "Playfair Display"; font-size: 26px; color: var(--gold); text-decoration: none; letter-spacing: 1px; }
-        
-        nav { display: flex; align-items: center; }
-        nav a { color: white; margin-left: 30px; text-decoration: none; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; cursor: pointer; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--black);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+
+        /* ===========================
+           HEADER & NAVIGATION
+        =========================== */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 8, 8, 0.97);
+            border-bottom: 1px solid var(--gold-muted);
+            z-index: 9999;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: var(--text-muted);
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        nav a {
+            color: #ccc;
+            padding: 8px 18px;
+            text-decoration: none;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
         nav a:hover { color: var(--gold); }
 
-        /* MEGA MENU FIX (KPC STYLE) */
-        .services-link-wrapper { position: static; } /* Full-width alignment */
+        /* Hamburger for mobile */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 1.5px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        /* ===========================
+           MEGA MENU
+        =========================== */
+        .services-link-wrapper {
+            position: static;
+        }
+
         .mega {
-            position: absolute; top: 100%; left: 0; width: 100%; background: #0f0f0f;
-            border-bottom: 3px solid var(--gold); padding: 50px 0; display: none;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.8); z-index: 1000;
+            position: fixed;
+            top: 62px; /* matches header height */
+            left: 0;
+            width: 100%;
+            background: #0c0c0c;
+            border-bottom: 2px solid var(--gold-muted);
+            padding: 50px 0;
+            display: none;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+            z-index: 9998;
         }
-        .services-link-wrapper:hover .mega { display: block; animation: slideDown 0.4s ease-out forwards; }
-        .mega-content { display: flex; max-width: 1200px; margin: auto; padding: 0 20px; }
-        
-        .menu-left { width: 30%; border-right: 1px solid #333; }
-        .menu-left div { padding: 15px 20px; font-size: 16px; cursor: pointer; transition: 0.3s; color: #888; display: flex; align-items: center; }
-        .menu-left div i { margin-right: 15px; width: 20px; text-align: center; }
-        .menu-left div.active-tab, .menu-left div:hover { color: var(--gold); background: rgba(212, 175, 55, 0.05); }
 
-        .menu-right { width: 70%; padding-left: 60px; }
+        .services-link-wrapper:hover .mega,
+        .mega:hover { display: block; }
+
+        .mega-content {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            gap: 0;
+        }
+
+        .menu-left {
+            width: 28%;
+            border-right: 1px solid #222;
+            padding-right: 30px;
+        }
+
+        .menu-left div {
+            padding: 14px 16px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            letter-spacing: 0.5px;
+            border-left: 2px solid transparent;
+        }
+
+        .menu-left div i {
+            width: 18px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .menu-left div.active-tab,
+        .menu-left div:hover {
+            color: var(--gold);
+            border-left-color: var(--gold);
+            background: var(--gold-dim);
+        }
+
+        .menu-right {
+            width: 72%;
+            padding-left: 60px;
+        }
+
         .tab-content { display: none; }
-        .tab-content.active { display: block; animation: fadeIn 0.5s ease; }
-        .tab-content h3 { color: var(--gold); font-family: "Playfair Display"; margin-top: 0; }
-        .tab-content p { color: #ccc; line-height: 1.8; }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
 
-        /* HERO SECTION */
+        .tab-content h3 {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .tab-content p {
+            color: #bbb;
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        .tab-content ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 40px;
+            margin-top: 10px;
+        }
+
+        .tab-content ul li {
+            font-size: 14px;
+            color: #bbb;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.6;
+        }
+
+        .tab-content ul li::before {
+            content: '—';
+            color: var(--gold-muted);
+            flex-shrink: 0;
+        }
+
+        /* ===========================
+           HERO SECTION
+        =========================== */
         .hero {
-            height: 80vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-            url('https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&w=1350&q=80'); 
-            background-size: cover; background-position: center; background-attachment: fixed;
-            display: flex; align-items: center; text-align: center;
+            min-height: 88vh;
+            background:
+                linear-gradient(to bottom, rgba(8,8,8,0.5) 0%, rgba(8,8,8,0.85) 60%, rgba(8,8,8,1) 100%),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
         }
-        .hero h1 { font-family: "Playfair Display"; font-size: 60px; color: var(--gold); margin: 0; }
-        .hero p { font-size: 20px; max-width: 800px; margin: 20px auto; color: #ddd; }
 
-        /* ABOUT SECTION (RE-INCLUDED & FIXED) */
-        .about-section { padding: 100px 0; background: #080808; }
-        .about-flex { display: flex; align-items: center; gap: 60px; }
-        .about-image { width: 350px; height: 350px; flex-shrink: 0; border: 1px solid var(--gold); padding: 10px; }
-        .about-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%); }
-        .about-text h2 { font-family: "Playfair Display"; font-size: 40px; color: var(--gold); margin-top: 0; }
-        .about-text p { font-size: 16px; color: #ccc; margin-bottom: 20px; }
+        .hero-content { width: 100%; }
 
-        /* ARTICLES & RESOURCES */
-        section { padding: 100px 0; }
-        .article-card { background: var(--card); border: 1px solid #222; padding: 45px; margin-bottom: 30px; }
-        .article-card h3 { color: var(--gold); font-family: "Playfair Display"; font-size: 24px; }
-        .pdf-link { 
-            display: inline-flex; align-items: center; background: var(--gold); color: black; 
-            padding: 12px 25px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; 
+        .hero-eyebrow {
+            font-size: 11px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 400;
+            margin-bottom: 24px;
+            font-family: 'Cormorant Garamond', serif;
         }
-        .pdf-link:hover { box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); transform: translateY(-3px); }
 
-        /* ANIMATIONS */
-        @keyframes slideDown { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .reveal { opacity: 0; transform: translateY(40px); transition: 1s ease; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 6vw, 80px);
+            color: var(--text);
+            margin: 0 0 8px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .hero h1 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(18px, 2.5vw, 24px);
+            max-width: 700px;
+            margin: 24px auto 40px;
+            color: #c0bdb5;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #000;
+            padding: 14px 36px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            box-shadow: 0 0 30px rgba(201, 168, 76, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--gold-muted);
+            color: var(--gold);
+            padding: 14px 36px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            background: var(--gold-dim);
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            background: var(--black-2);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 30px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 10px 0;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: var(--gold);
+            font-weight: 700;
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 6px;
+            display: block;
+        }
+
+        /* ===========================
+           ABOUT SECTION
+        =========================== */
+        .about-section {
+            padding: 110px 0;
+            background: var(--black);
+        }
+
+        .about-flex {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border: 1px solid var(--gold-muted);
+            padding: 10px;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(15%);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            right: 12px;
+            bottom: 12px;
+            border: 1px solid var(--gold-dim);
+            z-index: -1;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--gold);
+            color: #000;
+            padding: 14px 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .about-text { padding-top: 10px; }
+
+        .section-tag {
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(30px, 3.5vw, 46px);
+            color: var(--text);
+            margin-bottom: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .about-text h2 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .about-lead {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: #d0cdc5;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .about-text p {
+            font-size: 15px;
+            color: #aaa;
+            margin-bottom: 18px;
+            line-height: 1.9;
+        }
+
+        .about-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .credential-tag {
+            border: 1px solid var(--gold-muted);
+            color: var(--gold);
+            padding: 7px 16px;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .about-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold-muted);
+            margin: 32px 0;
+        }
+
+        /* ===========================
+           EXPERTISE SECTION
+        =========================== */
+        .expertise-section {
+            padding: 100px 0;
+            background: var(--black-2);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 3vw, 40px);
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .section-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            color: #1a1a1a;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+        }
+
+        .expertise-card {
+            background: var(--card);
+            padding: 50px 36px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .expertise-card:hover { background: #151515; }
+        .expertise-card:hover::before { transform: scaleX(1); }
+
+        .expertise-icon {
+            font-size: 28px;
+            color: var(--gold-muted);
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+
+        .expertise-card:hover .expertise-icon { color: var(--gold); }
+
+        .expertise-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--text);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .expertise-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .expertise-card ul {
+            list-style: none;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        .expertise-card ul li {
+            font-size: 13px;
+            color: #888;
+            padding: 6px 0;
+            border-bottom: 1px solid #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .expertise-card ul li::before {
+            content: '›';
+            color: var(--gold-muted);
+            font-size: 16px;
+        }
+
+        /* ===========================
+           ARTICLES SECTION
+        =========================== */
+        .articles-section {
+            padding: 100px 0;
+            background: var(--black);
+        }
+
+        .article-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 50px;
+            margin-bottom: 24px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--gold);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: var(--transition);
+        }
+
+        .article-card:hover { border-color: #2a2a2a; }
+        .article-card:hover::before { transform: scaleY(1); }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .article-tag {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid var(--gold-muted);
+            padding: 4px 12px;
+        }
+
+        .article-date {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .article-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: var(--text);
+            margin-bottom: 18px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .article-card p {
+            font-size: 15px;
+            color: #999;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .article-card strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .article-card .formula-block {
+            background: #0a0a0a;
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--gold-muted);
+            padding: 18px 24px;
+            margin: 20px 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: var(--gold-light);
+            letter-spacing: 0.5px;
+        }
+
+        /* ===========================
+           RESOURCES SECTION
+        =========================== */
+        .resources-section {
+            padding: 100px 0;
+            background: var(--black-2);
+        }
+
+        .resource-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .resource-card:hover { border-color: var(--gold-muted); }
+
+        .resource-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: var(--text);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .resource-card p {
+            font-size: 15px;
+            color: #999;
+            max-width: 560px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold);
+            color: #000;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .pdf-link:hover {
+            background: var(--gold-light);
+            box-shadow: 0 0 30px rgba(201, 168, 76, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* ===========================
+           CONTACT SECTION
+        =========================== */
+        .contact-section {
+            padding: 120px 0;
+            background: var(--black);
+            text-align: center;
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, var(--gold-muted));
+        }
+
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 52px);
+            color: var(--text);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .contact-section h2 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .contact-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            background: var(--card);
+            padding: 40px 30px;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover { background: #141414; }
+
+        .contact-item i {
+            font-size: 22px;
+            color: var(--gold-muted);
+            margin-bottom: 16px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover i { color: var(--gold); }
+
+        .contact-item a,
+        .contact-item p {
+            font-size: 14px;
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .contact-item a:hover { color: var(--gold); }
+
+        .contact-item .contact-label {
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* ===========================
+           FOOTER
+        =========================== */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 11px;
+            color: #444;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-size: 11px;
+            color: #444;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        /* ===========================
+           ANIMATIONS
+        =========================== */
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+
+        /* ===========================
+           RESPONSIVE
+        =========================== */
+        @media (max-width: 900px) {
+            .about-flex { grid-template-columns: 1fr; }
+            .about-image { max-width: 320px; }
+            .about-badge { right: 0; bottom: -16px; }
+            .expertise-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item:nth-child(2) { border-right: none; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .mega { display: none !important; }
+        }
+
+        @media (max-width: 700px) {
+            nav { display: none; }
+            nav.open { display: flex; flex-direction: column; position: fixed; top: 62px; left: 0; width: 100%; background: #0a0a0a; padding: 20px; border-bottom: 1px solid var(--border); gap: 8px; z-index: 9998; }
+            .hamburger { display: flex; }
+            .hero { background-attachment: scroll; }
+            .about-flex { gap: 40px; }
+            .article-card { padding: 30px 24px; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+        }
     </style>
 </head>
 <body>
 
+<!-- ========================
+     HEADER
+========================= -->
 <header>
     <div class="container nav">
-        <a href="#" class="logo">CA TIRTH SHAH</a>
-        <nav>
+        <a href="#" class="logo">
+            CA TIRTH SHAH
+            <span>Chartered Accountant · Ahmedabad</span>
+        </a>
+        <nav id="main-nav">
             <a href="#about">About</a>
             <div class="services-link-wrapper">
-                <a href="#services">Services <i class="fa fa-chevron-down" style="font-size: 10px;"></i></a>
+                <a href="#services">Services <i class="fa fa-chevron-down" style="font-size:9px; margin-left:4px;"></i></a>
                 <div class="mega">
                     <div class="mega-content">
                         <div class="menu-left">
@@ -96,15 +950,39 @@
                         <div class="menu-right">
                             <div class="tab-content active" id="it">
                                 <h3>Income Tax Advisory</h3>
-                                <p>• Scrutiny Assessments & Appeals Representation<br>• Corporate Tax Strategy & Planning<br>• Search & Seizure Case Management<br>• Capital Gains Advisory</p>
+                                <p>End-to-end representation and strategic counsel across the income tax lifecycle.</p>
+                                <ul>
+                                    <li>Scrutiny Assessments & Appeals Representation</li>
+                                    <li>Corporate Tax Strategy & Planning</li>
+                                    <li>Search & Seizure Case Management</li>
+                                    <li>Capital Gains Advisory</li>
+                                    <li>Tax Audit & Compliance Support</li>
+                                    <li>Advance Ruling Applications</li>
+                                </ul>
                             </div>
                             <div class="tab-content" id="gst">
                                 <h3>GST Compliance & Strategy</h3>
-                                <p>• GST Refund Liasoning & Recovery<br>• Indirect Tax Health Checks<br>• GST Departmental Audit Assistance<br>• Strategic Input Tax Credit (ITC) Optimization</p>
+                                <p>Comprehensive GST advisory from registration to departmental proceedings.</p>
+                                <ul>
+                                    <li>GST Refund Liaisoning & Recovery</li>
+                                    <li>Indirect Tax Health Checks</li>
+                                    <li>GST Departmental Audit Assistance</li>
+                                    <li>Strategic Input Tax Credit (ITC) Optimization</li>
+                                    <li>GST Litigation & Appeals</li>
+                                    <li>E-invoice & E-way Bill Compliance</li>
+                                </ul>
                             </div>
                             <div class="tab-content" id="intl">
                                 <h3>International Taxation</h3>
-                                <p>• NRI Taxation & Compliance Management<br>• Double Taxation Avoidance Agreement (DTAA) Benefits<br>• Form 15CA & 15CB Certification<br>• Cross-Border Remittance Strategy</p>
+                                <p>Cross-border tax solutions for NRIs, multinationals, and global professionals.</p>
+                                <ul>
+                                    <li>NRI Taxation & Compliance Management</li>
+                                    <li>DTAA Benefits & Treaty Analysis</li>
+                                    <li>Form 15CA & 15CB Certification</li>
+                                    <li>Cross-Border Remittance Strategy</li>
+                                    <li>Transfer Pricing Documentation</li>
+                                    <li>FEMA & RBI Compliance</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -114,71 +992,241 @@
             <a href="#resources">Resources</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
     </div>
 </header>
 
+<!-- ========================
+     HERO
+========================= -->
 <section class="hero">
-    <div class="container reveal">
-        <h1>BEYOND COMPLIANCE.</h1>
-        <p>Specialized Advisory in International Taxation, GST Refunds, and Complex Litigations.</p>
-        <a href="#contact" class="btn" style="border: 1px solid var(--gold); padding: 15px 30px; color: var(--gold); text-decoration: none; margin-top: 20px; display: inline-block;">Consult Now</a>
+    <div class="container hero-content reveal">
+        <p class="hero-eyebrow">Chartered Accountant · Tax Advisory · Litigation</p>
+        <h1>Beyond<br><em>Compliance.</em></h1>
+        <p class="hero-sub">Specialized advisory in International Taxation, GST Refunds, and Complex Tax Litigations for businesses and NRI clients.</p>
+        <div class="hero-cta-group">
+            <a href="#contact" class="btn-primary">Schedule a Consultation</a>
+            <a href="#about" class="btn-outline">Learn More</a>
+        </div>
     </div>
 </section>
 
+<!-- Stats Bar -->
+<div class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years of Practice</span>
+            </div>
+            <div class="stat-item reveal reveal-delay-1">
+                <span class="stat-number">ICAI</span>
+                <span class="stat-label">Qualified Member</span>
+            </div>
+            <div class="stat-item reveal reveal-delay-2">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Core Specializations</span>
+            </div>
+            <div class="stat-item reveal reveal-delay-3">
+                <span class="stat-number">IND</span>
+                <span class="stat-label">Pan-India Advisory</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================
+     ABOUT
+========================= -->
 <section id="about" class="about-section">
-    <div class="container about-flex reveal">
-        <div class="about-image">
-            <img src="images/Profile.png" alt="CA Tirth Shah">
-        </div>
-        <div class="about-text">
-            <h2>About <span>Tirth Shah</span></h2>
-            <p>I am a Chartered Accountant specializing in Direct Tax, GST, and International Taxation with a focus on cross-border advisory and tax litigation.</p>
-            <p>My approach combines deep legal research with technical proficiency to help clients navigate the complexities of the Income-tax Act, GST law, and global tax treaties.</p>
-            <p>Currently, I focus on assisting NRI clients and high-scale businesses in optimizing their tax structures through judicial precedents and strategic planning.</p>
+    <div class="container">
+        <div class="about-flex reveal">
+            <div class="about-image-wrapper">
+                <div class="about-image">
+                    <img src="images/Profile.png" alt="CA Tirth Shah - Chartered Accountant, Ahmedabad">
+                </div>
+                <div class="about-badge">
+                    ACA<br>ICAI
+                </div>
+            </div>
+            <div class="about-text">
+                <span class="section-tag">About the Practitioner</span>
+                <h2>Tirth Shah,<br><em>CA</em></h2>
+                <p class="about-lead">A Chartered Accountant with a focused practice in Direct Tax, GST, and International Taxation — combining deep legal research with strategic foresight.</p>
+                <div class="about-divider"></div>
+                <p>I am a qualified Chartered Accountant and a member of the Institute of Chartered Accountants of India (ICAI), with specialized expertise in Direct Tax, Goods and Services Tax (GST), and International Taxation. My practice is built on the principle that genuine advisory goes far beyond mechanical compliance — it demands a thorough understanding of the law, evolving judicial precedents, and the client's unique economic context.</p>
+                <p>My approach integrates rigorous legal research with practical, results-oriented strategy. I assist clients in navigating the full spectrum of the Income-tax Act, GST legislation, and India's extensive network of Double Taxation Avoidance Agreements (DTAAs), ensuring that every engagement is rooted in technical accuracy and commercial awareness.</p>
+                <p>A significant portion of my practice is dedicated to NRI clients and high-value businesses seeking to optimize their tax structures within the bounds of law. I appear before tax authorities, assist in departmental audits, and manage cross-border remittance transactions requiring Form 15CA/15CB certification. I have also developed a keen interest in Transfer Pricing — particularly in the analysis and application of financial metrics such as the Berry Ratio under the Transactional Net Margin Method (TNMM).</p>
+                <p>I am deeply passionate about writing and knowledge dissemination. Through technical articles and research papers, I aim to make complex tax law accessible to practitioners and businesses alike. My work has covered topics including transfer pricing methodologies, DTAA treaty shopping, ITC optimization, and the evolving jurisprudence around search and seizure assessments.</p>
+                <div class="about-credentials">
+                    <span class="credential-tag">ACA – ICAI</span>
+                    <span class="credential-tag">Direct Tax</span>
+                    <span class="credential-tag">International Tax</span>
+                    <span class="credential-tag">GST Advisory</span>
+                    <span class="credential-tag">Transfer Pricing</span>
+                    <span class="credential-tag">Tax Litigation</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="articles" class="articles">
-    <div class="container reveal">
-        <h2 style="font-family: 'Playfair Display'; text-align: left; border-left: 4px solid var(--gold); padding-left: 20px; margin-bottom: 50px;">Technical Insights</h2>
-        <div class="article-card">
+<!-- ========================
+     EXPERTISE / SERVICES
+========================= -->
+<section id="services" class="expertise-section">
+    <div class="container">
+        <div class="section-header reveal">
+            <div>
+                <span class="section-tag">Practice Areas</span>
+                <h2>Core Expertise</h2>
+            </div>
+            <span class="section-number">02</span>
+        </div>
+        <div class="expertise-grid">
+            <div class="expertise-card reveal">
+                <div class="expertise-icon"><i class="fa fa-calculator"></i></div>
+                <h3>Income Tax</h3>
+                <p>Comprehensive direct tax advisory for corporates, HNIs, and individuals across assessment, appeals, and planning.</p>
+                <ul>
+                    <li>Scrutiny Assessments & Representation</li>
+                    <li>Corporate Tax Strategy</li>
+                    <li>Search & Seizure Matters</li>
+                    <li>Capital Gains Advisory</li>
+                </ul>
+            </div>
+            <div class="expertise-card reveal reveal-delay-1">
+                <div class="expertise-icon"><i class="fa fa-receipt"></i></div>
+                <h3>GST Advisory</h3>
+                <p>End-to-end GST compliance and strategic advisory, from registration to complex refund recovery and litigation.</p>
+                <ul>
+                    <li>GST Refund Recovery</li>
+                    <li>ITC Optimization Strategy</li>
+                    <li>Departmental Audit Assistance</li>
+                    <li>GST Health Checks</li>
+                </ul>
+            </div>
+            <div class="expertise-card reveal reveal-delay-2">
+                <div class="expertise-icon"><i class="fa fa-globe"></i></div>
+                <h3>International Tax</h3>
+                <p>Cross-border tax solutions leveraging DTAA benefits and regulatory frameworks for NRIs and multinationals.</p>
+                <ul>
+                    <li>DTAA Analysis & Application</li>
+                    <li>NRI Taxation & Compliance</li>
+                    <li>Form 15CA / 15CB</li>
+                    <li>Transfer Pricing Advisory</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================
+     ARTICLES / INSIGHTS
+========================= -->
+<section id="articles" class="articles-section">
+    <div class="container">
+        <div class="section-header reveal">
+            <div>
+                <span class="section-tag">Publications & Research</span>
+                <h2>Technical Insights</h2>
+            </div>
+            <span class="section-number">03</span>
+        </div>
+
+        <div class="article-card reveal">
+            <div class="article-meta">
+                <span class="article-tag">Transfer Pricing</span>
+                <span class="article-date">2025</span>
+            </div>
             <h3>The Berry Ratio in Transfer Pricing: Concept, Logic and Practical Use</h3>
-            <p>In transfer pricing analysis, transactions between associated enterprises must satisfy the Arm’s Length Principle. To evaluate whether the pricing between related parties is comparable to that between independent enterprises, various transfer pricing methods and financial indicators are used.</p>
-            <p>The Berry Ratio is a Profit Level Indicator commonly applied in cases involving distribution or intermediary functions. The ratio measures the relationship between gross profit and operating expenses and evaluates whether a distributor earns an appropriate return relative to the services it performs.</p>
-            <p><strong>Berry Ratio = Gross Profit / Operating Expenses</strong></p>
-            <p>The concept originated in the landmark U.S. case <strong>E.I. DuPont de Nemours & Co. v. United States</strong>. This metric is particularly relevant for limited-risk distributors or service providers where operating expenses represent the primary driver of value creation.</p>
+            <p>In transfer pricing analysis, transactions between associated enterprises must satisfy the Arm's Length Principle (ALP). To evaluate whether the pricing between related parties reflects what independent enterprises would agree upon, tax authorities and practitioners employ various transfer pricing methods and financial metrics known as Profit Level Indicators (PLIs).</p>
+            <p>The <strong>Berry Ratio</strong> is one such PLI, commonly applied where distribution or intermediary functions are involved. It measures the relationship between gross profit and operating expenses to evaluate whether a limited-risk distributor earns a return proportionate to the services it renders.</p>
+            <div class="formula-block">
+                Berry Ratio = Gross Profit ÷ Operating Expenses
+            </div>
+            <p>The concept was developed from the landmark U.S. Transfer Pricing case <strong>E.I. DuPont de Nemours & Co. v. United States</strong>, where Charles Berry first articulated the ratio. It has since gained recognition under the OECD Transfer Pricing Guidelines and the U.S. Treasury Regulations as a legitimate and reliable PLI in cases involving limited-risk distributors and commission agents where operating expenses are the primary driver of value creation.</p>
+            <p>Unlike return on sales or return on assets, the Berry Ratio is particularly appropriate when a tested party does not own significant assets but incurs substantial operating expenses in performing its functions — making it a valuable tool in the modern transfer pricing toolkit.</p>
         </div>
     </div>
 </section>
 
-<section id="resources" style="background: #080808;">
-    <div class="container reveal">
-        <h2 style="font-family: 'Playfair Display'; text-align: center; margin-bottom: 50px;">Resources</h2>
-        <div class="article-card" style="text-align: center; max-width: 800px; margin: auto;">
+<!-- ========================
+     RESOURCES
+========================= -->
+<section id="resources" class="resources-section">
+    <div class="container">
+        <div class="section-header reveal">
+            <div>
+                <span class="section-tag">Downloads & Research Papers</span>
+                <h2>Resources</h2>
+            </div>
+            <span class="section-number">04</span>
+        </div>
+        <div class="resource-card reveal">
+            <div class="expertise-icon" style="margin-bottom: 20px;"><i class="fa-solid fa-file-pdf" style="font-size: 36px; color: var(--gold-muted);"></i></div>
             <h3>The Berry Ratio in Transfer Pricing – Full Research Paper</h3>
-            <p>Download the detailed research material explaining the history, mechanics, and regulatory recognition of the Berry Ratio under OECD and US Treasury guidelines.</p>
+            <p>A detailed research paper explaining the history, theoretical foundations, mechanics, and regulatory recognition of the Berry Ratio under OECD Guidelines and US Treasury Regulations. Includes case studies and practical applications.</p>
             <a href="documents/Berry ratio.pdf" target="_blank" class="pdf-link">
-                <i class="fa-solid fa-file-pdf" style="margin-right: 10px;"></i> Download Full Paper (PDF)
+                <i class="fa-solid fa-download"></i> Download Full Paper (PDF)
             </a>
         </div>
     </div>
 </section>
 
-<section id="contact" style="text-align: center;">
-    <div class="container reveal">
-        <h2 style="font-family: 'Playfair Display';">Contact</h2>
-        <p style="color: var(--gold); font-size: 20px;">Email: catirths@gmail.com</p>
-        <p>Mobile: +91 81283 35264</p>
+<!-- ========================
+     CONTACT
+========================= -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="reveal">
+            <span class="section-tag" style="display:block; text-align:center; margin-bottom: 14px;">Get In Touch</span>
+            <h2>Let's <em>Connect</em></h2>
+            <p class="contact-tagline">For advisory enquiries, consultations, or professional collaborations.</p>
+        </div>
+        <div class="contact-grid reveal">
+            <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <span class="contact-label">Email</span>
+                <a href="mailto:catirths@gmail.com">catirths@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <span class="contact-label">Mobile</span>
+                <a href="tel:+918128335264">+91 81283 35264</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-location-dot"></i>
+                <span class="contact-label">Location</span>
+                <p>Ahmedabad, Gujarat, India</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<footer style="padding: 40px 0; text-align: center; border-top: 1px solid #222; font-size: 12px; color: #555;">
-    &copy; 2026 CA TIRTH SHAH | CHARTERED ACCOUNTANT | AHMEDABAD, INDIA
+<!-- ========================
+     FOOTER
+========================= -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <p>&copy; 2026 CA Tirth Shah · All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
 </footer>
 
+<!-- ========================
+     JAVASCRIPT
+========================= -->
 <script>
-    // Tab Switching for Mega Menu
+    // --- Mega Menu Tab Switching ---
     const tabs = document.querySelectorAll(".menu-left div");
     const contents = document.querySelectorAll(".tab-content");
 
@@ -187,18 +1235,54 @@
             tabs.forEach(t => t.classList.remove("active-tab"));
             contents.forEach(c => c.classList.remove("active"));
             tab.classList.add("active-tab");
-            document.getElementById(tab.dataset.tab).classList.add("active");
+            const target = document.getElementById(tab.dataset.tab);
+            if (target) target.classList.add("active");
         });
     });
 
-    // Reveal on Scroll Animation
+    // --- Scroll Reveal Animation ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add("active");
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
 
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    // --- Mobile Navigation Toggle ---
+    function toggleMenu() {
+        const nav = document.getElementById("main-nav");
+        nav.classList.toggle("open");
+    }
+
+    // --- Close mobile nav on link click ---
+    document.querySelectorAll("#main-nav a").forEach(link => {
+        link.addEventListener("click", () => {
+            document.getElementById("main-nav").classList.remove("open");
+        });
+    });
+
+    // --- Active nav link on scroll ---
+    const sections = document.querySelectorAll("section[id], div[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+        });
+        navLinks.forEach(link => {
+            link.style.color = "";
+            if (link.getAttribute("href") === `#${current}`) {
+                link.style.color = "var(--gold)";
+            }
+        });
+    });
 </script>
 
 </body>
