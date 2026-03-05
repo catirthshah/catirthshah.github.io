@@ -1,42 +1,21 @@
-let index = 0;
-const slider = document.getElementById("slider");
-const slides = slider.children.length;
-const dotsContainer = document.getElementById("dots");
+const items = document.querySelectorAll(".menu-item")
 
-for (let i = 0; i < slides; i++) {
-  const dot = document.createElement("span");
-  if (i === 0) dot.classList.add("active");
-  dotsContainer.appendChild(dot);
-}
+items.forEach(item=>{
 
-const dots = dotsContainer.children;
+item.addEventListener("mouseenter",()=>{
 
-function updateSlider() {
-  slider.style.transform = `translateX(-${index * 100}%)`;
-  [...dots].forEach(d => d.classList.remove("active"));
-  dots[index].classList.add("active");
-}
+document.querySelectorAll(".menu-item")
+.forEach(i=>i.classList.remove("active"))
 
-function next() {
-  index = (index + 1) % slides;
-  updateSlider();
-}
+document.querySelectorAll(".tab-content")
+.forEach(c=>c.classList.remove("active"))
 
-function prev() {
-  index = (index - 1 + slides) % slides;
-  updateSlider();
-}
+item.classList.add("active")
 
-setInterval(next, 4500);
+document
+.getElementById(item.dataset.tab)
+.classList.add("active")
 
-document.querySelector(".arrow.right").onclick = next;
-document.querySelector(".arrow.left").onclick = prev;
+})
 
-/* touch support */
-let startX = 0;
-slider.addEventListener("touchstart", e => startX = e.touches[0].clientX);
-slider.addEventListener("touchend", e => {
-  const endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) next();
-  if (endX - startX > 50) prev();
-});
+})
