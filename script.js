@@ -1,7 +1,6 @@
-const items = document.querySelectorAll(".menu-item")
+const items=document.querySelectorAll(".menu-item")
 
 items.forEach(item=>{
-
 item.addEventListener("mouseenter",()=>{
 
 document.querySelectorAll(".menu-item")
@@ -17,5 +16,4 @@ document
 .classList.add("active")
 
 })
-
 })
