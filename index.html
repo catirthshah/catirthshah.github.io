@@ -157,13 +157,14 @@
     .mega-service-item:hover{color:var(--gold);padding-left:4px;}
     .mega-service-item:hover .si-icon{color:var(--gold);border-color:var(--gold-muted);background:var(--gold-dim);}
 
-    /* HERO */
+    /* HERO — SVG landmark backgrounds, zero external dependency */
     #hero{height:100vh;min-height:600px;position:relative;overflow:hidden;}
     .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease);display:flex;align-items:center;}
     .slide.is-active{opacity:1;z-index:2;}
-    .slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);transition:transform 8s linear;}
+    .slide-bg{position:absolute;inset:0;background-size:cover;background-position:center bottom;transform:scale(1.04);transition:transform 10s linear;}
     .slide.is-active .slide-bg{transform:scale(1);}
-    .slide-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(7,7,7,0.88) 0%,rgba(7,7,7,0.55) 55%,rgba(7,7,7,0.25) 100%);}
+    .slide-svg{position:absolute;inset:0;width:100%;height:100%;}
+    .slide-overlay{position:absolute;inset:0;}
     .slide-content{position:relative;z-index:3;max-width:700px;padding-top:72px;}
     .slide-eyebrow{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:22px;opacity:0;transform:translateY(16px);transition:all 0.7s var(--ease) 0.3s;}
     .slide-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold-muted);}
@@ -527,16 +528,50 @@
 
 <!-- HERO -->
 <section id="hero">
-    <!-- ═══════════════════════════════════════════════
-         7 WONDERS OF THE WORLD — International Tax Focus
-    ═══════════════════════════════════════════════ -->
+    <!-- ═══ 7 WONDERS OF THE WORLD ═══ -->
 
-    <!-- Slide 1: Taj Mahal, India — home ground, global symbol -->
+    <!-- SLIDE 1: TAJ MAHAL -->
     <div class="slide is-active" data-idx="0">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80');background-position:center 55%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(7,5,2,0.62) 52%,rgba(20,12,0,0.25) 100%);"></div>
+        <svg class="slide-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="s1sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#040200"/><stop offset="100%" stop-color="#201205"/></linearGradient>
+                <linearGradient id="s1left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#030100" stop-opacity="0.95"/><stop offset="45%" stop-color="#030100" stop-opacity="0.6"/><stop offset="100%" stop-color="#030100" stop-opacity="0.05"/></linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#s1sky)"/>
+            <g fill="#b89030" opacity="0.18">
+                <circle cx="300" cy="80" r="1.5"/><circle cx="600" cy="50" r="1"/><circle cx="900" cy="90" r="1.5"/><circle cx="1300" cy="60" r="1"/><circle cx="1600" cy="100" r="1.5"/><circle cx="450" cy="140" r="1"/><circle cx="1150" cy="130" r="1"/>
+            </g>
+            <circle cx="1620" cy="140" r="30" fill="#f0e0b0" opacity="0.45"/>
+            <!-- Taj Mahal silhouette -->
+            <g fill="#C9A84C" opacity="0.30">
+                <ellipse cx="960" cy="620" rx="105" ry="115"/>
+                <rect x="885" y="690" width="150" height="35" rx="3"/>
+                <rect x="758" y="730" width="404" height="18" rx="2"/>
+                <rect x="770" y="748" width="380" height="28" rx="2"/>
+                <rect x="700" y="776" width="520" height="28" rx="2"/>
+                <rect x="955" y="505" width="10" height="65"/>
+                <ellipse cx="960" cy="503" rx="13" ry="10"/>
+                <rect x="706" y="650" width="18" height="126" rx="3"/>
+                <ellipse cx="715" cy="644" rx="11" ry="15"/>
+                <rect x="716" y="638" width="2" height="18"/>
+                <rect x="1196" y="650" width="18" height="126" rx="3"/>
+                <ellipse cx="1205" cy="644" rx="11" ry="15"/>
+                <rect x="1205" y="638" width="2" height="18"/>
+                <rect x="796" y="690" width="14" height="88" rx="2"/>
+                <ellipse cx="803" cy="686" rx="8" ry="11"/>
+                <rect x="1110" y="690" width="14" height="88" rx="2"/>
+                <ellipse cx="1117" cy="686" rx="8" ry="11"/>
+                <rect x="770" y="728" width="72" height="52" rx="2"/>
+                <ellipse cx="806" cy="722" rx="36" ry="30"/>
+                <rect x="1078" y="728" width="72" height="52" rx="2"/>
+                <ellipse cx="1114" cy="722" rx="36" ry="30"/>
+                <rect x="924" y="748" width="72" height="44" rx="5"/>
+            </g>
+            <rect x="0" y="804" width="1920" height="276" fill="#030100" opacity="0.9"/>
+            <rect width="1920" height="1080" fill="url(#s1left)"/>
+        </svg>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-location-dot" style="font-size:10px;"></i> &nbsp;Ahmedabad, India · International Tax Consultants</p>
+            <p class="slide-eyebrow"><i class="fa fa-location-dot" style="font-size:10px;"></i>&nbsp; Ahmedabad, India · International Tax Consultants</p>
             <h1 class="slide-title">Beyond<br><em>Compliance.</em></h1>
             <p class="slide-desc">Specialized advisory in International Taxation, GST Strategy, and Complex Tax Litigation — rooted in India, serving clients across the globe.</p>
             <div class="slide-actions">
@@ -547,12 +582,35 @@
         <div class="wonder-label">Taj Mahal · Agra, India</div>
     </div>
 
-    <!-- Slide 2: Great Wall of China — DTAA with China/Asia -->
+    <!-- SLIDE 2: GREAT WALL OF CHINA -->
     <div class="slide" data-idx="1">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92) 0%,rgba(5,5,5,0.60) 52%,rgba(0,5,10,0.25) 100%);"></div>
+        <svg class="slide-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="s2sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#010305"/><stop offset="100%" stop-color="#040e18"/></linearGradient>
+                <linearGradient id="s2left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#010203" stop-opacity="0.95"/><stop offset="45%" stop-color="#010203" stop-opacity="0.6"/><stop offset="100%" stop-color="#010203" stop-opacity="0.05"/></linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#s2sky)"/>
+            <g fill="#b89030" opacity="0.15"><circle cx="400" cy="70" r="1.5"/><circle cx="700" cy="40" r="1"/><circle cx="1100" cy="80" r="1.5"/><circle cx="1500" cy="55" r="1"/><circle cx="1750" cy="110" r="1.5"/></g>
+            <circle cx="1650" cy="120" r="28" fill="#e8d090" opacity="0.4"/>
+            <!-- Mountain ranges -->
+            <polygon points="0,800 180,500 320,620 480,420 650,560 820,360 980,520 1150,310 1320,480 1500,340 1680,500 1920,380 1920,1080 0,1080" fill="#030c14" opacity="0.95"/>
+            <polygon points="0,860 150,660 280,720 420,580 580,660 740,500 900,600 1060,460 1220,560 1400,440 1580,560 1780,480 1920,540 1920,1080 0,1080" fill="#020810" opacity="0.97"/>
+            <!-- Great Wall path -->
+            <g fill="#C9A84C" opacity="0.32">
+                <path d="M0,760 L120,680 L220,610 L320,660 L420,580 L520,540 L620,590 L720,510 L820,470 L920,510 L1020,440 L1120,480 L1220,410 L1320,450 L1420,500 L1520,440 L1620,480 L1720,510 L1920,470 L1920,500 L1720,540 L1620,510 L1520,470 L1420,530 L1320,480 L1220,440 L1120,510 L1020,470 L920,540 L820,500 L720,540 L620,620 L520,570 L420,610 L320,690 L220,640 L120,710 L0,790 Z"/>
+                <!-- Watchtowers -->
+                <rect x="215" y="578" width="32" height="42" rx="2"/><rect x="208" y="563" width="46" height="16" rx="1"/>
+                <rect x="415" y="548" width="32" height="42" rx="2"/><rect x="408" y="533" width="46" height="16" rx="1"/>
+                <rect x="715" y="478" width="32" height="42" rx="2"/><rect x="708" y="463" width="46" height="16" rx="1"/>
+                <rect x="1015" y="408" width="32" height="42" rx="2"/><rect x="1008" y="393" width="46" height="16" rx="1"/>
+                <rect x="1315" y="418" width="32" height="42" rx="2"/><rect x="1308" y="403" width="46" height="16" rx="1"/>
+                <rect x="1615" y="448" width="32" height="42" rx="2"/><rect x="1608" y="433" width="46" height="16" rx="1"/>
+            </g>
+            <rect x="0" y="860" width="1920" height="220" fill="#010305" opacity="0.95"/>
+            <rect width="1920" height="1080" fill="url(#s2left)"/>
+        </svg>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-globe" style="font-size:10px;"></i> &nbsp;International Taxation · DTAA · Cross-Border Advisory</p>
+            <p class="slide-eyebrow"><i class="fa fa-globe" style="font-size:10px;"></i>&nbsp; International Taxation · DTAA · Cross-Border Advisory</p>
             <h1 class="slide-title">Global Tax.<br><em>Local Insight.</em></h1>
             <p class="slide-desc">Leveraging India's network of 90+ Double Taxation Avoidance Agreements — we navigate cross-border transactions with precision and treaty expertise.</p>
             <div class="slide-actions">
@@ -560,15 +618,41 @@
                 <a href="#insights" class="btn-ghost">Read Insights</a>
             </div>
         </div></div>
-        <div class="wonder-label">Great Wall · China</div>
+        <div class="wonder-label">Great Wall of China</div>
     </div>
 
-    <!-- Slide 3: Machu Picchu, Peru — FEMA/Outbound investment -->
+    <!-- SLIDE 3: MACHU PICCHU -->
     <div class="slide" data-idx="2">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80');background-position:center 40%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92) 0%,rgba(4,6,4,0.60) 52%,rgba(0,8,4,0.25) 100%);"></div>
+        <svg class="slide-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="s3sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#010402"/><stop offset="100%" stop-color="#051508"/></linearGradient>
+                <linearGradient id="s3left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#010402" stop-opacity="0.95"/><stop offset="45%" stop-color="#010402" stop-opacity="0.6"/><stop offset="100%" stop-color="#010402" stop-opacity="0.05"/></linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#s3sky)"/>
+            <!-- Andean peaks -->
+            <polygon points="550,1080 700,320 850,500 1000,250 1150,420 1350,200 1550,400 1750,280 1920,420 1920,1080" fill="#030e05" opacity="0.95"/>
+            <polygon points="700,1080 820,480 920,600 1050,380 1180,520 1350,300 1500,460 1700,340 1920,500 1920,1080" fill="#020b04" opacity="0.97"/>
+            <!-- Huayna Picchu peak -->
+            <polygon points="1350,1080 1450,220 1550,400 1650,1080" fill="#010803" opacity="0.98"/>
+            <!-- Terraces and structures -->
+            <g fill="#C9A84C" opacity="0.32">
+                <path d="M580,700 L860,600 L860,618 L580,718 Z"/>
+                <path d="M600,728 L860,628 L860,646 L600,746 Z"/>
+                <path d="M618,756 L860,656 L860,674 L618,774 Z"/>
+                <path d="M636,784 L860,684 L860,702 L636,802 Z"/>
+                <rect x="690" y="556" width="56" height="44" rx="2"/>
+                <rect x="756" y="544" width="76" height="56" rx="2"/>
+                <rect x="842" y="532" width="46" height="68" rx="2"/>
+                <ellipse cx="770" cy="543" rx="42" ry="18"/>
+                <rect x="686" y="596" width="210" height="18" rx="1"/>
+                <rect x="648" y="698" width="16" height="144"/>
+            </g>
+            <g fill="#b89030" opacity="0.15"><circle cx="200" cy="80" r="1.5"/><circle cx="500" cy="50" r="1"/><circle cx="1600" cy="90" r="1.5"/></g>
+            <rect x="0" y="840" width="1920" height="240" fill="#010402" opacity="0.92"/>
+            <rect width="1920" height="1080" fill="url(#s3left)"/>
+        </svg>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-arrows-left-right" style="font-size:10px;"></i> &nbsp;NRI Taxation · FEMA · Outbound Investment</p>
+            <p class="slide-eyebrow"><i class="fa fa-arrows-left-right" style="font-size:10px;"></i>&nbsp; NRI Taxation · FEMA · Outbound Investment</p>
             <h1 class="slide-title">Cross-Border.<br><em>Without Borders.</em></h1>
             <p class="slide-desc">Form 15CA/15CB, NRI compliance, repatriation planning and outbound investment structuring — for the global Indian and multinational enterprise.</p>
             <div class="slide-actions">
@@ -579,12 +663,38 @@
         <div class="wonder-label">Machu Picchu · Peru</div>
     </div>
 
-    <!-- Slide 4: Chichen Itza, Mexico — GST & Indirect Tax -->
+    <!-- SLIDE 4: CHICHEN ITZA -->
     <div class="slide" data-idx="3">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1920&q=80');background-position:center 45%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(6,5,2,0.62) 52%,rgba(15,10,0,0.25) 100%);"></div>
+        <svg class="slide-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="s4sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#030100"/><stop offset="100%" stop-color="#180b00"/></linearGradient>
+                <linearGradient id="s4left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#030100" stop-opacity="0.95"/><stop offset="45%" stop-color="#030100" stop-opacity="0.6"/><stop offset="100%" stop-color="#030100" stop-opacity="0.05"/></linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#s4sky)"/>
+            <rect x="0" y="760" width="1920" height="320" fill="#050200" opacity="0.97"/>
+            <g fill="#b89030" opacity="0.15"><circle cx="300" cy="80" r="1.5"/><circle cx="900" cy="50" r="1"/><circle cx="1500" cy="90" r="1.5"/><circle cx="1750" cy="60" r="1"/></g>
+            <circle cx="1620" cy="150" r="28" fill="#e0c880" opacity="0.38"/>
+            <!-- El Castillo pyramid -->
+            <g fill="#C9A84C" opacity="0.35">
+                <rect x="658" y="730" width="604" height="28" rx="1"/>
+                <rect x="696" y="702" width="528" height="28" rx="1"/>
+                <rect x="734" y="674" width="452" height="28" rx="1"/>
+                <rect x="772" y="646" width="376" height="28" rx="1"/>
+                <rect x="810" y="618" width="300" height="28" rx="1"/>
+                <rect x="845" y="590" width="230" height="28" rx="1"/>
+                <rect x="878" y="562" width="164" height="28" rx="1"/>
+                <rect x="908" y="534" width="104" height="28" rx="1"/>
+                <rect x="932" y="506" width="56" height="28" rx="1"/>
+                <rect x="918" y="456" width="84" height="52" rx="2"/>
+                <rect x="930" y="410" width="60" height="48" rx="1"/>
+                <rect x="940" y="394" width="40" height="18" rx="1"/>
+                <rect x="957" y="456" width="6" height="274"/>
+                <polygon points="658,758 960,456 960,758" fill="#C9A84C" opacity="0.06"/>
+            </g>
+            <rect width="1920" height="1080" fill="url(#s4left)"/>
+        </svg>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-receipt" style="font-size:10px;"></i> &nbsp;GST Advisory · Refunds · ITC · Litigation</p>
+            <p class="slide-eyebrow"><i class="fa fa-receipt" style="font-size:10px;"></i>&nbsp; GST Advisory · Refunds · ITC · Litigation</p>
             <h1 class="slide-title">Structured.<br><em>Compliant.</em></h1>
             <p class="slide-desc">GST refund recovery, ITC optimization, departmental audit representation and GST litigation — end-to-end indirect tax management for your business.</p>
             <div class="slide-actions">
@@ -595,12 +705,52 @@
         <div class="wonder-label">Chichen Itza · Mexico</div>
     </div>
 
-    <!-- Slide 5: Colosseum, Rome — Tax Litigation / Fighting in forums -->
+    <!-- SLIDE 5: ROMAN COLOSSEUM -->
     <div class="slide" data-idx="4">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(5,4,3,0.60) 52%,rgba(10,6,0,0.25) 100%);"></div>
+        <svg class="slide-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="s5sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#010002"/><stop offset="100%" stop-color="#100608"/></linearGradient>
+                <linearGradient id="s5left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#010002" stop-opacity="0.95"/><stop offset="45%" stop-color="#010002" stop-opacity="0.6"/><stop offset="100%" stop-color="#010002" stop-opacity="0.05"/></linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#s5sky)"/>
+            <g fill="#b89030" opacity="0.15"><circle cx="200" cy="60" r="1.5"/><circle cx="500" cy="40" r="1"/><circle cx="700" cy="80" r="1"/></g>
+            <circle cx="300" cy="110" r="24" fill="#e8d8c0" opacity="0.35"/>
+            <!-- Colosseum -->
+            <g fill="#C9A84C" opacity="0.30">
+                <ellipse cx="1200" cy="680" rx="510" ry="250"/>
+                <ellipse cx="1200" cy="680" rx="452" ry="202" fill="#080305"/>
+                <!-- Arch rows -->
+                <g>
+                    <rect x="714" y="610" width="26" height="74" rx="13 13 0 0"/>
+                    <rect x="754" y="598" width="26" height="84" rx="13 13 0 0"/>
+                    <rect x="794" y="582" width="26" height="98" rx="13 13 0 0"/>
+                    <rect x="834" y="568" width="26" height="110" rx="13 13 0 0"/>
+                    <rect x="874" y="556" width="26" height="122" rx="13 13 0 0"/>
+                    <rect x="914" y="546" width="26" height="132" rx="13 13 0 0"/>
+                    <rect x="998" y="434" width="26" height="78" rx="13 13 0 0"/>
+                    <rect x="1056" y="428" width="26" height="78" rx="13 13 0 0"/>
+                    <rect x="1114" y="425" width="26" height="78" rx="13 13 0 0"/>
+                    <rect x="1172" y="424" width="26" height="78" rx="13 13 0 0"/>
+                    <rect x="1230" y="424" width="26" height="78" rx="13 13 0 0"/>
+                    <rect x="1288" y="425" width="26" height="78" rx="13 13 0 0"/>
+                    <rect x="1346" y="428" width="26" height="78" rx="13 13 0 0"/>
+                    <rect x="1440" y="546" width="26" height="132" rx="13 13 0 0"/>
+                    <rect x="1480" y="556" width="26" height="122" rx="13 13 0 0"/>
+                    <rect x="1520" y="568" width="26" height="110" rx="13 13 0 0"/>
+                    <rect x="1560" y="582" width="26" height="98" rx="13 13 0 0"/>
+                    <rect x="1600" y="598" width="26" height="84" rx="13 13 0 0"/>
+                    <rect x="1640" y="610" width="26" height="74" rx="13 13 0 0"/>
+                </g>
+                <rect x="726" y="682" width="948" height="9" rx="2" opacity="0.6"/>
+                <rect x="736" y="622" width="928" height="7" rx="2" opacity="0.5"/>
+                <rect x="760" y="564" width="880" height="6" rx="2" opacity="0.4"/>
+                <rect x="900" y="502" width="600" height="6" rx="2" opacity="0.35"/>
+            </g>
+            <rect x="0" y="808" width="1920" height="272" fill="#040102" opacity="0.95"/>
+            <rect width="1920" height="1080" fill="url(#s5left)"/>
+        </svg>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-gavel" style="font-size:10px;"></i> &nbsp;Tax Litigation · Scrutiny · ITAT · Appeals</p>
+            <p class="slide-eyebrow"><i class="fa fa-gavel" style="font-size:10px;"></i>&nbsp; Tax Litigation · Scrutiny · ITAT · Appeals</p>
             <h1 class="slide-title">Your Advocate.<br><em>In Every Forum.</em></h1>
             <p class="slide-desc">Scrutiny assessments, CIT(A) and ITAT appeals, search &amp; seizure matters — represented with legal rigour and forensic preparation at every tier.</p>
             <div class="slide-actions">
@@ -611,12 +761,35 @@
         <div class="wonder-label">Colosseum · Rome, Italy</div>
     </div>
 
-    <!-- Slide 6: Christ the Redeemer, Brazil — Transfer Pricing / OECD -->
+    <!-- SLIDE 6: CHRIST THE REDEEMER -->
     <div class="slide" data-idx="5">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1920&q=80');background-position:center 35%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(4,5,6,0.60) 52%,rgba(0,5,12,0.25) 100%);"></div>
+        <svg class="slide-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="s6sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#010206"/><stop offset="100%" stop-color="#050a18"/></linearGradient>
+                <linearGradient id="s6left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#010206" stop-opacity="0.95"/><stop offset="45%" stop-color="#010206" stop-opacity="0.6"/><stop offset="100%" stop-color="#010206" stop-opacity="0.05"/></linearGradient>
+                <radialGradient id="s6halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C9A84C" stop-opacity="0.18"/><stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#s6sky)"/>
+            <g fill="#8090a0" opacity="0.08"><circle cx="600" cy="880" r="2"/><circle cx="800" cy="860" r="1.5"/><circle cx="1100" cy="875" r="2"/><circle cx="1400" cy="860" r="1.5"/><circle cx="1600" cy="878" r="2"/></g>
+            <polygon points="760,1080 960,520 1160,1080" fill="#030812" opacity="0.97"/>
+            <polygon points="880,1080 960,620 1040,1080" fill="#020610" opacity="0.98"/>
+            <ellipse cx="960" cy="510" rx="150" ry="150" fill="url(#s6halo)"/>
+            <g fill="#C9A84C" opacity="0.40">
+                <rect x="942" y="490" width="36" height="230" rx="4"/>
+                <path d="M730,575 L942,550 L942,568 L730,593 Z"/>
+                <path d="M978,550 L1190,575 L1190,593 L978,568 Z"/>
+                <ellipse cx="730" cy="584" rx="16" ry="9"/>
+                <ellipse cx="1190" cy="584" rx="16" ry="9"/>
+                <ellipse cx="960" cy="476" rx="20" ry="24"/>
+                <rect x="934" y="718" width="52" height="62" rx="2"/>
+                <rect x="924" y="780" width="72" height="18" rx="2"/>
+                <rect x="914" y="798" width="92" height="14" rx="2"/>
+            </g>
+            <g fill="#b89030" opacity="0.18"><circle cx="200" cy="60" r="1.5"/><circle cx="500" cy="80" r="1"/><circle cx="1500" cy="50" r="1.5"/><circle cx="1750" cy="90" r="1"/></g>
+            <rect width="1920" height="1080" fill="url(#s6left)"/>
+        </svg>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-scale-balanced" style="font-size:10px;"></i> &nbsp;Transfer Pricing · OECD · Berry Ratio · BEPS</p>
+            <p class="slide-eyebrow"><i class="fa fa-scale-balanced" style="font-size:10px;"></i>&nbsp; Transfer Pricing · OECD · Berry Ratio · BEPS</p>
             <h1 class="slide-title">Arm's Length.<br><em>Every Transaction.</em></h1>
             <p class="slide-desc">Transfer pricing documentation, Berry Ratio benchmarking, APA advisory, and TP audit representation — aligned with OECD guidelines and Indian TP jurisprudence.</p>
             <div class="slide-actions">
@@ -627,12 +800,50 @@
         <div class="wonder-label">Christ the Redeemer · Brazil</div>
     </div>
 
-    <!-- Slide 7: Petra, Jordan — DTAA Middle East / NRI Gulf -->
+    <!-- SLIDE 7: PETRA, JORDAN -->
     <div class="slide" data-idx="6">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(6,4,2,0.60) 52%,rgba(15,8,0,0.25) 100%);"></div>
+        <svg class="slide-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="s7sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#030100"/><stop offset="100%" stop-color="#1a0800"/></linearGradient>
+                <linearGradient id="s7left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#030100" stop-opacity="0.95"/><stop offset="45%" stop-color="#030100" stop-opacity="0.6"/><stop offset="100%" stop-color="#030100" stop-opacity="0.05"/></linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#s7sky)"/>
+            <!-- Canyon walls -->
+            <polygon points="0,0 420,0 370,350 310,660 210,780 0,1080" fill="#0e0400" opacity="0.97"/>
+            <polygon points="1920,0 1500,0 1550,350 1610,660 1710,780 1920,1080" fill="#0e0400" opacity="0.97"/>
+            <!-- Al-Khazneh Treasury facade -->
+            <g fill="#C9A84C" opacity="0.36">
+                <rect x="780" y="390" width="20" height="294" rx="3"/>
+                <rect x="838" y="390" width="20" height="294" rx="3"/>
+                <rect x="1062" y="390" width="20" height="294" rx="3"/>
+                <rect x="1120" y="390" width="20" height="294" rx="3"/>
+                <rect x="772" y="372" width="376" height="20" rx="2"/>
+                <polygon points="772,372 960,272 1148,372"/>
+                <ellipse cx="960" cy="326" rx="52" ry="62"/>
+                <ellipse cx="960" cy="326" rx="38" ry="47" fill="#120500"/>
+                <rect x="852" y="270" width="12" height="104" rx="2"/>
+                <rect x="900" y="264" width="12" height="108" rx="2"/>
+                <rect x="1008" y="264" width="12" height="108" rx="2"/>
+                <rect x="1056" y="270" width="12" height="104" rx="2"/>
+                <rect x="842" y="258" width="236" height="12" rx="1"/>
+                <rect x="922" y="548" width="76" height="118" rx="7 7 0 0"/>
+                <ellipse cx="960" cy="548" rx="38" ry="23"/>
+                <rect x="922" y="562" width="76" height="104" fill="#120500"/>
+                <rect x="810" y="506" width="48" height="76" rx="4 4 0 0"/>
+                <ellipse cx="834" cy="506" rx="24" ry="13"/>
+                <rect x="810" y="516" width="48" height="66" fill="#120500"/>
+                <rect x="1062" y="506" width="48" height="76" rx="4 4 0 0"/>
+                <ellipse cx="1086" cy="506" rx="24" ry="13"/>
+                <rect x="1062" y="516" width="48" height="66" fill="#120500"/>
+                <rect x="762" y="682" width="396" height="20" rx="2"/>
+                <rect x="752" y="702" width="416" height="14" rx="2"/>
+            </g>
+            <g fill="#b89030" opacity="0.20"><circle cx="960" cy="55" r="2"/><circle cx="910" cy="85" r="1"/><circle cx="1010" cy="75" r="1.5"/></g>
+            <rect x="0" y="716" width="1920" height="364" fill="#060100" opacity="0.95"/>
+            <rect width="1920" height="1080" fill="url(#s7left)"/>
+        </svg>
         <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-user-tie" style="font-size:10px;"></i> &nbsp;NRI Advisory · UAE · Gulf · Middle East DTAA</p>
+            <p class="slide-eyebrow"><i class="fa fa-user-tie" style="font-size:10px;"></i>&nbsp; NRI Advisory · UAE · Gulf · Middle East DTAA</p>
             <h1 class="slide-title">Wherever You Are.<br><em>We've Got India.</em></h1>
             <p class="slide-desc">Specialized NRI tax advisory for Gulf-based Indians — UAE DTAA benefits, repatriation planning, Form 15CA/15CB, and Indian income compliance made seamless.</p>
             <div class="slide-actions">
@@ -643,7 +854,7 @@
         <div class="wonder-label">Petra · Jordan</div>
     </div>
 
-    <!-- Dot controls — 7 dots -->
+    <!-- Dot controls -->
     <div class="hero-controls" id="hero-dots">
         <div class="hero-dot is-active" data-to="0"></div>
         <div class="hero-dot" data-to="1"></div>
@@ -657,6 +868,8 @@
 </section>
 
 <!-- MARQUEE -->
+
+
 <div class="marquee-strip">
     <div class="marquee-track">
         <div class="marquee-item">International Taxation</div><div class="marquee-item">GST Advisory</div>
