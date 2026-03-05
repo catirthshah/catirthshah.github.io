@@ -41,27 +41,121 @@
     .nav-cta{background:var(--gold);color:#000!important;padding:10px 22px!important;font-weight:600!important;letter-spacing:2px;transition:background var(--t) var(--ease),box-shadow var(--t) var(--ease)!important;margin-left:10px;}
     .nav-cta:hover{background:var(--gold-light)!important;box-shadow:0 0 24px var(--gold-glow);}
 
-    /* MEGA MENU */
-    .mega-wrap{position:fixed;top:72px;left:0;right:0;background:#090909;border-bottom:2px solid var(--gold-muted);box-shadow:0 40px 80px rgba(0,0,0,0.95);z-index:9998;display:none;animation:megaSlide 0.3s var(--ease) forwards;}
+    /* MEGA MENU — true 100vw full-width
+       #header is position:fixed and acts as containing block.
+       .nav-item stays position:static so .mega-wrap's left:0
+       is anchored to the fixed header's left edge = viewport edge. */
+    .mega-wrap{
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100vw;
+        background:#080808;
+        border-top:2px solid var(--gold-muted);
+        border-bottom:3px solid var(--gold-muted);
+        box-shadow:0 40px 80px rgba(0,0,0,0.98);
+        z-index:9998;
+        display:none;
+        animation:megaSlide 0.28s var(--ease) forwards;
+    }
+    #header{position:fixed;top:0;left:0;right:0;z-index:9999;}
+    .nav-item{position:static;}
     .nav-item:hover .mega-wrap{display:block;}
-    @keyframes megaSlide{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
-    .mega-inner{display:grid;grid-template-columns:260px 1fr;max-width:1260px;margin:0 auto;padding:0 36px;min-height:340px;}
-    .mega-tabs{border-right:1px solid #1e1e1e;padding:40px 0;}
-    .mega-tab{display:flex;align-items:center;gap:14px;padding:14px 24px;font-size:13px;letter-spacing:0.5px;color:var(--text-dim);cursor:pointer;transition:all var(--t) var(--ease);border-left:2px solid transparent;font-weight:400;}
-    .mega-tab i{width:18px;text-align:center;font-size:14px;}
-    .mega-tab:hover,.mega-tab.is-active{color:var(--gold);border-left-color:var(--gold);background:var(--gold-dim);}
-    .mega-panels{padding:40px 0 40px 50px;flex:1;}
+    @keyframes megaSlide{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+
+    /* Inner layout — wider columns to fill the full viewport width */
+    .mega-inner{
+        display:grid;
+        grid-template-columns:320px 1fr;
+        width:100%;
+        max-width:1600px;
+        margin:0 auto;
+        padding:0 80px;
+        min-height:380px;
+    }
+    .mega-tabs{
+        border-right:1px solid #1e1e1e;
+        padding:50px 0;
+        background:#050505;
+    }
+    /* Each tab: gold icon + label */
+    .mega-tab{
+        display:flex;align-items:center;gap:16px;
+        padding:16px 28px;
+        font-size:12px;letter-spacing:1px;
+        color:var(--text-dim);cursor:pointer;
+        transition:all var(--t) var(--ease);
+        border-left:3px solid transparent;
+        font-weight:400;
+        text-transform:uppercase;
+    }
+    .mega-tab .tab-icon{
+        width:34px;height:34px;
+        border:1px solid #222;
+        display:flex;align-items:center;justify-content:center;
+        flex-shrink:0;font-size:13px;
+        color:var(--gold-muted);
+        transition:all var(--t) var(--ease);
+    }
+    .mega-tab .tab-label{line-height:1.2;}
+    .mega-tab .tab-sub{display:block;font-size:10px;letter-spacing:0;text-transform:none;color:#444;margin-top:2px;font-weight:300;}
+    .mega-tab:hover,.mega-tab.is-active{
+        color:var(--gold);
+        border-left-color:var(--gold);
+        background:linear-gradient(to right,rgba(201,168,76,0.07),transparent);
+    }
+    .mega-tab:hover .tab-icon,.mega-tab.is-active .tab-icon{
+        border-color:var(--gold-muted);color:var(--gold);
+        background:var(--gold-dim);
+    }
+
+    /* Right panel */
+    .mega-panels{padding:44px 50px 44px 60px;flex:1;}
     .mega-panel{display:none;}
-    .mega-panel.is-active{display:block;animation:fadeUp 0.35s var(--ease);}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-    .mega-panel-head{display:flex;align-items:flex-start;gap:30px;margin-bottom:28px;padding-bottom:22px;border-bottom:1px solid var(--border);}
-    .mega-panel-icon{font-size:32px;color:var(--gold-muted);margin-top:4px;flex-shrink:0;}
-    .mega-panel-head h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--text);font-weight:600;margin-bottom:6px;}
-    .mega-panel-head p{font-size:13px;color:var(--text-dim);line-height:1.7;}
-    .mega-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 30px;}
-    .mega-service-item{font-size:13px;color:var(--text-mid);padding:7px 0;border-bottom:1px solid #161616;display:flex;align-items:center;gap:10px;transition:color var(--t) var(--ease);cursor:pointer;}
-    .mega-service-item::before{content:'›';color:var(--gold-muted);font-size:16px;line-height:1;flex-shrink:0;}
-    .mega-service-item:hover{color:var(--gold);}
+    .mega-panel.is-active{display:block;animation:fadeUp 0.32s var(--ease);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+    .mega-panel-head{
+        display:grid;grid-template-columns:auto 1fr auto;
+        align-items:start;gap:24px;
+        margin-bottom:28px;padding-bottom:22px;
+        border-bottom:1px solid #171717;
+    }
+    .mega-panel-icon{
+        width:52px;height:52px;
+        border:1px solid var(--border-gold);
+        display:flex;align-items:center;justify-content:center;
+        font-size:22px;color:var(--gold-muted);flex-shrink:0;
+    }
+    .mega-panel-head h3{font-family:'Playfair Display',serif;font-size:26px;color:var(--text);font-weight:600;margin-bottom:6px;}
+    .mega-panel-head p{font-size:13px;color:var(--text-dim);line-height:1.7;max-width:500px;}
+    .mega-panel-cta{
+        align-self:center;
+        font-size:10px;letter-spacing:2px;text-transform:uppercase;
+        color:var(--gold);border:1px solid var(--gold-muted);
+        padding:10px 18px;white-space:nowrap;
+        transition:all var(--t) var(--ease);
+    }
+    .mega-panel-cta:hover{background:var(--gold-dim);}
+
+    /* Service items grid — with inline gold FA icons */
+    .mega-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 24px;}
+    .mega-service-item{
+        font-size:13px;color:var(--text-mid);
+        padding:10px 0;
+        border-bottom:1px solid #141414;
+        display:flex;align-items:center;gap:12px;
+        transition:all var(--t) var(--ease);cursor:pointer;
+    }
+    .mega-service-item .si-icon{
+        width:28px;height:28px;flex-shrink:0;
+        display:flex;align-items:center;justify-content:center;
+        font-size:11px;color:var(--gold-muted);
+        border:1px solid #1e1e1e;
+        transition:all var(--t) var(--ease);
+    }
+    .mega-service-item:hover{color:var(--gold);padding-left:4px;}
+    .mega-service-item:hover .si-icon{color:var(--gold);border-color:var(--gold-muted);background:var(--gold-dim);}
 
     /* HERO */
     #hero{height:100vh;min-height:600px;position:relative;overflow:hidden;}
@@ -300,67 +394,78 @@
                     <a class="nav-link">Services <i class="fa fa-chevron-down"></i></a>
                     <div class="mega-wrap">
                         <div class="mega-inner">
+                            <!-- LEFT: 3 category tabs with icons + sub-labels -->
                             <div class="mega-tabs" id="mega-tabs">
-                                <div class="mega-tab is-active" data-panel="p-it"><i class="fa fa-calculator"></i> Income Tax</div>
-                                <div class="mega-tab" data-panel="p-gst"><i class="fa fa-receipt"></i> GST Advisory</div>
-                                <div class="mega-tab" data-panel="p-intl"><i class="fa fa-globe"></i> International Tax</div>
-                                <div class="mega-tab" data-panel="p-tp"><i class="fa fa-scale-balanced"></i> Transfer Pricing</div>
+                                <div class="mega-tab is-active" data-panel="p-it">
+                                    <div class="tab-icon"><i class="fa fa-calculator"></i></div>
+                                    <div class="tab-label">Income Tax<span class="tab-sub">Direct Tax Advisory &amp; Litigation</span></div>
+                                </div>
+                                <div class="mega-tab" data-panel="p-gst">
+                                    <div class="tab-icon"><i class="fa fa-receipt"></i></div>
+                                    <div class="tab-label">GST Advisory<span class="tab-sub">Compliance, Refunds &amp; Strategy</span></div>
+                                </div>
+                                <div class="mega-tab" data-panel="p-intl">
+                                    <div class="tab-icon"><i class="fa fa-globe"></i></div>
+                                    <div class="tab-label">International Tax<span class="tab-sub">DTAA · 15CA/15CB · NRI · Transfer Pricing</span></div>
+                                </div>
                             </div>
+                            <!-- RIGHT: panels -->
                             <div class="mega-panels">
+                                <!-- Income Tax Panel -->
                                 <div class="mega-panel is-active" id="p-it">
                                     <div class="mega-panel-head">
                                         <div class="mega-panel-icon"><i class="fa fa-calculator"></i></div>
-                                        <div><h3>Income Tax Advisory</h3><p>End-to-end advisory across assessments, appeals, corporate planning, and complex litigation — backed by deep legal research.</p></div>
+                                        <div>
+                                            <h3>Income Tax Advisory</h3>
+                                            <p>End-to-end advisory across assessments, appeals, corporate planning, and complex litigation — backed by deep legal research and current judicial precedents.</p>
+                                        </div>
+                                        <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;margin-left:6px;"></i></a>
                                     </div>
                                     <div class="mega-services-grid">
-                                        <div class="mega-service-item">Scrutiny Assessments</div>
-                                        <div class="mega-service-item">Appeals Representation</div>
-                                        <div class="mega-service-item">Corporate Tax Strategy</div>
-                                        <div class="mega-service-item">Search &amp; Seizure Matters</div>
-                                        <div class="mega-service-item">Capital Gains Advisory</div>
-                                        <div class="mega-service-item">Tax Audit &amp; Compliance</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>Scrutiny Assessments</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-landmark"></i></div>CIT(A) &amp; ITAT Appeals</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-building"></i></div>Corporate Tax Strategy</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-magnifying-glass"></i></div>Search &amp; Seizure Matters</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-chart-line"></i></div>Capital Gains Advisory</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-file-invoice"></i></div>Tax Compliance &amp; Planning</div>
                                     </div>
                                 </div>
+                                <!-- GST Panel -->
                                 <div class="mega-panel" id="p-gst">
                                     <div class="mega-panel-head">
                                         <div class="mega-panel-icon"><i class="fa fa-receipt"></i></div>
-                                        <div><h3>GST Compliance &amp; Strategy</h3><p>Comprehensive GST advisory from registration to departmental proceedings and complex refund recovery.</p></div>
+                                        <div>
+                                            <h3>GST Compliance &amp; Strategy</h3>
+                                            <p>Complete GST lifecycle management — from registration to departmental proceedings, refund recovery, and strategic ITC optimization.</p>
+                                        </div>
+                                        <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;margin-left:6px;"></i></a>
                                     </div>
                                     <div class="mega-services-grid">
-                                        <div class="mega-service-item">GST Refund Recovery</div>
-                                        <div class="mega-service-item">ITC Optimization</div>
-                                        <div class="mega-service-item">Departmental Audit Assistance</div>
-                                        <div class="mega-service-item">GST Litigation &amp; Appeals</div>
-                                        <div class="mega-service-item">Indirect Tax Health Checks</div>
-                                        <div class="mega-service-item">E-invoice Compliance</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-rotate-left"></i></div>GST Refund Recovery</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-coins"></i></div>ITC Optimization Strategy</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-stethoscope"></i></div>GST Health Checks</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>GST Litigation &amp; Appeals</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-clipboard-check"></i></div>Departmental Audit Support</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-file-code"></i></div>E-Invoice &amp; Compliance</div>
                                     </div>
                                 </div>
+                                <!-- International Tax Panel — expanded with TP + DTAA/15CA highlighted -->
                                 <div class="mega-panel" id="p-intl">
                                     <div class="mega-panel-head">
                                         <div class="mega-panel-icon"><i class="fa fa-globe"></i></div>
-                                        <div><h3>International Taxation</h3><p>Cross-border tax solutions for NRIs, multinationals, and global professionals leveraging India's DTAA network.</p></div>
+                                        <div>
+                                            <h3>International Taxation</h3>
+                                            <p>Cross-border tax solutions covering DTAA treaty benefits, Form 15CA/15CB certification, NRI compliance, FEMA, and Transfer Pricing — for NRIs, multinationals, and global businesses.</p>
+                                        </div>
+                                        <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;margin-left:6px;"></i></a>
                                     </div>
                                     <div class="mega-services-grid">
-                                        <div class="mega-service-item">NRI Taxation &amp; Compliance</div>
-                                        <div class="mega-service-item">DTAA Analysis &amp; Application</div>
-                                        <div class="mega-service-item">Form 15CA / 15CB</div>
-                                        <div class="mega-service-item">Cross-Border Remittance</div>
-                                        <div class="mega-service-item">FEMA &amp; RBI Compliance</div>
-                                        <div class="mega-service-item">Expatriate Taxation</div>
-                                    </div>
-                                </div>
-                                <div class="mega-panel" id="p-tp">
-                                    <div class="mega-panel-head">
-                                        <div class="mega-panel-icon"><i class="fa fa-scale-balanced"></i></div>
-                                        <div><h3>Transfer Pricing</h3><p>Arm's length documentation, benchmarking analysis, and audit representation aligned with OECD guidelines.</p></div>
-                                    </div>
-                                    <div class="mega-services-grid">
-                                        <div class="mega-service-item">TP Documentation</div>
-                                        <div class="mega-service-item">Benchmarking Studies</div>
-                                        <div class="mega-service-item">Advance Pricing Agreements</div>
-                                        <div class="mega-service-item">TP Audit Representation</div>
-                                        <div class="mega-service-item">Safe Harbour Analysis</div>
-                                        <div class="mega-service-item">BEPS Compliance</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-handshake"></i></div>DTAA Benefits &amp; Treaty Analysis</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-file-signature"></i></div>Form 15CA &amp; 15CB Certification</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-user-tie"></i></div>NRI Taxation &amp; Compliance</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-arrows-left-right"></i></div>Cross-Border Remittance</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-shield-halved"></i></div>FEMA &amp; RBI Compliance</div>
+                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-scale-balanced"></i></div>Transfer Pricing Advisory</div>
                                     </div>
                                 </div>
                             </div>
@@ -386,7 +491,7 @@
 <!-- HERO -->
 <section id="hero">
     <div class="slide is-active" data-idx="0">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1920&q=80');background-position:center 40%;"></div>
         <div class="slide-overlay"></div>
         <div class="container"><div class="slide-content">
             <p class="slide-eyebrow">Chartered Accountant · Ahmedabad</p>
@@ -399,7 +504,7 @@
         </div></div>
     </div>
     <div class="slide" data-idx="1">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1920&q=80');background-position:center 60%;"></div>
         <div class="slide-overlay"></div>
         <div class="container"><div class="slide-content">
             <p class="slide-eyebrow">International Taxation</p>
@@ -412,7 +517,7 @@
         </div></div>
     </div>
     <div class="slide" data-idx="2">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
         <div class="slide-overlay"></div>
         <div class="container"><div class="slide-content">
             <p class="slide-eyebrow">Tax Litigation &amp; Advisory</p>
@@ -459,55 +564,69 @@
             <div class="svc-cat is-active" data-svc="s-it"><i class="fa fa-calculator"></i> Income Tax</div>
             <div class="svc-cat" data-svc="s-gst"><i class="fa fa-receipt"></i> GST Advisory</div>
             <div class="svc-cat" data-svc="s-intl"><i class="fa fa-globe"></i> International Tax</div>
-            <div class="svc-cat" data-svc="s-tp"><i class="fa fa-scale-balanced"></i> Transfer Pricing</div>
         </div>
         <div class="services-detail">
+            <!-- Income Tax -->
             <div class="svc-panel is-active" id="s-it">
                 <h2 class="svc-panel-title">Income Tax</h2>
-                <p class="svc-panel-desc">End-to-end advisory for corporates, HNIs, and individuals across assessments, appeals, and strategic planning rooted in deep legal analysis.</p>
+                <p class="svc-panel-desc">End-to-end advisory for corporates, HNIs, and individuals — from assessments and appeals to search &amp; seizure and strategic tax planning rooted in deep legal analysis.</p>
                 <div class="svc-items-grid">
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>Scrutiny Assessments</h4><p>Comprehensive representation and documentation support before assessing officers.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-landmark"></i></div><div class="svc-tile-text"><h4>Appeals &amp; Litigation</h4><p>CIT(A), ITAT representation backed by current judicial precedents.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-building"></i></div><div class="svc-tile-text"><h4>Corporate Tax Strategy</h4><p>Optimized tax structures aligned with your business model and growth plans.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-magnifying-glass"></i></div><div class="svc-tile-text"><h4>Search &amp; Seizure</h4><p>Expert guidance through search operations, statements, and post-search assessments.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-chart-line"></i></div><div class="svc-tile-text"><h4>Capital Gains</h4><p>Advisory on sale of assets, shares, property, and reinvestment planning under Section 54 series.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-file-invoice"></i></div><div class="svc-tile-text"><h4>Tax Audit</h4><p>Timely and accurate tax audit under Section 44AB with detailed reporting.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>Scrutiny Assessments</h4><p>Comprehensive representation and documentation support before assessing officers under Sections 143(2) and 147.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-landmark"></i></div><div class="svc-tile-text"><h4>CIT(A) &amp; ITAT Appeals</h4><p>Appellate representation backed by current judicial precedents and well-drafted grounds of appeal.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-building"></i></div><div class="svc-tile-text"><h4>Corporate Tax Strategy</h4><p>Optimized tax structures for businesses aligned with growth objectives and regulatory compliance.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-magnifying-glass"></i></div><div class="svc-tile-text"><h4>Search &amp; Seizure</h4><p>Expert guidance through search operations, voluntary disclosure, statements, and post-search assessments.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-chart-line"></i></div><div class="svc-tile-text"><h4>Capital Gains Advisory</h4><p>Advisory on sale of assets, shares, property and reinvestment exemptions under Section 54 series.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div><div class="svc-tile-text"><h4>HNI &amp; Individual Tax</h4><p>Holistic tax planning and compliance for high-net-worth individuals, professionals, and business owners.</p></div></div>
                 </div>
             </div>
+            <!-- GST -->
             <div class="svc-panel" id="s-gst">
                 <h2 class="svc-panel-title">GST Advisory</h2>
-                <p class="svc-panel-desc">Complete GST lifecycle management — from registration and compliance to ITC optimization and complex departmental proceedings.</p>
+                <p class="svc-panel-desc">Complete GST lifecycle management — from registration and ITC optimization to complex refund recovery, departmental proceedings, and appellate representation.</p>
                 <div class="svc-items-grid">
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div><div class="svc-tile-text"><h4>GST Refund Recovery</h4><p>End-to-end refund filing, follow-up, and liaisoning with GST authorities.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-coins"></i></div><div class="svc-tile-text"><h4>ITC Optimization</h4><p>Strategic input tax credit planning to maximize legitimate credits and cash flow.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-stethoscope"></i></div><div class="svc-tile-text"><h4>GST Health Check</h4><p>Periodic review of GST returns, reconciliations, and compliance gaps.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>GST Litigation</h4><p>Representation before GST authorities, Appellate Authority, and Tribunal.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-clipboard-check"></i></div><div class="svc-tile-text"><h4>Departmental Audit</h4><p>Complete support and representation during GST departmental audit proceedings.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-file-code"></i></div><div class="svc-tile-text"><h4>E-Invoice Compliance</h4><p>Implementation, reconciliation, and compliance under the e-invoicing framework.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div><div class="svc-tile-text"><h4>GST Refund Recovery</h4><p>End-to-end refund filing and recovery for exporters, inverted duty structure applicants, and SEZ suppliers.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-coins"></i></div><div class="svc-tile-text"><h4>ITC Optimization</h4><p>Strategic input tax credit planning to maximize legitimate credits and improve business cash flow.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-stethoscope"></i></div><div class="svc-tile-text"><h4>GST Health Check</h4><p>Periodic review of returns, GSTR-2B reconciliations, and identification of compliance gaps before they escalate.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>GST Litigation &amp; Appeals</h4><p>Representation before adjudicating authorities, First Appellate Authority, and GST Appellate Tribunal.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-clipboard-check"></i></div><div class="svc-tile-text"><h4>Departmental Audit</h4><p>Full support and representation during GST departmental audit and special audit proceedings.</p></div></div>
+                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-file-code"></i></div><div class="svc-tile-text"><h4>E-Invoice &amp; E-Way Bill</h4><p>Implementation, exception handling, and reconciliation under the e-invoicing and e-way bill frameworks.</p></div></div>
                 </div>
             </div>
+            <!-- International Tax — 3 pillar, with DTAA and 15CA/CB as hero services -->
             <div class="svc-panel" id="s-intl">
                 <h2 class="svc-panel-title">International Taxation</h2>
-                <p class="svc-panel-desc">Cross-border tax solutions for NRI clients, expatriates, and multinationals — leveraging India's DTAA network and FEMA framework.</p>
+                <p class="svc-panel-desc">High-value cross-border advisory for NRIs, multinationals, and global professionals — built on India's network of 90+ DTAAs, FEMA, and robust transfer pricing frameworks.</p>
                 <div class="svc-items-grid">
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-user"></i></div><div class="svc-tile-text"><h4>NRI Taxation</h4><p>Filing, planning, and compliance for Non-Resident Indians across income categories.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-handshake"></i></div><div class="svc-tile-text"><h4>DTAA Benefits</h4><p>Treaty analysis and structured application of Double Taxation Avoidance Agreements.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-file-signature"></i></div><div class="svc-tile-text"><h4>Form 15CA / 15CB</h4><p>Certification and remittance planning for outward foreign payments.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-arrows-left-right"></i></div><div class="svc-tile-text"><h4>Cross-Border Remittance</h4><p>Strategic advice on outbound and inbound remittances under FEMA and IT Act.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-shield-halved"></i></div><div class="svc-tile-text"><h4>FEMA Compliance</h4><p>Advisory and compliance management under Foreign Exchange Management Act.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-plane"></i></div><div class="svc-tile-text"><h4>Expatriate Taxation</h4><p>Tax structuring and compliance for foreign professionals working in India.</p></div></div>
-                </div>
-            </div>
-            <div class="svc-panel" id="s-tp">
-                <h2 class="svc-panel-title">Transfer Pricing</h2>
-                <p class="svc-panel-desc">Arm's length documentation, benchmarking analysis, and audit representation for intercompany transactions — aligned with OECD guidelines and Indian TP regulations.</p>
-                <div class="svc-items-grid">
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-folder-open"></i></div><div class="svc-tile-text"><h4>TP Documentation</h4><p>Robust master file and local file documentation under Section 92D and Rule 10D.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-chart-bar"></i></div><div class="svc-tile-text"><h4>Benchmarking Studies</h4><p>Comparable analysis using Berry Ratio, TNMM, CUP, and other PLIs.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>TP Audit Representation</h4><p>Expert defence before the TPO and DRP in transfer pricing disputes.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-lock"></i></div><div class="svc-tile-text"><h4>Advance Pricing Agreements</h4><p>Assistance in obtaining unilateral, bilateral, or multilateral APAs for certainty.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-umbrella"></i></div><div class="svc-tile-text"><h4>Safe Harbour Analysis</h4><p>Eligibility assessment and compliance under safe harbour provisions.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-globe"></i></div><div class="svc-tile-text"><h4>BEPS Compliance</h4><p>Country-by-country reporting and OECD BEPS action plan compliance.</p></div></div>
+                    <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);">
+                        <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-handshake"></i></div>
+                        <div class="svc-tile-text">
+                            <h4 style="color:var(--gold);">DTAA Benefits &amp; Treaty Analysis</h4>
+                            <p>Structured application of Double Taxation Avoidance Agreements to legally minimise withholding tax, claim treaty relief, and prevent double taxation on cross-border income.</p>
+                        </div>
+                    </div>
+                    <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);">
+                        <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-file-signature"></i></div>
+                        <div class="svc-tile-text">
+                            <h4 style="color:var(--gold);">Form 15CA &amp; 15CB Certification</h4>
+                            <p>Expert CA certification under Section 195 for all categories of foreign remittances — including royalties, professional fees, dividends, and loan repayments — with full treaty analysis.</p>
+                        </div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div>
+                        <div class="svc-tile-text"><h4>NRI Taxation &amp; Compliance</h4><p>Residency determination, ITR filing, TDS on property and rent, DTAA claims, and repatriation planning for Non-Resident Indians.</p></div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-arrows-left-right"></i></div>
+                        <div class="svc-tile-text"><h4>Cross-Border Remittance Strategy</h4><p>Tax-efficient structuring of outbound and inbound remittances, repatriation of profits, and dividend distributions under FEMA and the IT Act.</p></div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-shield-halved"></i></div>
+                        <div class="svc-tile-text"><h4>FEMA &amp; RBI Compliance</h4><p>Compliance management under the Foreign Exchange Management Act for investments, overseas borrowings, and compounding of FEMA contraventions.</p></div>
+                    </div>
+                    <div class="svc-item-tile">
+                        <div class="svc-tile-icon"><i class="fa fa-scale-balanced"></i></div>
+                        <div class="svc-tile-text"><h4>Transfer Pricing Advisory</h4><p>Arm's length documentation, Berry Ratio benchmarking, and representation before the Transfer Pricing Officer under OECD guidelines.</p></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -545,10 +664,10 @@
 <!-- STATS -->
 <div class="stats-band">
     <div class="stats-band-inner">
-        <div class="stat-block"><span class="stat-num">5+</span><span class="stat-lbl">Years of Practice</span></div>
-        <div class="stat-block"><span class="stat-num">ICAI</span><span class="stat-lbl">Qualified Member</span></div>
-        <div class="stat-block"><span class="stat-num">4</span><span class="stat-lbl">Core Specializations</span></div>
-        <div class="stat-block"><span class="stat-num">PAN</span><span class="stat-lbl">India Advisory</span></div>
+        <div class="stat-block"><span class="stat-num">90+</span><span class="stat-lbl">Countries Covered by DTAA</span></div>
+        <div class="stat-block"><span class="stat-num">OECD</span><span class="stat-lbl">Aligned TP Advisory</span></div>
+        <div class="stat-block"><span class="stat-num">BEPS</span><span class="stat-lbl">Action Plan Compliance</span></div>
+        <div class="stat-block"><span class="stat-num">15CA</span><span class="stat-lbl">Cross-Border Certification</span></div>
     </div>
 </div>
 
@@ -699,7 +818,7 @@
             <p>For advisory enquiries, consultations, or professional collaborations — reach out directly.</p>
             <div class="contact-row">
                 <div class="contact-icon"><i class="fa fa-envelope"></i></div>
-                <div><span class="contact-row-label">Email</span><a href="mailto:catirths@gmail.com">catirths@gmail.com</a></div>
+                <div><span class="contact-row-label">Email</span><a href="/cdn-cgi/l/email-protection#ff9c9e8b968d8b978cbf98929e9693d19c9092"><span class="__cf_email__" data-cfemail="a5c6c4d1ccd7d1cdd6e5c2c8c4ccc98bc6cac8">[email&#160;protected]</span></a></div>
             </div>
             <div class="contact-row">
                 <div class="contact-icon"><i class="fa fa-phone"></i></div>
@@ -709,7 +828,7 @@
                 <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
                 <div><span class="contact-row-label">Location</span><p>Ahmedabad, Gujarat, India</p></div>
             </div>
-            <div style="margin-top:36px;"><a href="mailto:catirths@gmail.com" class="btn-gold"><i class="fa fa-envelope"></i> Send a Message</a></div>
+            <div style="margin-top:36px;"><a href="/cdn-cgi/l/email-protection#620103160b10160a1122050f030b0e4c010d0f" class="btn-gold"><i class="fa fa-envelope"></i> Send a Message</a></div>
         </div>
     </div>
     <div class="contact-map">
@@ -734,15 +853,16 @@
                 <p>A focused practice in Direct Tax, GST, and International Taxation — where technical rigour meets strategic insight.</p>
                 <div class="footer-social">
                     <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:catirths@gmail.com" class="social-link"><i class="fa fa-envelope"></i></a>
+                    <a href="/cdn-cgi/l/email-protection#80e3e1f4e9f2f4e8f3c0e7ede1e9ecaee3efed" class="social-link"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#services-grid">Income Tax</a></li>
+                    <li><a href="#services-grid">Income Tax Advisory</a></li>
                     <li><a href="#services-grid">GST Advisory</a></li>
                     <li><a href="#services-grid">International Tax</a></li>
+                    <li><a href="#services-grid">DTAA &amp; 15CA/15CB</a></li>
                     <li><a href="#services-grid">Transfer Pricing</a></li>
                 </ul>
             </div>
@@ -759,7 +879,7 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="mailto:catirths@gmail.com">Email</a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#543735203d26203c27143339353d387a373b39">Email</a></li>
                     <li><a href="tel:+918128335264">+91 81283 35264</a></li>
                 </ul>
             </div>
@@ -775,7 +895,7 @@
     </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Header scroll
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>60);});
@@ -837,12 +957,4 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
 // Active nav
 const navLinks=document.querySelectorAll('#primary-nav .nav-link:not(.nav-cta)');
-const sectionIds=['about','services-grid','insights','resources','contact'];
-window.addEventListener('scroll',()=>{
-    let cur='';
-    sectionIds.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)cur=id;});
-    navLinks.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+cur)l.classList.add('active');});
-},{passive:true});
-</script>
-</body>
-</html>
+const sectionIds=['about','services-grid','insigh
