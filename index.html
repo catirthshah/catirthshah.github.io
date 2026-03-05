@@ -1,1214 +1,1073 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CA Tirth Shah | Chartered Accountant | Ahmedabad</title>
-    <meta name="description" content="Chartered Accountant specializing in International Taxation, GST Advisory, Income Tax Litigation and Transfer Pricing. Based in Ahmedabad, India.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-    :root {
-        --black:#070707;--black-2:#0d0d0d;--black-3:#111111;
-        --white:#f5f2eb;--gold:#C9A84C;--gold-light:#E2C47A;
-        --gold-muted:#6E4E18;--gold-dim:rgba(201,168,76,0.10);
-        --gold-glow:rgba(201,168,76,0.22);--text:#e8e4da;
-        --text-mid:#aaa89e;--text-dim:#666460;--border:#1c1c1c;
-        --border-gold:#2e2510;--card:#0f0f0f;
-        --ease:cubic-bezier(0.4,0,0.2,1);--t:0.38s;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
-    body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--text);overflow-x:hidden;line-height:1.7;}
-    ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--black);}::-webkit-scrollbar-thumb{background:var(--gold-muted);}
-    .container{max-width:1260px;margin:0 auto;padding:0 36px;}
-    a{color:inherit;text-decoration:none;}
-    img{max-width:100%;display:block;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CA Tirth Shah | Chartered Accountant | Ahmedabad</title>
+<meta name="description" content="Chartered Accountant specializing in International Taxation, GST Advisory, Income Tax Litigation and Transfer Pricing. Based in Ahmedabad, India.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --black:#070707;--black-2:#0d0d0d;--black-3:#111111;
+  --white:#f5f2eb;--gold:#C9A84C;--gold-light:#E2C47A;
+  --gold-muted:#6E4E18;--gold-dim:rgba(201,168,76,0.10);
+  --gold-glow:rgba(201,168,76,0.22);--text:#e8e4da;
+  --text-mid:#aaa89e;--text-dim:#666460;--border:#1c1c1c;
+  --border-gold:#2e2510;--card:#0f0f0f;
+  --ease:cubic-bezier(0.4,0,0.2,1);--t:0.38s;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--text);overflow-x:hidden;line-height:1.7;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--black);}::-webkit-scrollbar-thumb{background:var(--gold-muted);}
+.container{max-width:1260px;margin:0 auto;padding:0 36px;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
 
-    /* HEADER */
-    #header{position:fixed;top:0;left:0;right:0;z-index:9999;transition:background var(--t) var(--ease),border-color var(--t) var(--ease);border-bottom:1px solid transparent;}
-    #header.scrolled{background:rgba(7,7,7,0.97);border-bottom-color:var(--border-gold);backdrop-filter:blur(16px);}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:40px;}
-    .logo-wrap{display:flex;flex-direction:column;gap:2px;flex-shrink:0;}
-    .logo-main{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:3px;text-transform:uppercase;line-height:1;}
-    .logo-sub{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:4px;color:var(--text-dim);text-transform:uppercase;font-weight:300;}
-    .primary-nav{display:flex;align-items:center;gap:2px;flex:1;justify-content:flex-end;}
-    .nav-item{position:static;display:flex;align-items:center;}
-    .nav-link{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#ccc;padding:10px 16px;transition:color var(--t) var(--ease);display:flex;align-items:center;gap:6px;white-space:nowrap;}
-    .nav-link:hover,.nav-link.active{color:var(--gold);}
-    .nav-link i{font-size:8px;transition:transform var(--t) var(--ease);}
-    .nav-item:hover .nav-link i{transform:rotate(180deg);}
-    .nav-cta{background:var(--gold);color:#000!important;padding:10px 22px!important;font-weight:600!important;letter-spacing:2px;transition:background var(--t) var(--ease),box-shadow var(--t) var(--ease)!important;margin-left:10px;}
-    .nav-cta:hover{background:var(--gold-light)!important;box-shadow:0 0 24px var(--gold-glow);}
+/* ── HEADER ── */
+#header{position:fixed;top:0;left:0;right:0;z-index:9999;transition:background var(--t) var(--ease),border-color var(--t) var(--ease);border-bottom:1px solid transparent;}
+#header.scrolled{background:rgba(7,7,7,0.97);border-bottom-color:var(--border-gold);backdrop-filter:blur(16px);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:40px;}
+.logo-wrap{display:flex;flex-direction:column;gap:2px;flex-shrink:0;}
+.logo-main{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:3px;text-transform:uppercase;line-height:1;}
+.logo-sub{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:4px;color:var(--text-dim);text-transform:uppercase;font-weight:300;}
+.primary-nav{display:flex;align-items:center;gap:2px;flex:1;justify-content:flex-end;}
+.nav-item{position:static;display:flex;align-items:center;}
+.nav-link{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#ccc;padding:10px 16px;transition:color var(--t) var(--ease);display:flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer;}
+.nav-link:hover,.nav-link.active{color:var(--gold);}
+.nav-link i.chevron{font-size:8px;transition:transform var(--t) var(--ease);}
+.nav-item.has-mega:hover .nav-link .chevron{transform:rotate(180deg);}
+.nav-cta{background:var(--gold)!important;color:#000!important;padding:10px 22px!important;font-weight:600!important;letter-spacing:2px;transition:background var(--t) var(--ease),box-shadow var(--t) var(--ease)!important;margin-left:10px;}
+.nav-cta:hover{background:var(--gold-light)!important;box-shadow:0 0 24px var(--gold-glow)!important;color:#000!important;}
 
-    /* MEGA MENU — true 100vw full-width
-       #header is position:fixed and acts as containing block.
-       .nav-item stays position:static so .mega-wrap's left:0
-       is anchored to the fixed header's left edge = viewport edge. */
-    .mega-wrap{
-        position:absolute;
-        top:72px;
-        left:0;
-        width:100vw;
-        background:#080808;
-        border-top:2px solid var(--gold-muted);
-        border-bottom:3px solid var(--gold-muted);
-        box-shadow:0 40px 80px rgba(0,0,0,0.98);
-        z-index:9998;
-        display:none;
-        animation:megaSlide 0.28s var(--ease) forwards;
-    }
-    #header{position:fixed;top:0;left:0;right:0;z-index:9999;}
-    .nav-item{position:static;}
-    .nav-item:hover .mega-wrap{display:block;}
-    @keyframes megaSlide{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+/* Mega menu */
+.mega-wrap{
+  position:fixed;top:72px;left:0;width:100vw;
+  background:#080808;
+  border-top:2px solid var(--gold-muted);
+  border-bottom:3px solid var(--gold-muted);
+  box-shadow:0 40px 80px rgba(0,0,0,0.98);
+  z-index:9998;
+  opacity:0;pointer-events:none;
+  transform:translateY(-8px);
+  transition:opacity 0.25s var(--ease),transform 0.25s var(--ease);
+}
+.nav-item.has-mega:hover .mega-wrap{opacity:1;pointer-events:all;transform:translateY(0);}
+.mega-inner{display:grid;grid-template-columns:260px 1fr;width:100%;max-width:1400px;margin:0 auto;padding:0 60px;min-height:340px;}
+.mega-tabs{border-right:1px solid #1e1e1e;padding:36px 0;background:#050505;}
+.mega-tab{display:flex;align-items:center;gap:14px;padding:14px 22px;font-size:12px;letter-spacing:1px;color:var(--text-dim);cursor:pointer;transition:all var(--t) var(--ease);border-left:3px solid transparent;text-transform:uppercase;}
+.mega-tab .tab-icon{width:30px;height:30px;border:1px solid #222;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;color:var(--gold-muted);transition:all var(--t) var(--ease);}
+.mega-tab .tab-sub{display:block;font-size:10px;letter-spacing:0;text-transform:none;color:#444;margin-top:2px;font-weight:300;}
+.mega-tab:hover,.mega-tab.is-active{color:var(--gold);border-left-color:var(--gold);background:linear-gradient(to right,rgba(201,168,76,0.07),transparent);}
+.mega-tab:hover .tab-icon,.mega-tab.is-active .tab-icon{border-color:var(--gold-muted);color:var(--gold);background:var(--gold-dim);}
+.mega-panels{padding:32px 40px 32px 46px;}
+.mega-panel{display:none;}
+.mega-panel.is-active{display:block;}
+.mega-panel-head{display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:18px;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid #171717;}
+.mega-panel-icon{width:44px;height:44px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--gold-muted);flex-shrink:0;}
+.mega-panel-head h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--text);font-weight:600;margin-bottom:4px;}
+.mega-panel-head p{font-size:12px;color:var(--text-dim);line-height:1.65;max-width:440px;}
+.mega-panel-cta{align-self:center;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-muted);padding:8px 14px;white-space:nowrap;transition:all var(--t) var(--ease);display:inline-flex;align-items:center;gap:6px;}
+.mega-panel-cta:hover{background:var(--gold-dim);}
+.mega-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px 18px;}
+.mega-service-item{font-size:12px;color:var(--text-mid);padding:9px 0;border-bottom:1px solid #141414;display:flex;align-items:center;gap:9px;transition:all var(--t) var(--ease);}
+.mega-service-item .si-icon{width:24px;height:24px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--gold-muted);border:1px solid #1e1e1e;transition:all var(--t) var(--ease);}
+.mega-service-item:hover{color:var(--gold);padding-left:4px;}
+.mega-service-item:hover .si-icon{color:var(--gold);border-color:var(--gold-muted);background:var(--gold-dim);}
 
-    /* Inner layout — wider columns to fill the full viewport width */
-    .mega-inner{
-        display:grid;
-        grid-template-columns:320px 1fr;
-        width:100%;
-        max-width:1600px;
-        margin:0 auto;
-        padding:0 80px;
-        min-height:380px;
-    }
-    .mega-tabs{
-        border-right:1px solid #1e1e1e;
-        padding:50px 0;
-        background:#050505;
-    }
-    /* Each tab: gold icon + label */
-    .mega-tab{
-        display:flex;align-items:center;gap:16px;
-        padding:16px 28px;
-        font-size:12px;letter-spacing:1px;
-        color:var(--text-dim);cursor:pointer;
-        transition:all var(--t) var(--ease);
-        border-left:3px solid transparent;
-        font-weight:400;
-        text-transform:uppercase;
-    }
-    .mega-tab .tab-icon{
-        width:34px;height:34px;
-        border:1px solid #222;
-        display:flex;align-items:center;justify-content:center;
-        flex-shrink:0;font-size:13px;
-        color:var(--gold-muted);
-        transition:all var(--t) var(--ease);
-    }
-    .mega-tab .tab-label{line-height:1.2;}
-    .mega-tab .tab-sub{display:block;font-size:10px;letter-spacing:0;text-transform:none;color:#444;margin-top:2px;font-weight:300;}
-    .mega-tab:hover,.mega-tab.is-active{
-        color:var(--gold);
-        border-left-color:var(--gold);
-        background:linear-gradient(to right,rgba(201,168,76,0.07),transparent);
-    }
-    .mega-tab:hover .tab-icon,.mega-tab.is-active .tab-icon{
-        border-color:var(--gold-muted);color:var(--gold);
-        background:var(--gold-dim);
-    }
+/* ── HERO ── */
+#hero{height:100vh;min-height:600px;position:relative;overflow:hidden;}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s var(--ease);display:flex;align-items:center;}
+.slide.is-active{opacity:1;z-index:2;}
+.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);transition:transform 8s linear;}
+.slide.is-active .slide-bg{transform:scale(1);}
+.slide-overlay{position:absolute;inset:0;}
+.slide-content{position:relative;z-index:3;max-width:700px;padding-top:72px;}
+.slide-eyebrow{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:22px;opacity:0;transform:translateY(16px);transition:all 0.7s var(--ease) 0.3s;}
+.slide-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold-muted);}
+.slide.is-active .slide-eyebrow{opacity:1;transform:translateY(0);}
+.slide-title{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,80px);font-weight:700;color:var(--white);line-height:1.06;margin-bottom:22px;opacity:0;transform:translateY(20px);transition:all 0.8s var(--ease) 0.5s;}
+.slide-title em{color:var(--gold);font-style:italic;}
+.slide.is-active .slide-title{opacity:1;transform:translateY(0);}
+.slide-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,21px);color:#c0bdb5;max-width:560px;margin-bottom:38px;line-height:1.8;font-weight:300;opacity:0;transform:translateY(14px);transition:all 0.8s var(--ease) 0.7s;}
+.slide.is-active .slide-desc{opacity:1;transform:translateY(0);}
+.slide-actions{display:flex;gap:14px;flex-wrap:wrap;opacity:0;transform:translateY(12px);transition:all 0.8s var(--ease) 0.9s;}
+.slide.is-active .slide-actions{opacity:1;transform:translateY(0);}
+.btn-gold{background:var(--gold);color:#000;padding:14px 32px;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:all var(--t) var(--ease);display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-gold:hover{background:var(--gold-light);box-shadow:0 0 36px var(--gold-glow);transform:translateY(-2px);}
+.btn-ghost{border:1px solid rgba(201,168,76,0.38);color:var(--gold);padding:14px 32px;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;transition:all var(--t) var(--ease);display:inline-flex;align-items:center;gap:10px;}
+.btn-ghost:hover{border-color:var(--gold);background:var(--gold-dim);}
+.hero-controls{position:absolute;bottom:44px;right:60px;z-index:10;display:flex;align-items:center;gap:10px;}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer;transition:all var(--t) var(--ease);}
+.hero-dot.is-active{background:var(--gold);width:28px;border-radius:3px;}
+.scroll-cue{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.5;animation:scrollBounce 2.4s ease-in-out infinite;}
+.scroll-cue span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--text-mid);}
+.scroll-cue i{font-size:14px;color:var(--gold-muted);}
+@keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(7px);}}
+.wonder-label{position:absolute;bottom:52px;left:60px;z-index:10;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(201,168,76,0.55);display:flex;align-items:center;gap:10px;opacity:0;transition:opacity 1s ease 1.3s;}
+.wonder-label::before{content:'';display:block;width:24px;height:1px;background:rgba(201,168,76,0.35);}
+.slide.is-active .wonder-label{opacity:1;}
+.fresher-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.30);padding:5px 13px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);margin-bottom:16px;font-family:'DM Sans',sans-serif;font-weight:500;}
 
-    /* Right panel */
-    .mega-panels{padding:44px 50px 44px 60px;flex:1;}
-    .mega-panel{display:none;}
-    .mega-panel.is-active{display:block;animation:fadeUp 0.32s var(--ease);}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+/* ── MARQUEE ── */
+.marquee-strip{background:var(--gold);padding:13px 0;overflow:hidden;}
+.marquee-track{display:flex;white-space:nowrap;animation:marqueeRun 24s linear infinite;}
+.marquee-item{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#000;display:flex;align-items:center;gap:20px;flex-shrink:0;padding:0 20px;}
+.marquee-item::after{content:'◆';font-size:7px;opacity:0.5;}
+@keyframes marqueeRun{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-    .mega-panel-head{
-        display:grid;grid-template-columns:auto 1fr auto;
-        align-items:start;gap:24px;
-        margin-bottom:28px;padding-bottom:22px;
-        border-bottom:1px solid #171717;
-    }
-    .mega-panel-icon{
-        width:52px;height:52px;
-        border:1px solid var(--border-gold);
-        display:flex;align-items:center;justify-content:center;
-        font-size:22px;color:var(--gold-muted);flex-shrink:0;
-    }
-    .mega-panel-head h3{font-family:'Playfair Display',serif;font-size:26px;color:var(--text);font-weight:600;margin-bottom:6px;}
-    .mega-panel-head p{font-size:13px;color:var(--text-dim);line-height:1.7;max-width:500px;}
-    .mega-panel-cta{
-        align-self:center;
-        font-size:10px;letter-spacing:2px;text-transform:uppercase;
-        color:var(--gold);border:1px solid var(--gold-muted);
-        padding:10px 18px;white-space:nowrap;
-        transition:all var(--t) var(--ease);
-    }
-    .mega-panel-cta:hover{background:var(--gold-dim);}
+/* ── SERVICES ── */
+#services-grid{padding:0;background:var(--black-2);}
+.services-section-header{padding:80px 0 50px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border);}
+.section-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;display:block;margin-bottom:12px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--text);line-height:1.15;}
+.section-title em{color:var(--gold);font-style:italic;}
+.section-count{font-family:'Playfair Display',serif;font-size:90px;color:#131313;font-weight:700;line-height:1;flex-shrink:0;}
+.services-layout{display:grid;grid-template-columns:240px 1fr;min-height:480px;max-width:1260px;margin:0 auto;padding:0 36px;}
+.services-categories{border-right:1px solid var(--border);padding:36px 0;}
+.svc-cat{display:flex;align-items:center;gap:12px;padding:13px 22px;font-size:13px;color:var(--text-dim);cursor:pointer;transition:all var(--t) var(--ease);border-left:3px solid transparent;}
+.svc-cat i{width:18px;text-align:center;font-size:14px;}
+.svc-cat:hover,.svc-cat.is-active{color:var(--gold);border-left-color:var(--gold);background:var(--gold-dim);}
+.services-detail{padding:36px 46px;}
+.svc-panel{display:none;}
+.svc-panel.is-active{display:block;animation:fadeUp 0.35s var(--ease);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.svc-panel-title{font-family:'Playfair Display',serif;font-size:28px;color:var(--text);font-weight:600;margin-bottom:9px;}
+.svc-panel-desc{font-size:14px;color:var(--text-dim);margin-bottom:28px;max-width:560px;line-height:1.8;}
+.svc-items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);}
+.svc-item-tile{background:var(--black-3);padding:20px 24px;display:flex;align-items:flex-start;gap:13px;transition:background var(--t) var(--ease);}
+.svc-item-tile:hover{background:#141414;}
+.svc-tile-icon{width:34px;height:34px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;color:var(--gold-muted);margin-top:2px;}
+.svc-tile-text h4{font-size:13px;color:var(--text);font-weight:500;margin-bottom:4px;line-height:1.3;}
+.svc-tile-text p{font-size:12px;color:var(--text-dim);line-height:1.6;}
+.sub-services{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;}
+.sub-tag{font-size:10px;color:var(--text-dim);background:#0a0a0a;border:1px solid #1a1a1a;padding:3px 9px;display:flex;align-items:center;gap:5px;transition:all var(--t) var(--ease);white-space:nowrap;}
+.sub-tag i{font-size:7px;color:var(--gold-muted);}
+.svc-item-tile:hover .sub-tag{border-color:var(--border-gold);color:var(--text-mid);}
 
-    /* Service items grid — with inline gold FA icons */
-    .mega-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 24px;}
-    .mega-service-item{
-        font-size:13px;color:var(--text-mid);
-        padding:10px 0;
-        border-bottom:1px solid #141414;
-        display:flex;align-items:center;gap:12px;
-        transition:all var(--t) var(--ease);cursor:pointer;
-    }
-    .mega-service-item .si-icon{
-        width:28px;height:28px;flex-shrink:0;
-        display:flex;align-items:center;justify-content:center;
-        font-size:11px;color:var(--gold-muted);
-        border:1px solid #1e1e1e;
-        transition:all var(--t) var(--ease);
-    }
-    .mega-service-item:hover{color:var(--gold);padding-left:4px;}
-    .mega-service-item:hover .si-icon{color:var(--gold);border-color:var(--gold-muted);background:var(--gold-dim);}
+/* ── ABOUT ── */
+#about{display:grid;grid-template-columns:1fr 1fr;min-height:660px;}
+.about-visual{position:relative;overflow:hidden;background:#080808;}
+.about-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%) brightness(0.72);transition:transform 8s linear;}
+.about-visual:hover img{transform:scale(1.04);}
+.about-visual-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--black) 100%);}
+.about-badge-block{position:absolute;bottom:0;left:0;background:var(--gold);color:#000;padding:18px 24px;}
+.about-badge-block .badge-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;line-height:1;display:block;}
+.about-badge-block .badge-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;display:block;margin-top:3px;}
+.about-content{padding:72px 64px;background:var(--black-3);display:flex;flex-direction:column;justify-content:center;}
+.about-content h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,42px);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:20px;}
+.about-content h2 em{color:var(--gold);font-style:italic;}
+.about-lead{font-family:'Cormorant Garamond',serif;font-size:18px;color:#d0cdc5;line-height:1.85;margin-bottom:18px;font-weight:300;}
+.about-content p{font-size:14px;color:var(--text-dim);line-height:1.95;margin-bottom:13px;}
+.about-divider{width:50px;height:1px;background:var(--gold-muted);margin:20px 0;}
+.tags-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px;}
+.tag{border:1px solid var(--gold-muted);color:var(--gold);padding:5px 13px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;}
+.fresher-note{background:rgba(201,168,76,0.05);border:1px solid var(--border-gold);border-left:3px solid var(--gold-muted);padding:13px 17px;margin-top:16px;font-size:13px;color:var(--text-dim);line-height:1.7;}
+.fresher-note strong{color:var(--gold-light);}
 
-    /* HERO */
-    #hero{height:100vh;min-height:600px;position:relative;overflow:hidden;}
-    .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease);display:flex;align-items:center;}
-    .slide.is-active{opacity:1;z-index:2;}
-    .slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);transition:transform 8s linear;}
-    .slide.is-active .slide-bg{transform:scale(1);}
-    .slide-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(7,7,7,0.88) 0%,rgba(7,7,7,0.55) 55%,rgba(7,7,7,0.25) 100%);}
-    .slide-content{position:relative;z-index:3;max-width:700px;padding-top:72px;}
-    .slide-eyebrow{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:22px;opacity:0;transform:translateY(16px);transition:all 0.7s var(--ease) 0.3s;}
-    .slide-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold-muted);}
-    .slide.is-active .slide-eyebrow{opacity:1;transform:translateY(0);}
-    .slide-title{font-family:'Playfair Display',serif;font-size:clamp(44px,6vw,82px);font-weight:700;color:var(--white);line-height:1.05;margin-bottom:24px;opacity:0;transform:translateY(20px);transition:all 0.8s var(--ease) 0.5s;}
-    .slide-title em{color:var(--gold);font-style:italic;}
-    .slide.is-active .slide-title{opacity:1;transform:translateY(0);}
-    .slide-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,22px);color:#c0bdb5;max-width:560px;margin-bottom:40px;line-height:1.8;font-weight:300;opacity:0;transform:translateY(16px);transition:all 0.8s var(--ease) 0.7s;}
-    .slide.is-active .slide-desc{opacity:1;transform:translateY(0);}
-    .slide-actions{display:flex;gap:14px;flex-wrap:wrap;opacity:0;transform:translateY(12px);transition:all 0.8s var(--ease) 0.9s;}
-    .slide.is-active .slide-actions{opacity:1;transform:translateY(0);}
-    .btn-gold{background:var(--gold);color:#000;padding:14px 34px;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:all var(--t) var(--ease);display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer;}
-    .btn-gold:hover{background:var(--gold-light);box-shadow:0 0 36px var(--gold-glow);transform:translateY(-2px);}
-    .btn-ghost{border:1px solid rgba(201,168,76,0.35);color:var(--gold);padding:14px 34px;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;transition:all var(--t) var(--ease);display:inline-flex;align-items:center;gap:10px;}
-    .btn-ghost:hover{border-color:var(--gold);background:var(--gold-dim);}
-    .hero-controls{position:absolute;bottom:44px;right:60px;z-index:10;display:flex;align-items:center;gap:10px;}
-    .hero-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer;transition:all var(--t) var(--ease);}
-    .hero-dot.is-active{background:var(--gold);width:28px;border-radius:3px;}
-    .scroll-cue{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.55;animation:scrollBounce 2.4s ease-in-out infinite;}
-    .scroll-cue span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--text-mid);}
-    .scroll-cue i{font-size:14px;color:var(--gold-muted);}
-    @keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
+/* ── STATS ── */
+.stats-band{background:var(--gold);}
+.stats-band-inner{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-block{padding:40px 30px;text-align:center;border-right:1px solid rgba(0,0,0,0.12);transition:background var(--t) var(--ease);}
+.stat-block:last-child{border-right:none;}
+.stat-block:hover{background:rgba(0,0,0,0.07);}
+.stat-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:#000;line-height:1;display:block;}
+.stat-lbl{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,0,0,0.6);margin-top:5px;display:block;font-weight:500;}
 
-    /* Wonder location label — bottom right badge */
-    .wonder-label{
-        position:absolute;
-        bottom:52px;left:60px;
-        z-index:10;
-        font-family:'Cormorant Garamond',serif;
-        font-size:11px;
-        letter-spacing:3px;
-        text-transform:uppercase;
-        color:rgba(201,168,76,0.55);
-        display:flex;align-items:center;gap:10px;
-        opacity:0;
-        transition:opacity 1s ease 1.2s;
-    }
-    .wonder-label::before{
-        content:'';display:block;
-        width:24px;height:1px;
-        background:rgba(201,168,76,0.35);
-    }
-    .slide.is-active .wonder-label{opacity:1;}
+/* ── FEATURE CAROUSEL ── */
+#feature-carousel{background:var(--black);overflow:hidden;}
+.carousel-track-outer{display:flex;transition:transform 0.8s var(--ease);}
+.carousel-slide{min-width:100%;display:grid;grid-template-columns:1fr 1fr;min-height:520px;}
+.carousel-img{position:relative;overflow:hidden;}
+.carousel-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.65);}
+.carousel-text{padding:68px 60px;background:var(--black-3);display:flex;flex-direction:column;justify-content:center;}
+.carousel-text .c-eyebrow{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.carousel-text .c-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold-muted);}
+.carousel-text h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--text);margin-bottom:16px;line-height:1.2;}
+.carousel-text h2 em{color:var(--gold);font-style:italic;}
+.carousel-text p{font-size:14px;color:var(--text-dim);line-height:1.9;margin-bottom:10px;}
+.carousel-nav{display:flex;gap:10px;margin-top:28px;align-items:center;}
+.c-btn{width:40px;height:40px;border:1px solid var(--border-gold);background:none;color:var(--gold-muted);font-size:13px;cursor:pointer;transition:all var(--t) var(--ease);display:flex;align-items:center;justify-content:center;}
+.c-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim);}
+.carousel-counter{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--text-dim);margin-left:6px;}
 
-    /* MARQUEE */
-    .marquee-strip{background:var(--gold);padding:14px 0;overflow:hidden;}
-    .marquee-track{display:flex;gap:60px;white-space:nowrap;animation:marqueeRun 22s linear infinite;}
-    .marquee-item{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#000;display:flex;align-items:center;gap:16px;flex-shrink:0;}
-    .marquee-item::after{content:'◆';font-size:7px;}
-    @keyframes marqueeRun{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+/* ── INSIGHTS ── */
+#insights{padding:100px 0;background:var(--black-2);}
+.insights-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;padding-bottom:26px;border-bottom:1px solid var(--border);}
+.article-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:1px;background:var(--border);}
+.article-card{background:var(--card);padding:44px;transition:background var(--t) var(--ease);position:relative;overflow:hidden;}
+.article-card::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform var(--t) var(--ease);}
+.article-card:hover{background:#121212;}
+.article-card:hover::after{transform:scaleX(1);}
+.article-tag-row{display:flex;align-items:center;gap:12px;margin-bottom:17px;}
+.article-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-muted);padding:4px 11px;font-weight:500;}
+.article-date{font-size:12px;color:var(--text-dim);}
+.article-card h3{font-family:'Playfair Display',serif;font-size:clamp(18px,2.2vw,24px);color:var(--text);font-weight:600;line-height:1.3;margin-bottom:13px;}
+.article-card p{font-size:14px;color:var(--text-mid);line-height:1.9;margin-bottom:11px;}
+.article-card strong{color:var(--text);font-weight:500;}
+.formula-box{background:#090909;border:1px solid var(--border);border-left:3px solid var(--gold-muted);padding:13px 19px;margin:15px 0;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);letter-spacing:0.5px;}
 
-    /* SERVICES GRID */
-    #services-grid{padding:0;background:var(--black-2);}
-    .services-section-header{padding:80px 0 50px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border);margin-bottom:0;}
-    .section-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;display:block;margin-bottom:12px;}
-    .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--text);line-height:1.15;}
-    .section-title em{color:var(--gold);font-style:italic;}
-    .section-count{font-family:'Playfair Display',serif;font-size:90px;color:#131313;font-weight:700;line-height:1;flex-shrink:0;}
-    .services-layout{display:grid;grid-template-columns:280px 1fr;min-height:500px;max-width:1260px;margin:0 auto;padding:0 36px;}
-    .services-categories{border-right:1px solid var(--border);padding:40px 0;}
-    .svc-cat{display:flex;align-items:center;gap:16px;padding:16px 28px;font-size:13px;color:var(--text-dim);cursor:pointer;transition:all var(--t) var(--ease);border-left:3px solid transparent;letter-spacing:0.5px;}
-    .svc-cat i{width:20px;text-align:center;font-size:15px;}
-    .svc-cat:hover,.svc-cat.is-active{color:var(--gold);border-left-color:var(--gold);background:var(--gold-dim);}
-    .services-detail{padding:40px 50px;}
-    .svc-panel{display:none;}
-    .svc-panel.is-active{display:block;animation:fadeUp 0.35s var(--ease);}
-    .svc-panel-title{font-family:'Playfair Display',serif;font-size:30px;color:var(--text);font-weight:600;margin-bottom:10px;}
-    .svc-panel-desc{font-size:14px;color:var(--text-dim);margin-bottom:32px;max-width:580px;line-height:1.8;}
-    .svc-items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);}
-    .svc-item-tile{background:var(--black-3);padding:24px 28px;display:flex;align-items:flex-start;gap:16px;transition:background var(--t) var(--ease);}
-    .svc-item-tile:hover{background:#141414;}
-    .svc-tile-icon{width:38px;height:38px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;color:var(--gold-muted);margin-top:2px;}
-    .svc-tile-text h4{font-size:14px;color:var(--text);font-weight:500;margin-bottom:4px;line-height:1.3;}
-    .svc-tile-text p{font-size:12px;color:var(--text-dim);line-height:1.6;margin-bottom:10px;}
+/* ── RESOURCES ── */
+#resources{padding:100px 0;background:var(--black);}
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:48px;}
+.resource-tile{background:var(--card);padding:46px 36px;text-align:center;transition:background var(--t) var(--ease);}
+.resource-tile:hover{background:#131313;}
+.resource-icon{font-size:32px;color:var(--gold-muted);margin-bottom:18px;transition:color var(--t) var(--ease);}
+.resource-tile:hover .resource-icon{color:var(--gold);}
+.resource-tile h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:600;margin-bottom:10px;}
+.resource-tile p{font-size:13px;color:var(--text-dim);line-height:1.8;margin-bottom:20px;}
+.btn-gold-sm{background:var(--gold);color:#000;padding:10px 22px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all var(--t) var(--ease);font-family:'DM Sans',sans-serif;cursor:pointer;border:none;}
+.btn-gold-sm:hover{background:var(--gold-light);box-shadow:0 0 20px var(--gold-glow);}
+.coming-soon-tag{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);border:1px solid #222;padding:10px 20px;}
 
-    /* Sub-services tag list */
-    .sub-services{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
-    .sub-tag{
-        font-size:10px;letter-spacing:0.5px;
-        color:var(--text-dim);
-        background:#0a0a0a;
-        border:1px solid #1a1a1a;
-        padding:4px 10px;
-        display:flex;align-items:center;gap:5px;
-        transition:all var(--t) var(--ease);
-        white-space:nowrap;
-    }
-    .sub-tag i{font-size:7px;color:var(--gold-muted);}
-    .svc-item-tile:hover .sub-tag{border-color:var(--border-gold);color:var(--text-mid);}
-    .svc-item-tile:hover .sub-tag i{color:var(--gold);}
+/* ── TESTIMONIALS ── */
+#testimonials{padding:100px 0;background:var(--black-2);overflow:hidden;}
+.testimonial-slider{position:relative;overflow:hidden;margin-top:48px;}
+.testimonial-track{display:flex;transition:transform 0.7s var(--ease);}
+.testimonial-card{min-width:100%;padding:58px 76px;background:var(--card);border:1px solid var(--border);position:relative;}
+.testimonial-card::before{content:'\201C';font-family:'Playfair Display',serif;font-size:120px;color:var(--gold-dim);position:absolute;top:20px;left:46px;line-height:1;pointer-events:none;}
+.testimonial-text{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2.2vw,22px);color:#d0cdc5;font-style:italic;line-height:1.85;max-width:780px;margin:0 auto 28px;text-align:center;position:relative;z-index:1;}
+.testimonial-author{text-align:center;position:relative;z-index:1;}
+.author-name{font-size:13px;color:var(--gold);font-weight:500;letter-spacing:2px;text-transform:uppercase;display:block;}
+.author-role{font-size:12px;color:var(--text-dim);margin-top:4px;display:block;}
+.testimonial-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px;}
+.t-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:all var(--t) var(--ease);}
+.t-dot.is-active{background:var(--gold);width:26px;border-radius:3px;}
 
-    /* ABOUT */
-    #about{display:grid;grid-template-columns:1fr 1fr;min-height:680px;}
-    .about-visual{position:relative;overflow:hidden;background:#080808;}
-    .about-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%) brightness(0.75);transition:transform 8s linear;}
-    .about-visual:hover img{transform:scale(1.04);}
-    .about-visual-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--black) 100%);}
-    .about-badge-block{position:absolute;bottom:0;left:0;background:var(--gold);color:#000;padding:22px 28px;}
-    .about-badge-block .badge-num{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1;display:block;}
-    .about-badge-block .badge-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;display:block;margin-top:4px;}
-    .about-content{padding:80px 70px 80px 60px;background:var(--black-3);display:flex;flex-direction:column;justify-content:center;}
-    .about-content h2{font-family:'Playfair Display',serif;font-size:clamp(30px,3vw,46px);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:24px;}
-    .about-content h2 em{color:var(--gold);font-style:italic;}
-    .about-lead{font-family:'Cormorant Garamond',serif;font-size:19px;color:#d0cdc5;line-height:1.85;margin-bottom:22px;font-weight:300;}
-    .about-content p{font-size:14px;color:var(--text-dim);line-height:1.95;margin-bottom:16px;}
-    .about-divider{width:50px;height:1px;background:var(--gold-muted);margin:26px 0;}
-    .tags-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;}
-    .tag{border:1px solid var(--gold-muted);color:var(--gold);padding:6px 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;}
+/* ── CONTACT ── */
+#contact{display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
+.contact-info{padding:80px 64px;background:#0a0a0a;display:flex;flex-direction:column;justify-content:center;}
+.contact-info h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,42px);font-weight:700;color:var(--text);margin-bottom:11px;}
+.contact-info h2 em{color:var(--gold);font-style:italic;}
+.contact-info>p{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--text-dim);margin-bottom:36px;font-weight:300;line-height:1.7;}
+.contact-row{display:flex;align-items:flex-start;gap:16px;margin-bottom:22px;}
+.contact-icon{width:40px;height:40px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;color:var(--gold-muted);margin-top:2px;}
+.contact-row-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text-dim);display:block;margin-bottom:4px;}
+.contact-row a,.contact-row p{font-size:14px;color:var(--text-mid);transition:color var(--t) var(--ease);line-height:1.5;}
+.contact-row a:hover{color:var(--gold);}
+.contact-map{position:relative;overflow:hidden;background:#0d0d0d;}
+.contact-map img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%) brightness(0.30) sepia(30%);}
+.map-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(7,7,7,0.5);}
+.contact-form{margin-top:30px;display:flex;flex-direction:column;gap:12px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-group{display:flex;flex-direction:column;gap:5px;}
+.form-group label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);}
+.form-group input,.form-group select,.form-group textarea{background:#111;border:1px solid #222;color:var(--text);padding:10px 13px;font-family:'DM Sans',sans-serif;font-size:13px;transition:border-color var(--t) var(--ease);outline:none;-webkit-appearance:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold-muted);}
+.form-group select option{background:#111;}
+.form-group textarea{resize:vertical;min-height:90px;}
+.form-submit{background:var(--gold);color:#000;border:none;cursor:pointer;padding:12px 26px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:10px;transition:all var(--t) var(--ease);align-self:flex-start;}
+.form-submit:hover{background:var(--gold-light);box-shadow:0 0 24px var(--gold-glow);}
+.form-success{display:none;background:rgba(201,168,76,0.07);border:1px solid var(--gold-muted);padding:13px 17px;color:var(--gold-light);font-size:13px;letter-spacing:0.5px;line-height:1.6;}
 
-    /* STATS */
-    .stats-band{background:var(--gold);}
-    .stats-band-inner{display:grid;grid-template-columns:repeat(4,1fr);}
-    .stat-block{padding:44px 36px;text-align:center;border-right:1px solid rgba(0,0,0,0.12);transition:background var(--t) var(--ease);}
-    .stat-block:last-child{border-right:none;}
-    .stat-block:hover{background:rgba(0,0,0,0.07);}
-    .stat-num{font-family:'Playfair Display',serif;font-size:44px;font-weight:700;color:#000;line-height:1;display:block;}
-    .stat-lbl{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,0,0,0.6);margin-top:6px;display:block;font-weight:500;}
+/* ── FOOTER ── */
+footer{background:#060606;border-top:1px solid var(--border);}
+.footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:46px;padding:66px 0 52px;border-bottom:1px solid var(--border);}
+.footer-brand p{font-size:13px;color:var(--text-dim);line-height:1.8;max-width:250px;margin-bottom:20px;margin-top:13px;}
+.footer-social{display:flex;gap:9px;}
+.social-link{width:34px;height:34px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--text-dim);transition:all var(--t) var(--ease);}
+.social-link:hover{border-color:var(--gold-muted);color:var(--gold);}
+.footer-col h4{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:8px;}
+.footer-col ul li a{font-size:13px;color:var(--text-dim);transition:color var(--t) var(--ease);display:flex;align-items:center;gap:7px;}
+.footer-col ul li a::before{content:'›';color:var(--gold-muted);font-size:15px;}
+.footer-col ul li a:hover{color:var(--gold);}
+.footer-bottom{padding:18px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-bottom p{font-size:11px;color:#333;letter-spacing:1px;text-transform:uppercase;}
+.footer-bottom-links{display:flex;gap:20px;}
+.footer-bottom-links a{font-size:11px;color:#333;letter-spacing:1px;text-transform:uppercase;transition:color var(--t) var(--ease);}
+.footer-bottom-links a:hover{color:var(--gold);}
 
-    /* FEATURE CAROUSEL */
-    #feature-carousel{background:var(--black);overflow:hidden;}
-    .carousel-track-outer{display:flex;transition:transform 0.8s var(--ease);}
-    .carousel-slide{min-width:100%;display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
-    .carousel-img{position:relative;overflow:hidden;}
-    .carousel-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.7);transition:transform 8s linear;}
-    .carousel-img:hover img{transform:scale(1.04);}
-    .carousel-text{padding:80px 70px;background:var(--black-3);display:flex;flex-direction:column;justify-content:center;}
-    .carousel-text .c-eyebrow{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:18px;}
-    .carousel-text .c-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold-muted);}
-    .carousel-text h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:700;color:var(--text);margin-bottom:20px;line-height:1.2;}
-    .carousel-text h2 em{color:var(--gold);font-style:italic;}
-    .carousel-text p{font-size:14px;color:var(--text-dim);line-height:1.9;margin-bottom:12px;}
-    .carousel-nav{display:flex;gap:10px;margin-top:36px;}
-    .c-btn{width:44px;height:44px;border:1px solid var(--border-gold);background:none;color:var(--gold-muted);font-size:14px;cursor:pointer;transition:all var(--t) var(--ease);display:flex;align-items:center;justify-content:center;}
-    .c-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim);}
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.85s var(--ease),transform 0.85s var(--ease);}
+.reveal.d1{transition-delay:0.12s;}.reveal.d2{transition-delay:0.24s;}.reveal.d3{transition-delay:0.36s;}
+.reveal.visible{opacity:1;transform:translateY(0);}
 
-    /* INSIGHTS */
-    #insights{padding:100px 0;background:var(--black-2);}
-    .insights-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:50px;padding-bottom:30px;border-bottom:1px solid var(--border);}
-    .article-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:1px;background:var(--border);}
-    .article-card{background:var(--card);padding:48px;transition:background var(--t) var(--ease);position:relative;overflow:hidden;}
-    .article-card::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform var(--t) var(--ease);}
-    .article-card:hover{background:#121212;}
-    .article-card:hover::after{transform:scaleX(1);}
-    .article-tag-row{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
-    .article-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-muted);padding:4px 12px;font-weight:500;}
-    .article-date{font-size:12px;color:var(--text-dim);}
-    .article-card h3{font-family:'Playfair Display',serif;font-size:clamp(20px,2.2vw,26px);color:var(--text);font-weight:600;line-height:1.3;margin-bottom:16px;}
-    .article-card p{font-size:14px;color:var(--text-mid);line-height:1.9;margin-bottom:14px;}
-    .article-card strong{color:var(--text);font-weight:500;}
-    .formula-box{background:#090909;border:1px solid var(--border);border-left:3px solid var(--gold-muted);padding:16px 22px;margin:18px 0;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);letter-spacing:0.5px;}
+/* ── HAMBURGER / MOBILE ── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--gold);transition:var(--t);}
+.mobile-nav{display:none;flex-direction:column;background:#090909;border-top:1px solid var(--border);padding:12px 0;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{padding:12px 24px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ccc;border-bottom:1px solid var(--border);transition:color var(--t) var(--ease);}
+.mobile-nav a:hover{color:var(--gold);}
+.mob-svc-title{padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-muted);border-bottom:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:space-between;}
+.mob-svc-title i{transition:transform var(--t);}
+.mob-svc-list{display:none;background:#070707;}
+.mob-svc-list.open{display:block;}
+.mob-svc-list a{padding:10px 36px;font-size:11px;letter-spacing:1.5px;color:var(--text-dim);border-bottom:1px solid #111;display:block;}
+.mob-svc-list a:hover{color:var(--gold);}
 
-    /* RESOURCES */
-    #resources{padding:100px 0;background:var(--black);}
-    .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:50px;}
-    .resource-tile{background:var(--card);padding:50px 40px;text-align:center;transition:background var(--t) var(--ease);}
-    .resource-tile:hover{background:#131313;}
-    .resource-icon{font-size:36px;color:var(--gold-muted);margin-bottom:22px;transition:color var(--t) var(--ease);}
-    .resource-tile:hover .resource-icon{color:var(--gold);}
-    .resource-tile h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--text);font-weight:600;margin-bottom:12px;}
-    .resource-tile p{font-size:13px;color:var(--text-dim);line-height:1.8;margin-bottom:24px;}
-    .btn-gold-sm{background:var(--gold);color:#000;padding:11px 24px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all var(--t) var(--ease);}
-    .btn-gold-sm:hover{background:var(--gold-light);box-shadow:0 0 20px var(--gold-glow);}
-
-    /* TESTIMONIALS */
-    #testimonials{padding:100px 0;background:var(--black-2);overflow:hidden;}
-    .testimonial-slider{position:relative;overflow:hidden;margin-top:50px;}
-    .testimonial-track{display:flex;transition:transform 0.7s var(--ease);}
-    .testimonial-card{min-width:100%;padding:60px 80px;background:var(--card);border:1px solid var(--border);position:relative;}
-    .testimonial-card::before{content:'\201C';font-family:'Playfair Display',serif;font-size:140px;color:var(--gold-dim);position:absolute;top:20px;left:50px;line-height:1;pointer-events:none;}
-    .testimonial-text{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.2vw,24px);color:#d0cdc5;font-style:italic;line-height:1.85;max-width:800px;margin:0 auto 32px;text-align:center;position:relative;z-index:1;}
-    .testimonial-author{text-align:center;position:relative;z-index:1;}
-    .author-name{font-size:13px;color:var(--gold);font-weight:500;letter-spacing:2px;text-transform:uppercase;display:block;}
-    .author-role{font-size:12px;color:var(--text-dim);margin-top:4px;display:block;}
-    .testimonial-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:36px;}
-    .t-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:all var(--t) var(--ease);}
-    .t-dot.is-active{background:var(--gold);width:26px;border-radius:3px;}
-
-    /* CONTACT */
-    #contact{display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
-    .contact-info{padding:90px 70px;background:#0a0a0a;display:flex;flex-direction:column;justify-content:center;}
-    .contact-info h2{font-family:'Playfair Display',serif;font-size:clamp(30px,3vw,46px);font-weight:700;color:var(--text);margin-bottom:14px;}
-    .contact-info h2 em{color:var(--gold);font-style:italic;}
-    .contact-info>p{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--text-dim);margin-bottom:48px;font-weight:300;}
-    .contact-row{display:flex;align-items:flex-start;gap:20px;margin-bottom:28px;}
-    .contact-icon{width:44px;height:44px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:var(--gold-muted);margin-top:2px;}
-    .contact-row-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text-dim);display:block;margin-bottom:5px;}
-    .contact-row a,.contact-row p{font-size:15px;color:var(--text-mid);transition:color var(--t) var(--ease);line-height:1.5;}
-    .contact-row a:hover{color:var(--gold);}
-    .contact-map{position:relative;overflow:hidden;background:#0d0d0d;}
-    .contact-map img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%) brightness(0.35) sepia(30%);}
-    .map-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(7,7,7,0.55);}
-
-    /* FOOTER */
-    footer{background:#060606;border-top:1px solid var(--border);}
-    .footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;padding:70px 0 60px;border-bottom:1px solid var(--border);}
-    .footer-brand p{font-size:13px;color:var(--text-dim);line-height:1.8;max-width:260px;margin-bottom:24px;margin-top:14px;}
-    .footer-social{display:flex;gap:10px;}
-    .social-link{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--text-dim);transition:all var(--t) var(--ease);}
-    .social-link:hover{border-color:var(--gold-muted);color:var(--gold);}
-    .footer-col h4{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px;}
-    .footer-col ul{list-style:none;}
-    .footer-col ul li{margin-bottom:10px;}
-    .footer-col ul li a{font-size:13px;color:var(--text-dim);transition:color var(--t) var(--ease);display:flex;align-items:center;gap:8px;}
-    .footer-col ul li a::before{content:'›';color:var(--gold-muted);font-size:15px;}
-    .footer-col ul li a:hover{color:var(--gold);}
-    .footer-bottom{padding:22px 0;display:flex;align-items:center;justify-content:space-between;}
-    .footer-bottom p{font-size:11px;color:#333;letter-spacing:1px;text-transform:uppercase;}
-    .footer-bottom-links{display:flex;gap:24px;}
-    .footer-bottom-links a{font-size:11px;color:#333;letter-spacing:1px;text-transform:uppercase;transition:color var(--t) var(--ease);}
-    .footer-bottom-links a:hover{color:var(--gold);}
-
-    /* REVEAL */
-    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.85s var(--ease),transform 0.85s var(--ease);}
-    .reveal.d1{transition-delay:0.12s;}.reveal.d2{transition-delay:0.24s;}.reveal.d3{transition-delay:0.36s;}
-    .reveal.visible{opacity:1;transform:translateY(0);}
-
-    /* MOBILE */
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;}
-    .hamburger span{display:block;width:24px;height:1.5px;background:var(--gold);transition:var(--t);}
-    .mobile-nav{display:none;flex-direction:column;background:#090909;border-top:1px solid var(--border);padding:20px 0;}
-    .mobile-nav.open{display:flex;}
-    .mobile-nav a{padding:12px 24px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ccc;border-bottom:1px solid var(--border);transition:color var(--t) var(--ease);}
-    .mobile-nav a:hover{color:var(--gold);}
-
-    @media(max-width:1024px){
-        .primary-nav{display:none;}.hamburger{display:flex;}
-        #about,#contact{grid-template-columns:1fr;}
-        .about-visual{min-height:360px;}.contact-map{min-height:300px;}
-        .footer-main{grid-template-columns:1fr 1fr;}
-        .services-layout{grid-template-columns:1fr;}
-        .services-categories{display:none;}
-        .services-detail{padding:30px 24px;}
-        .svc-items-grid{grid-template-columns:1fr;}
-        .carousel-slide{grid-template-columns:1fr;}
-        .carousel-img{min-height:260px;}
-        .article-grid{grid-template-columns:1fr;}
-        .resource-grid{grid-template-columns:1fr;}
-        .testimonial-card{padding:40px 30px;}
-        .stats-band-inner{grid-template-columns:repeat(2,1fr);}
-    }
-    @media(max-width:640px){
-        .container{padding:0 20px;}
-        .footer-main{grid-template-columns:1fr;gap:30px;}
-        .article-card{padding:30px 24px;}
-        .about-content{padding:50px 30px;}
-        .contact-info{padding:60px 30px;}
-    }
-    </style>
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .primary-nav{display:none;}.hamburger{display:flex;}
+  #about,#contact{grid-template-columns:1fr;}
+  .about-visual{min-height:320px;}.contact-map{min-height:260px;}
+  .footer-main{grid-template-columns:1fr 1fr;}
+  .services-layout{grid-template-columns:1fr;padding:0 20px;}
+  .services-categories{display:none;}
+  .services-detail{padding:24px 18px;}
+  .svc-items-grid{grid-template-columns:1fr;}
+  .carousel-slide{grid-template-columns:1fr;}
+  .carousel-img{min-height:220px;}
+  .article-grid{grid-template-columns:1fr;}
+  .resource-grid{grid-template-columns:1fr;}
+  .testimonial-card{padding:36px 24px;}
+  .stats-band-inner{grid-template-columns:repeat(2,1fr);}
+  .form-row{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .container{padding:0 16px;}
+  .footer-main{grid-template-columns:1fr;gap:26px;}
+  .article-card{padding:26px 20px;}
+  .about-content{padding:40px 22px;}
+  .contact-info{padding:48px 22px;}
+  .wonder-label{left:18px;bottom:42px;}
+  .hero-controls{right:18px;bottom:36px;}
+  .testimonial-card{padding:32px 18px;}
+  .testimonial-card::before{font-size:70px;left:16px;}
+}
+</style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ══ HEADER ══ -->
 <header id="header">
-    <div class="container">
-        <div class="header-inner">
-            <a href="#" class="logo-wrap">
-                <span class="logo-main">CA Tirth Shah</span>
-                <span class="logo-sub">Chartered Accountant · Ahmedabad</span>
-            </a>
-            <nav class="primary-nav" id="primary-nav">
-                <div class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo-wrap">
+        <span class="logo-main">CA Tirth Shah</span>
+        <span class="logo-sub">Chartered Accountant · Ahmedabad</span>
+      </a>
+      <nav class="primary-nav" id="primary-nav">
+        <div class="nav-item"><a href="#about" class="nav-link">About</a></div>
+        <!-- Services Mega -->
+        <div class="nav-item has-mega">
+          <span class="nav-link">Services <i class="fa fa-chevron-down chevron"></i></span>
+          <div class="mega-wrap">
+            <div class="mega-inner">
+              <div class="mega-tabs" id="mega-tabs">
+                <div class="mega-tab is-active" data-panel="p-it">
+                  <div class="tab-icon"><i class="fa fa-calculator"></i></div>
+                  <div class="tab-label">Income Tax<span class="tab-sub">Direct Tax Advisory &amp; Litigation</span></div>
                 </div>
-                <div class="nav-item">
-                    <a class="nav-link">Services <i class="fa fa-chevron-down"></i></a>
-                    <div class="mega-wrap">
-                        <div class="mega-inner">
-                            <!-- LEFT: 3 category tabs with icons + sub-labels -->
-                            <div class="mega-tabs" id="mega-tabs">
-                                <div class="mega-tab is-active" data-panel="p-it">
-                                    <div class="tab-icon"><i class="fa fa-calculator"></i></div>
-                                    <div class="tab-label">Income Tax<span class="tab-sub">Direct Tax Advisory &amp; Litigation</span></div>
-                                </div>
-                                <div class="mega-tab" data-panel="p-gst">
-                                    <div class="tab-icon"><i class="fa fa-receipt"></i></div>
-                                    <div class="tab-label">GST Advisory<span class="tab-sub">Compliance, Refunds &amp; Strategy</span></div>
-                                </div>
-                                <div class="mega-tab" data-panel="p-intl">
-                                    <div class="tab-icon"><i class="fa fa-globe"></i></div>
-                                    <div class="tab-label">International Tax<span class="tab-sub">DTAA · 15CA/15CB · NRI · Transfer Pricing</span></div>
-                                </div>
-                            </div>
-                            <!-- RIGHT: panels -->
-                            <div class="mega-panels">
-                                <!-- Income Tax Panel -->
-                                <div class="mega-panel is-active" id="p-it">
-                                    <div class="mega-panel-head">
-                                        <div class="mega-panel-icon"><i class="fa fa-calculator"></i></div>
-                                        <div>
-                                            <h3>Income Tax Advisory</h3>
-                                            <p>End-to-end advisory across assessments, appeals, corporate planning, and complex litigation — backed by deep legal research and current judicial precedents.</p>
-                                        </div>
-                                        <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;margin-left:6px;"></i></a>
-                                    </div>
-                                    <div class="mega-services-grid">
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>Scrutiny Assessments</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-landmark"></i></div>CIT(A) &amp; ITAT Appeals</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-building"></i></div>Corporate Tax Strategy</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-magnifying-glass"></i></div>Search &amp; Seizure Matters</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-chart-line"></i></div>Capital Gains Advisory</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-file-invoice"></i></div>Tax Compliance &amp; Planning</div>
-                                    </div>
-                                </div>
-                                <!-- GST Panel -->
-                                <div class="mega-panel" id="p-gst">
-                                    <div class="mega-panel-head">
-                                        <div class="mega-panel-icon"><i class="fa fa-receipt"></i></div>
-                                        <div>
-                                            <h3>GST Compliance &amp; Strategy</h3>
-                                            <p>Complete GST lifecycle management — from registration to departmental proceedings, refund recovery, and strategic ITC optimization.</p>
-                                        </div>
-                                        <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;margin-left:6px;"></i></a>
-                                    </div>
-                                    <div class="mega-services-grid">
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-rotate-left"></i></div>GST Refund Recovery</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-coins"></i></div>ITC Optimization Strategy</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-stethoscope"></i></div>GST Health Checks</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>GST Litigation &amp; Appeals</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-clipboard-check"></i></div>Departmental Audit Support</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-file-code"></i></div>E-Invoice &amp; Compliance</div>
-                                    </div>
-                                </div>
-                                <!-- International Tax Panel — expanded with TP + DTAA/15CA highlighted -->
-                                <div class="mega-panel" id="p-intl">
-                                    <div class="mega-panel-head">
-                                        <div class="mega-panel-icon"><i class="fa fa-globe"></i></div>
-                                        <div>
-                                            <h3>International Taxation</h3>
-                                            <p>Cross-border tax solutions covering DTAA treaty benefits, Form 15CA/15CB certification, NRI compliance, FEMA, and Transfer Pricing — for NRIs, multinationals, and global businesses.</p>
-                                        </div>
-                                        <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;margin-left:6px;"></i></a>
-                                    </div>
-                                    <div class="mega-services-grid">
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-handshake"></i></div>DTAA Benefits &amp; Treaty Analysis</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-file-signature"></i></div>Form 15CA &amp; 15CB Certification</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-user-tie"></i></div>NRI Taxation &amp; Compliance</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-arrows-left-right"></i></div>Cross-Border Remittance</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-shield-halved"></i></div>FEMA &amp; RBI Compliance</div>
-                                        <div class="mega-service-item"><div class="si-icon"><i class="fa fa-scale-balanced"></i></div>Transfer Pricing Advisory</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mega-tab" data-panel="p-gst">
+                  <div class="tab-icon"><i class="fa fa-receipt"></i></div>
+                  <div class="tab-label">GST Advisory<span class="tab-sub">Compliance, Refunds &amp; Strategy</span></div>
                 </div>
-                <div class="nav-item"><a href="#insights" class="nav-link">Insights</a></div>
-                <div class="nav-item"><a href="#resources" class="nav-link">Resources</a></div>
-                <div class="nav-item"><a href="#contact" class="nav-link nav-cta">Contact Us</a></div>
-            </nav>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+                <div class="mega-tab" data-panel="p-intl">
+                  <div class="tab-icon"><i class="fa fa-globe"></i></div>
+                  <div class="tab-label">International Tax<span class="tab-sub">DTAA · 15CA/15CB · NRI · TP</span></div>
+                </div>
+              </div>
+              <div class="mega-panels">
+                <div class="mega-panel is-active" id="p-it">
+                  <div class="mega-panel-head">
+                    <div class="mega-panel-icon"><i class="fa fa-calculator"></i></div>
+                    <div><h3>Income Tax Advisory</h3><p>End-to-end advisory across assessments, appeals, corporate planning, and complex litigation — backed by deep legal research and current judicial precedents.</p></div>
+                    <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;"></i></a>
+                  </div>
+                  <div class="mega-services-grid">
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>Scrutiny Assessments</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-landmark"></i></div>CIT(A) &amp; ITAT Appeals</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-building"></i></div>Corporate Tax Strategy</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-magnifying-glass"></i></div>Search &amp; Seizure Matters</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-chart-line"></i></div>Capital Gains Advisory</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-file-invoice"></i></div>Tax Compliance &amp; Planning</a>
+                  </div>
+                </div>
+                <div class="mega-panel" id="p-gst">
+                  <div class="mega-panel-head">
+                    <div class="mega-panel-icon"><i class="fa fa-receipt"></i></div>
+                    <div><h3>GST Compliance &amp; Strategy</h3><p>Complete GST lifecycle management — from registration to departmental proceedings, refund recovery, and ITC optimization.</p></div>
+                    <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;"></i></a>
+                  </div>
+                  <div class="mega-services-grid">
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-rotate-left"></i></div>GST Refund Recovery</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-coins"></i></div>ITC Optimization Strategy</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-stethoscope"></i></div>GST Health Checks</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>GST Litigation &amp; Appeals</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-clipboard-check"></i></div>Departmental Audit Support</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-file-code"></i></div>E-Invoice &amp; Compliance</a>
+                  </div>
+                </div>
+                <div class="mega-panel" id="p-intl">
+                  <div class="mega-panel-head">
+                    <div class="mega-panel-icon"><i class="fa fa-globe"></i></div>
+                    <div><h3>International Taxation</h3><p>Cross-border tax solutions covering DTAA, Form 15CA/15CB, NRI compliance, FEMA, and Transfer Pricing — for NRIs, multinationals, and global businesses.</p></div>
+                    <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;"></i></a>
+                  </div>
+                  <div class="mega-services-grid">
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-handshake"></i></div>DTAA Benefits &amp; Treaty Analysis</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-file-signature"></i></div>Form 15CA &amp; 15CB Certification</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-user-tie"></i></div>NRI Taxation &amp; Compliance</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-arrows-left-right"></i></div>Cross-Border Remittance</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-shield-halved"></i></div>FEMA &amp; RBI Compliance</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-scale-balanced"></i></div>Transfer Pricing Advisory</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="nav-item"><a href="#insights" class="nav-link">Insights</a></div>
+        <div class="nav-item"><a href="#resources" class="nav-link">Resources</a></div>
+        <div class="nav-item"><a href="#contact" class="nav-link nav-cta">Contact Us</a></div>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#about">About</a>
+    <div class="mob-svc-title" id="mob-svc-toggle">Services <i class="fa fa-chevron-down" id="mob-svc-icon"></i></div>
+    <div class="mob-svc-list" id="mob-svc-list">
+      <a href="#services-grid">Income Tax Advisory</a>
+      <a href="#services-grid">GST Advisory</a>
+      <a href="#services-grid">International Taxation</a>
+      <a href="#services-grid">DTAA &amp; NRI Services</a>
+      <a href="#services-grid">Transfer Pricing</a>
+      <a href="#services-grid">Form 15CA / 15CB</a>
+    </div>
+    <a href="#insights">Insights</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ══ HERO – ALL 7 WONDERS ══ -->
+<section id="hero">
+
+  <!-- 1. Taj Mahal, India -->
+  <div class="slide is-active" data-idx="0">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80');background-position:center 55%;"></div>
+    <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(7,5,2,0.60)52%,rgba(20,12,0,0.20)100%);"></div>
+    <div class="container"><div class="slide-content">
+      <div class="fresher-badge"><i class="fa fa-star" style="font-size:9px;"></i>&nbsp;ACA · ICAI · Newly Qualified</div>
+      <p class="slide-eyebrow"><i class="fa fa-location-dot" style="font-size:10px;"></i>&nbsp;Ahmedabad, India · Tax Practice</p>
+      <h1 class="slide-title">Beyond<br><em>Compliance.</em></h1>
+      <p class="slide-desc">Specialized advisory in International Taxation, GST Strategy, and Income Tax Litigation — rooted in India, serving clients across the globe.</p>
+      <div class="slide-actions">
+        <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Consult Now</a>
+        <a href="#about" class="btn-ghost">About the Practice</a>
+      </div>
+    </div></div>
+    <div class="wonder-label">Taj Mahal · Agra, India</div>
+  </div>
+
+  <!-- 2. Great Wall, China -->
+  <div class="slide" data-idx="1">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
+    <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92)0%,rgba(5,5,5,0.58)52%,rgba(0,5,10,0.20)100%);"></div>
+    <div class="container"><div class="slide-content">
+      <p class="slide-eyebrow"><i class="fa fa-globe" style="font-size:10px;"></i>&nbsp;International Taxation · DTAA · Cross-Border</p>
+      <h1 class="slide-title">Global Tax.<br><em>Local Insight.</em></h1>
+      <p class="slide-desc">Leveraging India's network of 90+ Double Taxation Avoidance Agreements — navigating cross-border transactions with precision and treaty expertise.</p>
+      <div class="slide-actions">
+        <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> Our Services</a>
+        <a href="#insights" class="btn-ghost">Read Insights</a>
+      </div>
+    </div></div>
+    <div class="wonder-label">Great Wall · China</div>
+  </div>
+
+  <!-- 3. Machu Picchu, Peru -->
+  <div class="slide" data-idx="2">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80');background-position:center 40%;"></div>
+    <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92)0%,rgba(4,6,4,0.58)52%,rgba(0,8,4,0.20)100%);"></div>
+    <div class="container"><div class="slide-content">
+      <p class="slide-eyebrow"><i class="fa fa-arrows-left-right" style="font-size:10px;"></i>&nbsp;NRI Taxation · FEMA · Outbound Investment</p>
+      <h1 class="slide-title">Cross-Border.<br><em>Without Borders.</em></h1>
+      <p class="slide-desc">Form 15CA/15CB, NRI compliance, repatriation planning and outbound investment structuring — for the global Indian and multinational enterprise.</p>
+      <div class="slide-actions">
+        <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> International Tax</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div></div>
+    <div class="wonder-label">Machu Picchu · Peru</div>
+  </div>
+
+  <!-- 4. Chichen Itza, Mexico -->
+  <div class="slide" data-idx="3">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1920&q=80');background-position:center 45%;"></div>
+    <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(6,5,2,0.60)52%,rgba(15,10,0,0.20)100%);"></div>
+    <div class="container"><div class="slide-content">
+      <p class="slide-eyebrow"><i class="fa fa-receipt" style="font-size:10px;"></i>&nbsp;GST Advisory · Refunds · ITC · Litigation</p>
+      <h1 class="slide-title">Structured.<br><em>Compliant.</em></h1>
+      <p class="slide-desc">GST refund recovery, ITC optimization, departmental audit representation and GST litigation — end-to-end indirect tax management for your business.</p>
+      <div class="slide-actions">
+        <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> GST Services</a>
+        <a href="#contact" class="btn-ghost">Consult Now</a>
+      </div>
+    </div></div>
+    <div class="wonder-label">Chichen Itza · Mexico</div>
+  </div>
+
+  <!-- 5. Colosseum, Rome -->
+  <div class="slide" data-idx="4">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
+    <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(5,4,3,0.58)52%,rgba(10,6,0,0.20)100%);"></div>
+    <div class="container"><div class="slide-content">
+      <p class="slide-eyebrow"><i class="fa fa-gavel" style="font-size:10px;"></i>&nbsp;Tax Litigation · Scrutiny · ITAT · Appeals</p>
+      <h1 class="slide-title">Your Advocate.<br><em>In Every Forum.</em></h1>
+      <p class="slide-desc">Scrutiny assessments, CIT(A) and ITAT appeals, search &amp; seizure matters — represented with legal rigour and forensic preparation at every tier.</p>
+      <div class="slide-actions">
+        <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Get in Touch</a>
+        <a href="#resources" class="btn-ghost">Download Resources</a>
+      </div>
+    </div></div>
+    <div class="wonder-label">Colosseum · Rome, Italy</div>
+  </div>
+
+  <!-- 6. Christ the Redeemer, Brazil -->
+  <div class="slide" data-idx="5">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1920&q=80');background-position:center 35%;"></div>
+    <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(4,5,6,0.58)52%,rgba(0,5,12,0.20)100%);"></div>
+    <div class="container"><div class="slide-content">
+      <p class="slide-eyebrow"><i class="fa fa-scale-balanced" style="font-size:10px;"></i>&nbsp;Transfer Pricing · OECD · Berry Ratio · BEPS</p>
+      <h1 class="slide-title">Arm's Length.<br><em>Every Transaction.</em></h1>
+      <p class="slide-desc">Transfer pricing documentation, Berry Ratio benchmarking, APA advisory, and TP audit representation — aligned with OECD guidelines and Indian TP jurisprudence.</p>
+      <div class="slide-actions">
+        <a href="#insights" class="btn-gold"><i class="fa fa-arrow-right"></i> Read Research</a>
+        <a href="#contact" class="btn-ghost">Advisory Enquiry</a>
+      </div>
+    </div></div>
+    <div class="wonder-label">Christ the Redeemer · Brazil</div>
+  </div>
+
+  <!-- 7. Petra, Jordan -->
+  <div class="slide" data-idx="6">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
+    <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(6,4,2,0.58)52%,rgba(15,8,0,0.20)100%);"></div>
+    <div class="container"><div class="slide-content">
+      <p class="slide-eyebrow"><i class="fa fa-user-tie" style="font-size:10px;"></i>&nbsp;NRI Advisory · UAE · Gulf · Middle East DTAA</p>
+      <h1 class="slide-title">Wherever You Are.<br><em>We've Got India.</em></h1>
+      <p class="slide-desc">Specialized NRI tax advisory for Gulf-based Indians — UAE DTAA benefits, repatriation planning, Form 15CA/15CB, and Indian income compliance made seamless.</p>
+      <div class="slide-actions">
+        <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> NRI Services</a>
+        <a href="#contact" class="btn-ghost">Consult Now</a>
+      </div>
+    </div></div>
+    <div class="wonder-label">Petra · Jordan</div>
+  </div>
+
+  <div class="hero-controls" id="hero-dots">
+    <div class="hero-dot is-active" data-to="0"></div>
+    <div class="hero-dot" data-to="1"></div>
+    <div class="hero-dot" data-to="2"></div>
+    <div class="hero-dot" data-to="3"></div>
+    <div class="hero-dot" data-to="4"></div>
+    <div class="hero-dot" data-to="5"></div>
+    <div class="hero-dot" data-to="6"></div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><i class="fa fa-chevron-down"></i></div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <div class="marquee-item">International Taxation</div><div class="marquee-item">GST Advisory</div>
+    <div class="marquee-item">Income Tax Litigation</div><div class="marquee-item">Transfer Pricing</div>
+    <div class="marquee-item">NRI Compliance</div><div class="marquee-item">DTAA Benefits</div>
+    <div class="marquee-item">Tax Audit</div><div class="marquee-item">Form 15CA / 15CB</div>
+    <div class="marquee-item">International Taxation</div><div class="marquee-item">GST Advisory</div>
+    <div class="marquee-item">Income Tax Litigation</div><div class="marquee-item">Transfer Pricing</div>
+    <div class="marquee-item">NRI Compliance</div><div class="marquee-item">DTAA Benefits</div>
+    <div class="marquee-item">Tax Audit</div><div class="marquee-item">Form 15CA / 15CB</div>
+  </div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<section id="services-grid">
+  <div class="container">
+    <div class="services-section-header reveal">
+      <div><span class="section-eyebrow">Three Pillars of Practice</span><h2 class="section-title">Our <em>Services</em></h2></div>
+      <span class="section-count">02</span>
+    </div>
+  </div>
+  <div class="services-layout">
+    <div class="services-categories" id="svc-cats">
+      <div class="svc-cat is-active" data-svc="s-it"><i class="fa fa-calculator"></i><div><span style="display:block;font-weight:500;">Income Tax</span><span style="display:block;font-size:10px;color:#444;margin-top:2px;text-transform:none;letter-spacing:0;font-weight:300;">Advisory &amp; Litigation</span></div></div>
+      <div class="svc-cat" data-svc="s-gst"><i class="fa fa-receipt"></i><div><span style="display:block;font-weight:500;">GST Advisory</span><span style="display:block;font-size:10px;color:#444;margin-top:2px;text-transform:none;letter-spacing:0;font-weight:300;">Refunds, ITC &amp; Strategy</span></div></div>
+      <div class="svc-cat" data-svc="s-intl"><i class="fa fa-globe"></i><div><span style="display:block;font-weight:500;">International Tax</span><span style="display:block;font-size:10px;color:#444;margin-top:2px;text-transform:none;letter-spacing:0;font-weight:300;">DTAA · 15CA/CB · NRI · TP</span></div></div>
+    </div>
+    <div class="services-detail">
+      <div class="svc-panel is-active" id="s-it">
+        <h2 class="svc-panel-title">Income Tax</h2>
+        <p class="svc-panel-desc">End-to-end advisory for corporates, HNIs, and individuals — from assessments and appeals to search &amp; seizure and strategic tax planning rooted in deep legal analysis.</p>
+        <div class="svc-items-grid">
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>Scrutiny Assessments</h4><p>Comprehensive representation and documentation before assessing officers under Sections 143(2) and 147.</p></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-landmark"></i></div><div class="svc-tile-text"><h4>CIT(A) &amp; ITAT Appeals</h4><p>Appellate representation backed by current judicial precedents and well-drafted grounds of appeal.</p></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-building"></i></div><div class="svc-tile-text"><h4>Corporate Tax Strategy</h4><p>Optimized tax structures for businesses aligned with growth objectives and regulatory compliance.</p></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-magnifying-glass"></i></div><div class="svc-tile-text"><h4>Search &amp; Seizure</h4><p>Expert guidance through search operations, voluntary disclosure, and post-search assessments.</p></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-chart-line"></i></div><div class="svc-tile-text"><h4>Capital Gains Advisory</h4><p>Advisory on sale of assets, shares, property and reinvestment exemptions under Section 54 series.</p></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div><div class="svc-tile-text"><h4>HNI &amp; Individual Tax</h4><p>Holistic tax planning and compliance for high-net-worth individuals, professionals, and business owners.</p></div></div>
+        </div>
+      </div>
+      <div class="svc-panel" id="s-gst">
+        <h2 class="svc-panel-title">GST Advisory</h2>
+        <p class="svc-panel-desc">Complete GST lifecycle management — from registration and ITC optimization to complex refund recovery, departmental proceedings, and appellate representation.</p>
+        <div class="svc-items-grid">
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div><div class="svc-tile-text"><h4>GST Refund Recovery</h4><p>End-to-end refund filing for exporters, inverted duty structure applicants, and SEZ suppliers.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>Export Refunds</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Inverted Duty Structure</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>SEZ Supplier Refunds</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-coins"></i></div><div class="svc-tile-text"><h4>ITC Optimization</h4><p>Strategic input tax credit planning to maximize legitimate credits and improve business cash flow.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>GSTR-2B Reconciliation</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Blocked Credit (Sec 17(5))</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-stethoscope"></i></div><div class="svc-tile-text"><h4>GST Registration &amp; Compliance</h4><p>Health checks, registration, amendment, and cancellation across all GST return types.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>GSTR-1/3B/9/9C Filing</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Annual Return</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>GST Litigation &amp; Notices</h4><p>SCN replies, adjudication hearings, and appellate representation across all tiers of dispute resolution.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>SCN Reply</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Appellate Authority</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>High Court Writs</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-clipboard-check"></i></div><div class="svc-tile-text"><h4>GST on Specific Sectors</h4><p>Sector-specific advisory for real estate, imports/exports, e-commerce and works contracts.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>Real Estate</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>E-Commerce</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-file-code"></i></div><div class="svc-tile-text"><h4>E-Invoice &amp; Departmental Audit</h4><p>E-invoicing, e-way bill compliance and full support during departmental audits.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>E-Invoice Setup</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Special Audit Sec 66</span></div></div></div>
+        </div>
+      </div>
+      <div class="svc-panel" id="s-intl">
+        <h2 class="svc-panel-title">International Taxation</h2>
+        <p class="svc-panel-desc">High-value cross-border advisory for NRIs, multinationals, and global professionals — built on India's network of 90+ DTAAs, FEMA, and robust transfer pricing frameworks.</p>
+        <div class="svc-items-grid">
+          <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);"><div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-handshake"></i></div><div class="svc-tile-text"><h4 style="color:var(--gold);">DTAA Benefits &amp; Treaty Analysis</h4><p>Structured application of 90+ DTAAs to minimise withholding tax and prevent double taxation.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>Treaty Eligibility</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Withholding Tax Minimisation</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Tax Residency Certificate</span></div></div></div>
+          <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);"><div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-file-signature"></i></div><div class="svc-tile-text"><h4 style="color:var(--gold);">Form 15CA &amp; 15CB Certification</h4><p>CA certification under Section 195 for all categories of foreign remittances — with full treaty analysis.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>All 15CA Parts I–IV</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>15CB Certification</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Lower TDS (Sec 197)</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div><div class="svc-tile-text"><h4>NRI Taxation &amp; Compliance</h4><p>Residency determination, ITR filing, TDS on property, DTAA claims, and repatriation planning.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>NR/RNOR Determination</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>NRI ITR Filing</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-arrows-left-right"></i></div><div class="svc-tile-text"><h4>Cross-Border Remittance &amp; FEMA</h4><p>Tax-efficient structuring of outbound/inbound remittances and FEMA compliance management.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>Outbound Investment (ODI)</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>FEMA Compounding</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-building-columns"></i></div><div class="svc-tile-text"><h4>Foreign Company Taxation</h4><p>PE exposure analysis, branch profit tax, POEM, and compliance for foreign entities operating in India.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>PE Advisory</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>India Entry Structuring</span></div></div></div>
+          <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-scale-balanced"></i></div><div class="svc-tile-text"><h4>Transfer Pricing &amp; BEPS</h4><p>Arm's length documentation, Berry Ratio benchmarking, APA advisory, and BEPS compliance.</p><div class="sub-services"><span class="sub-tag"><i class="fa fa-chevron-right"></i>TP Documentation (Sec 92D)</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Berry Ratio Benchmarking</span><span class="sub-tag"><i class="fa fa-chevron-right"></i>Pillar Two Compliance</span></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="about-visual">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="CA Tirth Shah">
+    <div class="about-visual-overlay"></div>
+    <div class="about-badge-block"><span class="badge-num">ACA</span><span class="badge-label">ICAI Member</span></div>
+  </div>
+  <div class="about-content">
+    <div class="reveal">
+      <span class="section-eyebrow">The Practitioner</span>
+      <h2>Tirth Shah,<br><em>Chartered Accountant</em></h2>
+      <p class="about-lead">A newly qualified ACA building a focused practice at the intersection of tax law, judicial precedent, and strategic advisory.</p>
+      <div class="about-divider"></div>
+      <p>I am a member of the Institute of Chartered Accountants of India (ICAI), with specialized expertise in Direct Tax, Goods and Services Tax, and International Taxation. My practice is founded on the belief that genuine advisory demands more than mechanical compliance — it requires rigorous legal research, current knowledge of judicial trends, and a deep understanding of each client's economic reality.</p>
+      <p>A significant focus of my practice is advising NRI clients and high-value businesses on optimizing their tax structures through lawful planning, treaty analysis, and litigation strategy — including Form 15CA/15CB certification and Transfer Pricing with Berry Ratio analysis under TNMM.</p>
+      <div class="fresher-note">
+        <strong>Starting Fresh, Thinking Global.</strong> As a newly qualified CA, I bring the most current knowledge of BEPS, updated OECD guidelines, and recent judicial developments — combined with the personal attention and drive that only a focused boutique practice can offer.
+      </div>
+      <div class="tags-row">
+        <span class="tag">ACA – ICAI</span><span class="tag">Direct Tax</span>
+        <span class="tag">International Tax</span><span class="tag">GST Advisory</span>
+        <span class="tag">Transfer Pricing</span><span class="tag">Tax Litigation</span>
+      </div>
+      <div style="margin-top:30px;"><a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Schedule a Consultation</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<div class="stats-band">
+  <div class="stats-band-inner">
+    <div class="stat-block"><span class="stat-num">90+</span><span class="stat-lbl">Countries Covered by DTAA</span></div>
+    <div class="stat-block"><span class="stat-num">OECD</span><span class="stat-lbl">Aligned TP Advisory</span></div>
+    <div class="stat-block"><span class="stat-num">BEPS</span><span class="stat-lbl">Action Plan Compliance</span></div>
+    <div class="stat-block"><span class="stat-num">15CA</span><span class="stat-lbl">Cross-Border Certification</span></div>
+  </div>
+</div>
+
+<!-- ══ FEATURE CAROUSEL ══ -->
+<section id="feature-carousel">
+  <div class="carousel-track-outer" id="c-track">
+    <div class="carousel-slide">
+      <div class="carousel-img"><img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=900&q=80" alt="NRI Tax"></div>
+      <div class="carousel-text">
+        <p class="c-eyebrow">NRI &amp; Cross-Border Tax</p>
+        <h2>Serving the<br><em>Global Indian.</em></h2>
+        <p>Whether you are an NRI managing income from India, a foreign company entering the Indian market, or an Indian business expanding overseas — navigating the intersection of Indian tax law, FEMA, and bilateral treaties demands specialized counsel.</p>
+        <p>From DTAA benefit optimization to Form 15CA/15CB certification, I provide holistic cross-border tax support tailored to your unique residency and transaction profile.</p>
+        <div class="carousel-nav">
+          <button class="c-btn c-prev-btn" aria-label="Previous"><i class="fa fa-arrow-left"></i></button>
+          <button class="c-btn c-next-btn" aria-label="Next"><i class="fa fa-arrow-right"></i></button>
+          <span class="carousel-counter">1 / 3</span>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <div class="carousel-img"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80" alt="Tax Litigation"></div>
+      <div class="carousel-text">
+        <p class="c-eyebrow">Tax Controversy Management</p>
+        <h2>Rigour in<br><em>Every Forum.</em></h2>
+        <p>Tax disputes demand more than procedural compliance — they require deep knowledge of current judicial trends, forensic attention to facts, and the ability to construct compelling legal arguments before assessing officers, CIT(A), and ITAT.</p>
+        <p>With focused expertise across scrutiny assessments, search &amp; seizure proceedings, and GST litigation, I provide representation grounded in law and focused on outcomes.</p>
+        <div class="carousel-nav">
+          <button class="c-btn c-prev-btn" aria-label="Previous"><i class="fa fa-arrow-left"></i></button>
+          <button class="c-btn c-next-btn" aria-label="Next"><i class="fa fa-arrow-right"></i></button>
+          <span class="carousel-counter">2 / 3</span>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <div class="carousel-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Transfer Pricing"></div>
+      <div class="carousel-text">
+        <p class="c-eyebrow">Transfer Pricing Research</p>
+        <h2>The <em>Arm's Length</em><br>Advantage.</h2>
+        <p>Transfer pricing is one of the most technically demanding areas of modern international tax practice. My approach combines rigorous economic analysis with current OECD guidelines and Indian TP jurisprudence to build defensible, well-documented positions.</p>
+        <p>From Berry Ratio benchmarking to representing clients in TP audits before the Transfer Pricing Officer, I bring depth and precision to every engagement.</p>
+        <div class="carousel-nav">
+          <button class="c-btn c-prev-btn" aria-label="Previous"><i class="fa fa-arrow-left"></i></button>
+          <button class="c-btn c-next-btn" aria-label="Next"><i class="fa fa-arrow-right"></i></button>
+          <span class="carousel-counter">3 / 3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INSIGHTS ══ -->
+<section id="insights">
+  <div class="container">
+    <div class="insights-header reveal">
+      <div><span class="section-eyebrow">Publications &amp; Research</span><h2 class="section-title">Technical <em>Insights</em></h2></div>
+      <span class="section-count">04</span>
+    </div>
+    <div class="article-grid">
+      <div class="article-card reveal">
+        <div class="article-tag-row"><span class="article-tag">Transfer Pricing</span><span class="article-date">2025</span></div>
+        <h3>The Berry Ratio in Transfer Pricing: Concept, Logic and Practical Use</h3>
+        <p>In transfer pricing analysis, transactions between associated enterprises must satisfy the Arm's Length Principle. To evaluate whether pricing between related parties mirrors what independent parties would agree upon, practitioners employ Profit Level Indicators (PLIs).</p>
+        <p>The <strong>Berry Ratio</strong> is one such PLI — applied in cases involving distribution or intermediary functions. It measures the relationship between gross profit and operating expenses to assess whether a limited-risk distributor earns a return proportionate to the services it provides.</p>
+        <div class="formula-box">Berry Ratio = Gross Profit ÷ Operating Expenses</div>
+        <p>Developed from the landmark U.S. case <strong>E.I. DuPont de Nemours &amp; Co. v. United States</strong>, the ratio has since gained recognition under OECD Transfer Pricing Guidelines and U.S. Treasury Regulations.</p>
+        <div style="margin-top:18px;"><a href="documents/Berry ratio.pdf" target="_blank" class="btn-gold-sm"><i class="fa fa-download"></i> Download Full Paper</a></div>
+      </div>
+      <div style="background:var(--black-2);display:flex;flex-direction:column;gap:1px;">
+        <div class="article-card reveal d1" style="flex:1;padding:32px 36px;">
+          <div class="article-tag-row"><span class="article-tag">International Tax</span></div>
+          <h3>DTAA Treaty Shopping: Limits and Legitimacy</h3>
+          <p>An analysis of India's approach to treaty abuse, the Principal Purpose Test under BEPS Action 6, and how Indian courts have distinguished legitimate treaty planning from impermissible shopping.</p>
+        </div>
+        <div class="article-card reveal d2" style="flex:1;padding:32px 36px;">
+          <div class="article-tag-row"><span class="article-tag">GST</span></div>
+          <h3>ITC Optimization: Strategic Use of Input Tax Credits</h3>
+          <p>A practical guide to maximizing legitimate input tax credits across supply chains — common pitfalls, Section 17(5) blocked credits, and reconciliation strategies under GSTR-2B.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESOURCES ══ -->
+<section id="resources">
+  <div class="container">
+    <div class="insights-header reveal">
+      <div><span class="section-eyebrow">Downloads &amp; Research Papers</span><h2 class="section-title">Knowledge <em>Resources</em></h2></div>
+      <span class="section-count">05</span>
+    </div>
+    <div class="resource-grid">
+      <div class="resource-tile reveal">
+        <div class="resource-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h3>Berry Ratio Research Paper</h3>
+        <p>Detailed research covering the history, mechanics, and regulatory recognition of the Berry Ratio under OECD and US Treasury guidelines. Essential reading for transfer pricing practitioners.</p>
+        <a href="documents/Berry ratio.pdf" target="_blank" class="btn-gold-sm"><i class="fa fa-download"></i> Download PDF</a>
+      </div>
+      <div class="resource-tile reveal d1">
+        <div class="resource-icon"><i class="fa-solid fa-book"></i></div>
+        <h3>NRI Tax Guide</h3>
+        <p>A comprehensive reference on residency determination, taxability of Indian income, DTAA benefits, and annual compliance obligations for Non-Resident Indians.</p>
+        <span class="coming-soon-tag"><i class="fa fa-clock"></i> Coming Soon</span>
+      </div>
+      <div class="resource-tile reveal d2">
+        <div class="resource-icon"><i class="fa-solid fa-newspaper"></i></div>
+        <h3>GST Refund Handbook</h3>
+        <p>Step-by-step guide to GST refund procedures for exporters, inverted duty structure applicants, and excess cash ledger balances — including recent circular updates.</p>
+        <span class="coming-soon-tag"><i class="fa fa-clock"></i> Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="insights-header reveal">
+      <div><span class="section-eyebrow">Client Perspectives</span><h2 class="section-title">What Clients <em>Say</em></h2></div>
+      <span class="section-count">06</span>
+    </div>
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="t-track">
+        <div class="testimonial-card">
+          <p class="testimonial-text">The depth of analysis and clarity of advice provided on our DTAA structuring was exceptional. Tirth demonstrated a command over both Indian tax law and the treaty provisions that gave us complete confidence in our cross-border transactions.</p>
+          <div class="testimonial-author"><span class="author-name">NRI Business Owner</span><span class="author-role">UAE-Based Client · Real Estate &amp; Investments</span></div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">Our GST refund case had been stuck for over a year. Within months of engaging Tirth's services, we had full recovery. The meticulous preparation and department liaisoning made all the difference.</p>
+          <div class="testimonial-author"><span class="author-name">Director, Manufacturing Company</span><span class="author-role">Ahmedabad · Export-Oriented Unit</span></div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">The technical article on the Berry Ratio was one of the clearest explanations of a complex transfer pricing concept I have come across. It reflected a level of research and writing ability rarely seen in the profession.</p>
+          <div class="testimonial-author"><span class="author-name">Senior Tax Professional</span><span class="author-role">CA Firm · Mumbai</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-controls" id="t-controls">
+      <div class="t-dot is-active" data-to="0"></div>
+      <div class="t-dot" data-to="1"></div>
+      <div class="t-dot" data-to="2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="contact-info">
+    <div class="reveal">
+      <span class="section-eyebrow">Get In Touch</span>
+      <h2>Start a <em>Conversation</em></h2>
+      <p>For advisory enquiries, consultations, or professional collaborations — reach out directly.</p>
+      <div class="contact-row">
+        <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+        <div><span class="contact-row-label">Email</span><a href="mailto:catirthshah@gmail.com">catirthshah@gmail.com</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon"><i class="fa fa-phone"></i></div>
+        <div><span class="contact-row-label">Mobile</span><a href="tel:+918128335264">+91 81283 35264</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
+        <div><span class="contact-row-label">Location</span><p>Ahmedabad, Gujarat, India</p></div>
+      </div>
+      <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group"><label>Your Name *</label><input type="text" id="cf-name" placeholder="Rahul Mehta" required></div>
+          <div class="form-group"><label>Mobile / WhatsApp</label><input type="tel" id="cf-phone" placeholder="+91 98765 43210"></div>
+        </div>
+        <div class="form-group"><label>Email Address *</label><input type="email" id="cf-email" placeholder="rahul@example.com" required></div>
+        <div class="form-group">
+          <label>Service Required</label>
+          <select id="cf-service">
+            <option value="">— Select a service —</option>
+            <option>International Taxation / DTAA</option>
+            <option>Form 15CA / 15CB Certification</option>
+            <option>NRI Taxation &amp; Compliance</option>
+            <option>GST Advisory &amp; Refund Recovery</option>
+            <option>Income Tax Scrutiny / Appeals</option>
+            <option>Transfer Pricing</option>
+            <option>FEMA &amp; Cross-Border Remittance</option>
+            <option>General Tax Planning</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea id="cf-msg" placeholder="Briefly describe your requirement or query..."></textarea></div>
+        <button type="submit" class="form-submit" id="cf-submit"><i class="fa fa-paper-plane"></i> Send Message</button>
+        <div class="form-success" id="cf-success"><i class="fa fa-check-circle" style="color:var(--gold);margin-right:8px;"></i>Thank you! Your message has been sent. I will respond within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+  <div class="contact-map">
+    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80" alt="Ahmedabad">
+    <div class="map-overlay">
+      <div style="text-align:center;">
+        <span class="section-eyebrow" style="display:block;margin-bottom:8px;">Based in</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:30px;color:var(--text);font-weight:700;">Ahmedabad</h3>
+        <p style="font-size:12px;color:var(--text-dim);margin-top:5px;letter-spacing:2px;text-transform:uppercase;">Gujarat, India</p>
+        <a href="tel:+918128335264" class="btn-gold" style="margin-top:22px;justify-content:center;"><i class="fa fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-main">CA Tirth Shah</span>
+        <span class="logo-sub" style="display:block;margin-top:3px;">Chartered Accountant</span>
+        <p>A focused practice in Direct Tax, GST, and International Taxation — where technical rigour meets strategic insight.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:catirthshah@gmail.com" class="social-link" title="Email"><i class="fa fa-envelope"></i></a>
+          <a href="tel:+918128335264" class="social-link" title="Call"><i class="fa fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services-grid">Income Tax Advisory</a></li>
+          <li><a href="#services-grid">GST Advisory</a></li>
+          <li><a href="#services-grid">International Taxation</a></li>
+          <li><a href="#services-grid">DTAA &amp; Treaty Benefits</a></li>
+          <li><a href="#services-grid">Form 15CA / 15CB</a></li>
+          <li><a href="#services-grid">NRI Tax Compliance</a></li>
+          <li><a href="#services-grid">Transfer Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documents/Berry ratio.pdf" target="_blank">Berry Ratio Paper</a></li>
+          <li><a href="#insights">Technical Articles</a></li>
+          <li><a href="#insights">Tax Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="mailto:catirthshah@gmail.com">Email Us</a></li>
+          <li><a href="tel:+918128335264">+91 81283 35264</a></li>
+          <li><a href="#resources">Downloads</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CA Tirth Shah · All Rights Reserved · Ahmedabad, India</p>
+      <div class="footer-bottom-links">
         <a href="#about">About</a>
         <a href="#services-grid">Services</a>
         <a href="#insights">Insights</a>
-        <a href="#resources">Resources</a>
         <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<!-- HERO -->
-<section id="hero">
-    <!-- ═══════════════════════════════════════════════
-         7 WONDERS OF THE WORLD — International Tax Focus
-    ═══════════════════════════════════════════════ -->
-
-    <!-- Slide 1: Taj Mahal, India — home ground, global symbol -->
-    <div class="slide is-active" data-idx="0">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80');background-position:center 55%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(7,5,2,0.62) 52%,rgba(20,12,0,0.25) 100%);"></div>
-        <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-location-dot" style="font-size:10px;"></i> &nbsp;Ahmedabad, India · International Tax Consultants</p>
-            <h1 class="slide-title">Beyond<br><em>Compliance.</em></h1>
-            <p class="slide-desc">Specialized advisory in International Taxation, GST Strategy, and Complex Tax Litigation — rooted in India, serving clients across the globe.</p>
-            <div class="slide-actions">
-                <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Consult Now</a>
-                <a href="#about" class="btn-ghost">About the Practice</a>
-            </div>
-        </div></div>
-        <div class="wonder-label">Taj Mahal · Agra, India</div>
+      </div>
     </div>
-
-    <!-- Slide 2: Great Wall of China — DTAA with China/Asia -->
-    <div class="slide" data-idx="1">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92) 0%,rgba(5,5,5,0.60) 52%,rgba(0,5,10,0.25) 100%);"></div>
-        <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-globe" style="font-size:10px;"></i> &nbsp;International Taxation · DTAA · Cross-Border Advisory</p>
-            <h1 class="slide-title">Global Tax.<br><em>Local Insight.</em></h1>
-            <p class="slide-desc">Leveraging India's network of 90+ Double Taxation Avoidance Agreements — we navigate cross-border transactions with precision and treaty expertise.</p>
-            <div class="slide-actions">
-                <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> Our Services</a>
-                <a href="#insights" class="btn-ghost">Read Insights</a>
-            </div>
-        </div></div>
-        <div class="wonder-label">Great Wall · China</div>
-    </div>
-
-    <!-- Slide 3: Machu Picchu, Peru — FEMA/Outbound investment -->
-    <div class="slide" data-idx="2">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80');background-position:center 40%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92) 0%,rgba(4,6,4,0.60) 52%,rgba(0,8,4,0.25) 100%);"></div>
-        <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-arrows-left-right" style="font-size:10px;"></i> &nbsp;NRI Taxation · FEMA · Outbound Investment</p>
-            <h1 class="slide-title">Cross-Border.<br><em>Without Borders.</em></h1>
-            <p class="slide-desc">Form 15CA/15CB, NRI compliance, repatriation planning and outbound investment structuring — for the global Indian and multinational enterprise.</p>
-            <div class="slide-actions">
-                <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> International Tax</a>
-                <a href="#contact" class="btn-ghost">Get in Touch</a>
-            </div>
-        </div></div>
-        <div class="wonder-label">Machu Picchu · Peru</div>
-    </div>
-
-    <!-- Slide 4: Chichen Itza, Mexico — GST & Indirect Tax -->
-    <div class="slide" data-idx="3">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1920&q=80');background-position:center 45%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(6,5,2,0.62) 52%,rgba(15,10,0,0.25) 100%);"></div>
-        <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-receipt" style="font-size:10px;"></i> &nbsp;GST Advisory · Refunds · ITC · Litigation</p>
-            <h1 class="slide-title">Structured.<br><em>Compliant.</em></h1>
-            <p class="slide-desc">GST refund recovery, ITC optimization, departmental audit representation and GST litigation — end-to-end indirect tax management for your business.</p>
-            <div class="slide-actions">
-                <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> GST Services</a>
-                <a href="#contact" class="btn-ghost">Consult Now</a>
-            </div>
-        </div></div>
-        <div class="wonder-label">Chichen Itza · Mexico</div>
-    </div>
-
-    <!-- Slide 5: Colosseum, Rome — Tax Litigation / Fighting in forums -->
-    <div class="slide" data-idx="4">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(5,4,3,0.60) 52%,rgba(10,6,0,0.25) 100%);"></div>
-        <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-gavel" style="font-size:10px;"></i> &nbsp;Tax Litigation · Scrutiny · ITAT · Appeals</p>
-            <h1 class="slide-title">Your Advocate.<br><em>In Every Forum.</em></h1>
-            <p class="slide-desc">Scrutiny assessments, CIT(A) and ITAT appeals, search &amp; seizure matters — represented with legal rigour and forensic preparation at every tier.</p>
-            <div class="slide-actions">
-                <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Get in Touch</a>
-                <a href="#resources" class="btn-ghost">Download Resources</a>
-            </div>
-        </div></div>
-        <div class="wonder-label">Colosseum · Rome, Italy</div>
-    </div>
-
-    <!-- Slide 6: Christ the Redeemer, Brazil — Transfer Pricing / OECD -->
-    <div class="slide" data-idx="5">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1920&q=80');background-position:center 35%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(4,5,6,0.60) 52%,rgba(0,5,12,0.25) 100%);"></div>
-        <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-scale-balanced" style="font-size:10px;"></i> &nbsp;Transfer Pricing · OECD · Berry Ratio · BEPS</p>
-            <h1 class="slide-title">Arm's Length.<br><em>Every Transaction.</em></h1>
-            <p class="slide-desc">Transfer pricing documentation, Berry Ratio benchmarking, APA advisory, and TP audit representation — aligned with OECD guidelines and Indian TP jurisprudence.</p>
-            <div class="slide-actions">
-                <a href="#insights" class="btn-gold"><i class="fa fa-arrow-right"></i> Read Research</a>
-                <a href="#contact" class="btn-ghost">Advisory Enquiry</a>
-            </div>
-        </div></div>
-        <div class="wonder-label">Christ the Redeemer · Brazil</div>
-    </div>
-
-    <!-- Slide 7: Petra, Jordan — DTAA Middle East / NRI Gulf -->
-    <div class="slide" data-idx="6">
-        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=1920&q=80');background-position:center 50%;"></div>
-        <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93) 0%,rgba(6,4,2,0.60) 52%,rgba(15,8,0,0.25) 100%);"></div>
-        <div class="container"><div class="slide-content">
-            <p class="slide-eyebrow"><i class="fa fa-user-tie" style="font-size:10px;"></i> &nbsp;NRI Advisory · UAE · Gulf · Middle East DTAA</p>
-            <h1 class="slide-title">Wherever You Are.<br><em>We've Got India.</em></h1>
-            <p class="slide-desc">Specialized NRI tax advisory for Gulf-based Indians — UAE DTAA benefits, repatriation planning, Form 15CA/15CB, and Indian income compliance made seamless.</p>
-            <div class="slide-actions">
-                <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> NRI Services</a>
-                <a href="#contact" class="btn-ghost">Consult Now</a>
-            </div>
-        </div></div>
-        <div class="wonder-label">Petra · Jordan</div>
-    </div>
-
-    <!-- Dot controls — 7 dots -->
-    <div class="hero-controls" id="hero-dots">
-        <div class="hero-dot is-active" data-to="0"></div>
-        <div class="hero-dot" data-to="1"></div>
-        <div class="hero-dot" data-to="2"></div>
-        <div class="hero-dot" data-to="3"></div>
-        <div class="hero-dot" data-to="4"></div>
-        <div class="hero-dot" data-to="5"></div>
-        <div class="hero-dot" data-to="6"></div>
-    </div>
-    <div class="scroll-cue"><span>Scroll</span><i class="fa fa-chevron-down"></i></div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee-strip">
-    <div class="marquee-track">
-        <div class="marquee-item">International Taxation</div><div class="marquee-item">GST Advisory</div>
-        <div class="marquee-item">Income Tax Litigation</div><div class="marquee-item">Transfer Pricing</div>
-        <div class="marquee-item">NRI Compliance</div><div class="marquee-item">DTAA Benefits</div>
-        <div class="marquee-item">Tax Audit</div><div class="marquee-item">Form 15CA / 15CB</div>
-        <div class="marquee-item">International Taxation</div><div class="marquee-item">GST Advisory</div>
-        <div class="marquee-item">Income Tax Litigation</div><div class="marquee-item">Transfer Pricing</div>
-        <div class="marquee-item">NRI Compliance</div><div class="marquee-item">DTAA Benefits</div>
-        <div class="marquee-item">Tax Audit</div><div class="marquee-item">Form 15CA / 15CB</div>
-    </div>
-</div>
-
-<!-- SERVICES GRID -->
-<section id="services-grid">
-    <div class="container">
-        <div class="services-section-header reveal">
-            <div><span class="section-eyebrow">Three Pillars of Practice</span><h2 class="section-title">Our <em>Services</em></h2></div>
-            <span class="section-count">02</span>
-        </div>
-    </div>
-    <div class="services-layout">
-        <div class="services-categories" id="svc-cats">
-            <div class="svc-cat is-active" data-svc="s-it">
-                <i class="fa fa-calculator"></i>
-                <div><span style="display:block;font-weight:500;">Income Tax</span><span style="display:block;font-size:10px;color:#444;margin-top:3px;text-transform:none;letter-spacing:0;font-weight:300;">Advisory &amp; Litigation</span></div>
-            </div>
-            <div class="svc-cat" data-svc="s-gst">
-                <i class="fa fa-receipt"></i>
-                <div><span style="display:block;font-weight:500;">GST Advisory</span><span style="display:block;font-size:10px;color:#444;margin-top:3px;text-transform:none;letter-spacing:0;font-weight:300;">Refunds, ITC &amp; Strategy</span></div>
-            </div>
-            <div class="svc-cat" data-svc="s-intl">
-                <i class="fa fa-globe"></i>
-                <div><span style="display:block;font-weight:500;">International Tax</span><span style="display:block;font-size:10px;color:#444;margin-top:3px;text-transform:none;letter-spacing:0;font-weight:300;">DTAA · 15CA/CB · NRI · TP</span></div>
-            </div>
-        </div>
-        <div class="services-detail">
-            <!-- Income Tax -->
-            <div class="svc-panel is-active" id="s-it">
-                <h2 class="svc-panel-title">Income Tax</h2>
-                <p class="svc-panel-desc">End-to-end advisory for corporates, HNIs, and individuals — from assessments and appeals to search &amp; seizure and strategic tax planning rooted in deep legal analysis.</p>
-                <div class="svc-items-grid">
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-gavel"></i></div><div class="svc-tile-text"><h4>Scrutiny Assessments</h4><p>Comprehensive representation and documentation support before assessing officers under Sections 143(2) and 147.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-landmark"></i></div><div class="svc-tile-text"><h4>CIT(A) &amp; ITAT Appeals</h4><p>Appellate representation backed by current judicial precedents and well-drafted grounds of appeal.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-building"></i></div><div class="svc-tile-text"><h4>Corporate Tax Strategy</h4><p>Optimized tax structures for businesses aligned with growth objectives and regulatory compliance.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-magnifying-glass"></i></div><div class="svc-tile-text"><h4>Search &amp; Seizure</h4><p>Expert guidance through search operations, voluntary disclosure, statements, and post-search assessments.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-chart-line"></i></div><div class="svc-tile-text"><h4>Capital Gains Advisory</h4><p>Advisory on sale of assets, shares, property and reinvestment exemptions under Section 54 series.</p></div></div>
-                    <div class="svc-item-tile"><div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div><div class="svc-tile-text"><h4>HNI &amp; Individual Tax</h4><p>Holistic tax planning and compliance for high-net-worth individuals, professionals, and business owners.</p></div></div>
-                </div>
-            </div>
-            <!-- GST -->
-            <div class="svc-panel" id="s-gst">
-                <h2 class="svc-panel-title">GST Advisory</h2>
-                <p class="svc-panel-desc">Complete GST lifecycle management — from registration and ITC optimization to complex refund recovery, departmental proceedings, and appellate representation.</p>
-                <div class="svc-items-grid">
-                    <!-- Core services -->
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>GST Refund Recovery</h4>
-                            <p>End-to-end refund filing and recovery for exporters, inverted duty structure applicants, and SEZ suppliers.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Export Refunds (IGST &amp; ITC)</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Inverted Duty Structure</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> SEZ Supplier Refunds</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Excess Cash Ledger</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-coins"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>ITC Optimization</h4>
-                            <p>Strategic input tax credit planning to maximize legitimate credits and improve business cash flow.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GSTR-2B Reconciliation</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Blocked Credit (Sec. 17(5))</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> ITC Reversal Advisory</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Credit Chain Structuring</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-stethoscope"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>GST Registration &amp; Compliance</h4>
-                            <p>Periodic health checks, registration, amendment, and cancellation across all GST return types.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GST Registration &amp; Amendment</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GSTR-1 / 3B / 9 / 9C Filing</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Annual Return (GSTR-9/9C)</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Compliance Health Check</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-gavel"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>GST Litigation &amp; Notices</h4>
-                            <p>SCN replies, adjudication hearings, appeals and representation across all tiers of GST dispute resolution.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> SCN Reply &amp; Show Cause</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> First Appellate Authority</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GST Appellate Tribunal</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> High Court Writ Matters</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-clipboard-check"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>GST on Specific Sectors</h4>
-                            <p>Sector-specific GST advisory for real estate, imports/exports, e-commerce and works contracts.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GST on Real Estate</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> GST on Import &amp; Export</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> E-Commerce Operators</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Works Contract GST</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-file-code"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>E-Invoice &amp; Departmental Audit</h4>
-                            <p>Implementation of e-invoicing, e-way bill compliance and full support during departmental audits.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> E-Invoice Implementation</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> E-Way Bill Compliance</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Departmental Audit Support</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Special Audit (Sec. 66)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- International Tax — DTAA and 15CA/CB as hero services -->
-            <div class="svc-panel" id="s-intl">
-                <h2 class="svc-panel-title">International Taxation</h2>
-                <p class="svc-panel-desc">High-value cross-border advisory for NRIs, multinationals, and global professionals — built on India's network of 90+ DTAAs, FEMA, and robust transfer pricing frameworks.</p>
-                <div class="svc-items-grid">
-                    <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);">
-                        <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-handshake"></i></div>
-                        <div class="svc-tile-text">
-                            <h4 style="color:var(--gold);">DTAA Benefits &amp; Treaty Analysis</h4>
-                            <p>Structured application of Double Taxation Avoidance Agreements to minimise withholding tax, claim treaty relief, and prevent double taxation on cross-border income.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Treaty Eligibility Assessment</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Withholding Tax Minimisation</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Tie-Breaker Rule Advisory</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Tax Residency Certificate</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Principal Purpose Test (PPT)</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Treaty Shopping Defence</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);">
-                        <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-file-signature"></i></div>
-                        <div class="svc-tile-text">
-                            <h4 style="color:var(--gold);">Form 15CA &amp; 15CB Certification</h4>
-                            <p>Expert CA certification under Section 195 for all categories of foreign remittances — royalties, professional fees, dividends, loan repayments — with full treaty analysis.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> All Parts — 15CA (I/II/III/IV)</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> 15CB Chartered Accountant Cert.</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Royalty &amp; FTS Remittances</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Dividend &amp; Loan Repayments</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Software &amp; Technical Fees</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Lower TDS Certificate (Sec. 197)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>NRI Taxation &amp; Compliance</h4>
-                            <p>Residency determination, ITR filing, TDS on property and rent, DTAA claims, and repatriation planning for Non-Resident Indians.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Residency (NR/RNOR/R) Determination</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> NRI ITR Filing &amp; TDS Refund</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> TDS on Property Sale by NRI</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Repatriation of Funds from India</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-arrows-left-right"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>Cross-Border Remittance &amp; FEMA</h4>
-                            <p>Tax-efficient structuring of outbound/inbound remittances, outbound investments, and FEMA compliance management.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Outbound Investment (ODI)</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> FDI &amp; FPI Advisory</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> FEMA Compounding</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> ECB &amp; Overseas Borrowing</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-building-columns"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>Foreign Company Taxation in India</h4>
-                            <p>PE exposure analysis, branch profit tax, effective management (POEM), and compliance for foreign entities operating in India.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Permanent Establishment Advisory</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> POEM — Place of Effective Mgmt.</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Branch / Liaison Office Tax</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> India Entry Tax Structuring</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="svc-item-tile">
-                        <div class="svc-tile-icon"><i class="fa fa-scale-balanced"></i></div>
-                        <div class="svc-tile-text">
-                            <h4>Transfer Pricing &amp; BEPS</h4>
-                            <p>Arm's length documentation, Berry Ratio benchmarking, APA advisory, and BEPS / Pillar Two compliance for multinationals.</p>
-                            <div class="sub-services">
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> TP Documentation (Sec. 92D)</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> Berry Ratio Benchmarking</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> APA — Advance Pricing Agreement</span>
-                                <span class="sub-tag"><i class="fa fa-chevron-right"></i> BEPS &amp; Pillar Two Compliance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-    <div class="about-visual">
-        <img src="images/Profile.png" alt="CA Tirth Shah">
-        <div class="about-visual-overlay"></div>
-        <div class="about-badge-block"><span class="badge-num">ACA</span><span class="badge-label">ICAI Member</span></div>
-    </div>
-    <div class="about-content">
-        <div class="reveal">
-            <span class="section-eyebrow">The Practitioner</span>
-            <h2>Tirth Shah,<br><em>Chartered Accountant</em></h2>
-            <p class="about-lead">A qualified CA with a focused practice built at the intersection of tax law, judicial precedent, and strategic advisory.</p>
-            <div class="about-divider"></div>
-            <p>I am a member of the Institute of Chartered Accountants of India (ICAI), with specialized expertise in Direct Tax, Goods and Services Tax, and International Taxation. My practice is founded on the belief that genuine advisory demands more than mechanical compliance — it requires rigorous legal research, current knowledge of judicial trends, and a deep understanding of each client's economic reality.</p>
-            <p>A significant focus of my practice is advising NRI clients and high-value businesses on optimizing their tax structures through lawful planning, treaty analysis, and informed litigation strategy. I appear before tax authorities across income tax and GST proceedings, and regularly advise on cross-border remittance transactions involving Form 15CA/15CB certification.</p>
-            <p>I have developed a particular interest in Transfer Pricing, especially the application of financial metrics — such as the Berry Ratio under the Transactional Net Margin Method — in benchmarking intercompany transactions. I also write technical articles to make complex tax law accessible to practitioners and businesses.</p>
-            <div class="tags-row">
-                <span class="tag">ACA – ICAI</span><span class="tag">Direct Tax</span>
-                <span class="tag">International Tax</span><span class="tag">GST Advisory</span>
-                <span class="tag">Transfer Pricing</span><span class="tag">Tax Litigation</span>
-            </div>
-            <div style="margin-top:36px;">
-                <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Schedule a Consultation</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- STATS -->
-<div class="stats-band">
-    <div class="stats-band-inner">
-        <div class="stat-block"><span class="stat-num">90+</span><span class="stat-lbl">Countries Covered by DTAA</span></div>
-        <div class="stat-block"><span class="stat-num">OECD</span><span class="stat-lbl">Aligned TP Advisory</span></div>
-        <div class="stat-block"><span class="stat-num">BEPS</span><span class="stat-lbl">Action Plan Compliance</span></div>
-        <div class="stat-block"><span class="stat-num">15CA</span><span class="stat-lbl">Cross-Border Certification</span></div>
-    </div>
-</div>
-
-<!-- FEATURE CAROUSEL -->
-<section id="feature-carousel">
-    <div class="carousel-track-outer" id="c-track">
-        <div class="carousel-slide">
-            <div class="carousel-img"><img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=900&q=80" alt="NRI Tax"></div>
-            <div class="carousel-text">
-                <p class="c-eyebrow">NRI &amp; Cross-Border Tax</p>
-                <h2>Serving the<br><em>Global Indian.</em></h2>
-                <p>Whether you are an NRI managing income from India, a foreign company entering the Indian market, or an Indian business expanding overseas — navigating the intersection of Indian tax law, FEMA, and bilateral treaties demands specialized counsel.</p>
-                <p>From DTAA benefit optimization to Form 15CA/15CB certification and FEMA compliance, I provide holistic cross-border tax support tailored to your unique residency and transaction profile.</p>
-                <div class="carousel-nav">
-                    <button class="c-btn" onclick="moveCarousel(-1)"><i class="fa fa-arrow-left"></i></button>
-                    <button class="c-btn" onclick="moveCarousel(1)"><i class="fa fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-slide">
-            <div class="carousel-img"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80" alt="Tax Litigation"></div>
-            <div class="carousel-text">
-                <p class="c-eyebrow">Tax Controversy Management</p>
-                <h2>Rigour in<br><em>Every Forum.</em></h2>
-                <p>Tax disputes demand more than procedural compliance — they require deep knowledge of current judicial trends, forensic attention to facts, and the ability to construct compelling legal arguments before assessing officers, CIT(A), and ITAT.</p>
-                <p>With hands-on experience across scrutiny assessments, search &amp; seizure proceedings, and GST litigation, I provide representation that is grounded in law and focused on outcomes.</p>
-                <div class="carousel-nav">
-                    <button class="c-btn" onclick="moveCarousel(-1)"><i class="fa fa-arrow-left"></i></button>
-                    <button class="c-btn" onclick="moveCarousel(1)"><i class="fa fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-slide">
-            <div class="carousel-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Transfer Pricing"></div>
-            <div class="carousel-text">
-                <p class="c-eyebrow">Transfer Pricing Research</p>
-                <h2>The <em>Arm's Length</em><br>Advantage.</h2>
-                <p>Transfer pricing is one of the most technically demanding areas of modern international tax practice. My approach combines rigorous economic analysis with current OECD guidelines and Indian TP jurisprudence to build defensible, well-documented positions.</p>
-                <p>From benchmarking intercompany transactions using methods like the Berry Ratio to representing clients in TP audits before the Transfer Pricing Officer, I bring depth and precision to every engagement.</p>
-                <div class="carousel-nav">
-                    <button class="c-btn" onclick="moveCarousel(-1)"><i class="fa fa-arrow-left"></i></button>
-                    <button class="c-btn" onclick="moveCarousel(1)"><i class="fa fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- INSIGHTS -->
-<section id="insights">
-    <div class="container">
-        <div class="insights-header reveal">
-            <div><span class="section-eyebrow">Publications &amp; Research</span><h2 class="section-title">Technical <em>Insights</em></h2></div>
-            <span class="section-count">04</span>
-        </div>
-        <div class="article-grid">
-            <div class="article-card reveal">
-                <div class="article-tag-row"><span class="article-tag">Transfer Pricing</span><span class="article-date">2025</span></div>
-                <h3>The Berry Ratio in Transfer Pricing: Concept, Logic and Practical Use</h3>
-                <p>In transfer pricing analysis, transactions between associated enterprises must satisfy the Arm's Length Principle (ALP). To evaluate whether pricing between related parties mirrors what independent parties would agree upon, practitioners employ financial metrics known as Profit Level Indicators (PLIs).</p>
-                <p>The <strong>Berry Ratio</strong> is one such PLI, commonly applied in cases involving distribution or intermediary functions. It measures the relationship between gross profit and operating expenses to assess whether a limited-risk distributor earns a return proportionate to the services it provides.</p>
-                <div class="formula-box">Berry Ratio = Gross Profit ÷ Operating Expenses</div>
-                <p>The concept was developed from the landmark U.S. case <strong>E.I. DuPont de Nemours &amp; Co. v. United States</strong>, where Charles Berry first articulated the ratio. It has since gained recognition under OECD Transfer Pricing Guidelines and U.S. Treasury Regulations, and is particularly applicable where operating expenses are the primary driver of value creation — such as in limited-risk distributors, commission agents, and service providers.</p>
-            </div>
-            <div style="background:var(--black-2);display:flex;flex-direction:column;gap:1px;">
-                <div class="article-card reveal d1" style="flex:1;padding:36px 40px;">
-                    <div class="article-tag-row"><span class="article-tag">International Tax</span></div>
-                    <h3>DTAA Treaty Shopping: Limits and Legitimacy</h3>
-                    <p>An analysis of India's approach to treaty abuse, the Principal Purpose Test under BEPS Action 6, and how Indian courts have distinguished legitimate treaty planning from impermissible shopping.</p>
-                </div>
-                <div class="article-card reveal d2" style="flex:1;padding:36px 40px;">
-                    <div class="article-tag-row"><span class="article-tag">GST</span></div>
-                    <h3>ITC Optimization: Strategic Use of Input Tax Credits</h3>
-                    <p>A practical guide to maximizing legitimate input tax credits across supply chains, with a focus on common pitfalls, Section 17(5) blocked credits, and reconciliation strategies under GSTR-2B.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- RESOURCES -->
-<section id="resources">
-    <div class="container">
-        <div class="insights-header reveal">
-            <div><span class="section-eyebrow">Downloads &amp; Research Papers</span><h2 class="section-title">Knowledge <em>Resources</em></h2></div>
-            <span class="section-count">05</span>
-        </div>
-        <div class="resource-grid">
-            <div class="resource-tile reveal">
-                <div class="resource-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                <h3>Berry Ratio Research Paper</h3>
-                <p>Detailed research covering the history, mechanics, and regulatory recognition of the Berry Ratio under OECD and US Treasury guidelines. Essential reading for transfer pricing practitioners.</p>
-                <a href="documents/Berry ratio.pdf" target="_blank" class="btn-gold-sm"><i class="fa fa-download"></i> Download PDF</a>
-            </div>
-            <div class="resource-tile reveal d1">
-                <div class="resource-icon"><i class="fa-solid fa-book"></i></div>
-                <h3>NRI Tax Guide</h3>
-                <p>A comprehensive reference on residency determination, taxability of Indian income, DTAA benefits, and annual compliance obligations for Non-Resident Indians.</p>
-                <span class="btn-gold-sm" style="opacity:0.5;cursor:not-allowed;"><i class="fa fa-clock"></i> Coming Soon</span>
-            </div>
-            <div class="resource-tile reveal d2">
-                <div class="resource-icon"><i class="fa-solid fa-newspaper"></i></div>
-                <h3>GST Refund Handbook</h3>
-                <p>Step-by-step guide to GST refund procedures for exporters, inverted duty structure applicants, and excess cash ledger balances — including recent circular updates.</p>
-                <span class="btn-gold-sm" style="opacity:0.5;cursor:not-allowed;"><i class="fa fa-clock"></i> Coming Soon</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-    <div class="container">
-        <div class="insights-header reveal">
-            <div><span class="section-eyebrow">Client Perspectives</span><h2 class="section-title">What Clients <em>Say</em></h2></div>
-            <span class="section-count">06</span>
-        </div>
-        <div class="testimonial-slider">
-            <div class="testimonial-track" id="t-track">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">The depth of analysis and clarity of advice provided on our DTAA structuring was exceptional. Tirth demonstrated a command over both Indian tax law and the treaty provisions that gave us complete confidence in our cross-border transactions.</p>
-                    <div class="testimonial-author"><span class="author-name">NRI Business Owner</span><span class="author-role">UAE-Based Client · Real Estate &amp; Investments</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Our GST refund case had been stuck for over a year. Within months of engaging Tirth's services, we had full recovery. The meticulous preparation and department liaisoning made all the difference.</p>
-                    <div class="testimonial-author"><span class="author-name">Director, Manufacturing Company</span><span class="author-role">Ahmedabad · Export-Oriented Unit</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">The technical article on the Berry Ratio was one of the clearest explanations of a complex transfer pricing concept I have come across. It reflected a level of research and writing ability rarely seen in the profession.</p>
-                    <div class="testimonial-author"><span class="author-name">Senior Tax Professional</span><span class="author-role">CA Firm · Mumbai</span></div>
-                </div>
-            </div>
-        </div>
-        <div class="testimonial-controls" id="t-controls">
-            <div class="t-dot is-active" data-to="0"></div>
-            <div class="t-dot" data-to="1"></div>
-            <div class="t-dot" data-to="2"></div>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="contact-info">
-        <div class="reveal">
-            <span class="section-eyebrow">Get In Touch</span>
-            <h2>Start a <em>Conversation</em></h2>
-            <p>For advisory enquiries, consultations, or professional collaborations — reach out directly.</p>
-            <div class="contact-row">
-                <div class="contact-icon"><i class="fa fa-envelope"></i></div>
-                <div><span class="contact-row-label">Email</span><a href="/cdn-cgi/l/email-protection#ff9c9e8b968d8b978cbf98929e9693d19c9092"><span class="__cf_email__" data-cfemail="a5c6c4d1ccd7d1cdd6e5c2c8c4ccc98bc6cac8">[email&#160;protected]</span></a></div>
-            </div>
-            <div class="contact-row">
-                <div class="contact-icon"><i class="fa fa-phone"></i></div>
-                <div><span class="contact-row-label">Mobile</span><a href="tel:+918128335264">+91 81283 35264</a></div>
-            </div>
-            <div class="contact-row">
-                <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
-                <div><span class="contact-row-label">Location</span><p>Ahmedabad, Gujarat, India</p></div>
-            </div>
-            <div style="margin-top:36px;"><a href="/cdn-cgi/l/email-protection#620103160b10160a1122050f030b0e4c010d0f" class="btn-gold"><i class="fa fa-envelope"></i> Send a Message</a></div>
-        </div>
-    </div>
-    <div class="contact-map">
-        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80" alt="Ahmedabad">
-        <div class="map-overlay">
-            <div style="text-align:center;">
-                <span class="section-eyebrow" style="display:block;margin-bottom:8px;">Based in</span>
-                <h3 style="font-family:'Playfair Display',serif;font-size:32px;color:var(--text);font-weight:700;">Ahmedabad</h3>
-                <p style="font-size:12px;color:var(--text-dim);margin-top:6px;letter-spacing:2px;text-transform:uppercase;">Gujarat, India</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <div class="footer-main">
-            <div class="footer-brand">
-                <span class="logo-main">CA Tirth Shah</span>
-                <span class="logo-sub">Chartered Accountant</span>
-                <p>A focused practice in Direct Tax, GST, and International Taxation — where technical rigour meets strategic insight.</p>
-                <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="/cdn-cgi/l/email-protection#80e3e1f4e9f2f4e8f3c0e7ede1e9ecaee3efed" class="social-link"><i class="fa fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services-grid">Income Tax Advisory</a></li>
-                    <li><a href="#services-grid">GST Advisory</a></li>
-                    <li><a href="#services-grid">International Taxation</a></li>
-                    <li><a href="#services-grid">DTAA &amp; Treaty Benefits</a></li>
-                    <li><a href="#services-grid">Form 15CA / 15CB</a></li>
-                    <li><a href="#services-grid">NRI Tax Compliance</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="documents/Berry ratio.pdf" target="_blank">Berry Ratio Paper</a></li>
-                    <li><a href="#insights">Technical Articles</a></li>
-                    <li><a href="#insights">Tax Insights</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="/cdn-cgi/l/email-protection#543735203d26203c27143339353d387a373b39">Email</a></li>
-                    <li><a href="tel:+918128335264">+91 81283 35264</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 CA Tirth Shah · All Rights Reserved · Ahmedabad, India</p>
-            <div class="footer-bottom-links">
-                <a href="#about">About</a>
-                <a href="#services-grid">Services</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </div>
+  </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Header scroll
-const header=document.getElementById('header');
-window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>60);});
+<script>
+// ── Header scroll effect ──
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 60);
+}, {passive:true});
 
-// Mobile nav
-document.getElementById('hamburger').addEventListener('click',()=>{document.getElementById('mobile-nav').classList.toggle('open');});
-document.querySelectorAll('#mobile-nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobile-nav').classList.remove('open')));
-
-// Mega menu tabs
-document.querySelectorAll('.mega-tab').forEach(tab=>{
-    tab.addEventListener('mouseenter',()=>{
-        document.querySelectorAll('.mega-tab').forEach(t=>t.classList.remove('is-active'));
-        document.querySelectorAll('.mega-panel').forEach(p=>p.classList.remove('is-active'));
-        tab.classList.add('is-active');
-        const p=document.getElementById(tab.dataset.panel);
-        if(p)p.classList.add('is-active');
-    });
+// ── Mobile hamburger toggle ──
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobile-nav').classList.toggle('open');
+});
+// Close on mobile link click
+document.querySelectorAll('#mobile-nav a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobile-nav').classList.remove('open'));
 });
 
-// Services tabs
-document.querySelectorAll('.svc-cat').forEach(cat=>{
-    cat.addEventListener('click',()=>{
-        document.querySelectorAll('.svc-cat').forEach(c=>c.classList.remove('is-active'));
-        document.querySelectorAll('.svc-panel').forEach(p=>p.classList.remove('is-active'));
-        cat.classList.add('is-active');
-        const p=document.getElementById(cat.dataset.svc);
-        if(p)p.classList.add('is-active');
-    });
+// ── Mobile services accordion ──
+document.getElementById('mob-svc-toggle').addEventListener('click', () => {
+  const list = document.getElementById('mob-svc-list');
+  const icon = document.getElementById('mob-svc-icon');
+  const open = list.classList.toggle('open');
+  icon.style.transform = open ? 'rotate(180deg)' : '';
 });
 
-// Hero slider
-let hIdx=0;
-const slides=document.querySelectorAll('.slide');
-const hDots=document.querySelectorAll('.hero-dot');
+// ── Mega menu tab switching (hover) ──
+document.querySelectorAll('.mega-tab').forEach(tab => {
+  tab.addEventListener('mouseenter', () => {
+    document.querySelectorAll('.mega-tab').forEach(t => t.classList.remove('is-active'));
+    document.querySelectorAll('.mega-panel').forEach(p => p.classList.remove('is-active'));
+    tab.classList.add('is-active');
+    const panel = document.getElementById(tab.dataset.panel);
+    if (panel) panel.classList.add('is-active');
+  });
+});
+
+// ── Services sidebar tabs ──
+document.querySelectorAll('.svc-cat').forEach(cat => {
+  cat.addEventListener('click', () => {
+    document.querySelectorAll('.svc-cat').forEach(c => c.classList.remove('is-active'));
+    document.querySelectorAll('.svc-panel').forEach(p => p.classList.remove('is-active'));
+    cat.classList.add('is-active');
+    const panel = document.getElementById(cat.dataset.svc);
+    if (panel) panel.classList.add('is-active');
+  });
+});
+
+// ── Hero slider (auto + dot control) ──
+let hIdx = 0;
+const slides = document.querySelectorAll('.slide');
+const hDots  = document.querySelectorAll('.hero-dot');
 let hTimer;
-function goSlide(n){slides[hIdx].classList.remove('is-active');hDots[hIdx].classList.remove('is-active');hIdx=(n+slides.length)%slides.length;slides[hIdx].classList.add('is-active');hDots[hIdx].classList.add('is-active');}
-hTimer=setInterval(()=>goSlide(hIdx+1),6000);
-hDots.forEach(d=>d.addEventListener('click',()=>{clearInterval(hTimer);goSlide(parseInt(d.dataset.to));hTimer=setInterval(()=>goSlide(hIdx+1),6000);}));
 
-// Feature carousel
-let cIdx=0;
-const cTrack=document.getElementById('c-track');
-const cSlides=cTrack.querySelectorAll('.carousel-slide');
-function moveCarousel(dir){cIdx=(cIdx+dir+cSlides.length)%cSlides.length;cTrack.style.transform='translateX(-'+cIdx*100+'%)';}
+function goSlide(n) {
+  slides[hIdx].classList.remove('is-active');
+  hDots[hIdx].classList.remove('is-active');
+  hIdx = (n + slides.length) % slides.length;
+  slides[hIdx].classList.add('is-active');
+  hDots[hIdx].classList.add('is-active');
+}
 
-// Testimonials
-let tIdx=0;
-const tTrack=document.getElementById('t-track');
-const tDots=document.querySelectorAll('.t-dot');
-const tCards=tTrack.querySelectorAll('.testimonial-card');
+hTimer = setInterval(() => goSlide(hIdx + 1), 6000);
+hDots.forEach(d => {
+  d.addEventListener('click', () => {
+    clearInterval(hTimer);
+    goSlide(parseInt(d.dataset.to));
+    hTimer = setInterval(() => goSlide(hIdx + 1), 6000);
+  });
+});
+
+// ── Feature carousel ──
+let cIdx = 0;
+const cTrack  = document.getElementById('c-track');
+const cSlides = cTrack.querySelectorAll('.carousel-slide');
+
+function moveCarousel(dir) {
+  cIdx = (cIdx + dir + cSlides.length) % cSlides.length;
+  cTrack.style.transform = 'translateX(-' + cIdx * 100 + '%)';
+}
+
+document.querySelectorAll('.c-prev-btn').forEach(btn => btn.addEventListener('click', () => moveCarousel(-1)));
+document.querySelectorAll('.c-next-btn').forEach(btn => btn.addEventListener('click', () => moveCarousel(1)));
+
+// ── Testimonials ──
+let tIdx = 0;
+const tTrack = document.getElementById('t-track');
+const tDots  = document.querySelectorAll('.t-dot');
+const tCards = tTrack.querySelectorAll('.testimonial-card');
 let tTimer;
-function goTestimonial(n){tDots[tIdx].classList.remove('is-active');tIdx=(n+tCards.length)%tCards.length;tTrack.style.transform='translateX(-'+tIdx*100+'%)';tDots[tIdx].classList.add('is-active');}
-tTimer=setInterval(()=>goTestimonial(tIdx+1),5500);
-tDots.forEach(d=>d.addEventListener('click',()=>{clearInterval(tTimer);goTestimonial(parseInt(d.dataset.to));tTimer=setInterval(()=>goTestimonial(tIdx+1),5500);}));
 
-// Scroll reveal
-const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}}),{threshold:0.07});
-document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+function goTestimonial(n) {
+  tDots[tIdx].classList.remove('is-active');
+  tIdx = (n + tCards.length) % tCards.length;
+  tTrack.style.transform = 'translateX(-' + tIdx * 100 + '%)';
+  tDots[tIdx].classList.add('is-active');
+}
 
-// Active nav
-const navLinks=document.querySelectorAll('#primary-nav .nav-link:not(.nav-cta)');
-const sectionIds=['about','services-grid','insigh
+tTimer = setInterval(() => goTestimonial(tIdx + 1), 5500);
+tDots.forEach(d => {
+  d.addEventListener('click', () => {
+    clearInterval(tTimer);
+    goTestimonial(parseInt(d.dataset.to));
+    tTimer = setInterval(() => goTestimonial(tIdx + 1), 5500);
+  });
+});
+
+// ── Contact form ──
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const name    = document.getElementById('cf-name').value.trim();
+  const email   = document.getElementById('cf-email').value.trim();
+  const service = document.getElementById('cf-service').value;
+  const msg     = document.getElementById('cf-msg').value.trim();
+  if (!name || !email) { alert('Please enter your name and email.'); return; }
+  const subject = encodeURIComponent('Enquiry: ' + (service || 'Tax Advisory'));
+  const body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nService: ' + (service||'Not specified') + '\n\nMessage:\n' + msg);
+  window.location.href = 'mailto:catirthshah@gmail.com?subject=' + subject + '&body=' + body;
+  const btn  = document.getElementById('cf-submit');
+  const succ = document.getElementById('cf-success');
+  btn.style.display  = 'none';
+  succ.style.display = 'block';
+  setTimeout(() => { btn.style.display = 'inline-flex'; succ.style.display = 'none'; document.getElementById('contact-form').reset(); }, 5000);
+}
+
+// ── Scroll reveal ──
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// ── Active nav highlighting ──
+const allNavLinks = document.querySelectorAll('#primary-nav .nav-link:not(.nav-cta)');
+const sectionEls  = ['about','services-grid','insights','resources','contact'].map(id => document.getElementById(id)).filter(Boolean);
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sectionEls.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  allNavLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + cur) link.classList.add('active');
+  });
+}, {passive:true});
+</script>
+</body>
+</html>
