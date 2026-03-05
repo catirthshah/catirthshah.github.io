@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,19 +7,243 @@
 
 <title>CA Tirth Shah | International Tax Advisory</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
 
+:root{
+--black:#000000;
+--gold:#D4AF37;
+--text:#ffffff;
+--card:#111111;
+}
+
+body{
+margin:0;
+font-family:Inter;
+background:linear-gradient(135deg,#000000 0%,#1a1a1a 100%);
+color:var(--text);
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+background:#000;
+border-bottom:1px solid var(--gold);
+z-index:1000;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-family:"Playfair Display";
+font-size:24px;
+color:var(--gold);
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+}
+
+/* MEGA MENU */
+
+.services{
+position:relative;
+display:inline-block;
+}
+
+.mega{
+position:absolute;
+left:0;
+width:100vw;
+background:#0f0f0f;
+border-top:1px solid var(--gold);
+padding:40px;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+
+.services:hover .mega{
+display:flex;
+animation:slideDown .3s ease;
+}
+
+.menu-left{
+width:30%;
+border-right:1px solid #333;
+}
+
+.menu-left div{
+padding:15px;
+cursor:pointer;
+}
+
+.menu-left div:hover{
+color:var(--gold);
+}
+
+.menu-right{
+width:70%;
+padding-left:40px;
+}
+
+.tab{
+display:none;
+}
+
+.tab.active{
+display:block;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.6)),
+url("images/hero.jpg") center/cover;
+display:flex;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-family:"Playfair Display";
+font-size:56px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+margin-top:20px;
+}
+
+.btn{
+background:var(--gold);
+color:#000;
+padding:14px 30px;
+border-radius:4px;
+display:inline-block;
+margin-top:25px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+box-shadow:0 0 20px var(--gold);
+transform:translateY(-3px);
+}
+
+/* ABOUT */
+
+section{
+padding:100px 0;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:50px;
+}
+
+.about img{
+width:100%;
+border-radius:8px;
+}
+
+/* SERVICES */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border:1px solid #333;
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px var(--gold);
+}
+
+.card i{
+font-size:40px;
+color:var(--gold);
+margin-bottom:10px;
+}
+
+/* ARTICLES */
+
+.article{
+background:var(--card);
+padding:30px;
+border:1px solid #333;
+max-width:800px;
+margin:auto;
+}
+
+.formula{
+color:var(--gold);
+font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+border-top:1px solid var(--gold);
+text-align:center;
+padding:30px;
+color:#aaa;
+}
+
+/* SCROLL ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+@keyframes slideDown{
+from{opacity:0;transform:translateY(-10px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+</style>
 </head>
 
 <body>
 
-
-<header class="navbar">
+<header>
 
 <div class="container nav">
 
@@ -29,8 +252,47 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <nav>
 
 <a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#industries">Industries</a>
+
+<div class="services">
+
+<a href="#">Services</a>
+
+<div class="mega">
+
+<div class="menu-left">
+
+<div data-tab="tax">Income Tax</div>
+<div data-tab="gst">GST</div>
+<div data-tab="intl">International Tax</div>
+
+</div>
+
+<div class="menu-right">
+
+<div class="tab active" id="tax">
+<p>Tax Planning</p>
+<p>Corporate Tax</p>
+<p>Litigation & Appeals</p>
+</div>
+
+<div class="tab" id="gst">
+<p>GST Returns</p>
+<p>Refund Advisory</p>
+<p>GST Strategy</p>
+</div>
+
+<div class="tab" id="intl">
+<p>NRI Taxation</p>
+<p>DTAA Advisory</p>
+<p>Form 15CA / 15CB</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 <a href="#articles">Insights</a>
 <a href="#contact">Contact</a>
 
@@ -41,28 +303,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </header>
 
 
-
 <section class="hero">
-
-<div class="hero-overlay">
 
 <div class="container reveal">
 
 <h1>International Tax & Cross-Border Advisory</h1>
 
 <p>
-Specialised advisory in Direct Tax, GST and
-international taxation matters.
+Advisory in Income Tax, GST and international tax matters for
+professionals, businesses and NRI clients.
 </p>
 
-<a class="btn"
-href="https://wa.me/918128335264">
-
-Discuss Your Matter
-
-</a>
-
-</div>
+<a class="btn">Discuss Your Matter</a>
 
 </div>
 
@@ -81,22 +333,20 @@ Discuss Your Matter
 <h2>About</h2>
 
 <p>
-I am a Chartered Accountant specialising in Direct Tax,
-GST and International Taxation with particular focus on
-cross-border advisory and tax litigation matters.
+I am a Chartered Accountant specialising in Direct Tax, GST and
+International Taxation with focus on cross-border advisory and
+tax litigation.
 </p>
 
 <p>
-My work involves assisting businesses and professionals
-in navigating complex regulatory frameworks under
-Indian tax law, including assessment proceedings,
-treaty interpretation and transfer pricing analysis.
+My work involves assisting clients in interpreting complex
+provisions of the Income-tax Act, GST law and tax treaties,
+supported by legal research and judicial precedents.
 </p>
 
 <p>
-My professional approach combines rigorous legal research
-with practical advisory solutions supported by statutory
-interpretation and judicial precedents.
+Current focus areas include international tax structuring,
+transfer pricing analysis and litigation strategy.
 </p>
 
 </div>
@@ -107,7 +357,7 @@ interpretation and judicial precedents.
 
 
 
-<section id="services" class="services reveal">
+<section class="services-section reveal">
 
 <div class="container">
 
@@ -115,50 +365,23 @@ interpretation and judicial precedents.
 
 <div class="service-grid">
 
-<div class="service-card">
+<div class="card">
 <i class="fa-solid fa-scale-balanced"></i>
-<h3>Income Tax Litigation</h3>
-<p>Assessment proceedings and appellate representation.</p>
+<h3>Income Tax</h3>
+<p>Assessment proceedings and litigation.</p>
 </div>
 
-<div class="service-card">
-<i class="fa-solid fa-globe"></i>
-<h3>International Tax</h3>
-<p>Treaty analysis and cross-border structuring.</p>
-</div>
-
-<div class="service-card">
-<i class="fa-solid fa-chart-line"></i>
-<h3>Transfer Pricing</h3>
-<p>Benchmarking and TP documentation.</p>
-</div>
-
-<div class="service-card">
+<div class="card">
 <i class="fa-solid fa-receipt"></i>
 <h3>GST Advisory</h3>
 <p>Compliance review and GST disputes.</p>
 </div>
 
+<div class="card">
+<i class="fa-solid fa-globe"></i>
+<h3>International Tax</h3>
+<p>Treaty interpretation and cross-border advisory.</p>
 </div>
-
-</div>
-
-</section>
-
-
-
-<section id="industries" class="industries reveal">
-
-<div class="container">
-
-<h2>Industries Served</h2>
-
-<div class="industry-grid">
-
-<div class="industry-card">Technology Startups</div>
-<div class="industry-card">Export Businesses</div>
-<div class="industry-card">Professional Services</div>
-<div class="industry-card">NRI Individuals</div>
 
 </div>
 
@@ -168,20 +391,20 @@ interpretation and judicial precedents.
 
 
 
-<section id="articles" class="articles reveal">
+<section id="articles" class="reveal">
 
 <div class="container">
 
 <h2>Insights</h2>
 
-<div class="article-card">
+<div class="article">
 
 <h3>The Berry Ratio in Transfer Pricing</h3>
 
 <p>
-The Berry Ratio is a financial indicator used in transfer
-pricing analysis to determine whether a distributor earns
-an appropriate return relative to operating expenses.
+The Berry Ratio is used in transfer pricing to evaluate whether
+a distributor earns appropriate returns relative to operating
+expenses.
 </p>
 
 <p class="formula">
@@ -189,9 +412,9 @@ Berry Ratio = Gross Profit / Operating Expenses
 </p>
 
 <p>
-The ratio is particularly relevant when analysing
-limited-risk distributors performing routine marketing
-and distribution functions.
+It is most relevant where the tested party performs routine
+distribution functions without significant inventory or
+intangibles.
 </p>
 
 </div>
@@ -202,28 +425,7 @@ and distribution functions.
 
 
 
-<section class="process reveal">
-
-<div class="container">
-
-<h2>Engagement Approach</h2>
-
-<div class="process-grid">
-
-<div class="process-step">Consultation</div>
-<div class="process-step">Issue Analysis</div>
-<div class="process-step">Legal Research</div>
-<div class="process-step">Structured Advisory</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="contact" class="contact reveal">
+<section id="contact" class="reveal">
 
 <div class="container">
 
@@ -231,7 +433,6 @@ and distribution functions.
 
 <p>Email: catirths@gmail.com</p>
 <p>Phone: +91 81283 35264</p>
-<p>LinkedIn: linkedin.com/in/ca-tirthshah2002</p>
 
 </div>
 
@@ -241,46 +442,37 @@ and distribution functions.
 
 <footer>
 
-<div class="container footer-grid">
-
-<div>
-
-<h3>CA Tirth Shah</h3>
-<p>International Tax Advisory</p>
-
-</div>
-
-<div>
-
-<h4>Services</h4>
-<p>Income Tax</p>
-<p>GST Advisory</p>
-<p>International Tax</p>
-
-</div>
-
-<div>
-
-<h4>Resources</h4>
-<p>Articles</p>
-<p>Research Papers</p>
-
-</div>
-
-<div>
-
-<h4>Contact</h4>
-<p>Ahmedabad, India</p>
-<p>Email: catirths@gmail.com</p>
-
-</div>
-
-</div>
+© 2026 CA Tirth Shah · International Tax Advisory
 
 </footer>
 
 
-<script src="script.js"></script>
+<script>
+
+const tabs=document.querySelectorAll(".menu-left div")
+
+tabs.forEach(tab=>{
+tab.addEventListener("mouseenter",()=>{
+
+document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"))
+
+document.getElementById(tab.dataset.tab).classList.add("active")
+
+})
+})
+
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active")
+}
+})
+})
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el))
+
+</script>
 
 </body>
 </html>
