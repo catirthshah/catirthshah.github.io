@@ -1,8 +1,15 @@
+:root{
+--navy:#1A237E;
+--accent:#F57C00;
+--white:#FFFFFF;
+--grey:#F2F2F2;
+}
+
 body{
 margin:0;
-font-family:system-ui;
-background:#f8fafc;
-color:#334155;
+font-family:"Source Sans Pro",sans-serif;
+background:var(--white);
+color:var(--navy);
 }
 
 .container{
@@ -11,11 +18,17 @@ margin:auto;
 padding:0 20px;
 }
 
+.topbar{
+height:6px;
+background:var(--accent);
+}
+
 .header{
 background:white;
-border-bottom:1px solid #e5e7eb;
+border-bottom:1px solid #eee;
 position:sticky;
 top:0;
+z-index:100;
 }
 
 .nav{
@@ -26,15 +39,15 @@ padding:18px 0;
 }
 
 .logo{
-font-weight:700;
-font-size:22px;
-color:#001F3F;
+font-family:"Playfair Display",serif;
+font-size:24px;
+color:var(--navy);
 }
 
 .menu a{
 margin-left:20px;
 text-decoration:none;
-color:#001F3F;
+color:var(--navy);
 }
 
 .services-menu{
@@ -42,17 +55,25 @@ position:relative;
 }
 
 .mega-menu{
+
 position:absolute;
-top:35px;
-left:-150px;
+top:40px;
+left:-200px;
+
+width:520px;
 display:flex;
-width:500px;
+
 background:white;
+
 border-radius:12px;
+
 box-shadow:0 10px 25px rgba(0,0,0,.15);
+
 padding:20px;
+
 opacity:0;
 visibility:hidden;
+
 transition:.3s;
 }
 
@@ -72,7 +93,7 @@ cursor:pointer;
 }
 
 .menu-item.active{
-color:#d4af37;
+color:var(--accent);
 font-weight:600;
 }
 
@@ -90,7 +111,7 @@ display:block;
 }
 
 .hero{
-background:linear-gradient(120deg,#0f172a,#1e3a8a);
+background:var(--navy);
 color:white;
 text-align:center;
 padding:120px 20px;
@@ -99,16 +120,15 @@ padding:120px 20px;
 .cta{
 display:inline-block;
 margin-top:20px;
-background:#d4af37;
+background:var(--accent);
 padding:14px 30px;
 border-radius:30px;
 text-decoration:none;
-color:black;
+color:white;
 }
 
 .about{
 padding:80px 0;
-background:white;
 }
 
 .about-grid{
@@ -123,7 +143,7 @@ border-radius:10px;
 }
 
 .services{
-background:#eef2ff;
+background:var(--grey);
 padding:80px 0;
 }
 
@@ -151,8 +171,13 @@ padding:30px;
 border-radius:10px;
 }
 
+.formula{
+color:var(--accent);
+font-weight:700;
+}
+
 .resources{
-background:#f1f5f9;
+background:var(--grey);
 padding:80px 0;
 text-align:center;
 }
@@ -165,16 +190,30 @@ max-width:600px;
 margin:auto;
 }
 
+.pdf-link{
+background:var(--accent);
+color:white;
+padding:12px 22px;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
 .contact{
-background:#0f172a;
+background:var(--navy);
 color:white;
 padding:80px 0;
 text-align:center;
 }
 
+.contact a{
+color:#ffb74d;
+}
+
 footer{
-background:#020617;
-color:#94a3b8;
+background:#0d154f;
+color:white;
 text-align:center;
 padding:15px;
 }
