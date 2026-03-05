@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CA Tirth Shah | International Tax Advisory</title>
+    <title>CA Tirth Shah | Tax & International Advisory</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -21,11 +21,12 @@
             background-color: var(--black);
             color: var(--text);
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         .container { max-width: 1200px; margin: auto; padding: 0 20px; }
 
-        /* HEADER FIX: Absolute positioning for Mega Menu */
+        /* HEADER & MEGA MENU */
         header {
             position: sticky;
             top: 0;
@@ -35,35 +36,14 @@
             backdrop-filter: blur(10px);
         }
 
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-family: "Playfair Display"; font-size: 26px; color: var(--gold); text-decoration: none; letter-spacing: 1px; }
 
-        .logo {
-            font-family: "Playfair Display";
-            font-size: 26px;
-            color: var(--gold);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        nav { display: flex; align-items: center; }
-        nav a {
-            color: white;
-            margin-left: 30px;
-            text-decoration: none;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
+        nav { display: flex; align-items: center; position: relative; }
+        nav a { color: white; margin-left: 30px; text-decoration: none; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; cursor: pointer; }
         nav a:hover { color: var(--gold); }
 
-        /* MEGA MENU BLUNDER FIX */
-        .services-link { position: static; } /* Crucial: ensures mega menu uses screen width, not parent width */
+        .nav-item-wrapper { position: static; }
         
         .mega {
             position: absolute;
@@ -78,47 +58,24 @@
             z-index: 1000;
         }
 
-        .nav-item-wrapper:hover .mega {
-            display: block;
-            animation: slideDown 0.4s ease-out forwards;
-        }
+        .nav-item-wrapper:hover .mega { display: block; animation: slideDown 0.4s ease-out forwards; }
 
-        .mega-content {
-            display: flex;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        .menu-left {
-            width: 30%;
-            border-right: 1px solid #333;
-        }
-
-        .menu-left div {
-            padding: 15px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-            color: #888;
-        }
-
-        .menu-left div.active-tab, .menu-left div:hover {
-            color: var(--gold);
-            background: rgba(212, 175, 55, 0.05);
-        }
+        .mega-content { display: flex; max-width: 1200px; margin: auto; padding: 0 20px; }
+        .menu-left { width: 30%; border-right: 1px solid #333; }
+        .menu-left div { padding: 15px 20px; font-size: 16px; cursor: pointer; transition: 0.3s; color: #888; }
+        .menu-left div.active-tab, .menu-left div:hover { color: var(--gold); background: rgba(212, 175, 55, 0.05); }
 
         .menu-right { width: 70%; padding-left: 60px; }
         .tab-content { display: none; }
         .tab-content.active { display: block; animation: fadeIn 0.5s ease; }
-        .tab-content h3 { color: var(--gold); margin-top: 0; }
-        .tab-content p { color: #ccc; line-height: 1.8; }
+        .tab-content h3 { color: var(--gold); margin-top: 0; font-family: "Playfair Display"; }
+        .tab-content p { color: #ccc; line-height: 1.8; font-size: 15px; }
 
-        /* HERO SECTION with KPC style overlay */
+        /* HERO SECTION */
         .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1548013146-72479768bbaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&w=1350&q=80'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -127,52 +84,63 @@
             text-align: center;
         }
 
-        .hero h1 { font-family: "Playfair Display"; font-size: 64px; color: var(--gold); margin-bottom: 10px; }
-        .hero p { font-size: 20px; max-width: 800px; margin: 20px auto; color: #ddd; font-weight: 300; }
+        .hero h1 { font-family: "Playfair Display"; font-size: 58px; color: var(--gold); margin: 0; }
+        .hero p { font-size: 18px; max-width: 750px; margin: 25px auto; color: #bbb; font-weight: 300; line-height: 1.6; }
 
         .btn {
             background: transparent;
             color: var(--gold);
             border: 1px solid var(--gold);
-            padding: 15px 40px;
+            padding: 14px 35px;
             text-transform: uppercase;
             letter-spacing: 2px;
             text-decoration: none;
             transition: 0.4s;
-            margin-top: 30px;
             display: inline-block;
+            font-size: 12px;
         }
 
-        .btn:hover { background: var(--gold); color: black; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+        .btn:hover { background: var(--gold); color: black; box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
 
-        /* PRACTICE AREAS (No Audit) */
-        section { padding: 100px 0; }
-        .section-title { text-align: center; font-family: "Playfair Display"; font-size: 40px; margin-bottom: 60px; }
-        .section-title span { color: var(--gold); }
-
-        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .card {
+        /* INSIGHTS & PDF SECTION */
+        .insights { background: #080808; padding: 100px 0; border-top: 1px solid #1a1a1a; }
+        .article-card {
             background: var(--card);
-            padding: 40px;
             border: 1px solid #222;
-            transition: 0.4s;
-            text-align: left;
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
             position: relative;
-            overflow: hidden;
         }
-        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .card i { font-size: 45px; color: var(--gold); margin-bottom: 20px; }
+        .article-card h2 { color: var(--gold); font-family: "Playfair Display"; margin-top: 0; }
+        .formula-box {
+            background: #000;
+            padding: 20px;
+            border-left: 3px solid var(--gold);
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 18px;
+            color: var(--gold);
+        }
+        .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .pdf-link i { margin-right: 10px; font-size: 20px; }
+        .pdf-link:hover { text-decoration: underline; transform: translateX(5px); }
 
-        /* ANIMATIONS */
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        /* FOOTER */
+        footer { padding: 50px 0; border-top: 1px solid #222; text-align: center; color: #555; font-size: 12px; letter-spacing: 1px; }
+
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-
     </style>
 </head>
 <body>
@@ -183,7 +151,7 @@
         <nav>
             <a href="#about">About</a>
             <div class="nav-item-wrapper">
-                <a href="#" class="services-link">Services <i class="fa fa-chevron-down" style="font-size: 10px;"></i></a>
+                <a>Services <i class="fa fa-chevron-down" style="font-size: 9px; margin-left: 5px;"></i></a>
                 <div class="mega">
                     <div class="mega-content">
                         <div class="menu-left">
@@ -193,21 +161,22 @@
                         </div>
                         <div class="menu-right">
                             <div class="tab-content active" id="tax">
-                                <h3>Direct Tax Services</h3>
-                                <p>• Strategic Tax Planning for Corporates<br>• Litigation Support & Representation<br>• Income Tax Appeals & Assessments<br>• Tax Audits & Compliance Management</p>
+                                <h3>Direct Tax Strategy</h3>
+                                <p>• Scrutiny Assessments & Appeals<br>• Corporate Tax Planning<br>• Search & Seizure Representation<br>• Capital Gains Optimization</p>
                             </div>
                             <div class="tab-content" id="gst">
-                                <h3>Indirect Tax (GST)</h3>
-                                <p>• GST Refund Processing<br>• Departmental Audit Support<br>• Annual Return Filing (GSTR-9/9C)<br>• Strategic GST Advisory for High-Scale Businesses</p>
+                                <h3>Goods & Services Tax</h3>
+                                <p>• GST Refund Claims & Liasoning<br>• Indirect Tax Health Checks<br>• Departmental Audit Representation<br>• Multi-state Compliance Management</p>
                             </div>
                             <div class="tab-content" id="intl">
                                 <h3>International Taxation</h3>
-                                <p>• NRI Taxation & Compliance<br>• DTAA Benefit Analysis (Tax Treaties)<br>• Certification (Form 15CA & 15CB)<br>• Foreign Remittance Strategy</p>
+                                <p>• NRI Taxation & Overseas Remittance<br>• Double Taxation Avoidance (DTAA)<br>• Form 15CA / 15CB Certification<br>• Transfer Pricing Documentation</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <a href="#insights">Insights</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
@@ -215,37 +184,48 @@
 
 <section class="hero">
     <div class="container reveal">
-        <h1>PRECISION. STRATEGY. GROWTH.</h1>
-        <p>Expert Advisory in Income Tax, GST, and International Taxation for Global Businesses and Professionals.</p>
-        <a href="#contact" class="btn">Schedule Consultation</a>
+        <h1>GLOBAL TAX STRATEGY</h1>
+        <p>Specialized advisory in Cross-Border Taxation, GST Refunds, and Complex Income Tax Litigations for high-growth businesses.</p>
+        <a href="#contact" class="btn">Connect with an Expert</a>
     </div>
 </section>
 
-<section id="services">
-    <div class="container">
-        <h2 class="section-title">Core <span>Specializations</span></h2>
-        <div class="service-grid">
-            <div class="card reveal">
-                <i class="fa-solid fa-building-columns"></i>
-                <h3>Income Tax</h3>
-                <p>Navigating complex scrutiny assessments and delivering results in tax litigations.</p>
+<section id="insights" class="insights">
+    <div class="container reveal">
+        <div class="article-card">
+            <span style="color: var(--gold); font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Technical Analysis</span>
+            <h2>The Berry Ratio in Transfer Pricing</h2>
+            <p>The Berry Ratio is a critical financial ratio used to determine if a taxpayer’s transfer price is at arm’s length. It is particularly effective for distributors and service providers who do not perform significant unique functions.</p>
+            
+            <div class="formula-box">
+                Berry Ratio = Gross Profit / Operating Expenses
             </div>
-            <div class="card reveal">
-                <i class="fa-solid fa-file-invoice-dollar"></i>
-                <h3>GST Advisory</h3>
-                <p>Ensuring seamless compliance and unlocking blocked refunds through strategic advisory.</p>
-            </div>
-            <div class="card reveal">
-                <i class="fa-solid fa-globe"></i>
-                <h3>International Tax</h3>
-                <p>Simplifying cross-border transactions and NRI tax matters with DTAA expertise.</p>
-            </div>
+
+            <p>Understanding this ratio is vital for benchmarking routine distribution activities in international transactions.</p>
+            
+            <a href="Berry_Ratio_Analysis.pdf" target="_blank" class="pdf-link">
+                <i class="fa-solid fa-file-pdf"></i> Download Full Technical Analysis (PDF)
+            </a>
         </div>
     </div>
 </section>
 
+<section id="contact" style="padding: 100px 0; text-align: center;">
+    <div class="container reveal">
+        <h2 style="font-family: 'Playfair Display'; font-size: 36px;">Ready to Optimize Your Tax Structure?</h2>
+        <p style="color: #888;">Direct: +91 81283 35264  |  Email: catirths@gmail.com</p>
+        <a href="mailto:catirths@gmail.com" class="btn" style="margin-top: 20px;">Send an Inquiry</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        &copy; 2026 CA TIRTH SHAH &bull; CHARTERED ACCOUNTANT &bull; INTERNATIONAL TAX SPECIALIST
+    </div>
+</footer>
+
 <script>
-    // Mega Menu Tab Switching
+    // Mega Menu Tab Logic
     const tabs = document.querySelectorAll(".menu-left div");
     const contents = document.querySelectorAll(".tab-content");
 
@@ -253,22 +233,21 @@
         tab.addEventListener("mouseenter", () => {
             tabs.forEach(t => t.classList.remove("active-tab"));
             contents.forEach(c => c.classList.remove("active"));
-            
             tab.classList.add("active-tab");
             document.getElementById(tab.dataset.tab).classList.add("active");
         });
     });
 
-    // Scroll Reveal Animation
+    // Intersection Observer for animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("active");
+                entry.target.classList.add('active');
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>
