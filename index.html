@@ -1071,4 +1071,26 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 // ── Active nav highlighting ──
 const allNavLinks = document.querySelectorAll('#primary-nav .nav-link:not(.nav-cta)');
 const sectionEls  = ['about','services-grid','insights','resources','contact'].map(id => document.getElementById(id)).filter(Boolean);
-window.a
+
+function updateActiveNav() {
+  const y = window.scrollY + 120;
+  let activeId = '';
+
+  sectionEls.forEach(sec => {
+    if (sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y) {
+      activeId = sec.id;
+    }
+  });
+
+  allNavLinks.forEach(link => {
+    const href = link.getAttribute('href') || '';
+    link.classList.toggle('active', href === '#' + activeId);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+window.addEventListener('resize', updateActiveNav, { passive: true });
+updateActiveNav();
+</script>
+</body>
+</html>
