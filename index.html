@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LexTax | Tax & Regulatory Advisory | CA Tirth Shah | Ahmedabad</title>
-<meta name="description" content="LexTax – Specialized advisory in GST, Income Tax, and International Taxation. CA Tirth Shah, Chartered Accountant, Ahmedabad.">
+<meta name="description" content="LexTax — Tax &amp; Regulatory Advisory by CA Tirth Shah (ACA, ICAI), Ahmedabad. Specialized in GST Advisory, Income Tax, and International Taxation including DTAA, Transfer Pricing, NRI Taxation, and Section 195 compliance.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -34,15 +36,25 @@ body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--text);
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 
+/* ══ TOP CONTACT BAR ══ */
+#top-contact-bar{position:fixed;top:0;left:0;right:0;background:#050505;border-bottom:1px solid #1a1400;padding:0;display:flex;align-items:center;justify-content:flex-end;height:34px;z-index:10000;transition:transform 0.3s ease;}
+#top-contact-bar .container{display:flex;align-items:center;justify-content:flex-end;gap:0;}
+.tcb-item{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--text-dim);padding:0 18px;border-left:1px solid #1c1c1c;height:34px;transition:color 0.2s;letter-spacing:0.5px;}
+.tcb-item:last-child{border-right:1px solid #1c1c1c;}
+.tcb-item i{color:var(--gold-muted);font-size:10px;}
+.tcb-item:hover{color:var(--gold);}
+.tcb-item:hover i{color:var(--gold);}
+.tcb-divider{width:1px;height:14px;background:#1c1c1c;}
+
 /* ══ HEADER ══ */
-#header{position:fixed;top:0;left:0;right:0;z-index:9999;transition:background var(--t) var(--ease),border-color var(--t) var(--ease);border-bottom:1px solid transparent;}
-#header.scrolled{background:rgba(7,7,7,0.97);border-bottom-color:var(--border-gold);backdrop-filter:blur(16px);}
+#header{position:fixed;top:34px;left:0;right:0;z-index:9999;transition:background var(--t) var(--ease),border-color var(--t) var(--ease);border-bottom:1px solid transparent;}
+#header.scrolled{background:rgba(7,7,7,0.97);border-bottom-color:var(--border-gold);backdrop-filter:blur(16px);}#top-contact-bar.hidden{transform:translateY(-34px);}#header.top-hidden{top:0;}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:40px;}
 .logo-wrap{display:flex;flex-direction:row;align-items:center;gap:10px;flex-shrink:0;text-decoration:none;}
 .logo-img{height:44px;width:44px;object-fit:contain;flex-shrink:0;}
 .logo-text-wrap{display:flex;flex-direction:column;gap:2px;}
 .logo-main{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:3px;text-transform:uppercase;line-height:1;}
-.logo-sub{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:4px;color:var(--text-dim);text-transform:uppercase;font-weight:300;}
+.logo-sub{font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:4px;color:var(--text-dim);text-transform:uppercase;font-weight:300;}
 .primary-nav{display:flex;align-items:center;gap:2px;flex:1;justify-content:flex-end;}
 .nav-item{position:static;display:flex;align-items:center;}
 .nav-link{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#ccc;padding:10px 16px;transition:color var(--t) var(--ease);display:flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer;}
@@ -53,7 +65,7 @@ img{max-width:100%;display:block;}
 .nav-cta:hover{background:var(--gold-light)!important;box-shadow:0 0 24px var(--gold-glow)!important;}
 
 /* ══ MEGA MENU ══ */
-.mega-wrap{position:fixed;top:72px;left:0;width:100vw;background:#080808;border-top:2px solid var(--gold-muted);border-bottom:3px solid var(--gold-muted);box-shadow:0 40px 80px rgba(0,0,0,0.98);z-index:9998;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity 0.25s var(--ease),transform 0.25s var(--ease);}
+.mega-wrap{position:fixed;top:106px;left:0;width:100vw;background:#080808;border-top:2px solid var(--gold-muted);border-bottom:3px solid var(--gold-muted);box-shadow:0 40px 80px rgba(0,0,0,0.98);z-index:9998;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity 0.25s var(--ease),transform 0.25s var(--ease);}
 .nav-item.has-mega:hover .mega-wrap{opacity:1;pointer-events:all;transform:translateY(0);}
 .mega-inner{display:grid;grid-template-columns:260px 1fr;width:100%;max-width:1400px;margin:0 auto;padding:0 60px;min-height:320px;}
 .mega-tabs{border-right:1px solid #1e1e1e;padding:36px 0;background:#050505;}
@@ -84,14 +96,14 @@ img{max-width:100%;display:block;}
 .slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04);transition:transform 9s linear;}
 .slide.is-active .slide-bg{transform:scale(1);}
 .slide-overlay{position:absolute;inset:0;}
-.slide-content{position:relative;z-index:3;max-width:680px;padding-top:72px;}
-.slide-eyebrow{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:20px;opacity:0;transform:translateY(14px);transition:all 0.7s var(--ease) 0.3s;}
+.slide-content{position:relative;z-index:3;max-width:680px;padding-top:120px;}
+.slide-eyebrow{font-family:'Playfair Display',serif;font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:20px;opacity:0;transform:translateY(14px);transition:all 0.7s var(--ease) 0.3s;}
 .slide-eyebrow::before{content:'';display:block;width:36px;height:1px;background:var(--gold-muted);}
 .slide.is-active .slide-eyebrow{opacity:1;transform:translateY(0);}
 .slide-title{font-family:'Playfair Display',serif;font-size:clamp(40px,5.5vw,76px);font-weight:700;color:var(--white);line-height:1.06;margin-bottom:20px;opacity:0;transform:translateY(18px);transition:all 0.8s var(--ease) 0.5s;}
 .slide-title em{color:var(--gold);font-style:italic;}
 .slide.is-active .slide-title{opacity:1;transform:translateY(0);}
-.slide-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,1.8vw,20px);color:#c0bdb5;max-width:540px;margin-bottom:34px;line-height:1.8;font-weight:300;opacity:0;transform:translateY(12px);transition:all 0.8s var(--ease) 0.7s;}
+.slide-desc{font-family:'Playfair Display',serif;font-size:clamp(16px,1.8vw,20px);color:#c0bdb5;max-width:540px;margin-bottom:34px;line-height:1.8;font-weight:300;opacity:0;transform:translateY(12px);transition:all 0.8s var(--ease) 0.7s;}
 .slide.is-active .slide-desc{opacity:1;transform:translateY(0);}
 .slide-actions{display:flex;gap:12px;flex-wrap:wrap;opacity:0;transform:translateY(10px);transition:all 0.8s var(--ease) 0.9s;}
 .slide.is-active .slide-actions{opacity:1;transform:translateY(0);}
@@ -105,7 +117,7 @@ img{max-width:100%;display:block;}
 .scroll-cue{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:5px;opacity:0.45;animation:scrollBounce 2.4s ease-in-out infinite;}
 .scroll-cue span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--text-mid);}
 @keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
-.wonder-label{position:absolute;bottom:46px;left:50px;z-index:10;font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(201,168,76,0.5);display:flex;align-items:center;gap:8px;opacity:0;transition:opacity 0.9s ease 1.2s;}
+.wonder-label{position:absolute;bottom:46px;left:50px;z-index:10;font-family:'Playfair Display',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(201,168,76,0.5);display:flex;align-items:center;gap:8px;opacity:0;transition:opacity 0.9s ease 1.2s;}
 .wonder-label::before{content:'';display:block;width:20px;height:1px;background:rgba(201,168,76,0.3);}
 .slide.is-active .wonder-label{opacity:1;}
 .fresher-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.28);padding:5px 13px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px;font-family:'DM Sans',sans-serif;font-weight:500;}
@@ -117,26 +129,42 @@ img{max-width:100%;display:block;}
 .marquee-item::after{content:'◆';font-size:6px;opacity:0.45;}
 @keyframes marqueeRun{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
+/* ══ AUTHORITY STRIP ══ */
+#authority-strip{background:#070707;border-top:1px solid #1a1400;border-bottom:1px solid #1c1c1c;padding:0;}
+.auth-items{display:flex;align-items:stretch;justify-content:center;}
+.auth-item{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 40px;gap:5px;flex:1;text-align:center;}
+.auth-num{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold);font-weight:700;line-height:1;}
+.auth-label{font-size:10px;color:var(--text-dim);letter-spacing:0.5px;line-height:1.5;text-transform:uppercase;}
+.auth-sep{width:1px;background:var(--border);flex-shrink:0;margin:16px 0;}
+@media(max-width:767px){
+  .auth-items{flex-wrap:wrap;}
+  .auth-item{flex:0 0 50%;padding:20px 16px;}
+  .auth-sep{display:none;}
+}
+
 /* ══ SERVICES ══ */
 #services-grid{padding:0;background:var(--black-2);}
-.services-section-header{padding:72px 0 44px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border);}
+.services-section-header{padding:90px 0 52px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border);}
 .section-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;display:block;margin-bottom:10px;}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,42px);font-weight:700;color:var(--text);line-height:1.15;}
 .section-title em{color:var(--gold);font-style:italic;}
 .section-count{font-family:'Playfair Display',serif;font-size:84px;color:#131313;font-weight:700;line-height:1;flex-shrink:0;}
 .services-layout{display:grid;grid-template-columns:230px 1fr;max-width:1260px;margin:0 auto;padding:0 36px;}
-.services-categories{border-right:1px solid var(--border);padding:32px 0;}
+.services-categories{border-right:1px solid var(--border);padding:44px 0;}
 .svc-cat{display:flex;align-items:center;gap:12px;padding:13px 20px;font-size:13px;color:var(--text-dim);cursor:pointer;transition:all var(--t) var(--ease);border-left:3px solid transparent;}
 .svc-cat i{width:18px;text-align:center;font-size:14px;flex-shrink:0;}
 .svc-cat:hover,.svc-cat.is-active{color:var(--gold);border-left-color:var(--gold);background:var(--gold-dim);}
-.services-detail{padding:32px 44px;}
+.services-detail{padding:52px 60px;}
 .svc-panel{display:none;}
 .svc-panel.is-active{display:block;animation:fadeUp 0.32s var(--ease);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(7px);}to{opacity:1;transform:translateY(0);}}
+.panel-outcome-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+.outcome-badge{font-size:10px;color:var(--gold);background:var(--gold-dim);border:1px solid var(--border-gold);padding:4px 10px;letter-spacing:1px;display:inline-flex;align-items:center;gap:5px;}
+.outcome-badge i{font-size:8px;}
 .svc-panel-title{font-family:'Playfair Display',serif;font-size:27px;color:var(--text);font-weight:600;margin-bottom:8px;}
-.svc-panel-desc{font-size:14px;color:var(--text-dim);margin-bottom:26px;max-width:560px;line-height:1.8;}
-.svc-items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);}
-.svc-item-tile{background:var(--black-3);padding:20px 22px;display:flex;align-items:flex-start;gap:13px;transition:background var(--t) var(--ease);}
+.svc-panel-desc{font-size:15px;color:var(--text-dim);margin-bottom:40px;max-width:600px;line-height:2.0;}
+.svc-items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);align-items:stretch;grid-auto-rows:1fr;}
+.svc-item-tile{background:var(--black-3);padding:28px 26px;display:flex;align-items:flex-start;gap:14px;transition:background var(--t) var(--ease);min-height:160px;height:100%;}
 .svc-item-tile:hover{background:#141414;}
 .svc-tile-icon{width:34px;height:34px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;color:var(--gold-muted);margin-top:2px;}
 .svc-tile-text h4{font-size:13px;color:var(--text);font-weight:500;margin-bottom:4px;line-height:1.3;}
@@ -158,7 +186,7 @@ img{max-width:100%;display:block;}
 .about-content{padding:68px 60px;background:var(--black-3);display:flex;flex-direction:column;justify-content:center;}
 .about-content h2{font-family:'Playfair Display',serif;font-size:clamp(26px,2.8vw,40px);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:18px;}
 .about-content h2 em{color:var(--gold);font-style:italic;}
-.about-lead{font-family:'Cormorant Garamond',serif;font-size:17px;color:#d0cdc5;line-height:1.85;margin-bottom:16px;font-weight:300;}
+.about-lead{font-family:'Playfair Display',serif;font-size:17px;color:#d0cdc5;line-height:1.85;margin-bottom:16px;font-weight:300;}
 .about-content p{font-size:13.5px;color:var(--text-dim);line-height:1.95;margin-bottom:12px;}
 .about-divider{width:44px;height:1px;background:var(--gold-muted);margin:18px 0;}
 .tags-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px;}
@@ -198,7 +226,7 @@ img{max-width:100%;display:block;}
 .carousel-img{position:relative;overflow:hidden;background:#111;}
 .carousel-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.62);}
 .carousel-text{padding:64px 58px;background:var(--black-3);display:flex;flex-direction:column;justify-content:center;}
-.c-eyebrow{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:11px;margin-bottom:14px;}
+.c-eyebrow{font-family:'Playfair Display',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:11px;margin-bottom:14px;}
 .c-eyebrow::before{content:'';display:block;width:26px;height:1px;background:var(--gold-muted);}
 .carousel-text h2{font-family:'Playfair Display',serif;font-size:clamp(22px,2.8vw,34px);font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.2;}
 .carousel-text h2 em{color:var(--gold);font-style:italic;}
@@ -206,7 +234,7 @@ img{max-width:100%;display:block;}
 .carousel-nav{display:flex;gap:9px;margin-top:26px;align-items:center;}
 .c-btn{width:38px;height:38px;border:1px solid var(--border-gold);background:none;color:var(--gold-muted);font-size:12px;cursor:pointer;transition:all var(--t) var(--ease);display:flex;align-items:center;justify-content:center;}
 .c-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim);}
-.carousel-counter{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--text-dim);margin-left:6px;}
+.carousel-counter{font-family:'Playfair Display',serif;font-size:14px;color:var(--text-dim);margin-left:6px;}
 
 /* ══ CASE LAW LIBRARY ══ */
 #case-law-library{background:var(--black-2);padding:0;}
@@ -227,7 +255,7 @@ img{max-width:100%;display:block;}
 .article-card h3{font-family:'Playfair Display',serif;font-size:clamp(17px,2vw,22px);color:var(--text);font-weight:600;line-height:1.3;margin-bottom:12px;}
 .article-card p{font-size:13.5px;color:var(--text-mid);line-height:1.9;margin-bottom:10px;}
 .article-card strong{color:var(--text);font-weight:500;}
-.formula-box{background:#090909;border:1px solid var(--border);border-left:3px solid var(--gold-muted);padding:12px 18px;margin:14px 0;font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold-light);letter-spacing:0.5px;}
+.formula-box{background:#090909;border:1px solid var(--border);border-left:3px solid var(--gold-muted);padding:12px 18px;margin:14px 0;font-family:'Playfair Display',serif;font-size:17px;color:var(--gold-light);letter-spacing:0.5px;}
 
 /* ══ RESOURCES ══ */
 #resources{padding:90px 0;background:var(--black);}
@@ -244,12 +272,12 @@ img{max-width:100%;display:block;}
 
 /* ══ TESTIMONIALS ══ */
 #testimonials{padding:90px 0;background:var(--black-2);}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:44px;}
-.testi-real{background:var(--card);padding:44px 38px;position:relative;text-align:center;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:44px;align-items:stretch;grid-auto-rows:1fr;}
+.testi-real{background:var(--card);padding:44px 38px;position:relative;text-align:center;display:flex;flex-direction:column;justify-content:space-between;height:100%;}
 .testi-real::before{content:'\201C';font-family:'Playfair Display',serif;font-size:80px;color:var(--gold-dim);position:absolute;top:10px;left:26px;line-height:1;}
 .testi-stars{display:flex;justify-content:center;gap:3px;margin-bottom:14px;}
 .testi-stars i{color:var(--gold);font-size:11px;}
-.testi-text{font-family:'Cormorant Garamond',serif;font-size:16px;color:#d0cdc5;font-style:italic;line-height:1.85;margin-bottom:20px;position:relative;z-index:1;}
+.testi-text{font-family:'Playfair Display',serif;font-size:16px;color:#d0cdc5;font-style:italic;line-height:1.85;margin-bottom:20px;position:relative;z-index:1;}
 .testi-name{font-size:12px;color:var(--gold);font-weight:500;letter-spacing:2px;text-transform:uppercase;display:block;}
 .testi-role{font-size:11px;color:var(--text-dim);margin-top:3px;display:block;}
 .testi-invite{background:var(--card);padding:44px 38px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed #2a2a2a;}
@@ -265,7 +293,7 @@ img{max-width:100%;display:block;}
 .contact-info{padding:76px 60px;background:#0a0a0a;display:flex;flex-direction:column;justify-content:center;}
 .contact-info h2{font-family:'Playfair Display',serif;font-size:clamp(25px,2.8vw,40px);font-weight:700;color:var(--text);margin-bottom:10px;}
 .contact-info h2 em{color:var(--gold);font-style:italic;}
-.contact-info>p{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--text-dim);margin-bottom:32px;font-weight:300;line-height:1.7;}
+.contact-info>p{font-family:'Playfair Display',serif;font-size:16px;color:var(--text-dim);margin-bottom:32px;font-weight:300;line-height:1.7;}
 .contact-row{display:flex;align-items:flex-start;gap:15px;margin-bottom:20px;}
 .contact-icon{width:38px;height:38px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;color:var(--gold-muted);}
 .contact-row-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text-dim);display:block;margin-bottom:4px;}
@@ -279,7 +307,7 @@ img{max-width:100%;display:block;}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold-muted);}
 .form-group select option{background:#111;}
 .form-group textarea{resize:vertical;min-height:88px;}
-.form-submit{background:var(--gold);color:#000;border:none;cursor:pointer;padding:12px 26px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:9px;transition:all var(--t) var(--ease);align-self:flex-start;}
+.form-submit{background:var(--gold);color:#000;border:none;cursor:pointer;padding:14px 32px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:9px;transition:all var(--t) var(--ease);align-self:flex-start;width:100%;justify-content:center;margin-top:6px;}
 .form-submit:hover{background:var(--gold-light);box-shadow:0 0 22px var(--gold-glow);}
 .form-success{display:none;background:rgba(201,168,76,0.07);border:1px solid var(--gold-muted);padding:12px 16px;color:var(--gold-light);font-size:13px;line-height:1.6;}
 .contact-map{position:relative;overflow:hidden;background:#0d0d0d;}
@@ -300,7 +328,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
 .footer-col ul li a::before{content:'›';color:var(--gold-muted);font-size:14px;}
 .footer-col ul li a:hover{color:var(--gold);}
 .footer-bottom{padding:17px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:9px;}
-.footer-bottom p{font-size:10px;color:#2e2e2e;letter-spacing:1px;text-transform:uppercase;}
+.footer-bottom p{font-size:10px;color:#2e2e2e;letter-spacing:1px;text-transform:uppercase;} .footer-bottom a{color:#2e2e2e;} .footer-bottom a:hover{color:var(--gold);}
 .footer-bottom-links{display:flex;gap:18px;}
 .footer-bottom-links a{font-size:10px;color:#2e2e2e;letter-spacing:1px;text-transform:uppercase;transition:color var(--t) var(--ease);}
 .footer-bottom-links a:hover{color:var(--gold);}
@@ -353,11 +381,105 @@ footer{background:#060606;border-top:1px solid var(--border);}
   .testi-real,.testi-invite{padding:36px 24px;}
   .focus-grid{grid-template-columns:1fr;}
 }
+
+/* ── TOP CONTACT BAR ── */
+.top-bar{background:#090909;border-bottom:1px solid #1a1400;padding:7px 0;display:flex;align-items:center;}
+.top-bar .container{display:flex;align-items:center;justify-content:flex-end;gap:28px;}
+.top-bar-item{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--text-dim);letter-spacing:0.3px;text-decoration:none;transition:color 0.2s;}
+.top-bar-item:hover{color:var(--gold);}
+.top-bar-item i{color:var(--gold);font-size:10px;}
+.top-bar-divider{width:1px;height:12px;background:#2a2a2a;}
+@media(max-width:640px){.top-bar{display:none;}}
+
+
+/* ── MOBILE SERVICE TABS ── */
+.mobile-svc-tabs{display:none;gap:0;border-bottom:1px solid var(--border);margin-bottom:0;}
+.mobile-svc-tab{flex:1;padding:13px 8px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);text-align:center;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;font-weight:500;}
+.mobile-svc-tab.is-active{color:var(--gold);border-bottom-color:var(--gold);}
+@media(max-width:1024px){
+  .mobile-svc-tabs{display:flex;}
+  .services-layout{gap:0;}
+  .services-detail{padding:32px 20px;}
+  .svc-panel-title{font-size:22px;}
+}
+@media(max-width:640px){
+  .services-section-header{flex-direction:column;align-items:flex-start;gap:8px;padding:44px 0 28px;}
+  .section-count{display:none;}
+  .svc-items-grid{gap:2px;}
+  .svc-item-tile{padding:20px 16px;min-height:auto;}
+  .svc-panel-title{font-size:20px;}
+  .svc-panel-desc{font-size:14px;}
+  .services-detail{padding:24px 16px;}
+}
+
+
+/* ── SERVICE PANEL CTA ── */
+.svc-panel-cta{display:inline-flex;align-items:center;gap:9px;margin-top:28px;padding:13px 26px;background:transparent;border:1px solid var(--gold-muted);color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.25s;font-family:'DM Sans',sans-serif;font-weight:500;}
+.svc-panel-cta:hover{background:var(--gold);color:#000;border-color:var(--gold);}
+.svc-panel-cta i{font-size:10px;transition:transform 0.2s;}
+.svc-panel-cta:hover i{transform:translateX(4px);}
+
+
+/* ── FOOTER CONTACT DETAILS ── */
+.footer-contact-details{display:flex;flex-direction:column;gap:8px;margin-top:14px;}
+.footer-contact-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-dim);text-decoration:none;transition:color 0.2s;}
+.footer-contact-item:hover{color:var(--gold);}
+.footer-contact-item i{color:var(--gold);font-size:10px;width:14px;text-align:center;}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "LexTax",
+  "description": "Tax & Regulatory Advisory — GST, Income Tax, International Taxation",
+  "founder": {
+    "@type": "Person",
+    "name": "CA Tirth Shah",
+    "jobTitle": "Chartered Accountant",
+    "alumniOf": "Institute of Chartered Accountants of India"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN"
+  },
+  "telephone": "+918128335264",
+  "email": "catirthshah@gmail.com",
+  "url": "https://catirthshah.github.io",
+  "serviceType": ["GST Advisory", "Income Tax", "International Taxation", "Transfer Pricing", "DTAA Advisory"]
+}
+</script>
 </head>
 <body>
 
 <!-- ══ HEADER ══ -->
+<div class="top-bar">
+  <div class="container">
+    <a href="tel:+918128335264" class="top-bar-item">
+      <i class="fa fa-phone"></i>
+      <span>+91 81283 35264</span>
+    </a>
+    <div class="top-bar-divider"></div>
+    <a href="mailto:catirthshah@gmail.com" class="top-bar-item">
+      <i class="fa fa-envelope"></i>
+      <span>catirthshah@gmail.com</span>
+    </a>
+    <div class="top-bar-divider"></div>
+    <span class="top-bar-item">
+      <i class="fa fa-location-dot"></i>
+      <span>Ahmedabad, India</span>
+    </span>
+  </div>
+</div>
+<div id="top-contact-bar">
+  <div class="container">
+    <a href="tel:+918128335264" class="tcb-item"><i class="fa fa-phone"></i> +91 81283 35264</a>
+    <a href="mailto:catirthshah@gmail.com" class="tcb-item"><i class="fa fa-envelope"></i> catirthshah@gmail.com</a>
+    <span class="tcb-item" style="color:#333;pointer-events:none;"><i class="fa fa-location-dot" style="color:#333;"></i> Ahmedabad, Gujarat</span>
+  </div>
+</div>
 <header id="header">
   <div class="container">
     <div class="header-inner">
@@ -501,7 +623,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="container"><div class="slide-content">
       <p class="slide-eyebrow"><i class="fa fa-globe" style="font-size:10px;"></i>&nbsp;International Taxation · DTAA · Cross-Border</p>
       <h1 class="slide-title">Global Tax.<br><em>Local Insight.</em></h1>
-      <p class="slide-desc">Leveraging India's network of 90+ Double Taxation Avoidance Agreements — structuring cross-border transactions with precision and treaty expertise.</p>
+      <p class="slide-desc">India's 90+ tax treaties are an asset most businesses never fully use. Structure cross-border transactions to legitimately eliminate double taxation — before the deal closes.</p>
       <div class="slide-actions">
         <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> Our Services</a>
         <a href="#insights" class="btn-ghost">Read Insights</a>
@@ -517,7 +639,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="container"><div class="slide-content">
       <p class="slide-eyebrow"><i class="fa fa-arrows-left-right" style="font-size:10px;"></i>&nbsp;NRI Taxation · FEMA · Outbound Investment</p>
       <h1 class="slide-title">Cross-Border.<br><em>Without Borders.</em></h1>
-      <p class="slide-desc">Form 15CA/15CB, NRI compliance, repatriation planning and outbound investment structuring — for the global Indian and multinational enterprise.</p>
+      <p class="slide-desc">The wrong TDS rate on a foreign remittance creates exposure that compounds over years. Get the correct Section 195 analysis, Form 15CA/15CB, and a defensible basis — every time.</p>
       <div class="slide-actions">
         <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> International Tax</a>
         <a href="#contact" class="btn-ghost">Get in Touch</a>
@@ -533,7 +655,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="container"><div class="slide-content">
       <p class="slide-eyebrow"><i class="fa fa-receipt" style="font-size:10px;"></i>&nbsp;GST Advisory · Structuring · Compliance · Litigation</p>
       <h1 class="slide-title">Structured.<br><em>Compliant.</em></h1>
-      <p class="slide-desc">GST advisory, structuring, compliance support, and litigation assistance — end-to-end indirect tax management for your business.</p>
+      <p class="slide-desc">GST notices don't disappear if you ignore them — they escalate. From advisory and ITC optimization to SCN replies and appellate representation: end-to-end GST support.</p>
       <div class="slide-actions">
         <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> GST Services</a>
         <a href="#contact" class="btn-ghost">Consult Now</a>
@@ -549,7 +671,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="container"><div class="slide-content">
       <p class="slide-eyebrow"><i class="fa fa-gavel" style="font-size:10px;"></i>&nbsp;Tax Litigation · Assessment · ITAT · Appeals</p>
       <h1 class="slide-title">Your Advocate.<br><em>In Every Forum.</em></h1>
-      <p class="slide-desc">Assessment representation, appellate support, and tax litigation — argued with legal rigour and forensic preparation at every tier of dispute resolution.</p>
+      <p class="slide-desc">A scrutiny notice is the department's opening argument. Your response is yours. Make it count — with research-backed submissions that address the case directly.</p>
       <div class="slide-actions">
         <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Get in Touch</a>
         <a href="#resources" class="btn-ghost">Download Resources</a>
@@ -565,7 +687,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="container"><div class="slide-content">
       <p class="slide-eyebrow"><i class="fa fa-scale-balanced" style="font-size:10px;"></i>&nbsp;Transfer Pricing · OECD · Benchmarking · Documentation</p>
       <h1 class="slide-title">Arm's Length.<br><em>Every Transaction.</em></h1>
-      <p class="slide-desc">Transfer pricing documentation, comparability analysis, and benchmarking support — aligned with OECD guidelines and Indian TP jurisprudence.</p>
+      <p class="slide-desc">Transfer pricing adjustments are among the largest tax risks in cross-border business. Documentation built to benchmarking standards that withstand the scrutiny of a TP audit.</p>
       <div class="slide-actions">
         <a href="#insights" class="btn-gold"><i class="fa fa-arrow-right"></i> Read Research</a>
         <a href="#contact" class="btn-ghost">Advisory Enquiry</a>
@@ -581,7 +703,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="container"><div class="slide-content">
       <p class="slide-eyebrow"><i class="fa fa-user-tie" style="font-size:10px;"></i>&nbsp;NRI Advisory · UAE · Gulf · Middle East DTAA</p>
       <h1 class="slide-title">Wherever You Are.<br><em>We've Got India.</em></h1>
-      <p class="slide-desc">Specialized NRI tax advisory for Gulf-based Indians — UAE DTAA benefits, repatriation planning, Form 15CA/15CB, and Indian income compliance made seamless.</p>
+      <p class="slide-desc">Your residency status determines everything — what India can tax, what it cannot, and which treaty protects you. Get clarity before you file, not after a notice arrives.</p>
       <div class="slide-actions">
         <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> NRI Services</a>
         <a href="#contact" class="btn-ghost">Consult Now</a>
@@ -630,6 +752,38 @@ footer{background:#060606;border-top:1px solid var(--border);}
 
 
 <!-- ══ SERVICES ══ -->
+<!-- ══ AUTHORITY STRIP ══ -->
+<div id="authority-strip">
+  <div class="container">
+    <div class="auth-items">
+      <div class="auth-item">
+        <span class="auth-num">ACA</span>
+        <span class="auth-label">ICAI Qualified<br>Chartered Accountant</span>
+      </div>
+      <div class="auth-sep"></div>
+      <div class="auth-item">
+        <span class="auth-num">90+</span>
+        <span class="auth-label">DTAA Countries<br>Covered</span>
+      </div>
+      <div class="auth-sep"></div>
+      <div class="auth-item">
+        <span class="auth-num">3</span>
+        <span class="auth-label">Focused Practice<br>Areas Only</span>
+      </div>
+      <div class="auth-sep"></div>
+      <div class="auth-item">
+        <span class="auth-num">100%</span>
+        <span class="auth-label">Direct Principal<br>Engagement</span>
+      </div>
+      <div class="auth-sep"></div>
+      <div class="auth-item">
+        <span class="auth-num">OECD</span>
+        <span class="auth-label">Aligned Transfer<br>Pricing Advisory</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section id="services-grid">
   <div class="container">
     <div class="services-section-header reveal">
@@ -639,6 +793,11 @@ footer{background:#060606;border-top:1px solid var(--border);}
       </div>
       <span class="section-count">02</span>
     </div>
+  </div>
+  <div class="mobile-svc-tabs" id="mobile-svc-tabs">
+    <div class="mobile-svc-tab is-active" data-svc="s-it">Income Tax</div>
+    <div class="mobile-svc-tab" data-svc="s-gst">GST</div>
+    <div class="mobile-svc-tab" data-svc="s-intl">Intl. Tax</div>
   </div>
   <div class="services-layout">
     <div class="services-categories" id="svc-cats">
@@ -669,20 +828,25 @@ footer{background:#060606;border-top:1px solid var(--border);}
 
       <!-- Income Tax Panel -->
       <div class="svc-panel is-active" id="s-it">
-        <h2 class="svc-panel-title">Income Tax</h2>
+        <div class="panel-outcome-bar">
+  <span class="outcome-badge"><i class="fa fa-check"></i> Direct CA Engagement</span>
+  <span class="outcome-badge"><i class="fa fa-check"></i> Written Advisory</span>
+  <span class="outcome-badge"><i class="fa fa-check"></i> Case Law Backed</span>
+</div>
+<h2 class="svc-panel-title">Income Tax</h2>
         <p class="svc-panel-desc">Assessment representation, litigation support, and strategic tax advisory for businesses, professionals, and individuals — grounded in deep legal analysis and current judicial developments.</p>
         <div class="svc-items-grid">
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-gavel"></i></div>
-            <div class="svc-tile-text"><h4>Assessment Representation</h4><p>Comprehensive support and documentation in scrutiny assessments, reassessments, and related proceedings.</p></div>
+            <div class="svc-tile-text"><h4>Assessment Representation</h4><p>Turn a scrutiny notice into a managed process — not a crisis. Meticulous replies and strategic documentation that protect your position before it escalates.</p></div>
           </div>
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-landmark"></i></div>
-            <div class="svc-tile-text"><h4>Litigation Support</h4><p>Assistance in appellate matters, drafting submissions, and research support for tax litigation across forums.</p></div>
+            <div class="svc-tile-text"><h4>Appellate Litigation — CIT(A) &amp; ITAT</h4><p>From CIT(A) to ITAT — well-researched submissions, current judicial precedents, and arguments built to withstand departmental scrutiny at every level.</p></div>
           </div>
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-building"></i></div>
-            <div class="svc-tile-text"><h4>Strategic Tax Advisory</h4><p>Structured tax planning aligned with business objectives, regulatory requirements, and judicial precedents.</p></div>
+            <div class="svc-tile-text"><h4>Strategic Tax Planning</h4><p>Minimize your tax liability legally and durably. Planning aligned with your actual business structure — not copy-paste templates designed for someone else.</p></div>
           </div>
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-magnifying-glass"></i></div>
@@ -697,11 +861,17 @@ footer{background:#060606;border-top:1px solid var(--border);}
             <div class="svc-tile-text"><h4>Tax Compliance &amp; Planning</h4><p>Holistic tax compliance and planning for individuals, professionals, and business owners.</p></div>
           </div>
         </div>
+        <a href="#contact" class="svc-panel-cta"><i class="fa fa-arrow-right"></i> Book a Consultation</a>
       </div>
 
       <!-- GST Panel -->
       <div class="svc-panel" id="s-gst">
-        <h2 class="svc-panel-title">GST Advisory</h2>
+        <div class="panel-outcome-bar">
+  <span class="outcome-badge"><i class="fa fa-check"></i> Direct CA Engagement</span>
+  <span class="outcome-badge"><i class="fa fa-check"></i> Circular-Backed Advisory</span>
+  <span class="outcome-badge"><i class="fa fa-check"></i> End-to-End Support</span>
+</div>
+<h2 class="svc-panel-title">GST Advisory</h2>
         <p class="svc-panel-desc">GST advisory, structuring, compliance support, and litigation assistance — from registration and ITC management to departmental proceedings and appellate representation.</p>
         <div class="svc-items-grid">
           <div class="svc-item-tile">
@@ -744,7 +914,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
             <div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div>
             <div class="svc-tile-text">
               <h4>GST Refund Assistance</h4>
-              <p>End-to-end support in refund filing for exporters, inverted duty structure applicants, and SEZ suppliers.</p>
+              <p>Refund claims filed correctly the first time — maximizing recoverable amounts and avoiding the rejection cycles that drain working capital.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Export Refunds (IGST &amp; ITC)</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Inverted Duty Structure</span>
@@ -756,7 +926,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
             <div class="svc-tile-icon"><i class="fa fa-coins"></i></div>
             <div class="svc-tile-text">
               <h4>ITC Analysis</h4>
-              <p>Input tax credit analysis, blocked credit identification, and reversal advisory under Section 17(5).</p>
+              <p>Section 17(5) blocks more ITC than most businesses realize. Identify what you can legitimately claim — and build a position that survives audit.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Blocked Credit (Sec 17(5))</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>ITC Reversal Advisory</span>
@@ -777,18 +947,24 @@ footer{background:#060606;border-top:1px solid var(--border);}
             </div>
           </div>
         </div>
+        <a href="#contact" class="svc-panel-cta"><i class="fa fa-arrow-right"></i> Book a Consultation</a>
       </div>
 
       <!-- International Tax Panel -->
       <div class="svc-panel" id="s-intl">
-        <h2 class="svc-panel-title">International Taxation</h2>
+        <div class="panel-outcome-bar">
+  <span class="outcome-badge"><i class="fa fa-check"></i> Direct CA Engagement</span>
+  <span class="outcome-badge"><i class="fa fa-check"></i> OECD Aligned</span>
+  <span class="outcome-badge"><i class="fa fa-check"></i> 90+ DTAA Network</span>
+</div>
+<h2 class="svc-panel-title">International Taxation</h2>
         <p class="svc-panel-desc">Cross-border tax advisory for NRIs, multinationals, and global professionals — DTAA interpretation, withholding tax advisory, and Transfer Pricing support grounded in OECD frameworks and Indian jurisprudence.</p>
         <div class="svc-items-grid">
           <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);">
             <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-handshake"></i></div>
             <div class="svc-tile-text">
               <h4 style="color:var(--gold);">Cross-Border Structuring</h4>
-              <p>Structuring of cross-border transactions to optimize tax outcomes across multiple jurisdictions using DTAA analysis.</p>
+              <p>Structure cross-border transactions before they close — not after the tax liability crystallizes. Optimize across jurisdictions using India's 90+ DTAA network.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Transaction Structuring</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Inbound &amp; Outbound Investment</span>
@@ -800,7 +976,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
             <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-file-signature"></i></div>
             <div class="svc-tile-text">
               <h4 style="color:var(--gold);">DTAA Interpretation</h4>
-              <p>Detailed treaty analysis for 90+ DTAAs — eligibility assessment, treaty shopping issues, and PPT analysis under BEPS.</p>
+              <p>India's tax treaties are an asset most businesses underuse. Identify treaty benefits, avoid double taxation, and structure cross-border flows efficiently.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Treaty Eligibility Assessment</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Tax Residency Certificate</span>
@@ -812,7 +988,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
             <div class="svc-tile-icon"><i class="fa fa-percent"></i></div>
             <div class="svc-tile-text">
               <h4>Withholding Tax Advisory</h4>
-              <p>Advisory on TDS obligations on cross-border payments — Form 15CA/15CB, and Section 195 analysis.</p>
+              <p>The wrong withholding rate on a cross-border payment creates significant exposure. Get the correct rate, proper Form 15CA/15CB, and a defensible legal basis.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>All 15CA Parts I–IV</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>15CB CA Certification</span>
@@ -824,7 +1000,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
             <div class="svc-tile-icon"><i class="fa fa-scale-balanced"></i></div>
             <div class="svc-tile-text">
               <h4>Transfer Pricing Support</h4>
-              <p>TP documentation, comparability analysis, benchmarking support, and advisory on TP-related disputes.</p>
+              <p>TP adjustments are among the largest tax risks in cross-border business. Documentation benchmarked correctly and built to withstand departmental scrutiny.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>TP Documentation (Sec 92D)</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Benchmarking Support</span>
@@ -857,6 +1033,8 @@ footer{background:#060606;border-top:1px solid var(--border);}
             </div>
           </div>
         </div>
+      </div>
+        <a href="#contact" class="svc-panel-cta"><i class="fa fa-arrow-right"></i> Book a Consultation</a>
       </div>
 
     </div>
@@ -977,7 +1155,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
   <div class="carousel-track-outer" id="c-track">
     <div class="carousel-slide">
       <div class="carousel-img">
-        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?w=800&q=65&auto=format&fit=crop" alt="NRI Tax" loading="lazy">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?w=800&q=65&auto=format&fit=crop" alt="NRI Tax" loading="lazy">
       </div>
       <div class="carousel-text">
         <p class="c-eyebrow">NRI &amp; Cross-Border Tax</p>
@@ -993,7 +1171,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     </div>
     <div class="carousel-slide">
       <div class="carousel-img">
-        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=65&auto=format&fit=crop" alt="Tax Litigation" loading="lazy">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=65&auto=format&fit=crop" alt="Tax Litigation" loading="lazy">
       </div>
       <div class="carousel-text">
         <p class="c-eyebrow">Tax Controversy Support</p>
@@ -1009,7 +1187,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     </div>
     <div class="carousel-slide">
       <div class="carousel-img">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=65&auto=format&fit=crop" alt="Transfer Pricing" loading="lazy">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=65&auto=format&fit=crop" alt="Transfer Pricing" loading="lazy">
       </div>
       <div class="carousel-text">
         <p class="c-eyebrow">Transfer Pricing Research</p>
@@ -1142,7 +1320,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
         <div class="testi-invite-icon"><i class="fa fa-comment"></i></div>
         <h4>Share Your Experience</h4>
         <p>Have you worked with LexTax? Your honest feedback helps others make informed decisions. Reach out to leave a review.</p>
-        <a href="/cdn-cgi/l/email-protection#1a797b6e73686e7269727b725a7d777b737634797577" class="testi-invite-link"><i class="fa fa-envelope" style="font-size:9px;"></i> Send Feedback</a>
+        <a href="mailto:catirthshah@gmail.com" class="testi-invite-link"><i class="fa fa-envelope" style="font-size:9px;"></i> Send Feedback</a>
       </div>
     </div>
   </div>
@@ -1207,7 +1385,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     </div>
   </div>
   <div class="contact-map">
-    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=60&auto=format&fit=crop" alt="Ahmedabad" loading="lazy">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=60&auto=format&fit=crop" alt="Ahmedabad" loading="lazy">
     <div class="map-overlay">
       <div style="text-align:center;">
         <span class="section-eyebrow" style="display:block;margin-bottom:7px;">Based in</span>
@@ -1231,9 +1409,14 @@ footer{background:#060606;border-top:1px solid var(--border);}
         <span class="logo-main">LexTax</span>
         <span class="logo-sub" style="display:block;margin-top:3px;">Tax Advisory &amp; Litigation</span>
         <p>GST | Income Tax | International Taxation. Research-driven tax strategies and practical solutions for businesses and cross-border transactions.</p>
+        <div class="footer-contact-details">
+          <a href="tel:+918128335264" class="footer-contact-item"><i class="fa fa-phone"></i> +91 81283 35264</a>
+          <a href="mailto:catirthshah@gmail.com" class="footer-contact-item"><i class="fa fa-envelope"></i> catirthshah@gmail.com</a>
+          <span class="footer-contact-item"><i class="fa fa-location-dot"></i> Ahmedabad, Gujarat, India</span>
+        </div>
         <div class="footer-social">
-          <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="/cdn-cgi/l/email-protection#e78486938e95938f948f868fa7808a868e8bc984888a" class="social-link" title="Email"><i class="fa fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/ca-tirthshah2002" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:catirthshah@gmail.com" class="social-link" title="Email"><i class="fa fa-envelope"></i></a>
           <a href="tel:+918128335264" class="social-link" title="Call"><i class="fa fa-phone"></i></a>
         </div>
       </div>
@@ -1484,48 +1667,48 @@ const COUNTRIES = ["All Countries","USA","Switzerland","Ireland","Netherlands","
 // ─── CSS (embedded in React) ───────────────────────────────────────────────────
 const LIB_CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap');
-.lt-app{font-family:'Manrope',sans-serif;background:transparent;padding:0;}
+.lt-app{font-family:'DM Sans',sans-serif;background:transparent;padding:0;}
 .lt-nav{background:rgba(8,8,8,0.96);border-bottom:1px solid #1c1c1c;display:flex;align-items:center;padding:0 36px;height:52px;gap:0;position:sticky;top:72px;z-index:100;backdrop-filter:blur(12px);}
-.lt-logo{font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;color:#C9A84C;letter-spacing:2px;text-transform:uppercase;margin-right:2rem;cursor:pointer;}
+.lt-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#C9A84C;letter-spacing:2px;text-transform:uppercase;margin-right:2rem;cursor:pointer;}
 .lt-nlinks{display:flex;flex:1;}
 .lt-nl{height:52px;display:flex;align-items:center;gap:6px;padding:0 .9rem;font-size:.75rem;font-weight:600;color:#666460;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;letter-spacing:.01em;text-transform:uppercase;}
 .lt-nl:hover{color:#C9A84C;}
 .lt-nl.on{color:#C9A84C;border-bottom-color:#C9A84C;}
-.lt-badge{background:rgba(201,168,76,0.15);color:#C9A84C;border:1px solid rgba(201,168,76,0.3);padding:2px 9px;border-radius:3px;font-size:.65rem;font-weight:700;font-family:'JetBrains Mono',monospace;}
+.lt-badge{background:rgba(201,168,76,0.15);color:#C9A84C;border:1px solid rgba(201,168,76,0.3);padding:2px 9px;border-radius:3px;font-size:.65rem;font-weight:700;font-family:'DM Sans',monospace;}
 .lt-badge-n{background:rgba(201,168,76,0.25);color:#C9A84C;border:1px solid rgba(201,168,76,0.4);}
 .lt-nav-end{margin-left:auto;display:flex;align-items:center;gap:.75rem;}
 
 .lt-hero{padding:3.5rem 36px 2rem;background:linear-gradient(180deg,rgba(14,10,2,0.95) 0%,transparent 100%);border-bottom:1px solid #1c1c1c;}
 .lt-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.22);color:#C9A84C;padding:4px 13px;border-radius:3px;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:1.1rem;}
-.lt-hero-h{font-family:'Libre Baskerville',serif;font-size:2.1rem;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:.8rem;color:#e8e4da;}
+.lt-hero-h{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:.8rem;color:#e8e4da;}
 .lt-hero-h span{color:#C9A84C;font-style:italic;}
 .lt-hero-sub{font-size:.9rem;color:#666460;max-width:520px;margin:0 0 2rem;line-height:1.75;}
 .lt-swrap{max-width:640px;background:#0f0f0f;border:1px solid #2e2510;display:flex;transition:border-color .2s;}
 .lt-swrap:focus-within{border-color:#C9A84C;box-shadow:0 0 0 3px rgba(201,168,76,0.08);}
-.lt-sinp{flex:1;padding:.9rem 1.1rem;background:none;border:none;outline:none;color:#e8e4da;font-family:'Manrope',sans-serif;font-size:.87rem;}
+.lt-sinp{flex:1;padding:.9rem 1.1rem;background:none;border:none;outline:none;color:#e8e4da;font-family:'DM Sans',sans-serif;font-size:.87rem;}
 .lt-sinp::placeholder{color:#333;}
-.lt-sbtn{padding:.75rem 1.3rem;background:#C9A84C;border:none;cursor:pointer;color:#000;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:700;display:flex;align-items:center;gap:7px;transition:background .15s;letter-spacing:1px;text-transform:uppercase;}
+.lt-sbtn{padding:.75rem 1.3rem;background:#C9A84C;border:none;cursor:pointer;color:#000;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:700;display:flex;align-items:center;gap:7px;transition:background .15s;letter-spacing:1px;text-transform:uppercase;}
 .lt-sbtn:hover{background:#E2C47A;}
 
 .lt-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;background:#0a0a0a;}
 .lt-stat{padding:1.2rem 2rem;border-right:1px solid #1c1c1c;}
 .lt-stat:last-child{border-right:none;}
-.lt-stat-n{font-family:'JetBrains Mono',monospace;font-size:1.5rem;color:#C9A84C;letter-spacing:-.02em;}
+.lt-stat-n{font-family:'DM Sans',monospace;font-size:1.5rem;color:#C9A84C;letter-spacing:-.02em;}
 .lt-stat-l{font-size:.68rem;color:#666460;text-transform:uppercase;letter-spacing:.07em;font-weight:600;margin-top:3px;}
 
 .lt-main{flex:1;padding:1.75rem 36px;max-width:1400px;width:100%;}
 .lt-two-col{display:grid;grid-template-columns:1fr 280px;gap:1.75rem;}
-.lt-sec-title{font-family:'Libre Baskerville',serif;font-size:.95rem;color:#e8e4da;margin-bottom:1rem;display:flex;align-items:center;gap:8px;}
+.lt-sec-title{font-family:'Playfair Display',serif;font-size:.95rem;color:#e8e4da;margin-bottom:1rem;display:flex;align-items:center;gap:8px;}
 .lt-sec-title::after{content:'';flex:1;height:1px;background:#1c1c1c;}
 
 .lt-clist{display:flex;flex-direction:column;gap:1px;background:#1c1c1c;border:1px solid #1c1c1c;overflow:hidden;}
 .lt-cc{background:#0f0f0f;padding:1.25rem 1.5rem;cursor:pointer;transition:background .15s;display:flex;flex-direction:column;gap:.8rem;border-left:3px solid transparent;}
 .lt-cc:hover{background:#141414;border-left-color:#6E4E18;}
-.lt-cc-court{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:#666460;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;}
-.lt-cc-title{font-family:'Libre Baskerville',serif;font-size:.91rem;line-height:1.5;color:#e8e4da;font-weight:700;}
+.lt-cc-court{font-family:'DM Sans',monospace;font-size:.66rem;color:#666460;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;}
+.lt-cc-title{font-family:'Playfair Display',serif;font-size:.91rem;line-height:1.5;color:#e8e4da;font-weight:700;}
 .lt-cc-tags{display:flex;flex-wrap:wrap;gap:5px;}
 .lt-cc-sum{font-size:.82rem;color:#666460;line-height:1.7;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-.lt-cc-ft{display:flex;align-items:center;gap:.9rem;padding-top:.6rem;border-top:1px solid #1c1c1c;font-family:'JetBrains Mono',monospace;font-size:.66rem;color:#333;}
+.lt-cc-ft{display:flex;align-items:center;gap:.9rem;padding-top:.6rem;border-top:1px solid #1c1c1c;font-family:'DM Sans',monospace;font-size:.66rem;color:#333;}
 
 .lt-tag{padding:2px 9px;border-radius:2px;font-size:.65rem;font-weight:700;letter-spacing:.03em;white-space:nowrap;}
 .lt-t-topic{background:rgba(201,168,76,0.08);color:#C9A84C;border:1px solid rgba(201,168,76,0.2);}
@@ -1543,24 +1726,24 @@ const LIB_CSS = `
 
 .lt-filter{background:#0a0a0a;border:1px solid #1c1c1c;padding:1.1rem;position:sticky;top:124px;}
 .lt-f-section{margin-bottom:1.25rem;}
-.lt-f-label{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:#666460;text-transform:uppercase;letter-spacing:.09em;display:block;margin-bottom:.6rem;font-weight:600;}
+.lt-f-label{font-family:'DM Sans',monospace;font-size:.63rem;color:#666460;text-transform:uppercase;letter-spacing:.09em;display:block;margin-bottom:.6rem;font-weight:600;}
 .lt-f-opt{display:flex;align-items:center;gap:7px;padding:6px 9px;cursor:pointer;font-size:.77rem;color:#666460;transition:all .15s;}
 .lt-f-opt:hover{background:#0f0f0f;color:#C9A84C;}
 .lt-f-opt.on{background:rgba(201,168,76,0.05);color:#C9A84C;}
 .lt-f-dot{width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;flex-shrink:0;}
-.lt-f-select{width:100%;background:#0f0f0f;border:1px solid #1c1c1c;color:#666460;padding:6px 9px;font-family:'Manrope',sans-serif;font-size:.77rem;outline:none;cursor:pointer;margin-bottom:.5rem;}
+.lt-f-select{width:100%;background:#0f0f0f;border:1px solid #1c1c1c;color:#666460;padding:6px 9px;font-family:'DM Sans',sans-serif;font-size:.77rem;outline:none;cursor:pointer;margin-bottom:.5rem;}
 .lt-f-select:focus{border-color:#C9A84C;}
 .lt-f-select option{background:#0f0f0f;}
 
 .lt-sbar{display:flex;align-items:center;gap:9px;background:#0f0f0f;border:1px solid #2e2510;padding:.65rem 1rem;margin-bottom:1.1rem;transition:border-color .2s;}
 .lt-sbar:focus-within{border-color:#C9A84C;}
-.lt-sbar input{flex:1;background:none;border:none;outline:none;color:#e8e4da;font-family:'Manrope',sans-serif;font-size:.86rem;}
+.lt-sbar input{flex:1;background:none;border:none;outline:none;color:#e8e4da;font-family:'DM Sans',sans-serif;font-size:.86rem;}
 .lt-sbar input::placeholder{color:#333;}
 .lt-res-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem;}
 .lt-res-ct{font-size:.8rem;color:#666460;}
 .lt-res-ct span{color:#e8e4da;font-weight:600;}
 
-.lt-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:700;cursor:pointer;transition:all .15s;border:none;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;}
+.lt-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:700;cursor:pointer;transition:all .15s;border:none;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;}
 .lt-btn-gold{background:#C9A84C;color:#000;}
 .lt-btn-gold:hover:not(:disabled){background:#E2C47A;}
 .lt-btn-gold:disabled{opacity:.5;cursor:not-allowed;}
@@ -1574,28 +1757,28 @@ const LIB_CSS = `
 .lt-back:hover{color:#C9A84C;}
 .lt-case-hdr{background:#0a0a0a;border:1px solid #1c1c1c;border-top:3px solid #C9A84C;padding:1.75rem;margin-bottom:1.25rem;}
 .lt-case-court-row{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.85rem;}
-.lt-court-badge{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:#666460;background:#111;border:1px solid #1c1c1c;padding:3px 9px;text-transform:uppercase;letter-spacing:.05em;}
-.lt-case-title{font-family:'Libre Baskerville',serif;font-size:1.35rem;font-weight:700;line-height:1.4;color:#e8e4da;margin-bottom:.9rem;}
+.lt-court-badge{font-family:'DM Sans',monospace;font-size:.66rem;color:#666460;background:#111;border:1px solid #1c1c1c;padding:3px 9px;text-transform:uppercase;letter-spacing:.05em;}
+.lt-case-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;line-height:1.4;color:#e8e4da;margin-bottom:.9rem;}
 .lt-case-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:1rem;}
 
 .lt-ratio-box{background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(201,168,76,0.02));border:1px solid rgba(201,168,76,0.2);padding:1.4rem;margin-bottom:1.25rem;position:relative;}
 .lt-ratio-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#C9A84C,#E2C47A,transparent);}
 .lt-ratio-hd{display:flex;align-items:center;gap:7px;margin-bottom:.9rem;}
-.lt-ratio-label{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:#C9A84C;text-transform:uppercase;letter-spacing:.1em;font-weight:600;}
-.lt-ratio-text{font-family:'Libre Baskerville',serif;font-size:.95rem;line-height:1.8;color:#e8e4da;font-style:italic;border-left:3px solid #C9A84C;padding-left:1rem;}
+.lt-ratio-label{font-family:'DM Sans',monospace;font-size:.63rem;color:#C9A84C;text-transform:uppercase;letter-spacing:.1em;font-weight:600;}
+.lt-ratio-text{font-family:'Playfair Display',serif;font-size:.95rem;line-height:1.8;color:#e8e4da;font-style:italic;border-left:3px solid #C9A84C;padding-left:1rem;}
 
 .lt-treaty-block{background:#0a0a0a;border:1px solid #1c1c1c;padding:.9rem 1.1rem;margin-bottom:1.25rem;}
-.lt-treaty-block-title{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:#666460;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.6rem;font-weight:600;}
+.lt-treaty-block-title{font-family:'DM Sans',monospace;font-size:.63rem;color:#666460;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.6rem;font-weight:600;}
 .lt-treaty-articles{display:flex;flex-wrap:wrap;gap:6px;}
 .lt-ta-pill{display:flex;align-items:center;gap:6px;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);padding:5px 11px;font-size:.75rem;color:#C9A84C;}
-.lt-ta-pill strong{font-family:'JetBrains Mono',monospace;font-size:.7rem;}
+.lt-ta-pill strong{font-family:'DM Sans',monospace;font-size:.7rem;}
 
 .lt-acc-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.25rem;}
 .lt-acc{background:#0a0a0a;border:1px solid #1c1c1c;overflow:hidden;}
 .lt-acc-hd{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.1rem;cursor:pointer;transition:background .15s;}
 .lt-acc-hd:hover{background:#111;}
 .lt-acc-hd.open{border-bottom:1px solid #1c1c1c;}
-.lt-acc-lbl{display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:.66rem;font-weight:600;color:#666460;text-transform:uppercase;letter-spacing:.08em;}
+.lt-acc-lbl{display:flex;align-items:center;gap:7px;font-family:'DM Sans',monospace;font-size:.66rem;font-weight:600;color:#666460;text-transform:uppercase;letter-spacing:.08em;}
 .lt-acc-body{padding:1.1rem 1.25rem;font-size:.875rem;color:#666460;line-height:1.85;}
 
 .lt-tl{display:flex;align-items:center;overflow-x:auto;padding-bottom:8px;}
@@ -1604,8 +1787,8 @@ const LIB_CSS = `
 .lt-tl-ok{background:rgba(23,168,122,.1);color:#17a87a;border:2px solid #17a87a;}
 .lt-tl-err{background:rgba(217,79,79,.1);color:#d94f4f;border:2px solid #d94f4f;}
 .lt-tl-mix{background:rgba(217,146,42,.1);color:#d9922a;border:2px solid #d9922a;}
-.lt-tl-stage{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:#666460;text-align:center;}
-.lt-tl-year{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#333;}
+.lt-tl-stage{font-family:'DM Sans',monospace;font-size:.63rem;color:#666460;text-align:center;}
+.lt-tl-year{font-family:'DM Sans',monospace;font-size:.6rem;color:#333;}
 .lt-tl-line{flex:1;height:1px;background:#1c1c1c;min-width:24px;margin:0 2px;position:relative;top:-10px;}
 
 .lt-daily{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.15);padding:.75rem 1.1rem;display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;}
@@ -1622,11 +1805,16 @@ const LIB_CSS = `
 @keyframes ltspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .lt-cursor{display:inline-block;width:2px;height:13px;background:#C9A84C;animation:ltblink 1s infinite;vertical-align:middle;margin-left:2px;}
 @keyframes ltblink{0%,100%{opacity:1}50%{opacity:0}}
-.lt-ai-box{background:#0a0a0a;border:1px solid #1c1c1c;padding:1.1rem;margin-top:.85rem;font-family:'JetBrains Mono',monospace;font-size:.76rem;color:#666460;line-height:1.85;max-height:300px;overflow-y:auto;white-space:pre-wrap;}
+.lt-ai-box{background:#0a0a0a;border:1px solid #1c1c1c;padding:1.1rem;margin-top:.85rem;font-family:'DM Sans',monospace;font-size:.76rem;color:#666460;line-height:1.85;max-height:300px;overflow-y:auto;white-space:pre-wrap;}
 
 .lt-toast{position:fixed;bottom:1.75rem;right:1.75rem;z-index:9999;background:#0f0f0f;border:1px solid rgba(201,168,76,0.3);padding:.85rem 1.1rem;display:flex;align-items:center;gap:9px;box-shadow:0 8px 30px rgba(0,0,0,.7);animation:lttoast .28s ease;}
 @keyframes lttoast{from{transform:translateX(110%);opacity:0}to{transform:translateX(0);opacity:1}}
 .lt-toast-t{font-size:.82rem;color:#e8e4da;}
+
+/* ══ FLOATING MOBILE CTA ══ */
+#floating-cta{display:none;position:fixed;bottom:22px;right:18px;z-index:9990;background:var(--gold);color:#000;padding:13px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;box-shadow:0 6px 32px rgba(201,168,76,0.5);transition:all 0.25s;align-items:center;gap:8px;text-decoration:none;}
+#floating-cta:hover{background:var(--gold-light);}
+@media(max-width:900px){#floating-cta{display:flex;}}
 
 @media(max-width:900px){
   .lt-two-col{grid-template-columns:1fr;}
@@ -1966,6 +2154,23 @@ function LexTaxCaseLibrary() {
 
 const root = ReactDOM.createRoot(document.getElementById('case-law-app'));
 root.render(React.createElement(LexTaxCaseLibrary));
+
+// Mobile service tabs
+const mobileTabs = document.querySelectorAll('.mobile-svc-tab');
+mobileTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    mobileTabs.forEach(t => t.classList.remove('is-active'));
+    tab.classList.add('is-active');
+    const svcId = tab.dataset.svc;
+    document.querySelectorAll('.svc-cat').forEach(c => {
+      c.classList.toggle('is-active', c.dataset.svc === svcId);
+    });
+    document.querySelectorAll('.svc-panel').forEach(p => {
+      p.classList.toggle('is-active', p.id === svcId);
+    });
+  });
+});
+
 </script>
 
 
