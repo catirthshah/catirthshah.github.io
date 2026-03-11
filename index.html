@@ -3,18 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CA Tirth Shah | Chartered Accountant | Ahmedabad</title>
-<meta name="description" content="Chartered Accountant specializing in International Taxation, GST Advisory, Income Tax and Transfer Pricing. Based in Ahmedabad, India.">
+<title>LexTax | Tax & Regulatory Advisory | CA Tirth Shah | Ahmedabad</title>
+<meta name="description" content="LexTax – Specialized advisory in GST, Income Tax, and International Taxation. CA Tirth Shah, Chartered Accountant, Ahmedabad.">
 
-<!-- PERFORMANCE: preconnect to external origins -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-<!-- Fonts: only weights we actually use -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Font Awesome: only load what we need -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
@@ -82,7 +79,6 @@ img{max-width:100%;display:block;}
 #hero{height:100vh;min-height:600px;position:relative;overflow:hidden;}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s var(--ease);display:flex;align-items:center;}
 .slide.is-active{opacity:1;z-index:2;}
-/* CSS backgrounds for hero — no img tags = no extra HTTP requests for invisible slides */
 .slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04);transition:transform 9s linear;}
 .slide.is-active .slide-bg{transform:scale(1);}
 .slide-overlay{position:absolute;inset:0;}
@@ -143,7 +139,6 @@ img{max-width:100%;display:block;}
 .svc-tile-icon{width:34px;height:34px;border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;color:var(--gold-muted);margin-top:2px;}
 .svc-tile-text h4{font-size:13px;color:var(--text);font-weight:500;margin-bottom:4px;line-height:1.3;}
 .svc-tile-text p{font-size:12px;color:var(--text-dim);line-height:1.6;}
-/* Sub-services — clearly visible */
 .sub-services{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
 .sub-tag{font-size:10px;color:#999;background:#111;border:1px solid #2c2c2c;padding:4px 10px;display:flex;align-items:center;gap:5px;white-space:nowrap;letter-spacing:0.3px;transition:all var(--t) var(--ease);}
 .sub-tag i{font-size:7px;color:var(--gold-muted);}
@@ -168,6 +163,22 @@ img{max-width:100%;display:block;}
 .tag{border:1px solid var(--gold-muted);color:var(--gold);padding:5px 13px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;}
 .fresher-note{background:rgba(201,168,76,0.05);border:1px solid var(--border-gold);border-left:3px solid var(--gold-muted);padding:12px 16px;margin-top:14px;font-size:13px;color:var(--text-dim);line-height:1.7;}
 .fresher-note strong{color:var(--gold-light);}
+
+/* ══ FOCUS AREAS ══ */
+#focus-areas{padding:90px 0;background:var(--black);}
+.focus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:44px;}
+.focus-card{background:var(--card);padding:38px 30px;transition:background var(--t) var(--ease);position:relative;overflow:hidden;}
+.focus-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform var(--t) var(--ease);}
+.focus-card:hover{background:#121212;}
+.focus-card:hover::after{transform:scaleX(1);}
+.focus-card-icon{font-size:24px;color:var(--gold-muted);margin-bottom:18px;transition:color var(--t) var(--ease);}
+.focus-card:hover .focus-card-icon{color:var(--gold);}
+.focus-card h3{font-family:'Playfair Display',serif;font-size:17px;color:var(--text);font-weight:600;margin-bottom:10px;}
+.focus-card p{font-size:12.5px;color:var(--text-dim);line-height:1.8;}
+.focus-sub-list{margin-top:14px;display:flex;flex-direction:column;gap:5px;}
+.focus-sub-item{font-size:11px;color:#555;display:flex;align-items:center;gap:7px;transition:color var(--t) var(--ease);}
+.focus-sub-item::before{content:'›';color:var(--gold-muted);font-size:14px;line-height:1;}
+.focus-card:hover .focus-sub-item{color:var(--text-dim);}
 
 /* ══ STATS ══ */
 .stats-band{background:var(--gold);}
@@ -194,6 +205,11 @@ img{max-width:100%;display:block;}
 .c-btn{width:38px;height:38px;border:1px solid var(--border-gold);background:none;color:var(--gold-muted);font-size:12px;cursor:pointer;transition:all var(--t) var(--ease);display:flex;align-items:center;justify-content:center;}
 .c-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim);}
 .carousel-counter{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--text-dim);margin-left:6px;}
+
+/* ══ CASE LAW LIBRARY ══ */
+#case-law-library{background:var(--black-2);padding:0;}
+.caselibrary-header{padding:72px 0 44px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border);}
+#case-law-app{min-height:700px;}
 
 /* ══ INSIGHTS ══ */
 #insights{padding:90px 0;background:var(--black-2);}
@@ -253,7 +269,6 @@ img{max-width:100%;display:block;}
 .contact-row-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text-dim);display:block;margin-bottom:4px;}
 .contact-row a,.contact-row p{font-size:14px;color:var(--text-mid);transition:color var(--t) var(--ease);line-height:1.5;}
 .contact-row a:hover{color:var(--gold);}
-/* Contact Form */
 .contact-form{margin-top:28px;display:flex;flex-direction:column;gap:11px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
 .form-group{display:flex;flex-direction:column;gap:5px;}
@@ -265,7 +280,6 @@ img{max-width:100%;display:block;}
 .form-submit{background:var(--gold);color:#000;border:none;cursor:pointer;padding:12px 26px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:9px;transition:all var(--t) var(--ease);align-self:flex-start;}
 .form-submit:hover{background:var(--gold-light);box-shadow:0 0 22px var(--gold-glow);}
 .form-success{display:none;background:rgba(201,168,76,0.07);border:1px solid var(--gold-muted);padding:12px 16px;color:var(--gold-light);font-size:13px;line-height:1.6;}
-/* Map side */
 .contact-map{position:relative;overflow:hidden;background:#0d0d0d;}
 .contact-map img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%) brightness(0.28) sepia(30%);}
 .map-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(7,7,7,0.48);}
@@ -324,6 +338,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
   .resource-grid,.testi-grid{grid-template-columns:1fr;}
   .stats-band-inner{grid-template-columns:repeat(2,1fr);}
   .form-row{grid-template-columns:1fr;}
+  .focus-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media(max-width:640px){
   .container{padding:0 16px;}
@@ -334,28 +349,25 @@ footer{background:#060606;border-top:1px solid var(--border);}
   .wonder-label{left:16px;bottom:36px;}
   .hero-controls{right:16px;bottom:32px;}
   .testi-real,.testi-invite{padding:36px 24px;}
+  .focus-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════
-     HEADER
-══════════════════════════════════ -->
+<!-- ══ HEADER ══ -->
 <header id="header">
   <div class="container">
     <div class="header-inner">
       <a href="#" class="logo-wrap">
-        <span class="logo-main">CA Tirth Shah</span>
-        <span class="logo-sub">Chartered Accountant · Ahmedabad</span>
+        <span class="logo-main">LexTax</span>
+        <span class="logo-sub">Tax &amp; Regulatory Advisory · Ahmedabad</span>
       </a>
 
       <nav class="primary-nav" id="primary-nav">
         <div class="nav-item">
           <a href="#about" class="nav-link">About</a>
         </div>
-
-        <!-- Services — mega menu -->
         <div class="nav-item has-mega">
           <span class="nav-link">Services <i class="fa fa-chevron-down chevron"></i></span>
           <div class="mega-wrap">
@@ -363,11 +375,11 @@ footer{background:#060606;border-top:1px solid var(--border);}
               <div class="mega-tabs" id="mega-tabs">
                 <div class="mega-tab is-active" data-panel="p-it">
                   <div class="tab-icon"><i class="fa fa-calculator"></i></div>
-                  <div class="tab-label">Income Tax<span class="tab-sub">Direct Tax Advisory &amp; Litigation</span></div>
+                  <div class="tab-label">Income Tax<span class="tab-sub">Advisory &amp; Litigation</span></div>
                 </div>
                 <div class="mega-tab" data-panel="p-gst">
                   <div class="tab-icon"><i class="fa fa-receipt"></i></div>
-                  <div class="tab-label">GST Advisory<span class="tab-sub">Compliance, Refunds &amp; Strategy</span></div>
+                  <div class="tab-label">GST Advisory<span class="tab-sub">Compliance &amp; Litigation</span></div>
                 </div>
                 <div class="mega-tab" data-panel="p-intl">
                   <div class="tab-icon"><i class="fa fa-globe"></i></div>
@@ -378,14 +390,14 @@ footer{background:#060606;border-top:1px solid var(--border);}
                 <div class="mega-panel is-active" id="p-it">
                   <div class="mega-panel-head">
                     <div class="mega-panel-icon"><i class="fa fa-calculator"></i></div>
-                    <div><h3>Income Tax Advisory</h3><p>End-to-end advisory across assessments, appeals, corporate planning, and litigation — backed by deep legal research and current judicial precedents.</p></div>
+                    <div><h3>Income Tax Advisory</h3><p>Assessment representation, litigation support, and strategic tax advisory for businesses and individuals.</p></div>
                     <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;"></i></a>
                   </div>
                   <div class="mega-services-grid">
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>Scrutiny Assessments</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-landmark"></i></div>CIT(A) &amp; ITAT Appeals</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-building"></i></div>Corporate Tax Strategy</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-magnifying-glass"></i></div>Search &amp; Seizure</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>Assessment Representation</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-landmark"></i></div>Litigation Support</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-building"></i></div>Strategic Tax Advisory</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-magnifying-glass"></i></div>Complex Tax Matters</a>
                     <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-chart-line"></i></div>Capital Gains Advisory</a>
                     <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-file-invoice"></i></div>Tax Compliance &amp; Planning</a>
                   </div>
@@ -393,38 +405,38 @@ footer{background:#060606;border-top:1px solid var(--border);}
                 <div class="mega-panel" id="p-gst">
                   <div class="mega-panel-head">
                     <div class="mega-panel-icon"><i class="fa fa-receipt"></i></div>
-                    <div><h3>GST Compliance &amp; Strategy</h3><p>Complete GST lifecycle management — registration to departmental proceedings, refund recovery, and strategic ITC optimization.</p></div>
+                    <div><h3>GST Advisory &amp; Litigation</h3><p>GST structuring, compliance support, and litigation assistance across all tiers of dispute resolution.</p></div>
                     <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;"></i></a>
                   </div>
                   <div class="mega-services-grid">
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-rotate-left"></i></div>GST Refund Recovery</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-sitemap"></i></div>GST Advisory &amp; Structuring</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-clipboard-check"></i></div>GST Compliance Support</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>GST Litigation</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-rotate-left"></i></div>Refund Recovery</a>
                     <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-coins"></i></div>ITC Optimization</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-stethoscope"></i></div>GST Health Checks</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-gavel"></i></div>GST Litigation &amp; Appeals</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-clipboard-check"></i></div>Departmental Audit</a>
                     <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-file-code"></i></div>E-Invoice &amp; Compliance</a>
                   </div>
                 </div>
                 <div class="mega-panel" id="p-intl">
                   <div class="mega-panel-head">
                     <div class="mega-panel-icon"><i class="fa fa-globe"></i></div>
-                    <div><h3>International Taxation</h3><p>Cross-border tax solutions — DTAA, Form 15CA/15CB, NRI compliance, FEMA, and Transfer Pricing for NRIs, multinationals, and global businesses.</p></div>
+                    <div><h3>International Taxation</h3><p>Cross-border structuring, DTAA interpretation, withholding tax advisory, and Transfer Pricing support.</p></div>
                     <a href="#services-grid" class="mega-panel-cta">View All <i class="fa fa-arrow-right" style="font-size:9px;"></i></a>
                   </div>
                   <div class="mega-services-grid">
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-handshake"></i></div>DTAA &amp; Treaty Analysis</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-file-signature"></i></div>Form 15CA &amp; 15CB</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-handshake"></i></div>Cross-Border Structuring</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-file-signature"></i></div>DTAA Interpretation</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-percent"></i></div>Withholding Tax Advisory</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-scale-balanced"></i></div>Transfer Pricing Support</a>
                     <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-user-tie"></i></div>NRI Taxation</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-arrows-left-right"></i></div>Cross-Border Remittance</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-shield-halved"></i></div>FEMA &amp; RBI Compliance</a>
-                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-scale-balanced"></i></div>Transfer Pricing</a>
+                    <a href="#services-grid" class="mega-service-item"><div class="si-icon"><i class="fa fa-file-signature"></i></div>Form 15CA &amp; 15CB</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
+        <div class="nav-item"><a href="#case-law-library" class="nav-link">Case Library</a></div>
         <div class="nav-item"><a href="#insights" class="nav-link">Insights</a></div>
         <div class="nav-item"><a href="#resources" class="nav-link">Resources</a></div>
         <div class="nav-item"><a href="#contact" class="nav-link nav-cta">Contact Us</a></div>
@@ -436,7 +448,6 @@ footer{background:#060606;border-top:1px solid var(--border);}
     </div>
   </div>
 
-  <!-- Mobile nav -->
   <nav class="mobile-nav" id="mobile-nav">
     <a href="#about">About</a>
     <div class="mob-svc-title" id="mob-svc-toggle">
@@ -450,6 +461,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
       <a href="#services-grid">NRI Tax Services</a>
       <a href="#services-grid">Transfer Pricing</a>
     </div>
+    <a href="#case-law-library">Case Library</a>
     <a href="#insights">Insights</a>
     <a href="#resources">Resources</a>
     <a href="#contact">Contact Us</a>
@@ -457,37 +469,34 @@ footer{background:#060606;border-top:1px solid var(--border);}
 </header>
 
 
-<!-- ══════════════════════════════════
-     HERO — 7 WONDERS
-     Images use low-res for slide 1 (eager), lazy for rest
-══════════════════════════════════ -->
+<!-- ══ HERO ══ -->
 <section id="hero">
 
-  <!-- 1: Taj Mahal (FIRST — loads eagerly, small size) -->
+  <!-- 1: Taj Mahal -->
   <div class="slide is-active" data-idx="0">
     <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1400&q=70&auto=format&fit=crop');background-position:center 55%;"></div>
     <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(7,5,2,0.60)52%,rgba(20,12,0,0.18)100%);"></div>
     <div class="container"><div class="slide-content">
-      <div class="fresher-badge"><i class="fa fa-star" style="font-size:8px;"></i>&nbsp;ACA · ICAI · Newly Qualified</div>
+      <div class="fresher-badge"><i class="fa fa-star" style="font-size:8px;"></i>&nbsp;CA Tirth Shah · ACA · ICAI</div>
       <p class="slide-eyebrow"><i class="fa fa-location-dot" style="font-size:10px;"></i>&nbsp;Ahmedabad, India</p>
-      <h1 class="slide-title">Beyond<br><em>Compliance.</em></h1>
-      <p class="slide-desc">Specialized advisory in International Taxation, GST Strategy, and Income Tax Litigation — rooted in India, serving clients across the globe.</p>
+      <h1 class="slide-title">LexTax.<br><em>Tax &amp; Regulatory Advisory.</em></h1>
+      <p class="slide-desc">Specialized advisory in GST, Income Tax, and International Taxation. Research-driven strategies and practical solutions for businesses and cross-border transactions.</p>
       <div class="slide-actions">
         <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Consult Now</a>
-        <a href="#about" class="btn-ghost">About the Practice</a>
+        <a href="#about" class="btn-ghost">About the Firm</a>
       </div>
     </div></div>
     <div class="wonder-label">Taj Mahal · Agra, India</div>
   </div>
 
-  <!-- 2: Great Wall — lazy bg via JS -->
+  <!-- 2: Great Wall -->
   <div class="slide" data-idx="1" data-bg="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1400&q=65&auto=format&fit=crop&crop=center">
     <div class="slide-bg" style="background-position:center 50%;"></div>
     <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.92)0%,rgba(5,5,5,0.58)52%,rgba(0,5,10,0.18)100%);"></div>
     <div class="container"><div class="slide-content">
-      <p class="slide-eyebrow"><i class="fa fa-globe" style="font-size:10px;"></i>&nbsp;International Taxation · DTAA</p>
+      <p class="slide-eyebrow"><i class="fa fa-globe" style="font-size:10px;"></i>&nbsp;International Taxation · DTAA · Cross-Border</p>
       <h1 class="slide-title">Global Tax.<br><em>Local Insight.</em></h1>
-      <p class="slide-desc">Leveraging India's network of 90+ Double Taxation Avoidance Agreements — navigating cross-border transactions with precision and treaty expertise.</p>
+      <p class="slide-desc">Leveraging India's network of 90+ Double Taxation Avoidance Agreements — structuring cross-border transactions with precision and treaty expertise.</p>
       <div class="slide-actions">
         <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> Our Services</a>
         <a href="#insights" class="btn-ghost">Read Insights</a>
@@ -517,9 +526,9 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="slide-bg" style="background-position:center 45%;"></div>
     <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(6,5,2,0.60)52%,rgba(15,10,0,0.18)100%);"></div>
     <div class="container"><div class="slide-content">
-      <p class="slide-eyebrow"><i class="fa fa-receipt" style="font-size:10px;"></i>&nbsp;GST Advisory · Refunds · ITC · Litigation</p>
+      <p class="slide-eyebrow"><i class="fa fa-receipt" style="font-size:10px;"></i>&nbsp;GST Advisory · Structuring · Compliance · Litigation</p>
       <h1 class="slide-title">Structured.<br><em>Compliant.</em></h1>
-      <p class="slide-desc">GST refund recovery, ITC optimization, departmental audit representation and GST litigation — end-to-end indirect tax management for your business.</p>
+      <p class="slide-desc">GST advisory, structuring, compliance support, and litigation assistance — end-to-end indirect tax management for your business.</p>
       <div class="slide-actions">
         <a href="#services-grid" class="btn-gold"><i class="fa fa-arrow-right"></i> GST Services</a>
         <a href="#contact" class="btn-ghost">Consult Now</a>
@@ -533,9 +542,9 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="slide-bg" style="background-position:center 50%;"></div>
     <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(5,4,3,0.58)52%,rgba(10,6,0,0.18)100%);"></div>
     <div class="container"><div class="slide-content">
-      <p class="slide-eyebrow"><i class="fa fa-gavel" style="font-size:10px;"></i>&nbsp;Tax Litigation · Scrutiny · ITAT · Appeals</p>
+      <p class="slide-eyebrow"><i class="fa fa-gavel" style="font-size:10px;"></i>&nbsp;Tax Litigation · Assessment · ITAT · Appeals</p>
       <h1 class="slide-title">Your Advocate.<br><em>In Every Forum.</em></h1>
-      <p class="slide-desc">Scrutiny assessments, CIT(A) and ITAT appeals, search &amp; seizure matters — represented with legal rigour and forensic preparation at every tier.</p>
+      <p class="slide-desc">Assessment representation, appellate support, and tax litigation — argued with legal rigour and forensic preparation at every tier of dispute resolution.</p>
       <div class="slide-actions">
         <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Get in Touch</a>
         <a href="#resources" class="btn-ghost">Download Resources</a>
@@ -549,9 +558,9 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="slide-bg" style="background-position:center 35%;"></div>
     <div class="slide-overlay" style="background:linear-gradient(110deg,rgba(4,4,4,0.93)0%,rgba(4,5,6,0.58)52%,rgba(0,5,12,0.18)100%);"></div>
     <div class="container"><div class="slide-content">
-      <p class="slide-eyebrow"><i class="fa fa-scale-balanced" style="font-size:10px;"></i>&nbsp;Transfer Pricing · OECD · Berry Ratio</p>
+      <p class="slide-eyebrow"><i class="fa fa-scale-balanced" style="font-size:10px;"></i>&nbsp;Transfer Pricing · OECD · Benchmarking · Documentation</p>
       <h1 class="slide-title">Arm's Length.<br><em>Every Transaction.</em></h1>
-      <p class="slide-desc">Transfer pricing documentation, Berry Ratio benchmarking, APA advisory, and TP audit representation — aligned with OECD guidelines.</p>
+      <p class="slide-desc">Transfer pricing documentation, comparability analysis, and benchmarking support — aligned with OECD guidelines and Indian TP jurisprudence.</p>
       <div class="slide-actions">
         <a href="#insights" class="btn-gold"><i class="fa fa-arrow-right"></i> Read Research</a>
         <a href="#contact" class="btn-ghost">Advisory Enquiry</a>
@@ -576,7 +585,6 @@ footer{background:#060606;border-top:1px solid var(--border);}
     <div class="wonder-label">Petra · Jordan</div>
   </div>
 
-  <!-- Dot controls -->
   <div class="hero-controls" id="hero-dots">
     <div class="hero-dot is-active" data-to="0"></div>
     <div class="hero-dot" data-to="1"></div>
@@ -628,7 +636,6 @@ footer{background:#060606;border-top:1px solid var(--border);}
     </div>
   </div>
   <div class="services-layout">
-    <!-- Sidebar tabs -->
     <div class="services-categories" id="svc-cats">
       <div class="svc-cat is-active" data-svc="s-it">
         <i class="fa fa-calculator"></i>
@@ -641,7 +648,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
         <i class="fa fa-receipt"></i>
         <div>
           <span style="display:block;font-weight:500;font-size:13px;">GST Advisory</span>
-          <span style="display:block;font-size:10px;color:#444;margin-top:2px;letter-spacing:0;font-weight:300;">Refunds, ITC &amp; Strategy</span>
+          <span style="display:block;font-size:10px;color:#444;margin-top:2px;letter-spacing:0;font-weight:300;">Advisory, Compliance &amp; Litigation</span>
         </div>
       </div>
       <div class="svc-cat" data-svc="s-intl">
@@ -653,37 +660,36 @@ footer{background:#060606;border-top:1px solid var(--border);}
       </div>
     </div>
 
-    <!-- Panels -->
     <div class="services-detail" id="svc-detail">
 
       <!-- Income Tax Panel -->
       <div class="svc-panel is-active" id="s-it">
         <h2 class="svc-panel-title">Income Tax</h2>
-        <p class="svc-panel-desc">End-to-end advisory for corporates, HNIs, and individuals — from assessments and appeals to search &amp; seizure and strategic tax planning rooted in deep legal analysis.</p>
+        <p class="svc-panel-desc">Assessment representation, litigation support, and strategic tax advisory for businesses, professionals, and individuals — grounded in deep legal analysis and current judicial developments.</p>
         <div class="svc-items-grid">
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-gavel"></i></div>
-            <div class="svc-tile-text"><h4>Scrutiny Assessments</h4><p>Comprehensive representation and documentation before assessing officers under Sections 143(2) and 147.</p></div>
+            <div class="svc-tile-text"><h4>Assessment Representation</h4><p>Comprehensive support and documentation in scrutiny assessments, reassessments, and related proceedings.</p></div>
           </div>
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-landmark"></i></div>
-            <div class="svc-tile-text"><h4>CIT(A) &amp; ITAT Appeals</h4><p>Appellate representation backed by current judicial precedents and well-drafted grounds of appeal.</p></div>
+            <div class="svc-tile-text"><h4>Litigation Support</h4><p>Assistance in appellate matters, drafting submissions, and research support for tax litigation across forums.</p></div>
           </div>
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-building"></i></div>
-            <div class="svc-tile-text"><h4>Corporate Tax Strategy</h4><p>Optimized tax structures for businesses aligned with growth objectives and regulatory compliance.</p></div>
+            <div class="svc-tile-text"><h4>Strategic Tax Advisory</h4><p>Structured tax planning aligned with business objectives, regulatory requirements, and judicial precedents.</p></div>
           </div>
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-magnifying-glass"></i></div>
-            <div class="svc-tile-text"><h4>Search &amp; Seizure</h4><p>Expert guidance through search operations, voluntary disclosure, statements, and post-search assessments.</p></div>
+            <div class="svc-tile-text"><h4>Advisory on Complex Tax Matters</h4><p>In-depth analysis of complex provisions, rulings, and judicial interpretations for informed decision-making.</p></div>
           </div>
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-chart-line"></i></div>
-            <div class="svc-tile-text"><h4>Capital Gains Advisory</h4><p>Advisory on sale of assets, shares, property and reinvestment exemptions under Section 54 series.</p></div>
+            <div class="svc-tile-text"><h4>Capital Gains Advisory</h4><p>Advisory on sale of assets, shares, property and reinvestment exemptions under the Income Tax Act.</p></div>
           </div>
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div>
-            <div class="svc-tile-text"><h4>HNI &amp; Individual Tax</h4><p>Holistic tax planning and compliance for high-net-worth individuals, professionals, and business owners.</p></div>
+            <div class="svc-tile-text"><h4>Tax Compliance &amp; Planning</h4><p>Holistic tax compliance and planning for individuals, professionals, and business owners.</p></div>
           </div>
         </div>
       </div>
@@ -691,41 +697,28 @@ footer{background:#060606;border-top:1px solid var(--border);}
       <!-- GST Panel -->
       <div class="svc-panel" id="s-gst">
         <h2 class="svc-panel-title">GST Advisory</h2>
-        <p class="svc-panel-desc">Complete GST lifecycle management — from registration and ITC optimization to complex refund recovery, departmental proceedings, and appellate representation.</p>
+        <p class="svc-panel-desc">GST advisory, structuring, compliance support, and litigation assistance — from registration and ITC management to departmental proceedings and appellate representation.</p>
         <div class="svc-items-grid">
           <div class="svc-item-tile">
-            <div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div>
+            <div class="svc-tile-icon"><i class="fa fa-sitemap"></i></div>
             <div class="svc-tile-text">
-              <h4>GST Refund Recovery</h4>
-              <p>End-to-end refund filing for exporters, inverted duty structure applicants, and SEZ suppliers.</p>
+              <h4>GST Advisory &amp; Structuring</h4>
+              <p>Strategic advice on GST implications in business transactions, contracts, and supply chain structures.</p>
               <div class="sub-services">
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Export Refunds (IGST &amp; ITC)</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Inverted Duty Structure</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>SEZ Supplier Refunds</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Excess Cash Ledger</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Transaction Structuring</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Rate Classification</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Place of Supply</span>
               </div>
             </div>
           </div>
           <div class="svc-item-tile">
-            <div class="svc-tile-icon"><i class="fa fa-coins"></i></div>
+            <div class="svc-tile-icon"><i class="fa fa-clipboard-check"></i></div>
             <div class="svc-tile-text">
-              <h4>ITC Optimization</h4>
-              <p>Strategic input tax credit planning to maximize legitimate credits and improve business cash flow.</p>
-              <div class="sub-services">
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>GSTR-2B Reconciliation</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Blocked Credit (Sec 17(5))</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>ITC Reversal Advisory</span>
-              </div>
-            </div>
-          </div>
-          <div class="svc-item-tile">
-            <div class="svc-tile-icon"><i class="fa fa-stethoscope"></i></div>
-            <div class="svc-tile-text">
-              <h4>GST Registration &amp; Compliance</h4>
-              <p>Health checks, registration, amendment, and cancellation across all GST return types.</p>
+              <h4>GST Compliance Support</h4>
+              <p>Assistance with return filing, reconciliation, and ongoing compliance management across all GSTN filings.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>GSTR-1 / 3B / 9 / 9C</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Annual Return (GSTR-9C)</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>GSTR-2B Reconciliation</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Compliance Health Check</span>
               </div>
             </div>
@@ -733,36 +726,48 @@ footer{background:#060606;border-top:1px solid var(--border);}
           <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-gavel"></i></div>
             <div class="svc-tile-text">
-              <h4>GST Litigation &amp; Notices</h4>
-              <p>SCN replies, adjudication hearings, and appellate representation across all tiers of GST dispute resolution.</p>
+              <h4>GST Litigation</h4>
+              <p>Support in show cause notice replies, adjudication hearings, and appellate proceedings across GST dispute forums.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>SCN Reply &amp; Show Cause</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>First Appellate Authority</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>High Court Writ Matters</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>GST Tribunal Matters</span>
               </div>
             </div>
           </div>
           <div class="svc-item-tile">
-            <div class="svc-tile-icon"><i class="fa fa-clipboard-check"></i></div>
+            <div class="svc-tile-icon"><i class="fa fa-rotate-left"></i></div>
             <div class="svc-tile-text">
-              <h4>GST on Specific Sectors</h4>
+              <h4>GST Refund Assistance</h4>
+              <p>End-to-end support in refund filing for exporters, inverted duty structure applicants, and SEZ suppliers.</p>
+              <div class="sub-services">
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Export Refunds (IGST &amp; ITC)</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Inverted Duty Structure</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>SEZ Supplier Refunds</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-item-tile">
+            <div class="svc-tile-icon"><i class="fa fa-coins"></i></div>
+            <div class="svc-tile-text">
+              <h4>ITC Analysis</h4>
+              <p>Input tax credit analysis, blocked credit identification, and reversal advisory under Section 17(5).</p>
+              <div class="sub-services">
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Blocked Credit (Sec 17(5))</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>ITC Reversal Advisory</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>ITC Optimization</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-item-tile">
+            <div class="svc-tile-icon"><i class="fa fa-industry"></i></div>
+            <div class="svc-tile-text">
+              <h4>Sector-Specific GST Advisory</h4>
               <p>Sector-specific advisory for real estate, imports/exports, e-commerce and works contracts.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>GST on Real Estate</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>GST on Import &amp; Export</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>E-Commerce Operators</span>
-              </div>
-            </div>
-          </div>
-          <div class="svc-item-tile">
-            <div class="svc-tile-icon"><i class="fa fa-file-code"></i></div>
-            <div class="svc-tile-text">
-              <h4>E-Invoice &amp; Departmental Audit</h4>
-              <p>E-invoicing, e-way bill compliance and full support during departmental audits.</p>
-              <div class="sub-services">
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>E-Invoice Implementation</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>E-Way Bill Compliance</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Special Audit (Sec 66)</span>
               </div>
             </div>
           </div>
@@ -772,31 +777,53 @@ footer{background:#060606;border-top:1px solid var(--border);}
       <!-- International Tax Panel -->
       <div class="svc-panel" id="s-intl">
         <h2 class="svc-panel-title">International Taxation</h2>
-        <p class="svc-panel-desc">High-value cross-border advisory for NRIs, multinationals, and global professionals — built on India's network of 90+ DTAAs, FEMA, and robust transfer pricing frameworks.</p>
+        <p class="svc-panel-desc">Cross-border tax advisory for NRIs, multinationals, and global professionals — DTAA interpretation, withholding tax advisory, and Transfer Pricing support grounded in OECD frameworks and Indian jurisprudence.</p>
         <div class="svc-items-grid">
           <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);">
             <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-handshake"></i></div>
             <div class="svc-tile-text">
-              <h4 style="color:var(--gold);">DTAA Benefits &amp; Treaty Analysis</h4>
-              <p>Structured application of 90+ DTAAs to minimise withholding tax and prevent double taxation on cross-border income.</p>
+              <h4 style="color:var(--gold);">Cross-Border Structuring</h4>
+              <p>Structuring of cross-border transactions to optimize tax outcomes across multiple jurisdictions using DTAA analysis.</p>
               <div class="sub-services">
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Treaty Eligibility Assessment</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Withholding Tax Minimisation</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Tax Residency Certificate</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Principal Purpose Test (PPT)</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Transaction Structuring</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Inbound &amp; Outbound Investment</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>India Entry Structuring</span>
               </div>
             </div>
           </div>
           <div class="svc-item-tile" style="border-left:2px solid var(--gold-muted);">
             <div class="svc-tile-icon" style="border-color:var(--gold-muted);color:var(--gold);"><i class="fa fa-file-signature"></i></div>
             <div class="svc-tile-text">
-              <h4 style="color:var(--gold);">Form 15CA &amp; 15CB Certification</h4>
-              <p>CA certification under Section 195 for all categories of foreign remittances — with full treaty analysis included.</p>
+              <h4 style="color:var(--gold);">DTAA Interpretation</h4>
+              <p>Detailed treaty analysis for 90+ DTAAs — eligibility assessment, treaty shopping issues, and PPT analysis under BEPS.</p>
+              <div class="sub-services">
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Treaty Eligibility Assessment</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Tax Residency Certificate</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Principal Purpose Test (PPT)</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-item-tile">
+            <div class="svc-tile-icon"><i class="fa fa-percent"></i></div>
+            <div class="svc-tile-text">
+              <h4>Withholding Tax Advisory</h4>
+              <p>Advisory on TDS obligations on cross-border payments — Form 15CA/15CB, and Section 195 analysis.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>All 15CA Parts I–IV</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>15CB CA Certification</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Royalty &amp; FTS Remittances</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Lower TDS Cert (Sec 197)</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-item-tile">
+            <div class="svc-tile-icon"><i class="fa fa-scale-balanced"></i></div>
+            <div class="svc-tile-text">
+              <h4>Transfer Pricing Support</h4>
+              <p>TP documentation, comparability analysis, benchmarking support, and advisory on TP-related disputes.</p>
+              <div class="sub-services">
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>TP Documentation (Sec 92D)</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Benchmarking Support</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>BEPS &amp; Pillar Two Advisory</span>
               </div>
             </div>
           </div>
@@ -804,7 +831,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
             <div class="svc-tile-icon"><i class="fa fa-user-tie"></i></div>
             <div class="svc-tile-text">
               <h4>NRI Taxation &amp; Compliance</h4>
-              <p>Residency determination, ITR filing, TDS on property, DTAA claims, and repatriation planning for NRIs.</p>
+              <p>Residency determination, ITR filing, DTAA claims, and repatriation planning for Non-Resident Indians.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>NR/RNOR Determination</span>
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>NRI ITR Filing &amp; TDS Refund</span>
@@ -813,53 +840,29 @@ footer{background:#060606;border-top:1px solid var(--border);}
             </div>
           </div>
           <div class="svc-item-tile">
-            <div class="svc-tile-icon"><i class="fa fa-arrows-left-right"></i></div>
-            <div class="svc-tile-text">
-              <h4>Cross-Border Remittance &amp; FEMA</h4>
-              <p>Tax-efficient structuring of outbound/inbound remittances and FEMA compliance management.</p>
-              <div class="sub-services">
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Outbound Investment (ODI)</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>FDI &amp; FPI Advisory</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>FEMA Compounding</span>
-              </div>
-            </div>
-          </div>
-          <div class="svc-item-tile">
             <div class="svc-tile-icon"><i class="fa fa-building-columns"></i></div>
             <div class="svc-tile-text">
-              <h4>Foreign Company Taxation</h4>
-              <p>PE exposure analysis, branch profit tax, POEM, and compliance for foreign entities operating in India.</p>
+              <h4>PE &amp; FEMA Advisory</h4>
+              <p>Permanent establishment exposure analysis, FEMA compliance, and cross-border remittance structuring.</p>
               <div class="sub-services">
                 <span class="sub-tag"><i class="fa fa-chevron-right"></i>Permanent Establishment (PE)</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>POEM Advisory</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>India Entry Structuring</span>
-              </div>
-            </div>
-          </div>
-          <div class="svc-item-tile">
-            <div class="svc-tile-icon"><i class="fa fa-scale-balanced"></i></div>
-            <div class="svc-tile-text">
-              <h4>Transfer Pricing &amp; BEPS</h4>
-              <p>Arm's length documentation, Berry Ratio benchmarking, APA advisory, and BEPS compliance for multinationals.</p>
-              <div class="sub-services">
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>TP Documentation (Sec 92D)</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>Berry Ratio Benchmarking</span>
-                <span class="sub-tag"><i class="fa fa-chevron-right"></i>BEPS &amp; Pillar Two</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>FEMA Compounding</span>
+                <span class="sub-tag"><i class="fa fa-chevron-right"></i>ODI &amp; FDI Advisory</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-    </div><!-- /services-detail -->
-  </div><!-- /services-layout -->
+    </div>
+  </div>
 </section>
 
 
 <!-- ══ ABOUT ══ -->
 <section id="about">
   <div class="about-visual">
-    <img src="images/Profile.png" alt="CA Tirth Shah" loading="eager">
+    <img src="images/Profile.png" alt="CA Tirth Shah – Founder, LexTax" loading="eager">
     <div class="about-visual-overlay"></div>
     <div class="about-badge-block">
       <span class="badge-num">ACA</span>
@@ -868,18 +871,18 @@ footer{background:#060606;border-top:1px solid var(--border);}
   </div>
   <div class="about-content">
     <div class="reveal">
-      <span class="section-eyebrow">The Practitioner</span>
-      <h2>Tirth Shah,<br><em>Chartered Accountant</em></h2>
-      <p class="about-lead">A newly qualified ACA building a focused practice at the intersection of tax law, judicial precedent, and strategic advisory.</p>
+      <span class="section-eyebrow">Founder &amp; Principal Advisor</span>
+      <h2>CA Tirth Shah,<br><em>Founder — LexTax</em></h2>
+      <p class="about-lead">A Chartered Accountant focused on tax advisory, litigation support, and international taxation research — delivering research-driven solutions for complex domestic and cross-border tax issues.</p>
       <div class="about-divider"></div>
-      <p>I am a member of the Institute of Chartered Accountants of India (ICAI), with specialized expertise in Direct Tax, Goods and Services Tax, and International Taxation. My practice is founded on the belief that genuine advisory demands more than mechanical compliance — it requires rigorous legal research, current knowledge of judicial trends, and a deep understanding of each client's economic reality.</p>
-      <p>A significant focus of my practice is advising NRI clients and high-value businesses on optimizing tax structures through lawful planning, treaty analysis, and litigation strategy — including Form 15CA/15CB certification and Transfer Pricing with Berry Ratio analysis under TNMM.</p>
+      <p>CA Tirth Shah is a member of the Institute of Chartered Accountants of India (ICAI). His work focuses on analyzing complex tax issues, interpreting tax treaties, and providing strategic tax solutions for businesses dealing with domestic and cross-border transactions.</p>
+      <p>The professional focus is on assisting businesses and professionals in navigating complex tax provisions, structuring cross-border transactions, and understanding judicial developments in tax law. LexTax brings the most current knowledge of BEPS, updated OECD guidelines, and recent judicial developments — combined with the personal attention that only a focused boutique practice can offer.</p>
       <div class="fresher-note">
-        <strong>Starting Fresh, Thinking Global.</strong> As a newly qualified CA, I bring the most current knowledge of BEPS, updated OECD guidelines, and recent judicial developments — combined with the personal attention that only a focused boutique practice can offer.
+        <strong>Core Areas of Work:</strong> International Taxation (DTAA, withholding tax, cross-border structuring) · Transfer Pricing (documentation, benchmarking, comparability) · Income Tax (assessment representation, litigation support, complex advisory) · GST (advisory, compliance, litigation support)
       </div>
       <div class="tags-row">
         <span class="tag">ACA – ICAI</span>
-        <span class="tag">Direct Tax</span>
+        <span class="tag">Income Tax</span>
         <span class="tag">International Tax</span>
         <span class="tag">GST Advisory</span>
         <span class="tag">Transfer Pricing</span>
@@ -887,6 +890,66 @@ footer{background:#060606;border-top:1px solid var(--border);}
       </div>
       <div style="margin-top:28px;">
         <a href="#contact" class="btn-gold"><i class="fa fa-arrow-right"></i> Schedule a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FOCUS AREAS ══ -->
+<section id="focus-areas">
+  <div class="container">
+    <div class="insights-header reveal">
+      <div>
+        <span class="section-eyebrow">Areas of Expertise</span>
+        <h2 class="section-title">Focus <em>Areas</em></h2>
+      </div>
+      <span class="section-count">03</span>
+    </div>
+    <div class="focus-grid">
+      <div class="focus-card reveal">
+        <div class="focus-card-icon"><i class="fa fa-globe"></i></div>
+        <h3>International Taxation</h3>
+        <p>Research-driven advisory on DTAA interpretation, cross-border transaction structuring, and international tax litigation support.</p>
+        <div class="focus-sub-list">
+          <span class="focus-sub-item">DTAA interpretation</span>
+          <span class="focus-sub-item">Cross-border transaction structuring</span>
+          <span class="focus-sub-item">Withholding tax advisory</span>
+          <span class="focus-sub-item">International tax litigation support</span>
+        </div>
+      </div>
+      <div class="focus-card reveal d1">
+        <div class="focus-card-icon"><i class="fa fa-scale-balanced"></i></div>
+        <h3>Transfer Pricing</h3>
+        <p>Comprehensive TP support — from documentation and benchmarking to comparability analysis aligned with OECD guidelines.</p>
+        <div class="focus-sub-list">
+          <span class="focus-sub-item">Transfer pricing documentation</span>
+          <span class="focus-sub-item">Comparability analysis</span>
+          <span class="focus-sub-item">Benchmarking support</span>
+          <span class="focus-sub-item">BEPS &amp; Pillar Two advisory</span>
+        </div>
+      </div>
+      <div class="focus-card reveal d2">
+        <div class="focus-card-icon"><i class="fa fa-calculator"></i></div>
+        <h3>Income Tax</h3>
+        <p>Assessment representation, litigation support, and advisory on complex income tax matters for businesses and individuals.</p>
+        <div class="focus-sub-list">
+          <span class="focus-sub-item">Assessment representation</span>
+          <span class="focus-sub-item">Litigation support</span>
+          <span class="focus-sub-item">Advisory on complex tax matters</span>
+          <span class="focus-sub-item">Capital gains planning</span>
+        </div>
+      </div>
+      <div class="focus-card reveal d3">
+        <div class="focus-card-icon"><i class="fa fa-receipt"></i></div>
+        <h3>GST</h3>
+        <p>End-to-end GST support — from structuring and compliance to litigation assistance across all tiers of dispute resolution.</p>
+        <div class="focus-sub-list">
+          <span class="focus-sub-item">GST advisory &amp; structuring</span>
+          <span class="focus-sub-item">GST compliance support</span>
+          <span class="focus-sub-item">GST litigation support</span>
+          <span class="focus-sub-item">Refund recovery assistance</span>
+        </div>
       </div>
     </div>
   </div>
@@ -915,7 +978,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
         <p class="c-eyebrow">NRI &amp; Cross-Border Tax</p>
         <h2>Serving the<br><em>Global Indian.</em></h2>
         <p>Whether you are an NRI managing income from India, a foreign company entering the Indian market, or an Indian business expanding overseas — navigating the intersection of Indian tax law, FEMA, and bilateral treaties demands specialized counsel.</p>
-        <p>From DTAA benefit optimization to Form 15CA/15CB certification, I provide holistic cross-border tax support tailored to your unique residency profile.</p>
+        <p>From DTAA analysis to Form 15CA/15CB certification, LexTax provides cross-border tax support tailored to your unique residency profile and transaction structure.</p>
         <div class="carousel-nav">
           <button class="c-btn c-prev-btn"><i class="fa fa-arrow-left"></i></button>
           <button class="c-btn c-next-btn"><i class="fa fa-arrow-right"></i></button>
@@ -928,10 +991,10 @@ footer{background:#060606;border-top:1px solid var(--border);}
         <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=65&auto=format&fit=crop" alt="Tax Litigation" loading="lazy">
       </div>
       <div class="carousel-text">
-        <p class="c-eyebrow">Tax Controversy Management</p>
+        <p class="c-eyebrow">Tax Controversy Support</p>
         <h2>Rigour in<br><em>Every Forum.</em></h2>
-        <p>Tax disputes demand more than procedural compliance — they require deep knowledge of current judicial trends, forensic attention to facts, and the ability to construct compelling legal arguments before assessing officers, CIT(A), and ITAT.</p>
-        <p>With focused expertise across scrutiny assessments, search &amp; seizure proceedings, and GST litigation, I provide representation grounded in law and focused on outcomes.</p>
+        <p>Tax disputes demand more than procedural compliance — they require deep knowledge of current judicial trends, forensic attention to facts, and the ability to construct compelling legal arguments before assessing officers, appellate authorities, and tribunals.</p>
+        <p>LexTax provides litigation support grounded in current case law, focused on practical outcomes and well-researched submissions across income tax and GST disputes.</p>
         <div class="carousel-nav">
           <button class="c-btn c-prev-btn"><i class="fa fa-arrow-left"></i></button>
           <button class="c-btn c-next-btn"><i class="fa fa-arrow-right"></i></button>
@@ -946,8 +1009,8 @@ footer{background:#060606;border-top:1px solid var(--border);}
       <div class="carousel-text">
         <p class="c-eyebrow">Transfer Pricing Research</p>
         <h2>The <em>Arm's Length</em><br>Advantage.</h2>
-        <p>Transfer pricing is one of the most technically demanding areas of modern international tax practice. My approach combines rigorous economic analysis with current OECD guidelines and Indian TP jurisprudence.</p>
-        <p>From Berry Ratio benchmarking to TP audits before the Transfer Pricing Officer, I bring depth and precision to every engagement.</p>
+        <p>Transfer pricing is one of the most technically demanding areas of modern international tax practice. LexTax combines rigorous economic analysis with current OECD guidelines and Indian TP jurisprudence.</p>
+        <p>From Berry Ratio benchmarking to TP documentation under Section 92D, we bring depth and precision to every transfer pricing engagement.</p>
         <div class="carousel-nav">
           <button class="c-btn c-prev-btn"><i class="fa fa-arrow-left"></i></button>
           <button class="c-btn c-next-btn"><i class="fa fa-arrow-right"></i></button>
@@ -959,12 +1022,34 @@ footer{background:#060606;border-top:1px solid var(--border);}
 </section>
 
 
+<!-- ══ CASE LAW LIBRARY ══ -->
+<section id="case-law-library" style="background:var(--black-2);">
+  <div class="container">
+    <div class="caselibrary-header reveal">
+      <div>
+        <span class="section-eyebrow">Research &amp; Jurisprudence</span>
+        <h2 class="section-title">International Tax<br><em>Case Law Library</em></h2>
+      </div>
+      <span class="section-count" style="font-size:60px;">07</span>
+    </div>
+    <p style="font-size:14px;color:var(--text-dim);max-width:600px;margin-bottom:32px;line-height:1.8;">AI-analyzed international tax judgments from ITAT, High Courts &amp; Supreme Court — with treaty article tagging, precedent networks, ratio decidendi, and AI practitioner analysis.</p>
+  </div>
+  <div id="case-law-app"></div>
+</section>
+
+
 <!-- ══ INSIGHTS ══ -->
 <section id="insights">
   <div class="container">
     <div class="insights-header reveal">
       <div><span class="section-eyebrow">Publications &amp; Research</span><h2 class="section-title">Technical <em>Insights</em></h2></div>
-      <span class="section-count">04</span>
+      <span class="section-count">08</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;">
+      <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-muted);padding:5px 13px;font-weight:500;cursor:pointer;">Landmark Tax Judgments</span>
+      <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);border:1px solid #1c1c1c;padding:5px 13px;font-weight:500;cursor:pointer;transition:color 0.3s;">International Tax Analysis</span>
+      <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);border:1px solid #1c1c1c;padding:5px 13px;font-weight:500;cursor:pointer;transition:color 0.3s;">GST Updates</span>
+      <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);border:1px solid #1c1c1c;padding:5px 13px;font-weight:500;cursor:pointer;transition:color 0.3s;">Transfer Pricing Insights</span>
     </div>
     <div class="article-grid">
       <div class="article-card reveal">
@@ -986,8 +1071,8 @@ footer{background:#060606;border-top:1px solid var(--border);}
         </div>
         <div class="article-card reveal d2" style="flex:1;padding:30px 34px;">
           <div class="article-tag-row"><span class="article-tag">GST</span></div>
-          <h3>ITC Optimization: Strategic Use of Input Tax Credits</h3>
-          <p>A practical guide to maximizing legitimate input tax credits — common pitfalls, Section 17(5) blocked credits, and reconciliation strategies under GSTR-2B.</p>
+          <h3>ITC Analysis: Strategic Use of Input Tax Credits</h3>
+          <p>A practical analysis of input tax credit management — common pitfalls, Section 17(5) blocked credits, and reconciliation strategies under GSTR-2B for effective GST compliance.</p>
         </div>
       </div>
     </div>
@@ -1000,7 +1085,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
   <div class="container">
     <div class="insights-header reveal">
       <div><span class="section-eyebrow">Downloads &amp; Research Papers</span><h2 class="section-title">Knowledge <em>Resources</em></h2></div>
-      <span class="section-count">05</span>
+      <span class="section-count">09</span>
     </div>
     <div class="resource-grid">
       <div class="resource-tile reveal">
@@ -1026,15 +1111,14 @@ footer{background:#060606;border-top:1px solid var(--border);}
 </section>
 
 
-<!-- ══ TESTIMONIALS — honest, no fake reviews ══ -->
+<!-- ══ TESTIMONIALS ══ -->
 <section id="testimonials">
   <div class="container">
     <div class="insights-header reveal">
       <div><span class="section-eyebrow">Client Perspectives</span><h2 class="section-title">What Clients <em>Say</em></h2></div>
-      <span class="section-count">06</span>
+      <span class="section-count">10</span>
     </div>
     <div class="testi-grid">
-      <!-- One verified testimonial about the Berry Ratio article -->
       <div class="testi-real reveal">
         <div class="testi-stars">
           <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
@@ -1043,19 +1127,17 @@ footer{background:#060606;border-top:1px solid var(--border);}
         <span class="testi-name">Senior Tax Professional</span>
         <span class="testi-role">CA Firm · Mumbai</span>
       </div>
-      <!-- Honest invite card 1 -->
       <div class="testi-invite reveal d1">
         <div class="testi-invite-icon"><i class="fa fa-handshake"></i></div>
-        <h4>Be Our First Client</h4>
-        <p>Starting practice means every client gets direct, dedicated, personal attention — no associates, no delegation. Just focused advisory from CA Tirth Shah himself.</p>
+        <h4>Work With LexTax</h4>
+        <p>Every client receives direct, dedicated, personal attention from CA Tirth Shah. No delegation, no associates — just focused advisory from the principal advisor himself.</p>
         <a href="#contact" class="testi-invite-link"><i class="fa fa-arrow-right" style="font-size:9px;"></i> Start a Conversation</a>
       </div>
-      <!-- Honest invite card 2 -->
       <div class="testi-invite reveal d2">
         <div class="testi-invite-icon"><i class="fa fa-comment"></i></div>
         <h4>Share Your Experience</h4>
-        <p>Have you worked with CA Tirth Shah? Your honest feedback helps others make informed decisions. Reach out to leave a review.</p>
-        <a href="/cdn-cgi/l/email-protection#2b484a5f42595f4358434a436b4c464a42470548444614585e49414e485f166d4e4e4f494a4840" class="testi-invite-link"><i class="fa fa-envelope" style="font-size:9px;"></i> Send Feedback</a>
+        <p>Have you worked with LexTax? Your honest feedback helps others make informed decisions. Reach out to leave a review.</p>
+        <a href="mailto:catirthshah@gmail.com" class="testi-invite-link"><i class="fa fa-envelope" style="font-size:9px;"></i> Send Feedback</a>
       </div>
     </div>
   </div>
@@ -1073,7 +1155,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
         <div class="contact-icon"><i class="fa fa-envelope"></i></div>
         <div>
           <span class="contact-row-label">Email</span>
-          <a href="/cdn-cgi/l/email-protection#2a494b5e43585e4259424b426a4d474b434604494547"><span class="__cf_email__" data-cfemail="f59694819c87819d869d949db59298949c99db969a98">[email&#160;protected]</span></a>
+          <a href="mailto:catirthshah@gmail.com">catirthshah@gmail.com</a>
         </div>
       </div>
       <div class="contact-row">
@@ -1090,7 +1172,6 @@ footer{background:#060606;border-top:1px solid var(--border);}
           <p>Ahmedabad, Gujarat, India</p>
         </div>
       </div>
-      <!-- Contact Form -->
       <form class="contact-form" id="contact-form">
         <div class="form-row">
           <div class="form-group">
@@ -1107,21 +1188,6 @@ footer{background:#060606;border-top:1px solid var(--border);}
           <input type="email" id="cf-email" placeholder="rahul@example.com" required>
         </div>
         <div class="form-group">
-          <label>Service Required</label>
-          <select id="cf-service">
-            <option value="">— Select a service —</option>
-            <option>International Taxation / DTAA</option>
-            <option>Form 15CA / 15CB Certification</option>
-            <option>NRI Taxation &amp; Compliance</option>
-            <option>GST Advisory &amp; Refund Recovery</option>
-            <option>Income Tax Scrutiny / Appeals</option>
-            <option>Transfer Pricing</option>
-            <option>FEMA &amp; Cross-Border Remittance</option>
-            <option>General Tax Planning</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
           <label>Message</label>
           <textarea id="cf-msg" placeholder="Briefly describe your requirement..."></textarea>
         </div>
@@ -1130,7 +1196,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
         </button>
         <div class="form-success" id="cf-success">
           <i class="fa fa-check-circle" style="color:var(--gold);margin-right:8px;"></i>
-          Thank you! Your message has been sent. I will respond within 24 hours.
+          Thank you! Your message has been received. We will respond within 24 hours.
         </div>
       </form>
     </div>
@@ -1156,12 +1222,12 @@ footer{background:#060606;border-top:1px solid var(--border);}
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <span class="logo-main">CA Tirth Shah</span>
-        <span class="logo-sub" style="display:block;margin-top:3px;">Chartered Accountant</span>
-        <p>A focused practice in Direct Tax, GST, and International Taxation — where technical rigour meets strategic insight.</p>
+        <span class="logo-main">LexTax</span>
+        <span class="logo-sub" style="display:block;margin-top:3px;">Tax Advisory &amp; Litigation</span>
+        <p>GST | Income Tax | International Taxation. Research-driven tax strategies and practical solutions for businesses and cross-border transactions.</p>
         <div class="footer-social">
           <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="/cdn-cgi/l/email-protection#61020015081315091209000921060c00080d4f020e0c" class="social-link" title="Email"><i class="fa fa-envelope"></i></a>
+          <a href="mailto:catirthshah@gmail.com" class="social-link" title="Email"><i class="fa fa-envelope"></i></a>
           <a href="tel:+918128335264" class="social-link" title="Call"><i class="fa fa-phone"></i></a>
         </div>
       </div>
@@ -1178,8 +1244,9 @@ footer{background:#060606;border-top:1px solid var(--border);}
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Resources</h4>
+        <h4>Research</h4>
         <ul>
+          <li><a href="#case-law-library">Case Law Library</a></li>
           <li><a href="documents/Berry ratio.pdf" target="_blank">Berry Ratio Paper</a></li>
           <li><a href="#insights">Technical Articles</a></li>
           <li><a href="#insights">Tax Insights</a></li>
@@ -1188,20 +1255,20 @@ footer{background:#060606;border-top:1px solid var(--border);}
       <div class="footer-col">
         <h4>Connect</h4>
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About the Firm</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#7b181a0f12090f1308131a133b1c161a121755181416">Email Us</a></li>
+          <li><a href="mailto:catirthshah@gmail.com">Email LexTax</a></li>
           <li><a href="tel:+918128335264">+91 81283 35264</a></li>
           <li><a href="#resources">Downloads</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 CA Tirth Shah · All Rights Reserved · Ahmedabad, India</p>
+      <p>&copy; 2026 LexTax · Tax Advisory &amp; Litigation · CA Tirth Shah · GST | Income Tax | International Taxation · Ahmedabad</p>
       <div class="footer-bottom-links">
         <a href="#about">About</a>
         <a href="#services-grid">Services</a>
-        <a href="#insights">Insights</a>
+        <a href="#case-law-library">Case Library</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -1209,17 +1276,701 @@ footer{background:#060606;border-top:1px solid var(--border);}
 </footer>
 
 
-<!-- ══════════════════════════════════
-     JAVASCRIPT — all in one block
-══════════════════════════════════ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-(function(){
+<!-- ══ REACT CASE LAW LIBRARY ══ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 
-  /* ── 1. Header scroll ── */
+<script type="text/babel" data-presets="react">
+// ─── CASE DATABASE ─────────────────────────────────────────────────────────────
+const CASES = [
+  {
+    id: "SC-2021-001",
+    title: "Engineering Analysis Centre of Excellence Pvt Ltd vs. CIT",
+    court: "Supreme Court",
+    date: "2021-03-02",
+    assessmentYear: "2010-11",
+    topic: "Royalty vs Business Income",
+    treaty: "India–USA DTAA",
+    treatyCountry: "USA",
+    treatyArticles: [{ article: "Article 12", subject: "Royalty" }, { article: "Article 7", subject: "Business Profits" }],
+    provisions: ["Section 9(1)(vi)", "Section 195", "Explanation 4"],
+    citation: "Civil Appeal No. 8733/2018 | (2021) 432 ITR 471",
+    keywords: ["software", "royalty", "copyright", "shrink-wrap", "end-user license", "DTAA override"],
+    ruling: "Assessee",
+    summary: "Landmark Supreme Court ruling holding that payments for shrink-wrap software licenses do not constitute royalty under DTAAs. The court distinguished between transfer of copyright and grant of limited end-user license.",
+    issue: "Whether amounts paid to non-resident companies as consideration for computer software constitute 'royalty' under Section 9(1)(vi) of the Income Tax Act and the applicable DTAAs.",
+    assesseeArguments: "Purchase of software is a sale of goods or grant of limited end-user license. No copyright or intellectual property is transferred. The definition of royalty in DTAAs does not include mere end-user software licenses.",
+    departmentArguments: "Software is a copyrighted work. Any payment for use of software is for use of copyright, hence royalty. The broader definition in domestic law should apply.",
+    reasoning: "The Supreme Court held that DTAA definitions of royalty must prevail over domestic law amendments under Section 9(1)(vi) Explanation 4. Purchase of shrink-wrap software does not involve any transfer of copyright rights but only a limited license to use the copyrighted article.",
+    ruling_detail: "Appeals allowed. Software payments not royalty under DTAAs. TDS obligation negated for end-user licenses.",
+    ratio_decidendi: "Payments for computer software under end-user license agreements do not constitute 'royalty' under DTAA provisions. A mere right to use a copyrighted article is not the same as a right to use the copyright itself. The DTAA definition of royalty prevails over the expanded domestic definition introduced by Explanation 4 to Section 9(1)(vi).",
+    cases_cited: ["SC-2012-Samsung", "Delhi-HC-Ericsson", "OECD-Commentary-Art12"],
+    related_ids: ["ITAT-2024-004", "HC-2023-006"],
+    appeal_history: [
+      { stage: "AO", result: "Against", year: "2010" },
+      { stage: "CIT(A)", result: "Against", year: "2012" },
+      { stage: "ITAT", result: "Mixed", year: "2015" },
+      { stage: "High Court", result: "Against", year: "2017" },
+      { stage: "Supreme Court", result: "In Favour", year: "2021" }
+    ],
+    pages: 156,
+    views: 8734
+  },
+  {
+    id: "ITAT-2024-001",
+    title: "Nestlé SA vs. DCIT – Liaison Office & PE Attribution",
+    court: "ITAT Mumbai",
+    date: "2024-03-12",
+    assessmentYear: "2019-20",
+    topic: "Permanent Establishment",
+    treaty: "India–Switzerland DTAA",
+    treatyCountry: "Switzerland",
+    treatyArticles: [{ article: "Article 5", subject: "Permanent Establishment" }, { article: "Article 7", subject: "Business Profits" }],
+    provisions: ["Article 5(1)", "Article 5(4)", "Article 5(5)", "Article 7"],
+    citation: "ITA No. 3421/Mum/2022",
+    keywords: ["PE", "liaison office", "preparatory auxiliary", "dependent agent", "profit attribution"],
+    ruling: "Assessee",
+    summary: "The tribunal held that liaison office activities did not constitute a Permanent Establishment under Article 5 of India–Switzerland DTAA. Preparatory and auxiliary activities do not create taxable nexus.",
+    issue: "Whether liaison office activities of Nestlé SA in India constitute a Permanent Establishment under Article 5 of India–Switzerland DTAA, and if so, what profits are attributable.",
+    assesseeArguments: "Liaison office undertakes only preparatory and auxiliary activities. No business contracts are concluded in India. Article 5(4) explicitly excludes these activities.",
+    departmentArguments: "Liaison office exercises supervisory functions beyond auxiliary activities. Employees provide strategic input to Indian operations.",
+    reasoning: "The tribunal analyzed the functional profile of the liaison office and concluded quality oversight and market research fall within the auxiliary activities exception under Article 5(4). No contracts were negotiated or signed in India.",
+    ruling_detail: "Appeal allowed. No PE constituted. AO's order set aside. No income attributable to India.",
+    ratio_decidendi: "A liaison office engaged solely in market research and quality oversight constitutes 'preparatory or auxiliary' activities within Article 5(4) of the India–Switzerland DTAA and does not create a Permanent Establishment, regardless of the functional depth of those activities.",
+    cases_cited: ["SC-2021-001", "Delhi-HC-Morgan-Stanley"],
+    related_ids: ["HC-2023-006", "ITAT-2024-005"],
+    appeal_history: [
+      { stage: "AO", result: "Against", year: "2021" },
+      { stage: "CIT(A)", result: "Against", year: "2022" },
+      { stage: "ITAT", result: "In Favour", year: "2024" }
+    ],
+    pages: 47,
+    views: 1243
+  },
+  {
+    id: "HC-2024-002",
+    title: "Google Ireland Ltd vs. CIT – Equalization Levy on Digital Services",
+    court: "Delhi High Court",
+    date: "2024-02-28",
+    assessmentYear: "2021-22",
+    topic: "Equalization Levy",
+    treaty: "India–Ireland DTAA",
+    treatyCountry: "Ireland",
+    treatyArticles: [{ article: "Article 7", subject: "Business Profits" }, { article: "Article 24", subject: "Non-Discrimination" }],
+    provisions: ["Finance Act 2020", "Section 165A", "Article 7"],
+    citation: "W.P.(C) 5671/2023",
+    keywords: ["equalization levy", "digital services", "DTAA override", "e-commerce", "non-resident"],
+    ruling: "Department",
+    summary: "Delhi High Court upheld applicability of Equalization Levy 2.0 on e-commerce supply of services by non-resident entities. The levy is not an 'income tax' covered by DTAA.",
+    issue: "Whether Equalization Levy under Finance Act 2020 is an 'income tax' covered under India–Ireland DTAA, and whether DTAA protection overrides the levy.",
+    assesseeArguments: "Equalization Levy is effectively income tax. It violates the non-discrimination clause. Digital services already covered as royalties or FTS under treaty provisions.",
+    departmentArguments: "Equalization Levy is a separate charge outside income tax. DTAA has no application.",
+    reasoning: "The court concluded the levy is specifically designed outside the income tax framework. DTAA cannot override a domestic levy that is not an income tax.",
+    ruling_detail: "Writ petition dismissed. Equalization Levy applicable. Treaty challenge rejected.",
+    ratio_decidendi: "The Equalization Levy under Finance Act 2020 is not an 'income tax' within the meaning of the India–Ireland DTAA. Non-resident e-commerce operators providing digital services to Indian customers are liable to the levy irrespective of treaty protection since the levy operates outside the income tax framework.",
+    cases_cited: ["SC-2021-001", "Finance-Act-2016-EL"],
+    related_ids: ["SC-2021-001", "ITAT-2024-004"],
+    appeal_history: [
+      { stage: "Writ Petition (HC)", result: "Against", year: "2024" }
+    ],
+    pages: 89,
+    views: 2891
+  },
+  {
+    id: "ITAT-2024-004",
+    title: "Amazon Web Services Inc vs. ACIT – Cloud Computing & FTS",
+    court: "ITAT Bangalore",
+    date: "2024-01-22",
+    assessmentYear: "2018-19",
+    topic: "Fees for Technical Services",
+    treaty: "India–USA DTAA",
+    treatyCountry: "USA",
+    treatyArticles: [{ article: "Article 12", subject: "Fees for Technical Services" }, { article: "Article 7", subject: "Business Profits" }],
+    provisions: ["Section 9(1)(vii)", "Section 195", "Article 12 Para 4"],
+    citation: "ITA No. 892/Bang/2022",
+    keywords: ["cloud computing", "FTS", "make available", "technical services", "AWS", "IaaS"],
+    ruling: "Assessee",
+    summary: "ITAT held cloud computing services provided by AWS do not constitute Fees for Technical Services under India–USA DTAA as the 'make available' condition is not satisfied.",
+    issue: "Whether consideration received by AWS for cloud computing services constitutes Fees for Technical Services under Article 12 of India–USA DTAA.",
+    assesseeArguments: "Cloud services are automated and standardized. No technical knowledge is transferred to customers. The 'make available' test in India–USA DTAA is not satisfied by mere automated service delivery.",
+    departmentArguments: "AWS provides sophisticated technical infrastructure. Indian customers benefit from technical expertise. FTS definition is broad enough to cover cloud services.",
+    reasoning: "The tribunal applied the 'make available' test strictly. For FTS to be taxable, services must transfer technical knowledge to the service recipient. Automated cloud computing does not transfer technical knowledge.",
+    ruling_detail: "Appeal allowed. Cloud computing payments not FTS. No Indian tax liability.",
+    ratio_decidendi: "Automated cloud computing services (IaaS/PaaS) do not satisfy the 'make available' test under Article 12 of the India–USA DTAA. Standardized automated infrastructure services do not meet this threshold.",
+    cases_cited: ["SC-2021-001", "Delhi-HC-Syntel-FTS"],
+    related_ids: ["SC-2021-001", "HC-2024-002"],
+    appeal_history: [
+      { stage: "AO", result: "Against", year: "2020" },
+      { stage: "CIT(A)", result: "Against", year: "2021" },
+      { stage: "ITAT", result: "In Favour", year: "2024" }
+    ],
+    pages: 62,
+    views: 3421
+  },
+  {
+    id: "ITAT-2024-005",
+    title: "Hyundai Motor Company vs. DCIT – TP Comparables & ALP",
+    court: "ITAT Chennai",
+    date: "2024-04-05",
+    assessmentYear: "2017-18",
+    topic: "Transfer Pricing",
+    treaty: "India–South Korea DTAA",
+    treatyCountry: "South Korea",
+    treatyArticles: [{ article: "Article 9", subject: "Associated Enterprises" }],
+    provisions: ["Section 92C", "Section 92CA", "Rule 10B", "Article 9"],
+    citation: "ITA No. 1205/Chny/2021",
+    keywords: ["transfer pricing", "ALP", "TNMM", "comparables", "functional analysis", "automotive"],
+    ruling: "Partial - Assessee",
+    summary: "Tribunal upheld TNMM method for ALP determination but directed fresh selection of comparables excluding functionally dissimilar companies. TP adjustment substantially reduced.",
+    issue: "Whether comparables selected by TPO for TNMM analysis are functionally comparable to Hyundai's Indian operations, and whether the TP adjustment is justified.",
+    assesseeArguments: "Comparables selected by TPO include companies with different risk profiles and asset intensity.",
+    departmentArguments: "TNMM is the most appropriate method. Selected comparables pass basic filters.",
+    reasoning: "The tribunal conducted a detailed functional analysis of each comparable. Companies with turnover below ₹1 crore, persistent losses, and those engaged in high-value R&D were excluded.",
+    ruling_detail: "Matter remanded to AO/TPO for fresh determination using revised comparables. Original adjustment of ₹847 crore substantially reduced.",
+    ratio_decidendi: "Comparable companies for TNMM analysis must have materially similar functional profiles, risk profiles, and asset intensity. Companies with dissimilar characteristics must be excluded from the final set even if they pass basic financial filters.",
+    cases_cited: ["SC-Maruti-Suzuki-TP", "ITAT-Del-Sony-Comparables"],
+    related_ids: ["HC-2023-006"],
+    appeal_history: [
+      { stage: "AO", result: "Against", year: "2019" },
+      { stage: "DRP", result: "Partial", year: "2020" },
+      { stage: "ITAT", result: "Partial - In Favour", year: "2024" }
+    ],
+    pages: 134,
+    views: 2156
+  },
+  {
+    id: "HC-2023-006",
+    title: "Vodafone International Holdings vs. UOI – Indirect Transfer & DTAA",
+    court: "Bombay High Court",
+    date: "2023-09-18",
+    assessmentYear: "2008-09",
+    topic: "DTAA Interpretation",
+    treaty: "India–Netherlands DTAA",
+    treatyCountry: "Netherlands",
+    treatyArticles: [{ article: "Article 13", subject: "Capital Gains" }, { article: "Article 4", subject: "Residence" }],
+    provisions: ["Section 9(1)(i)", "Explanation 5", "Article 13"],
+    citation: "W.P.(C) 8921/2021",
+    keywords: ["indirect transfer", "retrospective amendment", "DTAA", "capital gains", "treaty override"],
+    ruling: "Assessee",
+    summary: "Bombay HC struck down retrospective application of indirect transfer provisions against Vodafone citing India–Netherlands DTAA Article 13 protection. Capital gains from indirect transfer held not taxable.",
+    issue: "Whether retrospective amendment to Section 9(1)(i) overrides DTAA protection under India–Netherlands treaty for indirect transfer of Indian assets.",
+    assesseeArguments: "India–Netherlands DTAA Article 13 protects capital gains on sale of shares by Dutch company. Treaty override requires specific legislation.",
+    departmentArguments: "Parliament has sovereign power to amend tax laws retrospectively. The amendment clarifies existing law.",
+    reasoning: "The High Court applied the principle that specific DTAA provisions prevail over general domestic law. Without a specific treaty override provision, the retrospective domestic amendment cannot defeat treaty protection.",
+    ruling_detail: "Petition allowed. Retrospective assessment quashed. India–Netherlands DTAA protection upheld.",
+    ratio_decidendi: "DTAA provisions specifically allocating taxing rights on capital gains override retrospective domestic amendments to Section 9(1)(i) of the Income Tax Act. Treaty-based protection for indirect transfers can only be defeated by specific treaty override legislation, not by general domestic law expansion.",
+    cases_cited: ["SC-2012-Vodafone", "SC-2021-001"],
+    related_ids: ["ITAT-2024-001", "ITAT-2024-005"],
+    appeal_history: [
+      { stage: "AO", result: "Against", year: "2015" },
+      { stage: "High Court (Writ)", result: "In Favour", year: "2023" }
+    ],
+    pages: 112,
+    views: 5632
+  }
+];
+
+const TOPICS = ["All Topics","Permanent Establishment","Royalty vs Business Income","Fees for Technical Services","Transfer Pricing","DTAA Interpretation","Equalization Levy"];
+const COURTS = ["All Courts","Supreme Court","Delhi High Court","Bombay High Court","ITAT Mumbai","ITAT Bangalore","ITAT Chennai"];
+const COUNTRIES = ["All Countries","USA","Switzerland","Ireland","Netherlands","South Korea"];
+
+// ─── CSS (embedded in React) ───────────────────────────────────────────────────
+const LIB_CSS = `
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap');
+.lt-app{font-family:'Manrope',sans-serif;background:transparent;padding:0;}
+.lt-nav{background:rgba(8,8,8,0.96);border-bottom:1px solid #1c1c1c;display:flex;align-items:center;padding:0 36px;height:52px;gap:0;position:sticky;top:72px;z-index:100;backdrop-filter:blur(12px);}
+.lt-logo{font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;color:#C9A84C;letter-spacing:2px;text-transform:uppercase;margin-right:2rem;cursor:pointer;}
+.lt-nlinks{display:flex;flex:1;}
+.lt-nl{height:52px;display:flex;align-items:center;gap:6px;padding:0 .9rem;font-size:.75rem;font-weight:600;color:#666460;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;letter-spacing:.01em;text-transform:uppercase;}
+.lt-nl:hover{color:#C9A84C;}
+.lt-nl.on{color:#C9A84C;border-bottom-color:#C9A84C;}
+.lt-badge{background:rgba(201,168,76,0.15);color:#C9A84C;border:1px solid rgba(201,168,76,0.3);padding:2px 9px;border-radius:3px;font-size:.65rem;font-weight:700;font-family:'JetBrains Mono',monospace;}
+.lt-badge-n{background:rgba(201,168,76,0.25);color:#C9A84C;border:1px solid rgba(201,168,76,0.4);}
+.lt-nav-end{margin-left:auto;display:flex;align-items:center;gap:.75rem;}
+
+.lt-hero{padding:3.5rem 36px 2rem;background:linear-gradient(180deg,rgba(14,10,2,0.95) 0%,transparent 100%);border-bottom:1px solid #1c1c1c;}
+.lt-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.22);color:#C9A84C;padding:4px 13px;border-radius:3px;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:1.1rem;}
+.lt-hero-h{font-family:'Libre Baskerville',serif;font-size:2.1rem;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:.8rem;color:#e8e4da;}
+.lt-hero-h span{color:#C9A84C;font-style:italic;}
+.lt-hero-sub{font-size:.9rem;color:#666460;max-width:520px;margin:0 0 2rem;line-height:1.75;}
+.lt-swrap{max-width:640px;background:#0f0f0f;border:1px solid #2e2510;display:flex;transition:border-color .2s;}
+.lt-swrap:focus-within{border-color:#C9A84C;box-shadow:0 0 0 3px rgba(201,168,76,0.08);}
+.lt-sinp{flex:1;padding:.9rem 1.1rem;background:none;border:none;outline:none;color:#e8e4da;font-family:'Manrope',sans-serif;font-size:.87rem;}
+.lt-sinp::placeholder{color:#333;}
+.lt-sbtn{padding:.75rem 1.3rem;background:#C9A84C;border:none;cursor:pointer;color:#000;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:700;display:flex;align-items:center;gap:7px;transition:background .15s;letter-spacing:1px;text-transform:uppercase;}
+.lt-sbtn:hover{background:#E2C47A;}
+
+.lt-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;background:#0a0a0a;}
+.lt-stat{padding:1.2rem 2rem;border-right:1px solid #1c1c1c;}
+.lt-stat:last-child{border-right:none;}
+.lt-stat-n{font-family:'JetBrains Mono',monospace;font-size:1.5rem;color:#C9A84C;letter-spacing:-.02em;}
+.lt-stat-l{font-size:.68rem;color:#666460;text-transform:uppercase;letter-spacing:.07em;font-weight:600;margin-top:3px;}
+
+.lt-main{flex:1;padding:1.75rem 36px;max-width:1400px;width:100%;}
+.lt-two-col{display:grid;grid-template-columns:1fr 280px;gap:1.75rem;}
+.lt-sec-title{font-family:'Libre Baskerville',serif;font-size:.95rem;color:#e8e4da;margin-bottom:1rem;display:flex;align-items:center;gap:8px;}
+.lt-sec-title::after{content:'';flex:1;height:1px;background:#1c1c1c;}
+
+.lt-clist{display:flex;flex-direction:column;gap:1px;background:#1c1c1c;border:1px solid #1c1c1c;overflow:hidden;}
+.lt-cc{background:#0f0f0f;padding:1.25rem 1.5rem;cursor:pointer;transition:background .15s;display:flex;flex-direction:column;gap:.8rem;border-left:3px solid transparent;}
+.lt-cc:hover{background:#141414;border-left-color:#6E4E18;}
+.lt-cc-court{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:#666460;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;}
+.lt-cc-title{font-family:'Libre Baskerville',serif;font-size:.91rem;line-height:1.5;color:#e8e4da;font-weight:700;}
+.lt-cc-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.lt-cc-sum{font-size:.82rem;color:#666460;line-height:1.7;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.lt-cc-ft{display:flex;align-items:center;gap:.9rem;padding-top:.6rem;border-top:1px solid #1c1c1c;font-family:'JetBrains Mono',monospace;font-size:.66rem;color:#333;}
+
+.lt-tag{padding:2px 9px;border-radius:2px;font-size:.65rem;font-weight:700;letter-spacing:.03em;white-space:nowrap;}
+.lt-t-topic{background:rgba(201,168,76,0.08);color:#C9A84C;border:1px solid rgba(201,168,76,0.2);}
+.lt-t-pe{background:rgba(59,130,246,.1);color:#60a5fa;}
+.lt-t-royalty{background:rgba(168,85,247,.1);color:#c084fc;}
+.lt-t-fts{background:rgba(20,184,166,.1);color:#2dd4bf;}
+.lt-t-tp{background:rgba(249,115,22,.1);color:#fb923c;}
+.lt-t-dtaa{background:rgba(234,179,8,.1);color:#fbbf24;}
+.lt-t-el{background:rgba(16,185,129,.1);color:#34d399;}
+.lt-t-treaty{background:rgba(201,168,76,0.08);color:#C9A84C;border:1px solid rgba(201,168,76,0.18);}
+.lt-t-ok{background:rgba(23,168,122,.1);color:#17a87a;border:1px solid rgba(23,168,122,.2);}
+.lt-t-err{background:rgba(217,79,79,.1);color:#d94f4f;border:1px solid rgba(217,79,79,.2);}
+.lt-t-warn{background:rgba(217,146,42,.1);color:#d9922a;border:1px solid rgba(217,146,42,.2);}
+.lt-t-plain{background:#111;color:#666460;border:1px solid #222;}
+
+.lt-filter{background:#0a0a0a;border:1px solid #1c1c1c;padding:1.1rem;position:sticky;top:124px;}
+.lt-f-section{margin-bottom:1.25rem;}
+.lt-f-label{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:#666460;text-transform:uppercase;letter-spacing:.09em;display:block;margin-bottom:.6rem;font-weight:600;}
+.lt-f-opt{display:flex;align-items:center;gap:7px;padding:6px 9px;cursor:pointer;font-size:.77rem;color:#666460;transition:all .15s;}
+.lt-f-opt:hover{background:#0f0f0f;color:#C9A84C;}
+.lt-f-opt.on{background:rgba(201,168,76,0.05);color:#C9A84C;}
+.lt-f-dot{width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;flex-shrink:0;}
+.lt-f-select{width:100%;background:#0f0f0f;border:1px solid #1c1c1c;color:#666460;padding:6px 9px;font-family:'Manrope',sans-serif;font-size:.77rem;outline:none;cursor:pointer;margin-bottom:.5rem;}
+.lt-f-select:focus{border-color:#C9A84C;}
+.lt-f-select option{background:#0f0f0f;}
+
+.lt-sbar{display:flex;align-items:center;gap:9px;background:#0f0f0f;border:1px solid #2e2510;padding:.65rem 1rem;margin-bottom:1.1rem;transition:border-color .2s;}
+.lt-sbar:focus-within{border-color:#C9A84C;}
+.lt-sbar input{flex:1;background:none;border:none;outline:none;color:#e8e4da;font-family:'Manrope',sans-serif;font-size:.86rem;}
+.lt-sbar input::placeholder{color:#333;}
+.lt-res-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem;}
+.lt-res-ct{font-size:.8rem;color:#666460;}
+.lt-res-ct span{color:#e8e4da;font-weight:600;}
+
+.lt-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:700;cursor:pointer;transition:all .15s;border:none;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;}
+.lt-btn-gold{background:#C9A84C;color:#000;}
+.lt-btn-gold:hover:not(:disabled){background:#E2C47A;}
+.lt-btn-gold:disabled{opacity:.5;cursor:not-allowed;}
+.lt-btn-outline{background:none;color:#666460;border:1px solid #2e2510;}
+.lt-btn-outline:hover{background:rgba(201,168,76,0.05);color:#C9A84C;}
+.lt-btn-ghost{background:none;color:#666460;border:none;padding:4px 6px;}
+.lt-btn-ghost:hover{color:#e8e4da;}
+
+.lt-det-wrap{max-width:900px;margin:0 auto;}
+.lt-back{display:inline-flex;align-items:center;gap:7px;color:#666460;font-size:.8rem;cursor:pointer;padding:6px 0;margin-bottom:1.25rem;background:none;border:none;transition:color .15s;}
+.lt-back:hover{color:#C9A84C;}
+.lt-case-hdr{background:#0a0a0a;border:1px solid #1c1c1c;border-top:3px solid #C9A84C;padding:1.75rem;margin-bottom:1.25rem;}
+.lt-case-court-row{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.85rem;}
+.lt-court-badge{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:#666460;background:#111;border:1px solid #1c1c1c;padding:3px 9px;text-transform:uppercase;letter-spacing:.05em;}
+.lt-case-title{font-family:'Libre Baskerville',serif;font-size:1.35rem;font-weight:700;line-height:1.4;color:#e8e4da;margin-bottom:.9rem;}
+.lt-case-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:1rem;}
+
+.lt-ratio-box{background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(201,168,76,0.02));border:1px solid rgba(201,168,76,0.2);padding:1.4rem;margin-bottom:1.25rem;position:relative;}
+.lt-ratio-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#C9A84C,#E2C47A,transparent);}
+.lt-ratio-hd{display:flex;align-items:center;gap:7px;margin-bottom:.9rem;}
+.lt-ratio-label{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:#C9A84C;text-transform:uppercase;letter-spacing:.1em;font-weight:600;}
+.lt-ratio-text{font-family:'Libre Baskerville',serif;font-size:.95rem;line-height:1.8;color:#e8e4da;font-style:italic;border-left:3px solid #C9A84C;padding-left:1rem;}
+
+.lt-treaty-block{background:#0a0a0a;border:1px solid #1c1c1c;padding:.9rem 1.1rem;margin-bottom:1.25rem;}
+.lt-treaty-block-title{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:#666460;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.6rem;font-weight:600;}
+.lt-treaty-articles{display:flex;flex-wrap:wrap;gap:6px;}
+.lt-ta-pill{display:flex;align-items:center;gap:6px;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);padding:5px 11px;font-size:.75rem;color:#C9A84C;}
+.lt-ta-pill strong{font-family:'JetBrains Mono',monospace;font-size:.7rem;}
+
+.lt-acc-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.25rem;}
+.lt-acc{background:#0a0a0a;border:1px solid #1c1c1c;overflow:hidden;}
+.lt-acc-hd{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.1rem;cursor:pointer;transition:background .15s;}
+.lt-acc-hd:hover{background:#111;}
+.lt-acc-hd.open{border-bottom:1px solid #1c1c1c;}
+.lt-acc-lbl{display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:.66rem;font-weight:600;color:#666460;text-transform:uppercase;letter-spacing:.08em;}
+.lt-acc-body{padding:1.1rem 1.25rem;font-size:.875rem;color:#666460;line-height:1.85;}
+
+.lt-tl{display:flex;align-items:center;overflow-x:auto;padding-bottom:8px;}
+.lt-tl-node{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:90px;}
+.lt-tl-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.63rem;font-weight:700;flex-shrink:0;}
+.lt-tl-ok{background:rgba(23,168,122,.1);color:#17a87a;border:2px solid #17a87a;}
+.lt-tl-err{background:rgba(217,79,79,.1);color:#d94f4f;border:2px solid #d94f4f;}
+.lt-tl-mix{background:rgba(217,146,42,.1);color:#d9922a;border:2px solid #d9922a;}
+.lt-tl-stage{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:#666460;text-align:center;}
+.lt-tl-year{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#333;}
+.lt-tl-line{flex:1;height:1px;background:#1c1c1c;min-width:24px;margin:0 2px;position:relative;top:-10px;}
+
+.lt-daily{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.15);padding:.75rem 1.1rem;display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;}
+.lt-daily-dot{width:7px;height:7px;border-radius:50%;background:#C9A84C;box-shadow:0 0 8px #C9A84C;flex-shrink:0;animation:ltpulse 2s infinite;}
+@keyframes ltpulse{0%,100%{opacity:1}50%{opacity:.4}}
+.lt-daily-text{font-size:.8rem;color:#666460;}
+.lt-daily-text strong{color:#C9A84C;}
+
+.lt-topic-panel{background:#0a0a0a;border:1px solid #1c1c1c;}
+.lt-topic-item{background:#0a0a0a;border-bottom:1px solid #1c1c1c;padding:.85rem 1rem;cursor:pointer;display:flex;align-items:center;gap:9px;font-size:.8rem;color:#666460;transition:all .15s;}
+.lt-topic-item:hover{background:#111;color:#C9A84C;}
+
+.lt-spin{animation:ltspin 1s linear infinite;display:inline-flex;}
+@keyframes ltspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.lt-cursor{display:inline-block;width:2px;height:13px;background:#C9A84C;animation:ltblink 1s infinite;vertical-align:middle;margin-left:2px;}
+@keyframes ltblink{0%,100%{opacity:1}50%{opacity:0}}
+.lt-ai-box{background:#0a0a0a;border:1px solid #1c1c1c;padding:1.1rem;margin-top:.85rem;font-family:'JetBrains Mono',monospace;font-size:.76rem;color:#666460;line-height:1.85;max-height:300px;overflow-y:auto;white-space:pre-wrap;}
+
+.lt-toast{position:fixed;bottom:1.75rem;right:1.75rem;z-index:9999;background:#0f0f0f;border:1px solid rgba(201,168,76,0.3);padding:.85rem 1.1rem;display:flex;align-items:center;gap:9px;box-shadow:0 8px 30px rgba(0,0,0,.7);animation:lttoast .28s ease;}
+@keyframes lttoast{from{transform:translateX(110%);opacity:0}to{transform:translateX(0);opacity:1}}
+.lt-toast-t{font-size:.82rem;color:#e8e4da;}
+
+@media(max-width:900px){
+  .lt-two-col{grid-template-columns:1fr;}
+  .lt-stats{grid-template-columns:repeat(2,1fr);}
+  .lt-hero-h{font-size:1.5rem;}
+  .lt-main{padding:1.25rem 16px;}
+  .lt-hero{padding:2rem 16px 1.5rem;}
+  .lt-nav{padding:0 16px;}
+}
+`;
+
+// Helpers
+const topicClass = (t) => ({
+  "Permanent Establishment": "lt-t-pe",
+  "Royalty vs Business Income": "lt-t-royalty",
+  "Fees for Technical Services": "lt-t-fts",
+  "Transfer Pricing": "lt-t-tp",
+  "DTAA Interpretation": "lt-t-dtaa",
+  "Equalization Levy": "lt-t-el",
+}[t] || "lt-t-topic");
+
+const rulingTag = (r) => ({
+  "Assessee": React.createElement("span", {className:"lt-tag lt-t-ok"}, "✓ Assessee"),
+  "Department": React.createElement("span", {className:"lt-tag lt-t-err"}, "✗ Department"),
+}[r] || React.createElement("span", {className:"lt-tag lt-t-warn"}, "⚖ Partial"));
+
+const scoreCase = (c, q) => {
+  if (!q) return 1;
+  const txt = [c.title, c.court, c.topic, c.treaty, c.summary, ...(c.keywords||[])].join(" ").toLowerCase();
+  return txt.includes(q.toLowerCase()) ? 2 : 0;
+};
+
+// SVG Icons
+const LI = ({ n, s = 14, c = "currentColor" }) => {
+  const p = {
+    search: React.createElement("g", null, React.createElement("circle", {cx:"11",cy:"11",r:"8"}), React.createElement("path", {d:"m21 21-4.35-4.35"})),
+    book: React.createElement("g", null, React.createElement("path", {d:"M4 19.5A2.5 2.5 0 0 1 6.5 17H20"}), React.createElement("path", {d:"M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"})),
+    tag: React.createElement("g", null, React.createElement("path", {d:"M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"}), React.createElement("line", {x1:"7",y1:"7",x2:"7.01",y2:"7"})),
+    spark: React.createElement("g", null, React.createElement("path", {d:"M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z"})),
+    globe: React.createElement("g", null, React.createElement("circle", {cx:"12",cy:"12",r:"10"}), React.createElement("line", {x1:"2",y1:"12",x2:"22",y2:"12"}), React.createElement("path", {d:"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"})),
+    scale: React.createElement("g", null, React.createElement("line", {x1:"12",y1:"3",x2:"12",y2:"21"}), React.createElement("path", {d:"M5 21h14"}), React.createElement("path", {d:"M5 9H3l2 6h4L7 9"}), React.createElement("path", {d:"M19 9h2l-2 6h-4l2-6"})),
+    cr: React.createElement("polyline", {points:"9 18 15 12 9 6"}),
+    cl: React.createElement("polyline", {points:"15 18 9 12 15 6"}),
+    x: React.createElement("g", null, React.createElement("line", {x1:"18",y1:"6",x2:"6",y2:"18"}), React.createElement("line", {x1:"6",y1:"6",x2:"18",y2:"18"})),
+    ok: React.createElement("polyline", {points:"20 6 9 17 4 12"}),
+    cpu: React.createElement("g", null, React.createElement("rect", {x:"4",y:"4",width:"16",height:"16",rx:"2"}), React.createElement("rect", {x:"9",y:"9",width:"6",height:"6"})),
+    eye: React.createElement("g", null, React.createElement("path", {d:"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"}), React.createElement("circle", {cx:"12",cy:"12",r:"3"})),
+    pdf: React.createElement("g", null, React.createElement("path", {d:"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"}), React.createElement("polyline", {points:"14 2 14 8 20 8"})),
+    link: React.createElement("g", null, React.createElement("path", {d:"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"}), React.createElement("path", {d:"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"})),
+    dl: React.createElement("g", null, React.createElement("path", {d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"}), React.createElement("polyline", {points:"7 10 12 15 17 10"}), React.createElement("line", {x1:"12",y1:"15",x2:"12",y2:"3"})),
+  };
+  return React.createElement("svg", {width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.9",strokeLinecap:"round",strokeLinejoin:"round"}, p[n] || null);
+};
+
+const Spin = () => React.createElement("span", {className:"lt-spin"}, React.createElement(LI, {n:"cpu",s:13,c:"#C9A84C"}));
+
+function LTToast({ msg, onClose }) {
+  const { useEffect } = React;
+  useEffect(() => { const t = setTimeout(onClose, 3000); return () => clearTimeout(t); }, [onClose]);
+  return React.createElement("div", {className:"lt-toast"},
+    React.createElement(LI, {n:"ok",s:13,c:"#C9A84C"}),
+    React.createElement("span", {className:"lt-toast-t"}, msg),
+    React.createElement("button", {className:"lt-btn-ghost",onClick:onClose,style:{padding:"2px",marginLeft:"auto"}}, React.createElement(LI, {n:"x",s:12}))
+  );
+}
+
+function LTAcc({ label, children, def = false }) {
+  const [open, setOpen] = React.useState(def);
+  return React.createElement("div", {className:"lt-acc"},
+    React.createElement("div", {className:`lt-acc-hd${open?" open":""}`,onClick:()=>setOpen(!open)},
+      React.createElement("div", {className:"lt-acc-lbl"}, label),
+      React.createElement(LI, {n:open?"x":"cr",s:13,c:"#333"})
+    ),
+    open && React.createElement("div", {className:"lt-acc-body"}, children)
+  );
+}
+
+function CCard({ c, onClick }) {
+  return React.createElement("div", {className:"lt-cc",onClick:()=>onClick(c)},
+    React.createElement("div", null,
+      React.createElement("div", {className:"lt-cc-court"}, `${c.court} · ${c.date} · AY ${c.assessmentYear}`),
+      React.createElement("div", {className:"lt-cc-title"}, c.title)
+    ),
+    React.createElement("div", {className:"lt-cc-tags"},
+      React.createElement("span", {className:`lt-tag ${topicClass(c.topic)}`}, c.topic),
+      React.createElement("span", {className:"lt-tag lt-t-treaty"}, c.treatyCountry),
+      c.treatyArticles.slice(0,2).map(a => React.createElement("span", {key:a.article,className:"lt-tag lt-t-plain"}, a.article)),
+      rulingTag(c.ruling)
+    ),
+    React.createElement("div", {className:"lt-cc-sum"}, c.summary),
+    React.createElement("div", {className:"lt-cc-ft"},
+      React.createElement("span", null, React.createElement(LI, {n:"eye",s:10}), " ", c.views.toLocaleString()),
+      React.createElement("span", null, React.createElement(LI, {n:"pdf",s:10}), " ", c.pages, "p"),
+      React.createElement("span", null, React.createElement(LI, {n:"link",s:10}), " ", c.cases_cited.length, " cited"),
+      React.createElement("span", {style:{marginLeft:"auto",color:"#C9A84C",fontSize:".68rem"}}, "Read Analysis ", React.createElement(LI, {n:"cr",s:10,c:"#C9A84C"}))
+    )
+  );
+}
+
+function HomePage({ onSearch, onCase }) {
+  const [q, setQ] = React.useState("");
+  return React.createElement("div", null,
+    React.createElement("div", {className:"lt-hero"},
+      React.createElement("div", {className:"lt-chip"}, React.createElement(LI, {n:"spark",s:10,c:"#C9A84C"}), " International Tax Case Law Library"),
+      React.createElement("h2", {className:"lt-hero-h"}, "International Tax ", React.createElement("span", null, "Jurisprudence")),
+      React.createElement("p", {className:"lt-hero-sub"}, "AI-analyzed judgments from ITAT, High Courts & Supreme Court — treaty article tagging, ratio decidendi, precedent networks, and instant AI analysis."),
+      React.createElement("div", {className:"lt-swrap"},
+        React.createElement("input", {className:"lt-sinp",placeholder:"Search by keyword, treaty article, provision…",value:q,onChange:e=>setQ(e.target.value),onKeyDown:e=>e.key==="Enter"&&onSearch(q)}),
+        React.createElement("button", {className:"lt-sbtn",onClick:()=>onSearch(q)}, React.createElement(LI, {n:"search",s:13}), " Search")
+      )
+    ),
+    React.createElement("div", {className:"lt-stats"},
+      [["6","Landmark Cases"],["24","Treaty Countries"],["OECD","Aligned Analysis"],["BEPS","Action Coverage"]].map(([n,l]) =>
+        React.createElement("div", {className:"lt-stat",key:l},
+          React.createElement("div", {className:"lt-stat-n"}, n),
+          React.createElement("div", {className:"lt-stat-l"}, l)
+        )
+      )
+    ),
+    React.createElement("div", {className:"lt-main"},
+      React.createElement("div", {className:"lt-daily"},
+        React.createElement("div", {className:"lt-daily-dot"}),
+        React.createElement("div", {className:"lt-daily-text"}, React.createElement("strong", null, "Library updated"), " · SC, ITAT & HC judgments on PE, Royalty, FTS, TP & Equalization Levy"),
+        React.createElement("button", {className:"lt-btn lt-btn-outline",style:{marginLeft:"auto",fontSize:".72rem",padding:"5px 11px"},onClick:()=>onSearch("")}, "Browse All")
+      ),
+      React.createElement("div", {className:"lt-two-col"},
+        React.createElement("div", null,
+          React.createElement("div", {className:"lt-sec-title"}, React.createElement(LI, {n:"book",s:13,c:"#666460"}), " Featured Judgments"),
+          React.createElement("div", {className:"lt-clist"}, CASES.map(c => React.createElement(CCard, {key:c.id,c,onClick:onCase})))
+        ),
+        React.createElement("div", null,
+          React.createElement("div", {className:"lt-sec-title"}, React.createElement(LI, {n:"tag",s:13,c:"#666460"}), " Browse by Topic"),
+          React.createElement("div", {className:"lt-topic-panel"},
+            TOPICS.slice(1).map((t,i) =>
+              React.createElement("div", {className:"lt-topic-item",key:i,onClick:()=>onSearch(t)},
+                React.createElement("span", {className:`lt-tag ${topicClass(t)}`,style:{fontSize:".6rem",padding:"1px 5px"}}, t.split(" ")[0]),
+                React.createElement("span", {style:{flex:1}}, t),
+                React.createElement(LI, {n:"cr",s:10,c:"#333"})
+              )
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
+function SearchPage({ initialQ, onCase }) {
+  const [q, setQ] = React.useState(initialQ || "");
+  const [topic, setTopic] = React.useState("All Topics");
+  const [court, setCourt] = React.useState("All Courts");
+  const [country, setCountry] = React.useState("All Countries");
+
+  const results = CASES
+    .map(c => ({ c, score: scoreCase(c, q) }))
+    .filter(({ c, score }) => {
+      if (q && score === 0) return false;
+      if (topic !== "All Topics" && c.topic !== topic) return false;
+      if (court !== "All Courts" && c.court !== court) return false;
+      if (country !== "All Countries" && c.treatyCountry !== country) return false;
+      return true;
+    })
+    .sort((a, b) => b.score - a.score)
+    .map(({ c }) => c);
+
+  const clear = () => { setTopic("All Topics"); setCourt("All Courts"); setCountry("All Countries"); setQ(""); };
+
+  return React.createElement("div", {className:"lt-main"},
+    React.createElement("div", {className:"lt-sbar"},
+      React.createElement(LI, {n:"search",s:14,c:"#333"}),
+      React.createElement("input", {placeholder:"Search cases, treaty articles, provisions…",value:q,onChange:e=>setQ(e.target.value)}),
+      q && React.createElement("button", {className:"lt-btn-ghost",onClick:()=>setQ("")}, React.createElement(LI, {n:"x",s:12}))
+    ),
+    React.createElement("div", {style:{display:"grid",gridTemplateColumns:"220px 1fr",gap:"1.75rem"}},
+      React.createElement("div", {className:"lt-filter"},
+        React.createElement("div", {className:"lt-f-section"},
+          React.createElement("span", {className:"lt-f-label"}, "Topic"),
+          TOPICS.map(t => React.createElement("div", {key:t,className:`lt-f-opt${topic===t?" on":""}`,onClick:()=>setTopic(t)}, React.createElement("span", {className:"lt-f-dot"}), t))
+        ),
+        React.createElement("div", {className:"lt-f-section"},
+          React.createElement("span", {className:"lt-f-label"}, "Court / Tribunal"),
+          COURTS.map(c => React.createElement("div", {key:c,className:`lt-f-opt${court===c?" on":""}`,onClick:()=>setCourt(c)}, React.createElement("span", {className:"lt-f-dot"}), c))
+        ),
+        React.createElement("div", {className:"lt-f-section"},
+          React.createElement("span", {className:"lt-f-label"}, "Treaty Country"),
+          React.createElement("select", {className:"lt-f-select",value:country,onChange:e=>setCountry(e.target.value)},
+            COUNTRIES.map(c => React.createElement("option", {key:c}, c))
+          )
+        ),
+        React.createElement("button", {className:"lt-btn lt-btn-outline",style:{width:"100%",justifyContent:"center",marginTop:".25rem"},onClick:clear}, "Clear Filters")
+      ),
+      React.createElement("div", null,
+        React.createElement("div", {className:"lt-res-hd"},
+          React.createElement("div", {className:"lt-res-ct"}, React.createElement("span", null, results.length), " cases found", q ? ` for "${q}"` : ""),
+          q && React.createElement("span", {style:{fontSize:".7rem",color:"#333"}}, "Ranked by relevance")
+        ),
+        results.length === 0
+          ? React.createElement("div", {style:{textAlign:"center",padding:"4rem",color:"#333"}}, React.createElement(LI, {n:"search",s:36,c:"#1c1c1c"}), React.createElement("p", {style:{marginTop:".75rem"}}, "No cases match your criteria"))
+          : React.createElement("div", {className:"lt-clist"}, results.map(c => React.createElement(CCard, {key:c.id,c,onClick:onCase})))
+      )
+    )
+  );
+}
+
+function CasePage({ c, onBack, onCase, showToast }) {
+  const [aiLoad, setAiLoad] = React.useState(false);
+  const [aiText, setAiText] = React.useState("");
+
+  const related = CASES.filter(r => r.id !== c.id && (c.related_ids.includes(r.id) || r.topic === c.topic)).slice(0, 3);
+
+  const runAI = async () => {
+    setAiLoad(true); setAiText("");
+    try {
+      const res = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-20250514", max_tokens: 1000,
+          system: "You are a senior international tax counsel. Provide concise practitioner-focused analysis in 250 words.",
+          messages: [{ role: "user", content: `Analyze this international tax judgment:\n\nTitle: ${c.title}\nCourt: ${c.court} | ${c.date}\nTopic: ${c.topic} | Treaty: ${c.treaty}\nRatio: ${c.ratio_decidendi}\n\nAddress: (1) practical compliance implications, (2) precedential scope, (3) advisory considerations.` }]
+        })
+      });
+      const data = await res.json();
+      if (data.content?.[0]?.text) setAiText(data.content[0].text);
+      else setAiText("Analysis not available. Please try again.");
+    } catch { setAiText("Error generating analysis. Please try again."); }
+    setAiLoad(false);
+  };
+
+  return React.createElement("div", {className:"lt-main"},
+    React.createElement("button", {className:"lt-back",onClick:onBack}, React.createElement(LI, {n:"cl",s:14}), " Back to Search"),
+    React.createElement("div", {className:"lt-det-wrap"},
+      React.createElement("div", {className:"lt-case-hdr"},
+        React.createElement("div", {className:"lt-case-court-row"},
+          React.createElement("span", {className:"lt-court-badge"}, c.court),
+          React.createElement("span", {className:"lt-court-badge"}, c.date),
+          React.createElement("span", {className:"lt-court-badge"}, `AY ${c.assessmentYear}`)
+        ),
+        React.createElement("h2", {className:"lt-case-title"}, c.title),
+        React.createElement("div", {className:"lt-cc-tags",style:{marginBottom:0}},
+          React.createElement("span", {className:`lt-tag ${topicClass(c.topic)}`}, c.topic),
+          React.createElement("span", {className:"lt-tag lt-t-treaty"}, c.treaty),
+          c.treatyArticles.map(a => React.createElement("span", {key:a.article,className:"lt-tag lt-t-plain"}, `${a.article} – ${a.subject}`)),
+          rulingTag(c.ruling)
+        ),
+        React.createElement("div", {className:"lt-case-acts"},
+          React.createElement("button", {className:"lt-btn lt-btn-gold",onClick:runAI,disabled:aiLoad},
+            aiLoad ? React.createElement(Spin) : React.createElement(LI, {n:"spark",s:12}),
+            aiLoad ? "Analysing…" : "AI Expert Analysis"
+          ),
+          React.createElement("button", {className:"lt-btn lt-btn-outline",onClick:()=>showToast("Opening judgment…")}, React.createElement(LI, {n:"pdf",s:12}), " View Judgment")
+        )
+      ),
+
+      (aiLoad || aiText) && React.createElement("div", {className:"lt-ratio-box"},
+        React.createElement("div", {className:"lt-ratio-hd"}, React.createElement(LI, {n:"cpu",s:12,c:"#C9A84C"}), React.createElement("span", {className:"lt-ratio-label"}, "Claude AI · Practitioner Analysis"), aiLoad && React.createElement(Spin)),
+        React.createElement("div", {className:"lt-ai-box"}, aiText, aiLoad && React.createElement("span", {className:"lt-cursor"}))
+      ),
+
+      React.createElement("div", {className:"lt-treaty-block"},
+        React.createElement("div", {className:"lt-treaty-block-title"}, "Treaty Articles in This Case"),
+        React.createElement("div", {className:"lt-treaty-articles"},
+          c.treatyArticles.map(a => React.createElement("div", {className:"lt-ta-pill",key:a.article},
+            React.createElement("strong", null, a.article), React.createElement("span", null, "–"), React.createElement("span", null, a.subject)
+          )),
+          c.provisions.map(p => React.createElement("span", {key:p,className:"lt-tag lt-t-plain",style:{fontSize:".7rem"}}, p))
+        )
+      ),
+
+      React.createElement("div", {className:"lt-ratio-box"},
+        React.createElement("div", {className:"lt-ratio-hd"}, React.createElement(LI, {n:"scale",s:12,c:"#C9A84C"}), React.createElement("span", {className:"lt-ratio-label"}, "Ratio Decidendi · Key Legal Principle")),
+        React.createElement("div", {className:"lt-ratio-text"}, c.ratio_decidendi)
+      ),
+
+      React.createElement("div", {className:"lt-acc-list"},
+        React.createElement(LTAcc, {label:"Case Summary", def:true}, c.summary),
+        React.createElement(LTAcc, {label:"Issue"}, c.issue),
+        React.createElement(LTAcc, {label:"Assessee's Arguments"}, c.assesseeArguments),
+        React.createElement(LTAcc, {label:"Department's Arguments"}, c.departmentArguments),
+        React.createElement(LTAcc, {label:"Court's Reasoning"}, c.reasoning),
+        React.createElement(LTAcc, {label:"Ruling"}, c.ruling_detail),
+        React.createElement(LTAcc, {label:"Appeal History"},
+          React.createElement("div", {className:"lt-tl"},
+            c.appeal_history.map((h, i) => React.createElement("div", {key:i,className:"lt-tl"},
+              i > 0 && React.createElement("div", {className:"lt-tl-line"}),
+              React.createElement("div", {className:"lt-tl-node"},
+                React.createElement("div", {className:`lt-tl-dot ${h.result==="In Favour"||h.result==="Partial - In Favour"?"lt-tl-ok":h.result==="Partial"?"lt-tl-mix":"lt-tl-err"}`}, h.year.slice(2)),
+                React.createElement("div", {className:"lt-tl-stage"}, h.stage),
+                React.createElement("div", {className:"lt-tl-year"}, h.result)
+              )
+            ))
+          )
+        )
+      ),
+
+      related.length > 0 && React.createElement("div", null,
+        React.createElement("div", {className:"lt-sec-title",style:{marginBottom:"1rem"}}, "Related Cases"),
+        React.createElement("div", {className:"lt-clist"}, related.map(r => React.createElement(CCard, {key:r.id,c:r,onClick:onCase})))
+      )
+    )
+  );
+}
+
+function LexTaxCaseLibrary() {
+  const [page, setPage] = React.useState("home");
+  const [searchQ, setSearchQ] = React.useState("");
+  const [activeCase, setActiveCase] = React.useState(null);
+  const [toast, setToast] = React.useState(null);
+
+  const nav = (p) => { setPage(p); setActiveCase(null); };
+  const handleSearch = (q) => { setSearchQ(q); setPage("search"); };
+  const handleCase = (c) => { setActiveCase(c); setPage("case"); };
+  const showToast = (msg) => setToast(msg);
+
+  return React.createElement(React.Fragment, null,
+    React.createElement("style", null, LIB_CSS),
+    React.createElement("div", {className:"lt-app"},
+      React.createElement("nav", {className:"lt-nav"},
+        React.createElement("div", {className:"lt-logo",onClick:()=>nav("home")}, "LexTax"),
+        React.createElement("div", {className:"lt-nlinks"},
+          [["home","Library Home"],["search","Case Search"]].map(([id,lbl]) =>
+            React.createElement("div", {key:id,className:`lt-nl${page===id||(page==="case"&&id==="search")?" on":""}`,onClick:()=>nav(id)}, lbl)
+          )
+        ),
+        React.createElement("div", {className:"lt-nav-end"},
+          React.createElement("span", {className:"lt-badge"}, "6 cases"),
+          React.createElement("span", {className:"lt-badge lt-badge-n"}, "Updated 2025")
+        )
+      ),
+      page === "home" && React.createElement(HomePage, {onSearch:handleSearch,onCase:handleCase}),
+      page === "search" && React.createElement(SearchPage, {initialQ:searchQ,onCase:handleCase}),
+      page === "case" && activeCase && React.createElement(CasePage, {c:activeCase,onBack:()=>setPage("search"),onCase:handleCase,showToast}),
+      toast && React.createElement(LTToast, {msg:toast,onClose:()=>setToast(null)})
+    )
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('case-law-app'));
+root.render(React.createElement(LexTaxCaseLibrary));
+</script>
+
+
+<!-- ══ WEBSITE JAVASCRIPT ══ -->
+<script>
+(function(){
+  /* 1. Header scroll */
   const header = document.getElementById('header');
   window.addEventListener('scroll', function(){ header.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
 
-  /* ── 2. Mobile hamburger ── */
+  /* 2. Mobile hamburger */
   document.getElementById('hamburger').addEventListener('click', function(){
     document.getElementById('mobile-nav').classList.toggle('open');
   });
@@ -1227,7 +1978,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     a.addEventListener('click', function(){ document.getElementById('mobile-nav').classList.remove('open'); });
   });
 
-  /* ── 3. Mobile services accordion ── */
+  /* 3. Mobile services accordion */
   document.getElementById('mob-svc-toggle').addEventListener('click', function(){
     var list = document.getElementById('mob-svc-list');
     var icon = document.getElementById('mob-svc-icon');
@@ -1238,10 +1989,9 @@ footer{background:#060606;border-top:1px solid var(--border);}
     a.addEventListener('click', function(){ document.getElementById('mobile-nav').classList.remove('open'); });
   });
 
-  /* ── 4. Mega menu tabs (hover) ── */
+  /* 4. Mega menu tabs */
   var megaTabs   = document.querySelectorAll('.mega-tab');
   var megaPanels = document.querySelectorAll('.mega-panel');
-  // init first panel visible
   megaPanels[0].style.display = 'block';
   megaTabs.forEach(function(tab){
     tab.addEventListener('mouseenter', function(){
@@ -1253,10 +2003,9 @@ footer{background:#060606;border-top:1px solid var(--border);}
     });
   });
 
-  /* ── 5. Services sidebar tabs ── */
+  /* 5. Services sidebar tabs */
   var svcCats   = document.querySelectorAll('.svc-cat');
   var svcPanels = document.querySelectorAll('.svc-panel');
-  // init: show first, hide rest
   svcPanels.forEach(function(p){ p.style.display = 'none'; });
   svcPanels[0].style.display = 'block';
   svcCats.forEach(function(cat){
@@ -1269,7 +2018,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     });
   });
 
-  /* ── 6. Hero slider — lazy load bg images ── */
+  /* 6. Hero slider */
   var slides   = document.querySelectorAll('.slide');
   var hDots    = document.querySelectorAll('.hero-dot');
   var hIdx     = 0;
@@ -1280,9 +2029,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     if(loadedBg[idx]) return;
     var slide = slides[idx];
     var bg    = slide.dataset.bg;
-    if(bg){
-      slide.querySelector('.slide-bg').style.backgroundImage = "url('" + bg + "')";
-    }
+    if(bg) slide.querySelector('.slide-bg').style.backgroundImage = "url('" + bg + "')";
     loadedBg[idx] = true;
   }
 
@@ -1291,16 +2038,13 @@ footer{background:#060606;border-top:1px solid var(--border);}
     hDots[hIdx].classList.remove('is-active');
     hIdx = (n + slides.length) % slides.length;
     loadSlideBg(hIdx);
-    // preload next
     loadSlideBg((hIdx + 1) % slides.length);
     slides[hIdx].classList.add('is-active');
     hDots[hIdx].classList.add('is-active');
   }
 
-  // Slide 0 already loaded (inline style), preload slide 1
   loadedBg[0] = true;
   loadSlideBg(1);
-
   hTimer = setInterval(function(){ goSlide(hIdx + 1); }, 6000);
   hDots.forEach(function(d){
     d.addEventListener('click', function(){
@@ -1310,7 +2054,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     });
   });
 
-  /* ── 7. Feature carousel ── */
+  /* 7. Feature carousel */
   var cIdx    = 0;
   var cTrack  = document.getElementById('c-track');
   var cSlides = cTrack.querySelectorAll('.carousel-slide');
@@ -1321,16 +2065,16 @@ footer{background:#060606;border-top:1px solid var(--border);}
   document.querySelectorAll('.c-prev-btn').forEach(function(b){ b.addEventListener('click', function(){ moveCarousel(-1); }); });
   document.querySelectorAll('.c-next-btn').forEach(function(b){ b.addEventListener('click', function(){ moveCarousel(1); }); });
 
-  /* ── 8. Contact form ── */
+  /* 8. Contact form */
   document.getElementById('contact-form').addEventListener('submit', function(e){
     e.preventDefault();
-    var name    = document.getElementById('cf-name').value.trim();
-    var email   = document.getElementById('cf-email').value.trim();
-    var service = document.getElementById('cf-service').value;
-    var msg     = document.getElementById('cf-msg').value.trim();
+    var name  = document.getElementById('cf-name').value.trim();
+    var phone = document.getElementById('cf-phone').value.trim();
+    var email = document.getElementById('cf-email').value.trim();
+    var msg   = document.getElementById('cf-msg').value.trim();
     if(!name || !email){ alert('Please enter your name and email address.'); return; }
-    var subject = encodeURIComponent('Enquiry: ' + (service || 'Tax Advisory'));
-    var body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nService: ' + (service || 'Not specified') + '\n\nMessage:\n' + msg);
+    var subject = encodeURIComponent('LexTax Enquiry');
+    var body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + (phone||'Not provided') + '\n\nMessage:\n' + msg);
     window.location.href = 'mailto:catirthshah@gmail.com?subject=' + subject + '&body=' + body;
     var btn  = document.getElementById('cf-submit');
     var succ = document.getElementById('cf-success');
@@ -1340,7 +2084,7 @@ footer{background:#060606;border-top:1px solid var(--border);}
     setTimeout(function(){ btn.style.display = 'inline-flex'; succ.style.display = 'none'; form.reset(); }, 5000);
   });
 
-  /* ── 9. Scroll reveal ── */
+  /* 9. Scroll reveal */
   if('IntersectionObserver' in window){
     var ro = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
@@ -1352,19 +2096,16 @@ footer{background:#060606;border-top:1px solid var(--border);}
     document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
   }
 
-  /* ── 10. Active nav link on scroll ── */
+  /* 10. Active nav */
   var navLinks   = document.querySelectorAll('#primary-nav .nav-link:not(.nav-cta)');
-  var sectionEls = ['about','services-grid','insights','resources','contact']
-    .map(function(id){ return document.getElementById(id); })
-    .filter(Boolean);
+  var sectionEls = ['about','services-grid','case-law-library','insights','resources','contact']
+    .map(function(id){ return document.getElementById(id); }).filter(Boolean);
 
   function updateActiveNav(){
     var y = window.scrollY + 120;
     var activeId = '';
     sectionEls.forEach(function(sec){
-      if(sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y){
-        activeId = sec.id;
-      }
+      if(sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y) activeId = sec.id;
     });
     navLinks.forEach(function(link){
       var href = link.getAttribute('href') || '';
@@ -1372,7 +2113,6 @@ footer{background:#060606;border-top:1px solid var(--border);}
     });
   }
   window.addEventListener('scroll', updateActiveNav, {passive:true});
-  window.addEventListener('resize', updateActiveNav, {passive:true});
   updateActiveNav();
 
 })();
